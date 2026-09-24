@@ -102,6 +102,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 700px) {
     [data-footcols] { grid-template-columns: 1fr !important; }
   }
+  [data-topbar] a { color: rgba(255,255,255,.82); }
+  [data-topbar] a:hover { color: #fff; }
+  @media (max-width: 760px) {
+    [data-topbar-links] { display: none !important; }
+  }
+  @media (max-width: 560px) {
+    [data-headcta] { display: none !important; }
+    [data-burger] { margin-left: auto; }
+    [data-hero] { grid-template-columns: minmax(0,1fr) !important; }
+    [data-hero] h1 { font-size: 42px !important; }
+  }
   @media (max-width: 700px) {
     [data-quote] { grid-template-columns: 1fr !important; gap: 0 !important; }
     [data-quote] { min-height: 0 !important; }
@@ -122,9 +133,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   
 
+  <div data-topbar="" style="background:#344A3C;color:rgba(255,255,255,.82)">
+    <div data-pad="" style="max-width:1220px;margin:0 auto;padding:8px 24px;display:flex;align-items:center;gap:22px">
+      <a href="https://greenfield.clinic/" style="font-size:12.5px;font-weight:500;display:inline-flex;align-items:center;gap:6px">← Greenfield Dental home</a>
+      <nav data-topbar-links="" aria-label="Greenfield Dental" style="display:flex;gap:20px;margin-left:auto">
+        <a href="https://greenfield.clinic/#doctors" style="font-size:12.5px;font-weight:500">Our doctors</a>
+        <a href="https://greenfield.clinic/dental-implants-vietnam/" style="font-size:12.5px;font-weight:500">Implants</a>
+        <a href="https://greenfield.clinic/invisalign-in-vietnam/" style="font-size:12.5px;font-weight:500">Invisalign</a>
+        <a href="https://greenfield.clinic/porcelain-veneers/" style="font-size:12.5px;font-weight:500">Veneers</a>
+        <a href="https://greenfield.clinic/smile-gallery/" style="font-size:12.5px;font-weight:500">Smile gallery</a>
+        <a href="https://greenfield.clinic/dental-tourism/" style="font-size:12.5px;font-weight:500">Dental tourism</a>
+        <a href="https://greenfield.clinic/contact-us/" style="font-size:12.5px;font-weight:500">Contact</a>
+      </nav>
+    </div>
+  </div>
+
   <header style="position:sticky;top:0;z-index:60;background:rgba(239,241,242,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(51,59,59,.06)">
     <div data-pad="" style="max-width:1220px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:24px">
-      <a href="#top" style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
+      <a href="https://greenfield.clinic/" aria-label="Greenfield Dental home" style="display:flex;align-items:center;gap:10px;flex:0 0 auto">
         <img src="/dr-ta-hong-nhung/img/greenfield-original.webp" alt="Greenfield Dental" style="height:30px;width:auto;display:block">
       </a>
       <nav data-nav="" style="display:flex;gap:26px;margin-left:auto;align-items:center">
@@ -135,7 +161,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="#danh-gia" style="font-size:13.5px;color:#5A6462;font-weight:500">Reviews</a>
         <a href="#faq" style="font-size:13.5px;color:#5A6462;font-weight:500">FAQs</a>
       </nav>
-      <a href="#dat-hen" style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;border:1px solid #3F8F68;color:#2F7253;font-size:13.5px;font-weight:600;background:transparent;transition:background .25s,color .25s;flex:0 0 auto" style-hover="background:#3F8F68;color:#fff">
+      <a href="#dat-hen" data-headcta="" style="margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;border:1px solid #3F8F68;color:#2F7253;font-size:13.5px;font-weight:600;background:transparent;transition:background .25s,color .25s;flex:0 0 auto" style-hover="background:#3F8F68;color:#fff">
         <span style="width:7px;height:7px;border-radius:50%;background:#3F8F68"></span>Book a Consultation
       </a>
       <button data-burger="" onClick="{{ toggleMenu }}" aria-label="Menu" style="display:none;width:44px;height:44px;border-radius:14px;border:1px solid rgba(51,59,59,.12);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;flex:0 0 auto">
@@ -152,6 +178,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="#ca-dieu-tri" onClick="{{ closeMenu }}" style="padding:14px 6px;font-size:16px;color:#333B3B;font-weight:500;border-bottom:1px solid rgba(51,59,59,.06)">Cases</a>
         <a href="#danh-gia" onClick="{{ closeMenu }}" style="padding:14px 6px;font-size:16px;color:#333B3B;font-weight:500;border-bottom:1px solid rgba(51,59,59,.06)">Reviews</a>
         <a href="#faq" onClick="{{ closeMenu }}" style="padding:14px 6px;font-size:16px;color:#333B3B;font-weight:500">FAQs</a>
+        <a href="https://greenfield.clinic/#doctors" style="padding:14px 6px;font-size:16px;color:#333B3B;font-weight:500;border-top:1px solid rgba(51,59,59,.06);color:#2F7253">Meet our other doctors</a>
+        <a href="https://greenfield.clinic/" style="padding:14px 6px;font-size:16px;color:#333B3B;font-weight:500;border-top:1px solid rgba(51,59,59,.06);color:#2F7253">← Greenfield Dental home</a>
         <a href="#dat-hen" onClick="{{ closeMenu }}" style="margin-top:14px;display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;background:#3F8F68;color:#fff;font-weight:600;font-size:15px">Book a Consultation</a>
       </div>
     </sc-if>
@@ -168,7 +196,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div style="position: absolute; inset: 0; background: linear-gradient(90deg,#FFFFFF 0%,rgba(255,255,255,.96) 22%,rgba(255,255,255,.55) 34%,rgba(255,255,255,0) 46%); width: 1491px"></div>
       </div>
       <div data-cardpad="" style="position:relative;z-index:1;padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:22px">
-        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: .18em; font-weight: 600; color: #6D957F; text-transform: uppercase; width: 503px">
+        <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; letter-spacing: .18em; font-weight: 600; color: #6D957F; text-transform: uppercase; width: 503px; max-width: 100%">
           <span style="width: 22px; height: 1px; background: rgb(109, 149, 127); display: block;"></span>DDS | Msc. | Founder &amp; Clinical Director
         </span>
         <h1 style="margin: 0; font-size: 58px; line-height: 1.04; font-weight: 600; letter-spacing: -.02em; text-wrap: pretty">Dr.&nbsp;<span style="color: rgb(63, 143, 104);">Ta Hong Nhung</span></h1>
@@ -580,9 +608,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span style="flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.34) 0 6px,transparent 6px 12px)"></span>
       </div>
 
-      <div data-footcols="" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,4vw,48px)">
+      <div data-footcols="" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(26px,4vw,48px)">
         <div style="display:grid;gap:10px;align-content:start">
-          <span style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:4px">Quick links</span>
+          <span style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:4px">Greenfield Dental</span>
+        <a href="https://greenfield.clinic/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Home</a>
+        <a href="https://greenfield.clinic/#doctors" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Our doctors</a>
+        <a href="https://greenfield.clinic/dental-implants-vietnam/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Dental implants</a>
+        <a href="https://greenfield.clinic/invisalign-in-vietnam/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Invisalign</a>
+        <a href="https://greenfield.clinic/porcelain-veneers/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Porcelain veneers</a>
+        <a href="https://greenfield.clinic/teeth-braces/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Orthodontic braces</a>
+        <a href="https://greenfield.clinic/smile-gallery/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Smile gallery</a>
+        <a href="https://greenfield.clinic/dental-tourism/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Dental tourism</a>
+        <a href="https://greenfield.clinic/contact-us/" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Contact us</a>
+        </div>
+        <div style="display:grid;gap:10px;align-content:start">
+          <span style="font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.62);margin-bottom:4px">This page</span>
         <a href="#gioi-thieu" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">About</a>
         <a href="#chuyen-mon" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Main expertise</a>
         <a href="#ca-dieu-tri" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Case studies</a>
@@ -601,7 +641,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="https://www.facebook.com/nhakhoagreenfield" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Facebook</a>
         <a href="https://www.linkedin.com/company/greenfielddental/posts/?feedView=all" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">LinkedIn</a>
         <a href="https://www.instagram.com/greenfield_dental/" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Instagram</a>
-        <a href="https://greenfield.clinic/" target="_blank" rel="noopener" style="font-size:14px;color:rgba(255,255,255,.78);padding:4px 0;border-left:1px solid rgba(255,255,255,.22);padding-left:14px;transition:color .25s" style-hover="color:#fff">Website</a>
         </div>
       </div>
 
