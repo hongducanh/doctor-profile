@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "https://greenfield.clinic/", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)\\.(webp|js)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+  ]
+}
