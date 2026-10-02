@@ -1,0 +1,769 @@
+{
+ "shared/all-on-4-fixed-bridge": {
+  "widths": [
+   480,
+   552
+  ],
+  "ratio": 1.3986
+ },
+ "shared/dental-examination": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.3
+ },
+ "shared/greenfield-clinic-lounge": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.6664
+ },
+ "shared/clear-aligner-in-hand": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.5
+ },
+ "dr-do-nhu-chuyen/chris-portrait": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.4922
+ },
+ "dr-do-nhu-chuyen/chris-portrait-seated": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.0312
+ },
+ "dr-do-nhu-chuyen/chris-implant-surgery": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.929
+ },
+ "dr-do-nhu-chuyen/cert-dds-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-do-nhu-chuyen/implant-case-01-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-01-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-02-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-02-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-03-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-03-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-04-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-04-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-05-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-05-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-06-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-06-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-07-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-07-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-08-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/implant-case-08-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/giang-portrait": {
+  "widths": [
+   480,
+   792
+  ],
+  "ratio": 1.5694
+ },
+ "dr-tran-thi-giang/giang-portrait-seated": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 0.9524
+ },
+ "dr-tran-thi-giang/giang-treating-patient": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.5675
+ },
+ "dr-tran-thi-giang/cert-dds-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-tran-thi-giang/cert-invisalign-hao": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/cert-jm-ortho": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.5651
+ },
+ "dr-tran-thi-giang/cert-advanced-veneers-dmg": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-01-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-01-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-02-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-02-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-03-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-03-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-04-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-04-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-05-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-05-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-06-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-tran-thi-giang/restorative-case-06-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/hailey-portrait": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.1861
+ },
+ "dr-pham-thi-thu-hien/hailey-portrait-seated": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.0706
+ },
+ "dr-pham-thi-thu-hien/hailey-treating-patient": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.7645
+ },
+ "dr-pham-thi-thu-hien/cert-dds-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-pham-thi-thu-hien/cert-invisalign-hao": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/cert-jm-ortho": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.5651
+ },
+ "dr-pham-thi-thu-hien/cert-advanced-veneers-dmg": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-01-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-01-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-02-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-02-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-03-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-03-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-04-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-04-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-05-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-05-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-06-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-pham-thi-thu-hien/restorative-case-06-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/henry-portrait": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.5588
+ },
+ "dr-nguyen-duc-hieu/henry-portrait-smile": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.5661
+ },
+ "dr-nguyen-duc-hieu/henry-treating-patient": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.7495
+ },
+ "dr-nguyen-duc-hieu/cert-implant-placement-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-nguyen-duc-hieu/cert-full-arch-otp-dentis": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/cert-reconstructive-surgery": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.5714
+ },
+ "dr-nguyen-duc-hieu/cert-advanced-veneers-dmg": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/cert-peri-implant-soft-tissue": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-01-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-01-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-02-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-02-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-03-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-03-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-04-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-04-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-05-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-05-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-06-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-06-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-07-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-07-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-08-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-nguyen-duc-hieu/implant-case-08-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/kate-portrait": {
+  "widths": [
+   480,
+   752
+  ],
+  "ratio": 1.6596
+ },
+ "dr-ta-hong-nhung/kate-portrait-seated": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1.0803
+ },
+ "dr-ta-hong-nhung/kate-treating-patient": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.596
+ },
+ "dr-ta-hong-nhung/cert-dds-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-ta-hong-nhung/cert-msc-hmu": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6169
+ },
+ "dr-ta-hong-nhung/cert-diu-bordeaux": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.9916
+ },
+ "dr-ta-hong-nhung/cert-3m-excellere": {
+  "widths": [
+   438
+  ],
+  "ratio": 0.6598
+ },
+ "dr-ta-hong-nhung/cert-invisalign-hao": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/cert-jm-ortho": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.5651
+ },
+ "dr-ta-hong-nhung/cert-invisalign-platinum-2019": {
+  "widths": [
+   475
+  ],
+  "ratio": 1.4063
+ },
+ "dr-ta-hong-nhung/cert-invisalign-platinum-2020": {
+  "widths": [
+   476
+  ],
+  "ratio": 1.4034
+ },
+ "dr-ta-hong-nhung/cert-invisalign-platinum-2021": {
+  "widths": [
+   476
+  ],
+  "ratio": 1.3992
+ },
+ "dr-ta-hong-nhung/ortho-case-01-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-01-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-02-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-02-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-03-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-03-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-04-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-04-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-05-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-05-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-06-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-06-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-07-before": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ },
+ "dr-ta-hong-nhung/ortho-case-07-after": {
+  "widths": [
+   480,
+   800
+  ],
+  "ratio": 1
+ }
+}

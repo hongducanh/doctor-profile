@@ -1,0 +1,525 @@
+{
+  "slug": "dr-ta-hong-nhung",
+  "key": "kate",
+  "first": "Kate",
+  "name": "Dr. Ta Hong Nhung",
+  "nick": "Dr. Kate",
+  "short": "Dr. Kate",
+  "pronoun": "she",
+  "pronounObj": "her",
+  "pronounPoss": "her",
+  "jobTitle": "Orthodontist · Founder & Clinical Director",
+  "role": "Founder & Clinical Director, orthodontist",
+  "card": "Clinical Director · Orthodontist",
+  "specialty": [
+    "Orthodontics",
+    "Endodontics",
+    "Prosthodontics"
+  ],
+  "eyebrow": "DDS · MSc · Founder & Clinical Director",
+  "title": "Dr. Ta Hong Nhung (Dr. Kate) — Orthodontist & Clinical Director | Greenfield Dental",
+  "description": "Dr. Ta Hong Nhung (Dr. Kate), founder and clinical director of Greenfield Dental, Hanoi: Invisalign and clear aligners, braces for adults and teens, TMJ and bite problems. 15+ years, Platinum Invisalign Provider.",
+  "lead": "After training across Europe and Asia, Dr. Ta Hong Nhung (Dr. Kate), MSc, founded Greenfield Dental to pair careful dentistry with a calm, respectful patient experience. She leads the clinical team and the orthodontic service, from clear aligners to complex bite and jaw-joint (TMJ) cases.",
+  "chips": [
+    "Invisalign & clear aligners",
+    "Braces for adults & teens",
+    "TMJ & bite problems"
+  ],
+  "portrait": "kate-portrait",
+  "portraitAlt": "Dr. Ta Hong Nhung (Dr. Kate), founder and clinical director of Greenfield Dental",
+  "stats": [
+    {
+      "n": "15+",
+      "l": "Years in clinical practice"
+    },
+    {
+      "n": "Platinum",
+      "l": "Invisalign Provider"
+    }
+  ],
+  "badge": {
+    "n": "15+",
+    "l": "Years in<br>clinical practice"
+  },
+  "alumni": [
+    "Hanoi Medical University",
+    "Université de Bordeaux"
+  ],
+  "about": {
+    "eyebrow": "About Dr. Kate",
+    "h2": "One plan for",
+    "h2em": "your whole smile.",
+    "img": "kate-treating-patient",
+    "imgAlt": "Dr. Kate treating a patient at Greenfield Dental",
+    "p": [
+      "Dr. Kate works across orthodontics, endodontics and prosthodontics, and treats each case as one plan rather than separate procedures, documented with before, during and after imaging.",
+      "Seeing patients face anxiety, discomfort and impersonal care led her to build a different kind of practice, where every patient feels respected, comfortable and properly looked after."
+    ],
+    "creds": [
+      {
+        "t": "DDS and Master in Odonto-Stomatology",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "Implantology diploma (DIU)",
+        "s": "Université de Bordeaux, France"
+      },
+      {
+        "t": "Platinum Invisalign Provider",
+        "s": "Clear aligner treatment"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Invisalign & clear aligners",
+      "s": "Invisalign · Other clear aligner systems",
+      "img": "clear-aligner-in-hand",
+      "imgAlt": "Clear aligner held in hand",
+      "link": "https://greenfield.clinic/invisalign-in-vietnam/"
+    },
+    {
+      "t": "Braces for adults & teens",
+      "s": "Metal and ceramic braces",
+      "link": "https://greenfield.clinic/teeth-braces/"
+    },
+    {
+      "t": "TMJ & bite problems",
+      "s": "Crowding · Deep bite · Crossbite · Jaw-joint"
+    },
+    {
+      "t": "Root canal treatment under the microscope",
+      "s": "Treatment · Retreatment"
+    },
+    {
+      "t": "Restorative rehabilitation",
+      "s": "Ceramic crowns · Inlays & onlays",
+      "link": "https://greenfield.clinic/dental-crowns/"
+    }
+  ],
+  "quote": {
+    "text": "Patients shouldn't just be treated.",
+    "em": "They should enjoy every moment of their care.",
+    "by": "Dr. Ta Hong Nhung — Dr. Kate",
+    "role": "Founder & Clinical Director, Greenfield Dental",
+    "img": "kate-portrait-seated"
+  },
+  "certs": [
+    {
+      "img": "cert-dds-hmu",
+      "t": "Doctor of Dental Surgery",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "img": "cert-msc-hmu",
+      "t": "Master in Odonto-Stomatology",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "img": "cert-diu-bordeaux",
+      "t": "Inter-University Diploma in Surgical and Prosthetic Implantology",
+      "s": "Faculty of Odontology, Bordeaux, France"
+    },
+    {
+      "img": "cert-3m-excellere",
+      "t": "Vietnam Orthodontist's Educational Program",
+      "s": "3M Excellere Asia Pacific"
+    },
+    {
+      "img": "cert-invisalign-hao",
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "img": "cert-jm-ortho",
+      "t": "Typodont Orthodontic Training Course",
+      "s": "JM Ortho, Hanoi"
+    },
+    {
+      "img": "cert-invisalign-platinum-2019",
+      "t": "Invisalign Platinum Provider 2019",
+      "s": "Invisalign"
+    },
+    {
+      "img": "cert-invisalign-platinum-2020",
+      "t": "Invisalign Platinum Provider 2020",
+      "s": "Invisalign"
+    },
+    {
+      "img": "cert-invisalign-platinum-2021",
+      "t": "Invisalign Platinum Provider 2021",
+      "s": "Invisalign"
+    }
+  ],
+  "casesTeam": "orthodontic",
+  "cases": [
+    {
+      "img": "ortho-case-01",
+      "t": "Anterior crossbite with edge-to-edge bite",
+      "d": "Metal braces to correct the anterior crossbite, align both arches and improve the bite.",
+      "m": "25 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-02",
+      "t": "Bimaxillary protrusion with crowding",
+      "d": "Metal braces to retract and align the front teeth, correct the bite and improve facial balance.",
+      "m": "33 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-03",
+      "t": "Severe overjet with deep bite",
+      "d": "Metal braces to reduce overjet and overbite, align both arches and establish a more balanced bite.",
+      "m": "34 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-04",
+      "t": "Narrow arches with gummy smile",
+      "d": "Metal braces with arch expansion to correct crowding and crossbite.",
+      "m": "21 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-05",
+      "t": "Class III bite with anterior crossbite",
+      "d": "Metal braces to correct the Class III relationship, align both arches and achieve a stable bite.",
+      "m": "37 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-06",
+      "t": "Severe crowding and misalignment",
+      "d": "Metal braces to correct severe crowding, align both arches and improve the bite.",
+      "m": "28 months · Orthodontics"
+    },
+    {
+      "img": "ortho-case-07",
+      "t": "Lower crowding with mandibular asymmetry",
+      "d": "Invisalign treatment to align crowded teeth and achieve a more balanced bite.",
+      "m": "25 months · Orthodontics"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you start",
+      "d": "Send photos and any X-rays for Dr. Kate's first opinion.",
+      "g": "pre"
+    },
+    {
+      "t": "Examination & records",
+      "d": "Free exam, X-rays, photos and a 3D scan.",
+      "g": "t1"
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Method, estimated time and a written quote.",
+      "g": "t1"
+    },
+    {
+      "t": "Braces or aligners fitted",
+      "d": "Treatment starts once you agree the plan.",
+      "g": "t1"
+    },
+    {
+      "t": "Regular check-ups",
+      "d": "Adjustments in clinic; some aligner checks remotely.",
+      "g": "t2"
+    },
+    {
+      "t": "Finishing",
+      "d": "Fine-tuning the bite before braces come off.",
+      "g": "t2"
+    },
+    {
+      "t": "Retainers & follow-up",
+      "d": "Retainers fitted and reviewed to keep the result.",
+      "g": "t2"
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you start",
+      "t1": "First visits",
+      "t2": "During treatment · usually 12–24 months"
+    },
+    "gap": "treatment",
+    "gapLong": "Treatment time · usually 12–24 months",
+    "intro": "Orthodontic treatment runs in stages, with check-ups planned around where you live.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your orthodontic journey"
+  },
+  "faqs": [
+    {
+      "q": "How long does orthodontic treatment usually take?",
+      "a": "Many cases take 12–24 months, but it depends on how complex the bite is, the method (braces or clear aligners) and how consistently the plan is followed. You get an estimate in writing after your examination."
+    },
+    {
+      "q": "Why are retainers important after orthodontic treatment?",
+      "a": "Teeth naturally tend to move back after treatment. Retainers hold the new positions and reduce the risk of relapse, so wearing them as instructed is part of the treatment."
+    },
+    {
+      "q": "Can I have orthodontic treatment if I live abroad?",
+      "a": "Often yes. Clear aligners need fewer in-person visits than braces, and some check-ups can be done remotely with photos. Braces need regular adjustments in the clinic, so we plan the visit schedule with you before you start."
+    },
+    {
+      "q": "Can a tooth become infected again after root canal treatment?",
+      "a": "It can. Reinfection may come from missed canals, leakage, new decay, cracks or a poor final restoration. Careful cleaning and sealing, ideally under a microscope, and a well-fitting final restoration help prevent it."
+    },
+    {
+      "q": "How do I know whether I need veneers or crowns?",
+      "a": "Veneers may suit teeth that need a change in shape or colour and still have enough healthy enamel. Crowns are usually considered when a tooth is significantly weakened or heavily restored. The choice is made after an examination."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after your examination, before any treatment starts. Anything that depends on what we find during treatment is explained and quoted as a range up front."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Kate.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Kate's team reviews your case and replies with a suitable treatment direction."
+  },
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Kate.",
+  "related": [
+    {
+      "t": "Invisalign in Vietnam",
+      "u": "https://greenfield.clinic/invisalign-in-vietnam/"
+    },
+    {
+      "t": "Orthodontic braces",
+      "u": "https://greenfield.clinic/teeth-braces/"
+    }
+  ],
+  "images": [
+    {
+      "src": "originals/dr-ta-hong-nhung/dr-nhung-munn2yp3-jeie.webp",
+      "name": "kate-portrait",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/layer-5-mu26v2y1-i5ju.webp",
+      "name": "kate-portrait-seated",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/dsc09303-2-mu22xse7-5s3c.webp",
+      "name": "kate-treating-patient",
+      "widths": [
+        480,
+        800,
+        1200
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/images-1.webp",
+      "name": "cert-dds-hmu",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/images-1-cff623b5.webp",
+      "name": "cert-msc-hmu",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/pasted-1788858833017-0.webp",
+      "name": "cert-diu-bordeaux",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/pasted-1788858840400-0.webp",
+      "name": "cert-3m-excellere",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/images-4.webp",
+      "name": "cert-invisalign-hao",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/jmortho-rogo1-768x434.webp",
+      "name": "cert-jm-ortho",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/asset-1-4x.webp",
+      "name": "cert-invisalign-platinum-2019",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/asset-2-4x.webp",
+      "name": "cert-invisalign-platinum-2020",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/asset-3-4x.webp",
+      "name": "cert-invisalign-platinum-2021",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case1-before.webp",
+      "name": "ortho-case-01-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case1-after.webp",
+      "name": "ortho-case-01-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case2-before.webp",
+      "name": "ortho-case-02-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case2-after.webp",
+      "name": "ortho-case-02-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case3-before.webp",
+      "name": "ortho-case-03-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case3-after.webp",
+      "name": "ortho-case-03-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case4-before.webp",
+      "name": "ortho-case-04-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case4-after.webp",
+      "name": "ortho-case-04-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case5-before.webp",
+      "name": "ortho-case-05-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case5-after.webp",
+      "name": "ortho-case-05-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case6-before-v2.webp",
+      "name": "ortho-case-06-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case6-after-v2.webp",
+      "name": "ortho-case-06-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case7-before-v2.webp",
+      "name": "ortho-case-07-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-ta-hong-nhung/case7-after-v2.webp",
+      "name": "ortho-case-07-after",
+      "widths": [
+        480,
+        800
+      ]
+    }
+  ],
+  "ogPortrait": "originals/dr-ta-hong-nhung/dr-nhung-munn2yp3-jeie.webp",
+  "ogLine": [
+    "Invisalign & clear aligners · Braces · TMJ & bite",
+    "15+ years · Platinum Invisalign Provider"
+  ],
+  "imgDir": "/dr-ta-hong-nhung/img"
+}

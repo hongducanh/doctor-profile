@@ -1,0 +1,511 @@
+{
+  "slug": "dr-nguyen-duc-hieu",
+  "key": "henry",
+  "imgDir": "/dr-nguyen-duc-hieu/img",
+  "name": "Dr. Nguyen Duc Hieu",
+  "nick": "Dr. Henry",
+  "short": "Dr. Henry",
+  "pronoun": "he",
+  "pronounObj": "him",
+  "pronounPoss": "his",
+  "jobTitle": "Implant dentist",
+  "eyebrow": "DDS · Implant dentist · Greenfield Dental",
+  "title": "Dr. Nguyen Duc Hieu (Dr. Henry) — Implant Dentist in Hanoi | Greenfield Dental",
+  "description": "Dr. Nguyen Duc Hieu (Dr. Henry), implant dentist at Greenfield Dental, Hanoi: digital implant planning, All-on-4 / All-on-6, bone grafting and oral surgery. 6+ years, 1,000+ implant cases.",
+  "lead": "Dr. Nguyen Duc Hieu (Dr. Henry) is an implant dentist with a special interest in digital implant planning, periodontics and oral surgery. He plans every stage digitally, starting with healthy bone and gum foundations, so each implant is built for long-term function.",
+  "chips": [
+    "Dental implants",
+    "Tooth extractions & oral surgery",
+    "Full-arch implant rehabilitation"
+  ],
+  "portrait": "henry-portrait",
+  "portraitAlt": "Dr. Nguyen Duc Hieu (Dr. Henry), implant dentist at Greenfield Dental",
+  "stats": [
+    {
+      "n": "6+",
+      "l": "Years in clinical practice"
+    },
+    {
+      "n": "1,000+",
+      "l": "Implant cases"
+    }
+  ],
+  "about": {
+    "eyebrow": "About Dr. Henry",
+    "h2": "Where precision",
+    "h2em": "meets experience.",
+    "img": "henry-treating-patient",
+    "imgAlt": "Dr. Henry treating a patient at Greenfield Dental",
+    "p": [
+      "Dr. Henry focuses on implant dentistry and minor oral surgery. He combines digital planning with careful surgical technique to restore function, stability and a natural-looking result.",
+      "For Dr. Henry, dentistry is about making a real difference: restoring a patient's ability to eat, speak and smile with confidence is what drives his work every day."
+    ],
+    "creds": [
+      {
+        "t": "Doctor of Dental Surgery",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "Implantology diploma",
+        "s": "Bordeaux, France"
+      },
+      {
+        "t": "Digital implant dentistry",
+        "s": "3D scanning and digital treatment planning"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Single & multiple implants",
+      "s": "Implant placement · Implant crowns and bridges",
+      "link": "https://greenfield.clinic/dental-implants-vietnam/"
+    },
+    {
+      "t": "All-on-4 & All-on-6",
+      "s": "Full-arch rehabilitation · Fixed teeth",
+      "img": "all-on-4-fixed-bridge",
+      "imgAlt": "Full-arch fixed bridge on implants",
+      "link": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/"
+    },
+    {
+      "t": "Full-mouth restoration",
+      "s": "Implants · Crowns · Bridges",
+      "link": "https://greenfield.clinic/dental-crowns/"
+    },
+    {
+      "t": "Bone grafting & sinus lift",
+      "s": "Bone augmentation before implants"
+    },
+    {
+      "t": "Wisdom teeth & oral surgery",
+      "s": "Surgical extraction · Minor oral surgery"
+    }
+  ],
+  "quote": {
+    "text": "When the foundation is right,",
+    "em": "long-term success follows.",
+    "by": "Dr. Nguyen Duc Hieu — Dr. Henry",
+    "role": "Implantologist of Greenfield Dental",
+    "img": "henry-portrait-smile",
+    "attr": "Dr. Nguyen Duc Hieu (Henry) · Implant dentist",
+    "proof": [
+      {
+        "n": "Free",
+        "l": "examination & consultation"
+      },
+      {
+        "n": "3D",
+        "l": "digital implant planning"
+      },
+      {
+        "n": "Written",
+        "l": "plan & quote first"
+      }
+    ],
+    "btn": "Message Dr. Henry on WhatsApp"
+  },
+  "certs": [
+    {
+      "img": "cert-implant-placement-hmu",
+      "t": "Dental Implant Placement",
+      "s": "Institute of Odonto-Stomatology, Hanoi Medical University"
+    },
+    {
+      "img": "cert-full-arch-otp-dentis",
+      "t": "Full-Arch Dental Implants with the OTP Concept",
+      "s": "DENTIS Vietnam"
+    },
+    {
+      "img": "cert-reconstructive-surgery",
+      "t": "Reconstructive Surgery Around Teeth and Implants",
+      "s": "Peace of Mind for Dentists"
+    },
+    {
+      "img": "cert-advanced-veneers-dmg",
+      "t": "Advanced Veneers & Full-Mouth Rehabilitation",
+      "s": "DMG"
+    },
+    {
+      "img": "cert-peri-implant-soft-tissue",
+      "t": "Implant Prosthodontics and Peri-Implant Soft Tissue Management",
+      "s": "Tín Nha"
+    }
+  ],
+  "cases": [
+    {
+      "img": "implant-case-01",
+      "t": "Dentium implants with zirconia crowns",
+      "d": "Implant-supported zirconia crowns to replace six missing teeth, restore function and help preserve the jawbone.",
+      "m": "Implant dentistry"
+    },
+    {
+      "img": "implant-case-02",
+      "t": "All-on-6 implant rehabilitation",
+      "d": "A full-arch All-on-6 restoration for extensive tooth loss, bone loss and periodontal disease, restoring stable function.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-03",
+      "t": "All-on-4 full-arch restoration",
+      "d": "All-on-4 implants for a severely compromised dentition with multiple missing and fractured teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-04",
+      "t": "All-on-6 implant rehabilitation",
+      "d": "All-on-6 implants to restore function after advanced periodontitis, grade 3 bone loss and six missing teeth.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-05",
+      "t": "Dentium implants with Ceramill crowns",
+      "d": "Implant-supported Ceramill crowns for eleven missing teeth, extensive wear, fractures and sensitivity.",
+      "m": "Implant dentistry"
+    },
+    {
+      "img": "implant-case-06",
+      "t": "All-on-4 full-arch restoration",
+      "d": "All-on-4 implants to replace fifteen missing teeth in a case with periodontitis, loose teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-07",
+      "t": "All-on-4 full-arch restoration",
+      "d": "A stable All-on-4 solution after extensive tooth loss, periodontitis, loose teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-08",
+      "t": "Neodent implants with Ceramill Zolid restorations",
+      "d": "Implants and ceramic restorations to replace four missing teeth and treat dental cysts and cervical wear.",
+      "m": "Implant dentistry"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you travel",
+      "d": "Send photos and X-rays for Dr. Henry's first opinion.",
+      "g": "pre"
+    },
+    {
+      "t": "Arrival in Hanoi",
+      "d": "Airport pickup and help with your stay.",
+      "g": "t1"
+    },
+    {
+      "t": "Examination & 3D scan",
+      "d": "Free exam with Dr. Henry plus a CBCT scan.",
+      "g": "t1"
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Written timeline and quote; grafting quoted as a range.",
+      "g": "t1"
+    },
+    {
+      "t": "Implant surgery",
+      "d": "Implants placed; temporary teeth where bone allows.",
+      "g": "t1"
+    },
+    {
+      "t": "Check-ups during your stay",
+      "d": "Healing review before you fly home.",
+      "g": "t1"
+    },
+    {
+      "t": "Final teeth & follow-up",
+      "d": "Final crowns or bridge fitted, then remote check-ins.",
+      "g": "t2"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can I complete implant treatment in one trip?",
+      "a": "Usually it takes two trips. On the first trip (about 5–7 days) Dr. Henry places the implants and, for All-on-4 or All-on-6 where bone allows, fits a fixed temporary bridge. After the implants heal, typically 3–6 months, a second trip of a few days fits the final bridge or crowns. Cases that need bone grafting can take longer; Dr. Henry confirms the plan after your scan."
+    },
+    {
+      "q": "How long do dental implants last?",
+      "a": "Implants are designed as a long-term solution. With good home care and regular check-ups many last 15–20 years or longer. The crowns or bridge on top may need maintenance or replacement over time."
+    },
+    {
+      "q": "Can I eat normally after full-mouth implant treatment?",
+      "a": "Yes, once healing is complete and your final restoration is fitted. Straight after surgery we give you a short soft-food guide to protect the healing tissue."
+    },
+    {
+      "q": "What is the difference between All-on-4 and All-on-6?",
+      "a": "Both replace a full arch of teeth with a fixed bridge. All-on-6 uses six implants instead of four, which gives extra support and can suit patients with lower bone density or a stronger bite."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after the examination and scan, before any treatment starts. Items that depend on your scan, such as bone grafting, sinus lift or IV sedation, are quoted as a range so there are no surprises."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Henry.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Henry reviews your case before you travel and replies with a suitable treatment direction."
+  },
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Henry.",
+  "related": [
+    {
+      "t": "Dental implants in Vietnam",
+      "u": "https://greenfield.clinic/dental-implants-vietnam/"
+    },
+    {
+      "t": "All-on-4 / All-on-6",
+      "u": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/"
+    }
+  ],
+  "first": "Henry",
+  "specialty": [
+    "Implantology",
+    "Oral surgery",
+    "Periodontics"
+  ],
+  "badge": {
+    "n": "6+",
+    "l": "Years in<br>clinical practice"
+  },
+  "alumni": [
+    "Hanoi Medical University",
+    "Université de Bordeaux"
+  ],
+  "casesTeam": "implant",
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you travel",
+      "t1": "Trip 1 · about 5–7 days",
+      "t2": "Trip 2 · after 3–6 months"
+    },
+    "gap": "healing",
+    "gapLong": "Healing time · 3–6 months",
+    "intro": "Most implant cases take two trips: surgery first, final teeth after healing.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your implant journey"
+  },
+  "card": "Implantologist",
+  "role": "Implant dentist",
+  "images": [
+    {
+      "src": "originals/dr-nguyen-duc-hieu/dr-hi-u-munmxak1-5llj.webp",
+      "name": "henry-portrait",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/dr-hi-u-ph-mugh3txn-1425.webp",
+      "name": "henry-portrait-smile",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/dsc05583-muggy4oo-4rx8.webp",
+      "name": "henry-treating-patient",
+      "widths": [
+        480,
+        800,
+        1200
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/hcert1.webp",
+      "name": "cert-implant-placement-hmu",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/hcert2.webp",
+      "name": "cert-full-arch-otp-dentis",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/hcert3.webp",
+      "name": "cert-reconstructive-surgery",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/hcert4.webp",
+      "name": "cert-advanced-veneers-dmg",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/hcert5.webp",
+      "name": "cert-peri-implant-soft-tissue",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs1-before.webp",
+      "name": "implant-case-01-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs1-after.webp",
+      "name": "implant-case-01-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs2-before.webp",
+      "name": "implant-case-02-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs2-after.webp",
+      "name": "implant-case-02-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs3-before.webp",
+      "name": "implant-case-03-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs3-after.webp",
+      "name": "implant-case-03-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs4-before.webp",
+      "name": "implant-case-04-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs4-after.webp",
+      "name": "implant-case-04-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs5-before.webp",
+      "name": "implant-case-05-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs5-after.webp",
+      "name": "implant-case-05-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs6-before.webp",
+      "name": "implant-case-06-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs6-after.webp",
+      "name": "implant-case-06-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs7-before.webp",
+      "name": "implant-case-07-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs7-after.webp",
+      "name": "implant-case-07-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs8-before.webp",
+      "name": "implant-case-08-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-nguyen-duc-hieu/cs8-after.webp",
+      "name": "implant-case-08-after",
+      "widths": [
+        480,
+        800
+      ]
+    }
+  ],
+  "ogPortrait": "originals/dr-nguyen-duc-hieu/dr-hi-u-munmxak1-5llj.webp",
+  "ogLine": [
+    "Digital implant planning · Bone grafting · Oral surgery",
+    "6+ years · 1,000+ implant cases"
+  ]
+}

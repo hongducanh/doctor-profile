@@ -2,9 +2,30 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/", "destination": "https://greenfield.clinic/", "permanent": false }
+    {
+      "source": "/",
+      "destination": "https://greenfield.clinic/our-doctors/",
+      "permanent": false
+    }
   ],
   "headers": [
-    { "source": "/(.*)\\.(webp|js)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+    {
+      "source": "/shared/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }

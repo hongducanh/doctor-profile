@@ -1,0 +1,1 @@
+{ "name": "doctor-redesign-draft", "private": true, "type": "module", "scripts": { "images": "node build-images.mjs" }, "dependencies": { "sharp": "^0.34.0" } }

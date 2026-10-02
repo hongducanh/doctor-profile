@@ -1,3 +1,4 @@
-# Ghi chú nội bộ — không đưa lên site công khai
-CLAUDE.md
-README.md
+_build
+_redesign-draft
+node_modules
+*.md

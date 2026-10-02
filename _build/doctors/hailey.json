@@ -1,0 +1,443 @@
+{
+  "slug": "dr-pham-thi-thu-hien",
+  "key": "hailey",
+  "first": "Hailey",
+  "name": "Dr. Pham Thi Thu Hien",
+  "nick": "Dr. Hailey",
+  "short": "Dr. Hailey",
+  "pronoun": "she",
+  "pronounObj": "her",
+  "pronounPoss": "her",
+  "jobTitle": "General & restorative dentist",
+  "role": "General & restorative dentist",
+  "card": "General & restorative dentist",
+  "specialty": [
+    "Restorative dentistry",
+    "Endodontics",
+    "General dentistry"
+  ],
+  "eyebrow": "DDS · General & restorative dentist",
+  "title": "Dr. Pham Thi Thu Hien (Dr. Hailey) — Restorative Dentist in Hanoi | Greenfield Dental",
+  "description": "Dr. Pham Thi Thu Hien (Dr. Hailey), general and restorative dentist at Greenfield Dental, Hanoi: veneers, ceramic crowns, inlays and onlays, microscope-assisted root canal treatment. 6+ years, 200+ veneer and crown cases.",
+  "lead": "Dr. Pham Thi Thu Hien (Dr. Hailey) is a general and restorative dentist. She believes the best treatment isn't always the biggest one: by keeping as much healthy tooth as possible, she helps patients get conservative, natural-looking restorations that are built to last.",
+  "chips": [
+    "Veneers & ceramic crowns",
+    "Inlays & onlays",
+    "Microscope root canal treatment"
+  ],
+  "portrait": "hailey-portrait",
+  "portraitAlt": "Dr. Pham Thi Thu Hien (Dr. Hailey), general and restorative dentist at Greenfield Dental",
+  "stats": [
+    {
+      "n": "6+",
+      "l": "Years in clinical practice"
+    },
+    {
+      "n": "200+",
+      "l": "Veneer & crown cases"
+    }
+  ],
+  "badge": {
+    "n": "6+",
+    "l": "Years in<br>clinical practice"
+  },
+  "alumni": [
+    "Hanoi Medical University"
+  ],
+  "about": {
+    "eyebrow": "About Dr. Hailey",
+    "h2": "Healthy teeth,",
+    "h2em": "confident smiles.",
+    "img": "hailey-treating-patient",
+    "imgAlt": "Dr. Hailey treating a patient at Greenfield Dental",
+    "p": [
+      "Dr. Hailey provides general and restorative dentistry, from routine care to veneers, ceramic crowns, inlays and onlays, with a focus on conservative, long-lasting results.",
+      "She chose dentistry to help patients keep their own teeth healthy for as long as possible, and plans every restoration around the tooth structure that can be saved."
+    ],
+    "creds": [
+      {
+        "t": "Doctor of Dental Surgery",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "Restorative dentistry",
+        "s": "Veneers · Ceramic crowns · Inlays & onlays"
+      },
+      {
+        "t": "Microscope-assisted root canal treatment",
+        "s": "Saving natural teeth"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Veneers",
+      "s": "Minimal preparation · Natural shape and shade",
+      "link": "https://greenfield.clinic/porcelain-veneers/"
+    },
+    {
+      "t": "Ceramic crowns, inlays & onlays",
+      "s": "Rebuilding weakened teeth",
+      "link": "https://greenfield.clinic/dental-crowns/"
+    },
+    {
+      "t": "Root canal treatment under the microscope",
+      "s": "Treatment · Retreatment"
+    },
+    {
+      "t": "Clear aligners & braces",
+      "s": "Straightening before restorations",
+      "img": "clear-aligner-in-hand",
+      "imgAlt": "Clear aligner held in hand",
+      "link": "https://greenfield.clinic/invisalign-in-vietnam/"
+    },
+    {
+      "t": "General dentistry",
+      "s": "Check-ups · Fillings · Cleaning",
+      "link": "https://greenfield.clinic/general-dentistry/"
+    }
+  ],
+  "quote": {
+    "text": "The healthiest tooth is always your own.",
+    "em": "My role is to help you keep it for as long as possible.",
+    "by": "Dr. Pham Thi Thu Hien — Dr. Hailey",
+    "role": "General & restorative dentist, Greenfield Dental",
+    "img": "hailey-portrait-seated"
+  },
+  "certs": [
+    {
+      "img": "cert-dds-hmu",
+      "t": "Doctor of Dental Surgery",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "img": "cert-invisalign-hao",
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "img": "cert-jm-ortho",
+      "t": "Typodont Orthodontic Training Course",
+      "s": "JM Ortho, Hanoi"
+    },
+    {
+      "img": "cert-advanced-veneers-dmg",
+      "t": "Advanced Veneers & Full-Mouth Rehabilitation",
+      "s": "DMG"
+    }
+  ],
+  "casesTeam": "restorative",
+  "cases": [
+    {
+      "img": "restorative-case-01",
+      "t": "Severe tooth wear with sensitivity",
+      "d": "Ceramill Zolid crowns and E.max Press veneers to restore worn tooth structure, function and comfort.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "img": "restorative-case-02",
+      "t": "Multiple missing teeth with bone loss",
+      "d": "Zirconia crowns to restore compromised teeth and improve chewing function and stability.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "img": "restorative-case-03",
+      "t": "Missing tooth with extensive decay and wear",
+      "d": "Ceramill Zolid crowns to rebuild lost tooth structure and restore comfort and function.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "img": "restorative-case-04",
+      "t": "Missing teeth with bone loss and severe wear",
+      "d": "Dentium implants and zirconia crowns to replace missing teeth and restore worn teeth.",
+      "m": "3 visits · Implant & restorative dentistry"
+    },
+    {
+      "img": "restorative-case-05",
+      "t": "Missing and fractured teeth with deep caries",
+      "d": "Zirconia crowns and Biodentine restorations to rebuild and protect compromised teeth.",
+      "m": "3 visits · Restorative dentistry"
+    },
+    {
+      "img": "restorative-case-06",
+      "t": "Multiple missing teeth with severe wear",
+      "d": "Straumann implants and zirconia crowns to replace missing teeth and restore the bite.",
+      "m": "3 visits · Implant & restorative dentistry"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you travel",
+      "d": "Send photos and X-rays for Dr. Hailey's first opinion.",
+      "g": "pre"
+    },
+    {
+      "t": "Examination & scan",
+      "d": "Free exam with Dr. Hailey, X-rays and a digital scan.",
+      "g": "t1"
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Teeth, materials, visits and a written quote.",
+      "g": "t1"
+    },
+    {
+      "t": "Preparation",
+      "d": "Minimal preparation; temporaries while the lab works.",
+      "g": "t1"
+    },
+    {
+      "t": "Try-in",
+      "d": "Check shape, shade and bite before final fitting.",
+      "g": "t1"
+    },
+    {
+      "t": "Final fitting",
+      "d": "Crowns or veneers bonded and the bite checked.",
+      "g": "t1"
+    },
+    {
+      "t": "Follow-up",
+      "d": "Review at home with photos; check-ups as advised.",
+      "g": "t2"
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you travel",
+      "t1": "One trip · usually 5–10 days",
+      "t2": "After you return"
+    },
+    "gap": "home",
+    "gapLong": "After you return home",
+    "intro": "Most veneer and crown cases are completed in one trip, depending on how many teeth are treated.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your treatment journey"
+  },
+  "faqs": [
+    {
+      "q": "How do I know whether I need veneers or crowns?",
+      "a": "Veneers may suit teeth that need a change in shape or colour and still have enough healthy enamel. Crowns are usually considered when a tooth is significantly weakened or heavily restored. The choice is made after an examination."
+    },
+    {
+      "q": "Can a tooth become infected again after root canal treatment?",
+      "a": "It can. Reinfection may come from missed canals, leakage, new decay, cracks or a poor final restoration. Careful cleaning and sealing, ideally under a microscope, and a well-fitting final restoration help prevent it."
+    },
+    {
+      "q": "What are the options for replacing missing teeth?",
+      "a": "Depending on how many teeth are missing and the condition of the neighbouring teeth and bone, options include dental implants, implant-supported bridges, conventional bridges or removable dentures."
+    },
+    {
+      "q": "How long does orthodontic treatment usually take?",
+      "a": "Many cases take 12–24 months, but it depends on how complex the bite is, the method (braces or clear aligners) and how consistently the plan is followed. You get an estimate in writing after your examination."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after your examination, before any treatment starts. Anything that depends on what we find during treatment is explained and quoted as a range up front."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Hailey.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Hailey's team reviews your case and replies with a suitable treatment direction."
+  },
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Hailey.",
+  "related": [
+    {
+      "t": "Porcelain veneers",
+      "u": "https://greenfield.clinic/porcelain-veneers/"
+    },
+    {
+      "t": "Dental crowns",
+      "u": "https://greenfield.clinic/dental-crowns/"
+    },
+    {
+      "t": "General dentistry",
+      "u": "https://greenfield.clinic/general-dentistry/"
+    }
+  ],
+  "images": [
+    {
+      "src": "originals/dr-pham-thi-thu-hien/dr-hi-n-munmyfz0-ieri.webp",
+      "name": "hailey-portrait",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/dr-hien-ph-mugkhneo-8fs5.webp",
+      "name": "hailey-portrait-seated",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/k-p-t-c-sang-m-u-en-t-o-h-nh-b-i-t-c-ng-mugkabrs-3qqn.webp",
+      "name": "hailey-treating-patient",
+      "widths": [
+        480,
+        800,
+        1200
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/images-1.webp",
+      "name": "cert-dds-hmu",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/images-4.webp",
+      "name": "cert-invisalign-hao",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/jmortho-rogo1-768x434.webp",
+      "name": "cert-jm-ortho",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/cert-dmg.webp",
+      "name": "cert-advanced-veneers-dmg",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/1-before.webp",
+      "name": "restorative-case-01-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/1-after.webp",
+      "name": "restorative-case-01-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/2-before.webp",
+      "name": "restorative-case-02-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/2-after.webp",
+      "name": "restorative-case-02-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/3-before.webp",
+      "name": "restorative-case-03-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/3-after.webp",
+      "name": "restorative-case-03-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/4-before.webp",
+      "name": "restorative-case-04-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/4-after.webp",
+      "name": "restorative-case-04-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/5-before.webp",
+      "name": "restorative-case-05-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/5-after.webp",
+      "name": "restorative-case-05-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/6-before.webp",
+      "name": "restorative-case-06-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-pham-thi-thu-hien/6-after.webp",
+      "name": "restorative-case-06-after",
+      "widths": [
+        480,
+        800
+      ]
+    }
+  ],
+  "ogPortrait": "originals/dr-pham-thi-thu-hien/dr-hi-n-munmyfz0-ieri.webp",
+  "ogLine": [
+    "Veneers · Ceramic crowns · Microscope root canal",
+    "6+ years · 200+ veneer & crown cases"
+  ],
+  "imgDir": "/dr-pham-thi-thu-hien/img"
+}

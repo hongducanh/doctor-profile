@@ -1,0 +1,444 @@
+{
+  "slug": "dr-do-nhu-chuyen",
+  "key": "chris",
+  "first": "Chris",
+  "name": "Dr. Do Nhu Chuyen",
+  "nick": "Dr. Chris",
+  "short": "Dr. Chris",
+  "pronoun": "he",
+  "pronounObj": "him",
+  "pronounPoss": "his",
+  "jobTitle": "Implant dentist",
+  "role": "Implant dentist",
+  "card": "Implantologist",
+  "specialty": [
+    "Implantology",
+    "Oral surgery"
+  ],
+  "eyebrow": "DDS · Implant dentist · Greenfield Dental",
+  "title": "Dr. Do Nhu Chuyen (Dr. Chris) — Implant Dentist in Hanoi | Greenfield Dental",
+  "description": "Dr. Do Nhu Chuyen (Dr. Chris), implant surgeon at Greenfield Dental, Hanoi: All-on-4 / All-on-6, single and multiple implants, implant surgery under sedation. 12+ years, 10,000+ implants placed.",
+  "lead": "Dr. Do Nhu Chuyen (Dr. Chris) is an implant surgeon with 12+ years of clinical experience and more than 10,000 implants placed. A graduate of Hanoi Medical University, he focuses on full-arch treatment and complex cases, including implant surgery under sedation.",
+  "chips": [
+    "All-on-4 & All-on-6",
+    "Single & multiple implants",
+    "Implant surgery under sedation"
+  ],
+  "portrait": "chris-portrait",
+  "portraitAlt": "Dr. Do Nhu Chuyen (Dr. Chris), implant dentist at Greenfield Dental",
+  "stats": [
+    {
+      "n": "12+",
+      "l": "Years in clinical practice"
+    },
+    {
+      "n": "10,000+",
+      "l": "Implants placed"
+    }
+  ],
+  "badge": {
+    "n": "12+",
+    "l": "Years in<br>clinical practice"
+  },
+  "alumni": [
+    "Hanoi Medical University"
+  ],
+  "about": {
+    "eyebrow": "About Dr. Chris",
+    "h2": "Precision for",
+    "h2em": "every smile.",
+    "img": "chris-implant-surgery",
+    "imgAlt": "Dr. Chris performing implant surgery at Greenfield Dental",
+    "p": [
+      "Dr. Chris focuses on implant dentistry, All-on-4 and All-on-6, and minor oral surgery. He combines digital planning with careful surgical technique to restore function, stability and a natural-looking result.",
+      "For Dr. Chris, dentistry is about making a real difference: restoring a patient's comfort and confidence is what continues to drive his work every day."
+    ],
+    "creds": [
+      {
+        "t": "Doctor of Dental Surgery",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "All-on-4 & All-on-6",
+        "s": "Full-arch implant rehabilitation"
+      },
+      {
+        "t": "Implant surgery under sedation",
+        "s": "For complex and full-arch cases"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "All-on-4 & All-on-6",
+      "s": "Full-arch rehabilitation · Fixed teeth",
+      "img": "all-on-4-fixed-bridge",
+      "imgAlt": "Full-arch fixed bridge on implants",
+      "link": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/"
+    },
+    {
+      "t": "Single & multiple implants",
+      "s": "Implant placement · Implant crowns and bridges",
+      "link": "https://greenfield.clinic/dental-implants-vietnam/"
+    },
+    {
+      "t": "Implant surgery under sedation",
+      "s": "Complex and full-arch cases"
+    },
+    {
+      "t": "Bone grafting & sinus lift",
+      "s": "Bone augmentation before implants"
+    },
+    {
+      "t": "Wisdom teeth & oral surgery",
+      "s": "Surgical extraction · Minor oral surgery"
+    }
+  ],
+  "quote": {
+    "text": "The best treatment starts with listening.",
+    "em": "Only by understanding each patient's needs can we recommend the right solution.",
+    "by": "Dr. Do Nhu Chuyen — Dr. Chris",
+    "role": "Implantologist of Greenfield Dental",
+    "img": "chris-portrait-seated"
+  },
+  "certs": [
+    {
+      "img": "cert-dds-hmu",
+      "t": "Doctor of Dental Surgery",
+      "s": "Hanoi Medical University"
+    }
+  ],
+  "casesTeam": "implant",
+  "cases": [
+    {
+      "img": "implant-case-01",
+      "t": "Dentium implants with zirconia crowns",
+      "d": "Implant-supported zirconia crowns to replace six missing teeth, restore function and help preserve the jawbone.",
+      "m": "Implant dentistry"
+    },
+    {
+      "img": "implant-case-02",
+      "t": "All-on-6 implant rehabilitation",
+      "d": "A full-arch All-on-6 restoration for extensive tooth loss, bone loss and periodontal disease, restoring stable function.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-03",
+      "t": "All-on-4 full-arch restoration",
+      "d": "All-on-4 implants for a severely compromised dentition with multiple missing and fractured teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-04",
+      "t": "All-on-6 implant rehabilitation",
+      "d": "All-on-6 implants to restore function after advanced periodontitis, grade 3 bone loss and six missing teeth.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-05",
+      "t": "Dentium implants with Ceramill crowns",
+      "d": "Implant-supported Ceramill crowns for eleven missing teeth, extensive wear, fractures and sensitivity.",
+      "m": "Implant dentistry"
+    },
+    {
+      "img": "implant-case-06",
+      "t": "All-on-4 full-arch restoration",
+      "d": "All-on-4 implants to replace fifteen missing teeth in a case with periodontitis, loose teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-07",
+      "t": "All-on-4 full-arch restoration",
+      "d": "A stable All-on-4 solution after extensive tooth loss, periodontitis, loose teeth and bone loss.",
+      "m": "Full-arch implants"
+    },
+    {
+      "img": "implant-case-08",
+      "t": "Neodent implants with Ceramill Zolid restorations",
+      "d": "Implants and ceramic restorations to replace four missing teeth and treat dental cysts and cervical wear.",
+      "m": "Implant dentistry"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you travel",
+      "d": "Send photos and X-rays for Dr. Chris's first opinion.",
+      "g": "pre"
+    },
+    {
+      "t": "Arrival in Hanoi",
+      "d": "Airport pickup and help with your stay.",
+      "g": "t1"
+    },
+    {
+      "t": "Examination & 3D scan",
+      "d": "Free exam with Dr. Chris plus a CBCT scan.",
+      "g": "t1"
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Written timeline and quote; grafting quoted as a range.",
+      "g": "t1"
+    },
+    {
+      "t": "Implant surgery",
+      "d": "Implants placed; temporary teeth where bone allows.",
+      "g": "t1"
+    },
+    {
+      "t": "Check-ups during your stay",
+      "d": "Healing review before you fly home.",
+      "g": "t1"
+    },
+    {
+      "t": "Final teeth & follow-up",
+      "d": "Final crowns or bridge fitted, then remote check-ins.",
+      "g": "t2"
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you travel",
+      "t1": "Trip 1 · about 5–7 days",
+      "t2": "Trip 2 · after 3–6 months"
+    },
+    "gap": "healing",
+    "gapLong": "Healing time · 3–6 months",
+    "intro": "Most implant cases take two trips: surgery first, final teeth after healing.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your implant journey"
+  },
+  "faqs": [
+    {
+      "q": "Can I complete implant treatment in one trip?",
+      "a": "Usually it takes two trips. On the first trip (about 5–7 days) Dr. Chris places the implants and, for All-on-4 or All-on-6 where bone allows, fits a fixed temporary bridge. After the implants heal, typically 3–6 months, a second trip of a few days fits the final bridge or crowns. Cases that need bone grafting can take longer; Dr. Chris confirms the plan after your scan."
+    },
+    {
+      "q": "How long do dental implants last?",
+      "a": "Implants are designed as a long-term solution. With good home care and regular check-ups many last 15–20 years or longer. The crowns or bridge on top may need maintenance or replacement over time."
+    },
+    {
+      "q": "Can I eat normally after full-mouth implant treatment?",
+      "a": "Yes, once healing is complete and your final restoration is fitted. Straight after surgery we give you a short soft-food guide to protect the healing tissue."
+    },
+    {
+      "q": "What is the difference between All-on-4 and All-on-6?",
+      "a": "Both replace a full arch of teeth with a fixed bridge. All-on-6 uses six implants instead of four, which gives extra support and can suit patients with lower bone density or a stronger bite."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after the examination and scan, before any treatment starts. Items that depend on your scan, such as bone grafting, sinus lift or IV sedation, are quoted as a range so there are no surprises."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Chris.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Chris reviews your case before you travel and replies with a suitable treatment direction."
+  },
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Chris.",
+  "related": [
+    {
+      "t": "All-on-4 / All-on-6",
+      "u": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/"
+    },
+    {
+      "t": "Dental implants in Vietnam",
+      "u": "https://greenfield.clinic/dental-implants-vietnam/"
+    }
+  ],
+  "images": [
+    {
+      "src": "originals/dr-do-nhu-chuyen/dr-chuy-n-munkdq66-2r0p.webp",
+      "name": "chris-portrait",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/dr-chuy-n-ph-mugh8et3-5n1e.webp",
+      "name": "chris-portrait-seated",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/tnm8070-feeef017.webp",
+      "name": "chris-implant-surgery",
+      "widths": [
+        480,
+        800,
+        1200
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cert-n1.webp",
+      "name": "cert-dds-hmu",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs1-before.webp",
+      "name": "implant-case-01-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs1-after.webp",
+      "name": "implant-case-01-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs2-before.webp",
+      "name": "implant-case-02-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs2-after.webp",
+      "name": "implant-case-02-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs3-before.webp",
+      "name": "implant-case-03-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs3-after.webp",
+      "name": "implant-case-03-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs4-before.webp",
+      "name": "implant-case-04-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs4-after.webp",
+      "name": "implant-case-04-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs5-before.webp",
+      "name": "implant-case-05-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs5-after.webp",
+      "name": "implant-case-05-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs6-before.webp",
+      "name": "implant-case-06-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs6-after.webp",
+      "name": "implant-case-06-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs7-before.webp",
+      "name": "implant-case-07-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs7-after.webp",
+      "name": "implant-case-07-after",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs8-before.webp",
+      "name": "implant-case-08-before",
+      "widths": [
+        480,
+        800
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cs8-after.webp",
+      "name": "implant-case-08-after",
+      "widths": [
+        480,
+        800
+      ]
+    }
+  ],
+  "ogPortrait": "originals/dr-do-nhu-chuyen/dr-chuy-n-munkdq66-2r0p.webp",
+  "ogLine": [
+    "All-on-4 / All-on-6 · Implant surgery under sedation",
+    "12+ years · 10,000+ implants placed"
+  ],
+  "imgDir": "/dr-do-nhu-chuyen/img"
+}
