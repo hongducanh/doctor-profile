@@ -575,7 +575,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
   <div class="pad">
     <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
     <nav class="nav" aria-label="${esc(T.navAria)}">
-      ${menu(T.nav.services, MN.services)}${menu(T.nav.results, MN.results)}${menu(T.nav.about, MN.about)}<details class="dd"><summary>${esc(U.doctors)}</summary><div class="dd-panel">${docLinks()}</div></details><a href="${L("contact")}">${esc(T.nav.contact)}</a>
+      ${menu(T.nav.services, MN.services)}${menu(T.nav.results, MN.results)}${menu(T.nav.about, MN.about)}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
     </nav>
     <div class="hdr-right">
       <details class="dd lang-dd"><summary aria-label="${esc(T.langAria)}: ${esc(T.langName)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="dd-panel">${langLinks()}</div></details>
@@ -589,7 +589,6 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="mh">${esc(T.nav.services)}</p>${items(MN.services.slice(0, MN.mobileServices))}
     <p class="mh">${esc(T.nav.results)}</p>${items(MN.results)}
     <p class="mh">${esc(T.nav.about)}</p>${items(MN.about.slice(0, MN.mobileAbout))}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
-    <p class="mh">${esc(U.doctors)}</p>${docLinks()}
     <p class="mh">${esc(T.langAria)}</p><div class="mlang">${langLinks()}</div>
     <a class="hbtn" href="${primary}" target="_blank" rel="noopener">${esc(T.freeConsult)}</a>
   </div>
