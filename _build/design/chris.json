@@ -366,5 +366,79 @@
    "country": "Australia",
    "text": "Dr. Chris made me feel comfortable from the very first consultation. His gentle hands, attention to detail, and genuine compassion turned a treatment I once feared into an experience I'll always remember. I absolutely love my new smile."
   }
- ]
+ ],
+ "certsI18n": {
+  "vi": [
+   [
+    "Chứng chỉ Thiết kế nụ cười nâng cao",
+    "Korean Academy of Aesthetic Dentistry"
+   ],
+   [
+    "Fellowship Phục hình trên implant",
+    "ITI – International Team for Implantology"
+   ],
+   [
+    "Chứng chỉ chuyên sâu Khớp thái dương hàm & Khớp cắn",
+    "European Board of Orthodontics"
+   ],
+   [
+    "Nha sĩ thẩm mỹ hàng đầu — châu Á – Thái Bình Dương",
+    "International Dental Excellence Awards"
+   ]
+  ],
+  "es": [
+   [
+    "Certificación avanzada en diseño de sonrisa",
+    "Korean Academy of Aesthetic Dentistry"
+   ],
+   [
+    "Fellowship en prótesis sobre implantes",
+    "ITI – International Team for Implantology"
+   ],
+   [
+    "Certificación de especialista en ATM y oclusión",
+    "European Board of Orthodontics"
+   ],
+   [
+    "Mejor dentista estético — Asia-Pacífico",
+    "International Dental Excellence Awards"
+   ]
+  ],
+  "ko": [
+   [
+    "고급 스마일 디자인 자격증",
+    "대한심미치과학회 (Korean Academy of Aesthetic Dentistry)"
+   ],
+   [
+    "임플란트 보철 펠로우십",
+    "ITI 국제임플란트학회"
+   ],
+   [
+    "턱관절·교합 전문 자격증",
+    "유럽교정치과위원회 (European Board of Orthodontics)"
+   ],
+   [
+    "아시아 태평양 최고 심미 치과의사",
+    "International Dental Excellence Awards"
+   ]
+  ],
+  "zh": [
+   [
+    "高级微笑设计认证",
+    "韩国美学牙科学会（Korean Academy of Aesthetic Dentistry）"
+   ],
+   [
+    "种植修复研修（Fellowship）",
+    "国际口腔种植学会（ITI）"
+   ],
+   [
+    "颞下颌关节与咬合专科认证",
+    "欧洲正畸委员会（European Board of Orthodontics）"
+   ],
+   [
+    "亚太区顶尖美学牙医",
+    "International Dental Excellence Awards"
+   ]
+  ]
+ }
 }
