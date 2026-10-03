@@ -133,7 +133,7 @@ const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'
 const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
 const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
 const num = (n) => (lang === "vi" || lang === "es" ? String(n).replace(/(\d),(?=\d{3}\b)/g, "$1.") : String(n));
-const nav = [["about", 0], ["expertise", 1], ["journey", 2], ["cases", 3], ["reviews", 4], ["faq", 5]];
+const nav = [["about", 0], ["expertise", 1], ["cases", 3], ["reviews", 4], ["journey", 2], ["faq", 5]]; // đúng thứ tự các phần trên trang
 const ICON = { arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>` };
 // Header web chính: menu ngôn ngữ trỏ sang trang bác sĩ cùng ngôn ngữ (thứ tự + tên như web chính; web VI đưa Tiếng Việt lên đầu).
 const LORD = isVI ? ["vi", "en", "es", "ko", "zh"] : ["en", "es", "ko", "zh", "vi"];
