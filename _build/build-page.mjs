@@ -280,11 +280,15 @@ a.card:hover{border-color:var(--gold)}
 .commit .ic svg{width:22px;height:22px}
 .commit b{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-weight:600;line-height:1.35} .commit p{margin-top:4px;font-size:14px;line-height:1.55;color:var(--muted)}
 
-.odocs{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.odocs a{display:flex;align-items:center;gap:16px;min-height:88px;padding:10px 16px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;text-decoration:none;overflow:hidden}
-.odocs a:hover{border-color:var(--gold)}
-.odocs picture{flex:none;width:64px;align-self:end} .odocs img{width:64px;height:auto}
-.odocs span{display:grid;gap:2px;padding-bottom:10px} .odocs b{font-size:16px;font-weight:600} .odocs small{font-size:14px;color:var(--muted)}
+/* Bác sĩ khác: avatar tròn cắt đầu–vai (ảnh gốc là toàn thân, tỉ lệ khác nhau), thẻ cao bằng nhau (03/10/2026). */
+.odocs{list-style:none;margin:0;padding:0;display:grid;gap:12px;align-items:stretch}
+.odocs li{display:flex}
+.odocs a{flex:1;display:flex;align-items:center;gap:16px;min-height:104px;padding:16px;background:var(--paper);border:1px solid var(--line);border-radius:14px;text-decoration:none;color:inherit;transition:border-color .2s}
+.odocs a:hover,.odocs a:focus-visible{border-color:var(--gold)}
+.odocs picture{flex:none;display:block;width:72px;height:72px;border-radius:50%;overflow:hidden;background:#E9ECEA}
+.odocs img{display:block;width:72px;height:72px;object-fit:cover;object-position:50% 0;transform:scale(1.55);transform-origin:50% 4%}
+.odocs span{flex:1;min-width:0;display:grid;gap:4px} .odocs b{font-size:16px;font-weight:600;line-height:1.3} .odocs small{font-size:14px;line-height:1.4;color:var(--muted)}
+.odocs .go{flex:none;width:20px;height:20px;color:var(--gold)} .odocs .go svg{width:20px;height:20px}
 .cta{position:relative;color:#fff;background:var(--moss);overflow:hidden;margin-bottom:56px}
 .cta picture{position:absolute;inset:0} .cta picture img{width:100%;height:100%;object-fit:cover;opacity:.28}
 .cta .wrap{position:relative;display:grid;gap:18px;padding-block:72px}
@@ -544,7 +548,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 <section class="block others" aria-labelledby="others-h" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head"><p class="eyebrow">Our team</p><h2 id="others-h">Other Greenfield <em>doctors</em></h2></div>
-    <ul class="odocs">${others.map((o) => `<li><a href="/${o.slug}">${pic(o.portrait, o.portraitAlt, "120px", { slug: o.slug })}<span><b>${esc(o.name)}</b><small>${esc(o.nick)} · ${esc(o.card)}</small></span></a></li>`).join("")}</ul>
+    <ul class="odocs">${others.map((o) => `<li><a href="/${o.slug}">${pic(o.portrait, o.portraitAlt, "120px", { slug: o.slug })}<span><b>${esc(o.name)}</b><small>${esc(o.nick)} · ${esc(o.card)}</small></span><i class="go" aria-hidden="true">${ICON.arrow}</i></a></li>`).join("")}</ul>
   </div>
 </section>
 
