@@ -1,0 +1,338 @@
+{
+ "eyebrow": "DDS | MSc. | Fundadora y directora clínica",
+ "h1": [
+  "Dra.",
+  "Ta Hong Nhung"
+ ],
+ "checks": [
+  "Ortodoncia",
+  "Endodoncia",
+  "Prostodoncia"
+ ],
+ "lead": "Tras formarse en Europa y Asia, la Dra. Ta Hong Nhung, MSc., fundó Greenfield Dental con una visión sencilla: crear una clínica donde una odontología excepcional vaya de la mano de una experiencia del paciente igualmente excepcional.",
+ "badge": {
+  "l": "Años de experiencia"
+ },
+ "trust": {
+  "h2": [
+   "Por qué los pacientes",
+   "confían en ella"
+  ],
+  "p": "Ver a pacientes que sufrían ansiedad, molestias y una atención impersonal inspiró a la Dra. Nhung a crear un tipo de clínica dental diferente, en la que cada paciente se sienta respetado, cómodo y verdaderamente cuidado.",
+  "stats": [
+   {
+    "k": "Experiencia",
+    "l": "Años de experiencia"
+   },
+   {
+    "k": "Pacientes",
+    "l": "Pacientes tratados"
+   },
+   {
+    "k": "Ortodoncia",
+    "l": "Casos de ortodoncia"
+   },
+   {
+    "k": "Prostodoncia",
+    "l": "Casos de prostodoncia"
+   }
+  ]
+ },
+ "about": {
+  "eyebrow": "Sobre la Dra. Ta Hong Nhung — Kate",
+  "h2": "Un solo plan para<br>toda su sonrisa",
+  "p": "Especializada en ortodoncia, endodoncia y prostodoncia, la Dra. Kate aborda cada caso como un único plan en lugar de procedimientos separados, documentado con imágenes de antes, durante y después.",
+  "explore": "Conozca sus especialidades",
+  "chips": [
+   {
+    "t": "Universidad de Medicina de Hanói",
+    "s": "Doctora en Cirugía Dental"
+   },
+   {
+    "t": "Invisalign Platinum",
+    "s": "Proveedora certificada"
+   },
+   {
+    "t": "Diploma en implantología",
+    "s": "Burdeos, Francia"
+   }
+  ]
+ },
+ "expertiseH2": [
+  "Áreas de",
+  "especialización"
+ ],
+ "advice": {
+  "h": "¿No sabe qué<br>tratamiento necesita?",
+  "p": "Envíenos fotos de sus dientes y cuéntenos sus inquietudes. La Dra. Nhung le recomendará el enfoque de tratamiento más adecuado.",
+  "btn": "Solicitar asesoramiento"
+ },
+ "expertise": [
+  {
+   "t": "Endodoncia microquirúrgica<br>bajo microscopio",
+   "s": "Tratamiento de conductos · Retratamiento · Apicectomía"
+  },
+  {
+   "t": "Alineadores transparentes<br>y brackets modernos",
+   "s": "Invisalign · G-FLEX · Brackets cerámicos"
+  },
+  {
+   "t": "Odontología restauradora<br>y rehabilitación de la sonrisa",
+   "s": "Carillas · Coronas de cerámica pura · Incrustaciones inlay y onlay"
+  },
+  {
+   "t": "Corrección de la mordida<br>y casos complejos de ortodoncia",
+   "s": "Apiñamiento · Mordida profunda · Mordida cruzada · Maloclusión"
+  },
+  {
+   "t": "Restauraciones de precisión<br>para sonrisas naturales",
+   "s": "Restauraciones cerámicas · Coronas · Rehabilitación funcional"
+  }
+ ],
+ "quote": {
+  "text": "Los pacientes no solo deberían recibir tratamiento. Deberían",
+  "em": "disfrutar de cada momento de su atención.",
+  "by": "Dra. Ta Hong Nhung — Dra. Kate",
+  "role": "Fundadora y CEO de Greenfield Dental"
+ },
+ "certsH2": [
+  "Certificados y",
+  "reconocimientos"
+ ],
+ "casesH2": [
+  "Casos",
+  "clínicos"
+ ],
+ "casesIntro": "Fotografías clínicas reales, publicadas con el consentimiento del paciente.",
+ "reviewsH2": "Lo que dicen<br>nuestros pacientes",
+ "journeyH2": [
+  "El método",
+  "Greenfield"
+ ],
+ "journeyIntro": "Siete pasos fijos para cada caso, para que los pacientes sepan siempre en qué punto se encuentran.",
+ "faqH2": [
+  "Preguntas",
+  "frecuentes"
+ ],
+ "guaranteeH2": [
+  "El método",
+  "Greenfield"
+ ],
+ "guaranteeIntro": "Seis compromisos recogidos por escrito en el historial de tratamiento de cada paciente.",
+ "cta": {
+  "eyebrow": "Su siguiente paso",
+  "h2": "Dé el primer paso<br>hacia su nueva sonrisa",
+  "p": "Envíe fotos y sus inquietudes: la Dra. Kate revisa personalmente cada mensaje y le responde con una orientación de tratamiento adecuada.",
+  "btn": "Escríbanos por WhatsApp +84 906 621 988"
+ },
+ "foot": {
+  "h2": "Reserve hoy una consulta<br>con la Dra. Kate",
+  "hours": "Abierto toda la semana · 08:30 – 18:00",
+  "btn": "Reservar una consulta"
+ },
+ "faqs": [
+  {
+   "q": "¿Cuánto suele durar un tratamiento de ortodoncia?",
+   "a": "El tratamiento suele durar entre 12 y 24 meses, aunque la duración depende de la gravedad de la maloclusión, del método de tratamiento y de la constancia con la que el paciente siga las indicaciones."
+  },
+  {
+   "q": "¿Por qué son importantes los retenedores después del tratamiento de ortodoncia?",
+   "a": "Los dientes pueden desplazarse de forma natural tras el tratamiento. Los retenedores ayudan a mantener las posiciones dentales corregidas y reducen el riesgo de recidiva ortodóncica."
+  },
+  {
+   "q": "¿Puede un diente volver a infectarse después de una endodoncia?",
+   "a": "Sí. La reinfección puede producirse por conductos no tratados, filtraciones, nuevas caries, fisuras o una restauración inadecuada. Una limpieza, un sellado y una restauración final correctos son esenciales para el éxito a largo plazo."
+  },
+  {
+   "q": "¿Cómo sé si necesito carillas o coronas?",
+   "a": "Las carillas pueden ser adecuadas para mejorar la forma y el color de los dientes y corregir pequeñas imperfecciones estéticas cuando queda suficiente esmalte sano. Las coronas suelen considerarse cuando un diente está muy debilitado o estructuralmente comprometido."
+  },
+  {
+   "q": "¿Qué opciones existen para reemplazar los dientes perdidos?",
+   "a": "Según el número y el estado de los dientes perdidos, las opciones pueden incluir implantes dentales, puentes sobre implantes, puentes convencionales o prótesis removibles."
+  }
+ ],
+ "steps": [
+  {
+   "t": "Antes de su llegada",
+   "d": "Fotos, radiografías y consulta antes de viajar."
+  },
+  {
+   "t": "Recogida en el aeropuerto",
+   "d": "Traslado cómodo a su llegada a Vietnam."
+  },
+  {
+   "t": "Consulta",
+   "d": "Examen presencial y escáner 3D con la Dra. Kate."
+  },
+  {
+   "t": "Plan de tratamiento",
+   "d": "Plan claro, calendario y precio cerrado."
+  },
+  {
+   "t": "Tratamiento",
+   "d": "Realización de los procedimientos de ortodoncia o restauradores."
+  },
+  {
+   "t": "Atención durante su estancia",
+   "d": "Apoyo en la recuperación durante el resto de su viaje."
+  },
+  {
+   "t": "Seguimiento",
+   "d": "Controles a distancia después de regresar a casa."
+  }
+ ],
+ "guarantees": [
+  {
+   "t": "Garantía del tratamiento",
+   "d": "Garantía por escrito para los aparatos de ortodoncia y los trabajos restauradores de mayor envergadura."
+  },
+  {
+   "t": "Precios transparentes y cerrados",
+   "d": "Un único precio presupuestado tras la consulta, sin cargos adicionales ocultos."
+  },
+  {
+   "t": "Apoyo al paciente internacional",
+   "d": "Nos encargamos de la recogida en el aeropuerto, la traducción y la planificación de su viaje."
+  },
+  {
+   "t": "Tecnología y materiales modernos",
+   "d": "Escaneo digital, planificación del tratamiento en 3D y sistemas de alineadores de primera calidad."
+  },
+  {
+   "t": "Cuidados posteriores y seguimiento a distancia",
+   "d": "Controles y apoyo mucho tiempo después de que regrese a casa."
+  },
+  {
+   "t": "Calidad en la que puede confiar",
+   "d": "Una trayectoria construida sobre miles de casos completados."
+  }
+ ],
+ "cases": [
+  {
+   "t": "Mordida cruzada anterior con mordida borde a borde",
+   "d": "Brackets metálicos para corregir la mordida cruzada anterior, alinear ambas arcadas y mejorar la oclusión general.",
+   "m": "25 meses · Ortodoncia"
+  },
+  {
+   "t": "Biprotrusión maxilar con apiñamiento",
+   "d": "Brackets metálicos para retraer y alinear los dientes anteriores, corregir la mordida y mejorar la armonía facial y de la sonrisa.",
+   "m": "33 meses · Ortodoncia"
+  },
+  {
+   "t": "Resalte severo con mordida profunda",
+   "d": "Brackets metálicos para mejorar el resalte y la sobremordida, alinear ambas arcadas y establecer una oclusión más equilibrada.",
+   "m": "34 meses · Ortodoncia"
+  },
+  {
+   "t": "Arcadas estrechas con sonrisa gingival",
+   "d": "Brackets metálicos con expansión de las arcadas para corregir el apiñamiento y la mordida cruzada, creando a la vez una sonrisa más amplia y armoniosa.",
+   "m": "21 meses · Ortodoncia"
+  },
+  {
+   "t": "Mordida de clase III con mordida cruzada anterior",
+   "d": "Brackets metálicos para corregir la relación de clase III, alinear ambas arcadas y lograr una mordida funcional más estable.",
+   "m": "37 meses · Ortodoncia"
+  },
+  {
+   "t": "Apiñamiento y malposición dental severos",
+   "d": "Brackets metálicos para corregir el apiñamiento severo, alinear ambas arcadas y mejorar la armonía general de la mordida y la sonrisa.",
+   "m": "28 meses · Ortodoncia"
+  },
+  {
+   "t": "Apiñamiento de la arcada inferior con asimetría mandibular",
+   "d": "Tratamiento con Invisalign para alinear los dientes apiñados, mejorar la simetría mandibular y lograr una oclusión general más equilibrada.",
+   "m": "25 meses · Ortodoncia"
+  }
+ ],
+ "certs": [
+  {
+   "t": "Doctora en Cirugía Dental",
+   "s": "Universidad de Medicina de Hanói"
+  },
+  {
+   "t": "Odontoestomatología",
+   "s": "Universidad de Medicina de Hanói"
+  },
+  {
+   "t": "Diploma Interuniversitario en Implantología Quirúrgica y Protésica",
+   "s": "Facultad de Odontología – Burdeos – Francia"
+  },
+  {
+   "t": "Programa Educativo para Ortodoncistas de Vietnam",
+   "s": "3M Excellere Asia Pacific"
+  },
+  {
+   "t": "Invisalign – Master Class HAO",
+   "s": "Invisalign"
+  },
+  {
+   "t": "Curso de formación en ortodoncia sobre typodont en Hanói",
+   "s": "JM Ortho"
+  },
+  {
+   "t": "Certificado de Proveedor Invisalign Platinum 2019",
+   "s": "Invisalign"
+  },
+  {
+   "t": "Certificado de Proveedor Invisalign Platinum 2020",
+   "s": "Invisalign"
+  },
+  {
+   "t": "Certificado de Proveedor Invisalign Platinum 2021",
+   "s": "Invisalign"
+  }
+ ],
+ "reviews": [
+  {
+   "name": "Emily Helen",
+   "country": "Reino Unido",
+   "text": "“La Dra. Nhung es verdaderamente excepcional. Es increíblemente hábil, profesional y atenta en cada cita. Su atención al detalle me dio plena confianza en mi tratamiento, y los resultados son incluso mejores de lo que imaginaba.”"
+  },
+  {
+   "name": "Sophie",
+   "country": "Australia",
+   "text": "“Desde mi primera consulta, la Dra. Kate me hizo sentir completamente a gusto. No solo es talentosa y profesional, sino también increíblemente atenta a cada pequeño detalle. Siempre sentí que estaba en las mejores manos.”"
+  },
+  {
+   "name": "Olivia",
+   "country": "Inglaterra",
+   "text": "“Elegir a la Dra. Nhung para mi tratamiento de ortodoncia fue una de las mejores decisiones que he tomado. Combina una gran experiencia con un enfoque muy cuidadoso y profesional. Cada paso se me explicó con claridad, y no podría estar más feliz con mi sonrisa.”"
+  },
+  {
+   "name": "Charlotte",
+   "country": "Canadá",
+   "text": "“La Dra. Nhung es extraordinaria en lo que hace. Es guapa, cálida, increíblemente profesional y se nota que le apasiona su trabajo. Me impresionó con cuánto cuidado planificó cada etapa de mi tratamiento y lo de cerca que siguió mi evolución.”"
+  },
+  {
+   "name": "Libby C.",
+   "country": "Australia",
+   "text": "“La Dra. Nhung hizo de mi proceso de ortodoncia una experiencia muy positiva. Tiene amplísimos conocimientos, es precisa y atenta, y siempre me hizo sentir cómoda. Su profesionalidad y su atención al detalle realmente destacan.”"
+  },
+  {
+   "name": "Anna",
+   "country": "Inglaterra",
+   "text": "“La Dra. Nhung me impresionó desde el principio. Es muy profesional, delicada y sumamente precisa en su trabajo. Cada cita parecía cuidadosamente planificada, y siempre se tomaba el tiempo necesario para asegurarse de que todo avanzaba a la perfección.”"
+  },
+  {
+   "name": "Rachel",
+   "country": "Singapur",
+   "text": "“La Dra. Nhung es una ortodoncista excepcional. Es increíblemente profesional y meticulosa, pero también cálida y cercana. Aprecié mucho lo de cerca que supervisó mi tratamiento y cómo me explicó cada detalle a lo largo del proceso.”"
+  },
+  {
+   "name": "Yuki",
+   "country": "Japón",
+   "text": "“La Dra. Nhung es una doctora maravillosa. Es muy delicada, profesional e increíblemente cuidadosa con cada detalle. Siempre me sentí escuchada y bien atendida, y ver cómo mejoraba mi sonrisa a lo largo del tratamiento ha sido increíble.”"
+  },
+  {
+   "name": "Minji",
+   "country": "Corea del Sur",
+   "text": "“Estoy muy agradecida de haber tenido a la Dra. Nhung como ortodoncista. Es talentosa, profesional e increíblemente atenta. Su enfoque cuidadoso y su ojo para el detalle me dieron confianza durante todo el tratamiento, y me encanta el resultado.”"
+  },
+  {
+   "name": "Linh",
+   "country": "Vietnam",
+   "text": "“La Dra. Nhung es muy dedicada y profesional. Me impresionó especialmente lo esmerada y meticulosa que es en cada etapa del tratamiento. Siempre lo explica todo con claridad y delicadeza, y me transmite mucha tranquilidad.”"
+  }
+ ]
+}
