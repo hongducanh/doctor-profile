@@ -765,5 +765,37 @@
    800
   ],
   "ratio": 1
+ },
+ "shared/hero-bg": {
+  "widths": [
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.6665
+ },
+ "dr-do-nhu-chuyen/cert-n2": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/cert-n3": {
+  "widths": [
+   447
+  ],
+  "ratio": 1
+ },
+ "dr-do-nhu-chuyen/cert-n4": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.5
+ },
+ "dr-do-nhu-chuyen/cert-n5": {
+  "widths": [
+   480
+  ],
+  "ratio": 0.6628
  }
 }

@@ -39,6 +39,9 @@ const SHARED = [
   [join(SHARED_SRC, "t-i-xu-ng-2-mugfmn2y-s597.webp"), "all-on-4-fixed-bridge", [480, 800]],
   [join(SHARED_SRC, "8z8a3280-large-mu23juy1-2j45.webp"), "greenfield-clinic-lounge", [480, 800, 1200]],
   [P("./originals/dr-ta-hong-nhung/chatgpt-image-17-19-07-8-thg-9-2026.webp"), "clear-aligner-in-hand", [480, 800]],
+  [P("./originals/dr-ta-hong-nhung/5913b9c3-d062-40a6-8993-82a877844304.webp"), "dental-examination", [480, 800]],
+  // Giao diện mới (03/10/2026): nền màn đầu (lớp xanh rêu của thiết kế)
+  [P("./originals/dr-ta-hong-nhung/3149498-mudi0z1l-5dwo.webp"), "hero-bg", [800, 1200, 1600]],
 ];
 const sharedDir = join(DIST, "shared/img"); mkdirSync(sharedDir, { recursive: true });
 for (const [src, name, ws] of SHARED) await variants(src, sharedDir, name, ws, `shared/${name}`);
@@ -49,6 +52,8 @@ const logoSrc = P("./shared/img/logo-white-300.webp");
   const { data, info } = await sharp(logoSrc).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   for (let i = 0; i < data.length; i += 4) { data[i] = 255; data[i + 1] = 255; data[i + 2] = 255; }
   await sharp(data, { raw: info }).resize({ width: 160 }).webp({ quality: 90 }).toFile(join(sharedDir, "greenfield-logo-white-160.webp"));
+  // Logo ngang màu xanh (header giao diện mới)
+  await sharp(P("./shared/img/greenfield-logo-green.png")).resize({ height: 60 }).webp({ quality: 92 }).toFile(join(sharedDir, "greenfield-logo-green-60.webp"));
   for (const f of ["favicon-32.png", "favicon-192.png"]) copyFileSync(P(`./shared/img/${f}`), join(sharedDir, f));
   await sharp(P("./shared/img/favicon-32.png")).resize(32, 32).png().toFile(join(DIST, "favicon.png"));
 }
