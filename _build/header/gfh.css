@@ -1,0 +1,64 @@
+/* Header greenfield.clinic — đồng bộ footer #gf-footer (nền rêu, vàng). 26/09/2026 */
+#gfh{--h-bg:#16261E;--h-ink:rgba(255,255,255,.86);--h-dim:rgba(255,255,255,.6);--h-line:rgba(255,255,255,.12);--h-gold:#C9974A;--h-gold-hi:#d8a85c;--h-h:84px;
+  position:relative;background:var(--h-bg);color:var(--h-ink);font-family:'Be Vietnam Pro','GF Sans Fallback',system-ui,sans-serif;font-size:14px;line-height:1.3;transition:box-shadow .25s}
+#gfh *{box-sizing:border-box}
+#gfh a{color:inherit;text-decoration:none}
+#gfh.is-scrolled{--h-h:64px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+#gfh .gfh-in{max-width:1280px;margin:0 auto;height:var(--h-h);padding:0 24px;display:flex;align-items:center;gap:28px;transition:height .25s}
+#gfh .gfh-logo{flex:none;display:flex;align-items:center}
+#gfh .gfh-logo img{height:calc(var(--h-h) - 26px);width:auto;filter:brightness(0) invert(1);transition:height .25s}
+#gfh .gfh-nav{flex:1;display:flex;justify-content:center}
+#gfh .gfh-menu{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+#gfh .gfh-menu>li{position:relative}
+#gfh .gfh-top{display:inline-flex;align-items:center;gap:6px;height:var(--h-h);padding:0 14px;font-weight:500;color:var(--h-ink);background:none;border:0;font:inherit;font-weight:500;cursor:pointer;position:relative;transition:height .25s,color .2s}
+#gfh .gfh-top:hover,#gfh .gfh-top:focus-visible,#gfh li.is-open>.gfh-top{color:#fff}
+#gfh .gfh-top::after{content:"";position:absolute;left:14px;right:14px;bottom:18px;height:2px;background:var(--h-gold);transform:scaleX(0);transition:transform .2s}
+#gfh.is-scrolled .gfh-top::after{bottom:12px}
+#gfh .gfh-top[aria-current="page"]::after,#gfh li.is-current>.gfh-top::after,#gfh .gfh-top:hover::after{transform:scaleX(1)}
+#gfh .gfh-caret{width:10px;height:10px;opacity:.7;transition:transform .2s}
+#gfh li.is-open .gfh-caret{transform:rotate(180deg)}
+#gfh .gfh-panel{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:240px;background:#fff;color:#1d2a23;border-radius:14px;box-shadow:0 18px 50px rgba(10,25,18,.28);padding:14px;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s,visibility 0s .18s}
+#gfh li.is-open>.gfh-panel{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .18s,transform .18s}
+#gfh .gfh-panel a{display:block;padding:9px 12px;border-radius:8px;color:#1d2a23;font-weight:500}
+#gfh .gfh-panel a:hover,#gfh .gfh-panel a:focus-visible{background:#f3efe6;color:#16261E}
+#gfh .gfh-mega{display:grid;grid-template-columns:repeat(3,minmax(190px,1fr));gap:6px 10px;min-width:640px;padding:18px}
+#gfh .gfh-grp{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#a87a33;padding:4px 12px 6px}
+#gfh .gfh-right{flex:none;display:flex;align-items:center;gap:18px}
+#gfh .gfh-rating{display:flex;align-items:center;gap:8px;color:var(--h-ink);line-height:1.15}
+#gfh .gfh-rating b{color:#fff;font-size:14px}
+#gfh .gfh-rating .gfh-star{color:var(--h-gold);font-size:16px}
+#gfh .gfh-rating small{display:block;font-size:14px;color:var(--h-dim)}
+#gfh .gfh-rating:hover small{color:#fff}
+#gfh .gfh-lang{position:relative}
+#gfh .gfh-lang>button{display:inline-flex;align-items:center;gap:6px;background:none;border:1px solid var(--h-line);border-radius:999px;padding:7px 12px;color:var(--h-ink);font:inherit;font-size:14px;cursor:pointer}
+#gfh .gfh-lang>button:hover,#gfh .gfh-lang.is-open>button{border-color:var(--h-gold);color:#fff}
+#gfh .gfh-lang .gfh-panel{left:auto;right:0;transform:translateY(8px);min-width:170px}
+#gfh .gfh-lang.is-open .gfh-panel{opacity:1;visibility:visible;transform:none;transition:opacity .18s,transform .18s}
+#gfh .gfh-cta{display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:999px;background:var(--h-gold);color:#16261E!important;font-weight:600;white-space:nowrap;transition:background .2s}
+#gfh .gfh-cta:hover{background:var(--h-gold-hi)}
+#gfh .gfh-icon{display:none;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;border:1px solid var(--h-line);color:#fff;background:none;cursor:pointer;padding:0}
+#gfh .gfh-icon svg{width:20px;height:20px}
+#gfh .gfh-mob{display:none}
+@media (max-width:1240px){#gfh .gfh-rating small{display:none}#gfh .gfh-in{gap:18px}#gfh .gfh-top{padding:0 10px}}
+@media (max-width:1080px){
+  #gfh{--h-h:68px}#gfh.is-scrolled{--h-h:60px}
+  #gfh .gfh-nav,#gfh .gfh-rating,#gfh .gfh-lang,#gfh .gfh-right .gfh-cta{display:none}
+  #gfh .gfh-in{justify-content:space-between;padding:0 16px}
+  #gfh .gfh-icon{display:inline-flex}
+  #gfh .gfh-mob{display:block;position:fixed;inset:calc(var(--h-h) + var(--wp-admin--admin-bar--height,0px)) 0 0 0;background:var(--h-bg);overflow-y:auto;padding:8px 20px calc(28px + env(safe-area-inset-bottom));opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .2s,transform .2s,visibility 0s .2s}
+  #gfh.menu-open .gfh-mob{opacity:1;visibility:visible;transform:none;transition:opacity .2s,transform .2s}
+  #gfh .gfh-mob details{border-bottom:1px solid var(--h-line)}
+  #gfh .gfh-mob summary,#gfh .gfh-mob .gfh-mlink{display:flex;justify-content:space-between;align-items:center;list-style:none;padding:16px 4px;font-size:18px;font-weight:500;color:#fff;cursor:pointer}
+  #gfh .gfh-mob summary::-webkit-details-marker{display:none}
+  #gfh .gfh-mob .gfh-mlink{border-bottom:1px solid var(--h-line)}
+  #gfh .gfh-mob details[open] summary .gfh-caret{transform:rotate(180deg)}
+  #gfh .gfh-mob details a{display:block;padding:10px 12px;color:var(--h-ink);font-size:16px}
+  #gfh .gfh-mob .gfh-grp{color:var(--h-gold);padding:12px 12px 2px}
+  #gfh .gfh-mob-foot{display:grid;gap:14px;margin-top:22px}
+  #gfh .gfh-mob-foot .gfh-cta{justify-content:center;height:52px;font-size:16px}
+  #gfh .gfh-mob-langs{display:flex;flex-wrap:wrap;gap:8px}
+  #gfh .gfh-mob-langs a{padding:8px 14px;border:1px solid var(--h-line);border-radius:999px;font-size:14px}
+  #gfh .gfh-mob-langs a[aria-current]{border-color:var(--h-gold);color:#fff}
+  #gfh .gfh-mob .gfh-rating{display:flex}
+  #gfh .gfh-mob .gfh-rating small{display:block}
+}

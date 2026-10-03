@@ -20,10 +20,13 @@ const LNAME = { en: "English", vi: "Tiếng Việt", es: "Español", ko: "한국
 const UI = {};
 const ui = (l) => (UI[l] ||= JSON.parse(readFileSync(P(`./i18n/ui/${l}.json`), "utf8")));
 const M = JSON.parse(readFileSync(P("./manifest.json"), "utf8"));
+const HDR = Object.fromEntries(["en", "es", "ko", "zh", "vi"].map((l) => [l, readFileSync(P(`./header/${l}.html`), "utf8").trim()]));
+const HDR_CSS = readFileSync(P("./header/gfh.css"), "utf8").trim(), HDR_JS = readFileSync(P("./header/gfh.js"), "utf8").trim();
 const FF = (fam, file, w, range) => `@font-face{font-family:'${fam}';font-style:normal;font-weight:${w};font-display:swap;src:url(/shared/fonts/${file}) format('woff2');unicode-range:${range}}`;
 const R_LAT = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD";
 const R_EXT = "U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF";
 const R_VI = "U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB";
+const HDR_FONTS = [400, 500, 600].flatMap((w) => [FF("Be Vietnam Pro", `BeVietnamPro-${w}-vietnamese.woff2`, w, R_VI), FF("Be Vietnam Pro", `BeVietnamPro-${w}-latin.woff2`, w, R_LAT)]).join("\n");
 const FONTS_CSS = [FF("Plus Jakarta Sans", "plus-jakarta-sans-vietnamese-wght-normal.woff2", "200 800", R_VI), FF("Plus Jakarta Sans", "plus-jakarta-sans-latin-ext-wght-normal.woff2", "200 800", R_EXT), FF("Plus Jakarta Sans", "plus-jakarta-sans-latin-wght-normal.woff2", "200 800", R_LAT),
   FF("Anton", "anton-vietnamese-400-normal.woff2", 400, R_VI), FF("Anton", "anton-latin-400-normal.woff2", 400, R_LAT)].join("\n");
 /** Ghép bản dịch lên bản EN: object theo khoá, mảng theo vị trí (giữ img/link của EN). */
@@ -129,14 +132,13 @@ const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'
 const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
 const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
 const nav = [["about", 0], ["expertise", 1], ["journey", 2], ["cases", 3], ["reviews", 4], ["faq", 5]];
-const ICON = {
-  star: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9 12 2Z"/></svg>`,
-  arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>`,
-};
-const items = (arr) => arr.filter(([, k]) => L(k)).map(([lb, k]) => `<a href="${L(k)}">${esc(lb)}</a>`).join("");
-const menu = (label, arr) => `<details class="dd"><summary>${esc(label)}</summary><div class="dd-panel">${items(arr)}</div></details>`;
-const MN = T.menus;
-const langCodes = () => LANGS.map((l) => `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${CODE[l]}</a>`).join("");
+const ICON = { arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>` };
+// Header web chính: menu ngôn ngữ trỏ sang trang bác sĩ cùng ngôn ngữ (thứ tự + tên như web chính; web VI đưa Tiếng Việt lên đầu).
+const LORD = isVI ? ["vi", "en", "es", "ko", "zh"] : ["en", "es", "ko", "zh", "vi"];
+const LN = { en: "English", es: "Español", ko: "한국어", zh: "简体中文", vi: "Tiếng Việt" };
+const la = (l, cur) => `<a href="${pagePath(l, D.slug)}" lang="${HL[l]}" hreflang="${HL[l]}"${cur ? ` aria-current="true"` : ""}>${LN[l]}</a>`;
+const HEADER = HDR[lang].replace("{{LANG_PANEL}}", LORD.filter((l) => l !== lang).map((l) => la(l)).join(""))
+  .replace("{{LANG_MOB}}", LORD.map((l) => la(l, l === lang)).join("")).replace("{{WA}}", esc(waHref));
 const others = ORDER.filter((k) => k !== D.key).map((k) => doc(k, lang));
 const arrow = `<span class="ar" aria-hidden="true">→</span>`, dbl = `<span class="ar" aria-hidden="true">»</span>`;
 
@@ -190,49 +192,25 @@ h1 em,h2 em{font-style:normal;color:var(--g)}
 .tick{width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--g);display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 
 /* header */
-/* header — khung giống greenfield.clinic (khôi phục 03/10/2026) */
-.hdr{--moss:#16261E;--moss-2:#1F3329;--gold:#C9974A;--gold-h:#D8A85C;--on-moss:rgba(255,255,255,.86);--on-moss-line:rgba(255,255,255,.12);position:sticky;top:0;z-index:60;background:var(--moss);color:var(--on-moss);border-bottom:1px solid var(--on-moss-line)}
-.hdr .pad{display:flex;align-items:center;gap:20px;min-height:72px}
-.logo{display:flex;align-items:center;min-height:48px;flex:none} .logo img{width:66px;height:auto}
-.nav{display:none;align-items:center;gap:4px;margin-left:12px}
-.nav>a,.dd>summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:500 14px/1 var(--sans);color:#fff;text-decoration:none;cursor:pointer;list-style:none;border-radius:8px}
-.dd>summary::-webkit-details-marker{display:none}
-.dd>summary::after{content:"";width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.nav>a:hover,.dd>summary:hover{color:var(--gold)}
-.dd{position:relative}
-.dd-panel{position:absolute;top:100%;left:0;min-width:240px;background:var(--moss);border:1px solid var(--on-moss-line);border-radius:12px;padding:8px;display:grid;box-shadow:0 18px 40px rgba(0,0,0,.25)}
-.dd-panel a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:8px;color:var(--on-moss);text-decoration:none;font-size:14px}
-.dd-panel a small,.mlang a small{font-size:12px;opacity:.7}
-.dd-panel a:hover{background:var(--moss-2);color:#fff}
-.hdr-right{margin-left:auto;display:flex;align-items:center;gap:16px}
-.rating{display:none;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:14px;line-height:1.2;min-height:44px}
-.rating svg{width:16px;height:16px;color:var(--gold)} .rating b{font-weight:600} .rating small{display:block;font-size:14px;color:var(--on-moss);white-space:nowrap}
-.hbtn{display:none;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 18px;border-radius:999px;font:600 14px/1.2 var(--sans);background:var(--gold);color:var(--moss);white-space:nowrap}
-.hbtn:hover{background:var(--gold-h)} .hbtn svg{width:20px;height:20px;flex:none}
-.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--on-moss-line);border-radius:10px;background:transparent;color:#fff;cursor:pointer}
-.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:1.5px;background:currentColor;position:relative;content:""}
-.burger span::before{position:absolute;top:-6px} .burger span::after{position:absolute;top:6px}
-.mnav{display:none;background:var(--moss);border-top:1px solid var(--on-moss-line);padding:8px 20px 20px;max-height:calc(100dvh - 72px);overflow:auto}
-.mnav.open{display:block}
-.mnav .mh{font:600 12px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:18px 0 6px}
-.mnav a{display:flex;align-items:center;gap:8px;min-height:44px;color:var(--on-moss);text-decoration:none;font-size:16px;border-bottom:1px solid var(--on-moss-line)}
-.mnav .mlang{display:flex;flex-wrap:wrap;gap:4px 16px} .mnav .mlang a{border-bottom:0} .mnav .mlang a[aria-current]{color:var(--gold)}
-.mnav .hbtn{display:flex;margin-top:20px;font-size:16px;min-height:48px;border-bottom:0;color:var(--moss)}
-.lang-dd>summary{padding:0 10px;gap:6px} .lang-dd>summary svg{width:18px;height:18px}
-.lang-dd .dd-panel{left:auto;right:0;min-width:150px}
-.lang-dd .dd-panel a[aria-current],.lang-row a[aria-current]{color:var(--gold)}
-.lang-row{display:none;align-items:center}
-.lang-row a{display:flex;align-items:center;min-height:44px;padding:0 6px;font:500 14px/1 var(--sans);color:var(--on-moss);text-decoration:none}
-.lang-row a:hover{color:#fff} .lang-row a+a::before{content:"·";margin-right:6px;color:var(--on-moss-line)}
-/* thanh mục trong trang */
-.subnav{position:sticky;top:72px;z-index:50;background:rgba(239,241,242,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(51,59,59,.08)}
+/* header = header 2 web chính (#gfh, đồng bộ bằng sync-header.mjs — owner 03/10/2026) */
+${HDR_FONTS}
+${HDR_CSS}
+.gfh-wrap{position:sticky;top:0;z-index:60}
+.gfh-wrap>#gfh{z-index:2}.gfh-wrap>.subnav{position:relative;z-index:1}
+html.gfh-lock,html.gfh-lock body{overflow:hidden}
+html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
+#gfh .gfh-zalo{display:inline-flex;width:44px;height:44px;border-radius:50%;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.15);color:#fff;transition:border-color .2s}
+#gfh .gfh-zalo:hover{border-color:var(--h-gold)} #gfh .gfh-zalo svg,#gfh .gfh-mob-2 svg{width:20px;height:20px;flex:none}
+#gfh .gfh-mob-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#gfh .gfh-mob-2 a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:16px;font-weight:600;color:#fff;white-space:nowrap}
+@media (max-width:1080px){#gfh .gfh-zalo{display:none}}
+#gfh .gfh-rating-1>span{display:flex;align-items:baseline;gap:8px} /* VI: một hàng như nhakhoagreenfield.com */
+/* thanh mục trong trang (dính cùng header) */
+.subnav{background:rgba(239,241,242,.96);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(51,59,59,.08)}
 .subnav .pad{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
-@media (min-width:1024px){.nav,.rating,.hbtn{display:flex}.hdr-right>.hbtn{display:inline-flex}.burger{display:none}}
-@media (min-width:1024px) and (max-width:1279px){.hdr .rating{display:none}}
-@media (min-width:1280px){.lang-dd{display:none}.lang-row{display:flex}}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -560,7 +538,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 (function(){var done=false,ev=["keydown","mousedown","mousemove","touchstart","wheel","scroll"];function load(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,load,{passive:true})});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ND5D4BL3');}
 window.gfLoadGTM=load;ev.forEach(function(e){addEventListener(e,load,{passive:true})});
 document.addEventListener("click",function(e){try{var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var u=a.href||"";if(!/wa\\.me|whatsapp\\.com|zalo\\.me|^tel:|^mailto:/i.test(u))return;
- var loc=a.closest(".hdr,.mnav")?"header":a.closest(".ftr")?"footer":a.closest(".wa-float")?"floating":a.closest(".hero")?"hero":a.closest(".endcta")?"end_cta":a.closest(".ftr .fform")?"footer":"content";
+ var loc=a.closest("#gfh")?"header":a.closest(".ftr")?"footer":a.closest(".wa-float")?"floating":a.closest(".hero")?"hero":a.closest(".endcta")?"end_cta":a.closest(".ftr .fform")?"footer":"content";
  var t=String(a.innerText||a.getAttribute("aria-label")||"").replace(/\\s+/g," ").trim().slice(0,100);
  window.dataLayer.push({event:"gf_doctor_contact",doctor:"${D.key}",contact_method:/wa\\.me|whatsapp/i.test(u)?"whatsapp":/zalo\\.me/i.test(u)?"zalo":/^tel:/i.test(u)?"call":"email",cta_location:loc,page_lang:"${lang}"});
  var gtm=window.google_tag_manager;if(gtm){for(var k in gtm){if(k.indexOf("GTM-")===0)return;}}
@@ -571,29 +549,10 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 </head>
 <body>
 <script>document.documentElement.classList.add("js")</script>
-<header class="hdr">
-  <div class="pad">
-    <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
-    <nav class="nav" aria-label="${esc(T.navAria)}">
-      ${menu(T.nav.services, MN.services)}${menu(T.nav.results, MN.results)}${menu(T.nav.about, MN.about)}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
-    </nav>
-    <div class="hdr-right">
-      <details class="dd lang-dd"><summary aria-label="${esc(T.langAria)}: ${esc(T.langName)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="dd-panel">${langLinks()}</div></details>
-      <nav class="lang-row" aria-label="${esc(T.langAria)}">${langCodes()}</nav>
-      <a class="rating" href="https://g.co/kgs/FmAkkx3" rel="noopener">${ICON.star}<span><b data-rating>5.0</b><small>${t(T.ratingSmall)}</small></span></a>
-      <a class="hbtn" href="${L("contact")}">${esc(T.freeConsult)}</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="${esc(T.openMenu)}"><span></span></button>
-    </div>
-  </div>
-  <div class="mnav" id="mnav">
-    <p class="mh">${esc(T.nav.services)}</p>${items(MN.services.slice(0, MN.mobileServices))}
-    <p class="mh">${esc(T.nav.results)}</p>${items(MN.results)}
-    <p class="mh">${esc(T.nav.about)}</p>${items(MN.about.slice(0, MN.mobileAbout))}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
-    <p class="mh">${esc(T.langAria)}</p><div class="mlang">${langLinks()}</div>
-    <a class="hbtn" href="${primary}" target="_blank" rel="noopener">${esc(T.freeConsult)}</a>
-  </div>
-</header>
+<header class="gfh-wrap">
+${HEADER}
 <nav class="subnav" aria-label="${esc(T.subnavAria)}"><div class="pad"><a href="#top"><b>${esc(D.short)}</b></a>${nav.map(([id, i]) => `<a href="#${id}">${esc(U.nav[i])}</a>`).join("")}</div></nav>
+</header>
 
 <main id="top" class="pad">
 <section class="hero">
@@ -751,12 +710,10 @@ function fixWa(a){var u;try{u=new URL(a.href);}catch(x){return "";}if(u.hostname
 function onWa(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me"]');if(a)beacon(fixWa(a));}
 document.addEventListener("click",onWa,true);document.addEventListener("auxclick",onWa,true);document.addEventListener("contextmenu",onWa,true);})();</script>
 
+<script>${HDR_JS}</script>
 <script>/* Menu điện thoại, chọn ngôn ngữ, so sánh trước/sau, lời khen xoay vòng, hiện dần khi cuộn. */
-(function(){var b=document.querySelector(".burger"),m=document.getElementById("mnav");
-b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o);});
-m.addEventListener("click",function(e){if(e.target.closest("a[href^='#']")){m.classList.remove("open");b.setAttribute("aria-expanded",false);}});
+(function(){
 try{fetch("https://lead.greenfield.clinic/api/public/google-rating").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.count)return;document.querySelectorAll("[data-count]").forEach(function(e){e.textContent=j.count});document.querySelectorAll("[data-rating]").forEach(function(e){e.textContent=j.ratingText||"5.0"});}).catch(function(){});}catch(e){}
-var dds=[].slice.call(document.querySelectorAll(".hdr details"));dds.forEach(function(d){d.addEventListener("toggle",function(){if(d.open)dds.forEach(function(o){if(o!==d)o.open=false})})});document.addEventListener("click",function(e){dds.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false})});
 var C=${js(casesData)},TL=${js({ b: T.cases.beforeAlt, a: T.cases.afterAlt, n: U.caseLabel })},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});
 function setPic(p,d,alt){var s=p.querySelectorAll("source");s[0].srcset=d.a;s[1].srcset=d.w;var im=p.querySelector("img");im.src=d.s;im.alt=alt;}
