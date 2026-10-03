@@ -234,6 +234,9 @@ main{position:relative;z-index:1;padding-top:20px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;letter-spacing:.18em;font-weight:600;color:#6D957F;text-transform:uppercase}
 .eyebrow::before{content:"";width:22px;height:1px;background:#6D957F;flex:none}
 .hero h1{font-size:clamp(38px,4.6vw,58px);line-height:1.04;letter-spacing:-.02em;text-wrap:pretty}
+/* Tên bác sĩ không bao giờ bị ngắt giữa chừng: nếu không vừa cạnh danh xưng thì cả tên xuống dòng dưới (owner 03/10/2026) */
+.hero h1 em{display:inline-block;white-space:nowrap}
+@media (max-width:520px){.hero h1{font-size:min(38px,8.4vw)}}
 .checks{display:flex;flex-wrap:wrap;gap:10px 22px;list-style:none;margin:0;padding:0}
 .checks li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:#4A5453}
 .lead{font-size:14.5px;line-height:1.65;color:var(--mut);max-width:420px}
