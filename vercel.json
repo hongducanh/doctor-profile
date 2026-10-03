@@ -6,6 +6,26 @@
       "source": "/",
       "destination": "https://greenfield.clinic/our-doctors/",
       "permanent": false
+    },
+    {
+      "source": "/vi",
+      "destination": "https://www.nhakhoagreenfield.com/vi/bac-si",
+      "permanent": false
+    },
+    {
+      "source": "/es",
+      "destination": "https://greenfield.clinic/es/nuestros-dentistas/",
+      "permanent": false
+    },
+    {
+      "source": "/ko",
+      "destination": "https://greenfield.clinic/ko/doctors/",
+      "permanent": false
+    },
+    {
+      "source": "/zh",
+      "destination": "https://greenfield.clinic/zh/doctors-zh/",
+      "permanent": false
     }
   ],
   "headers": [

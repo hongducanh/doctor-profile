@@ -1,0 +1,242 @@
+{
+  "name": "Dr. Tran Thi Giang",
+  "nick": "Dr. Giang",
+  "short": "Dr. Giang",
+  "first": "Giang",
+  "jobTitle": "Dentist — orthodontics & general dentistry",
+  "role": "Orthodontics & general dentistry",
+  "card": "Orthodontics & general dentistry",
+  "eyebrow": "DDS · Orthodontics & general dentistry",
+  "title": "Dr. Tran Thi Giang — Orthodontics & General Dentistry in Hanoi | Greenfield Dental",
+  "description": "Dr. Tran Thi Giang, dentist at Greenfield Dental, Hanoi: orthodontics for children, braces for adults and veneers, with a calm, gentle approach for patients of all ages.",
+  "lead": "Dr. Tran Thi Giang is a calm, gentle dentist for orthodontic treatment at any age, with each plan built around the patient and relaxed visits for children. She also provides general dentistry and veneers, with careful attention to detail.",
+  "chips": [
+    "Orthodontics for children",
+    "Braces for adults",
+    "Veneers"
+  ],
+  "portraitAlt": "Dr. Tran Thi Giang, dentist at Greenfield Dental",
+  "specialty": [
+    "Orthodontics",
+    "General dentistry"
+  ],
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Giang.",
+  "ogLine": [
+    "Orthodontics for children & adults · Veneers",
+    "Calm, gentle care for all ages"
+  ],
+  "stats": [
+    {
+      "l": "Orthodontics for children and adults"
+    },
+    {
+      "l": "Hanoi Medical University"
+    }
+  ],
+  "about": {
+    "eyebrow": "About Dr. Giang",
+    "h2": "Natural-looking",
+    "h2em": "smiles.",
+    "imgAlt": "Dr. Giang with a patient at Greenfield Dental",
+    "p": [
+      "Dr. Giang provides orthodontics and general dentistry, from preventive care and fillings to braces, veneers and crowns, tailored to each patient's needs.",
+      "Helping patients smile with more confidence is what drew her to dentistry. She keeps every visit as gentle and stress-free as possible, especially for children."
+    ],
+    "creds": [
+      {
+        "t": "Doctor of Dental Surgery",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "Orthodontics for all ages",
+        "s": "Children, teens and adults"
+      },
+      {
+        "t": "General dentistry",
+        "s": "Preventive · Restorative · Family care"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Orthodontics for children",
+      "s": "Early assessment · Braces · Gentle visits",
+      "imgAlt": "Clear aligner held in hand"
+    },
+    {
+      "t": "Braces & clear aligners for adults",
+      "s": "Metal · Ceramic · Clear aligners"
+    },
+    {
+      "t": "Veneers & ceramic crowns",
+      "s": "Conservative, natural-looking restorations"
+    },
+    {
+      "t": "General dentistry",
+      "s": "Check-ups · Fillings · Cleaning"
+    }
+  ],
+  "quote": {
+    "text": "A great smile starts with feeling comfortable.",
+    "em": "My goal is to make every visit as gentle and stress-free as possible.",
+    "by": "Dr. Tran Thi Giang",
+    "role": "Dentist, Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctor of Dental Surgery",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Typodont Orthodontic Training Course",
+      "s": "JM Ortho, Hanoi"
+    },
+    {
+      "t": "Advanced Veneers & Full-Mouth Rehabilitation",
+      "s": "DMG"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Severe tooth wear with sensitivity",
+      "d": "Ceramill Zolid crowns and E.max Press veneers to restore worn tooth structure, function and comfort.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "t": "Multiple missing teeth with bone loss",
+      "d": "Zirconia crowns to restore compromised teeth and improve chewing function and stability.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "t": "Missing tooth with extensive decay and wear",
+      "d": "Ceramill Zolid crowns to rebuild lost tooth structure and restore comfort and function.",
+      "m": "2 visits · Restorative dentistry"
+    },
+    {
+      "t": "Missing teeth with bone loss and severe wear",
+      "d": "Dentium implants and zirconia crowns to replace missing teeth and restore worn teeth.",
+      "m": "3 visits · Implant & restorative dentistry"
+    },
+    {
+      "t": "Missing and fractured teeth with deep caries",
+      "d": "Zirconia crowns and Biodentine restorations to rebuild and protect compromised teeth.",
+      "m": "3 visits · Restorative dentistry"
+    },
+    {
+      "t": "Multiple missing teeth with severe wear",
+      "d": "Straumann implants and zirconia crowns to replace missing teeth and restore the bite.",
+      "m": "3 visits · Implant & restorative dentistry"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you start",
+      "d": "Send photos and any X-rays for Dr. Giang's first opinion."
+    },
+    {
+      "t": "Examination & records",
+      "d": "Free exam, X-rays, photos and a 3D scan."
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Method, estimated time and a written quote."
+    },
+    {
+      "t": "Braces or aligners fitted",
+      "d": "Treatment starts once you agree the plan."
+    },
+    {
+      "t": "Regular check-ups",
+      "d": "Adjustments in clinic; some aligner checks remotely."
+    },
+    {
+      "t": "Finishing",
+      "d": "Fine-tuning the bite before braces come off."
+    },
+    {
+      "t": "Retainers & follow-up",
+      "d": "Retainers fitted and reviewed to keep the result."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you start",
+      "t1": "First visits",
+      "t2": "During treatment · usually 12–24 months"
+    },
+    "gap": "treatment",
+    "gapLong": "Treatment time · usually 12–24 months",
+    "intro": "Orthodontic treatment runs in stages, with check-ups planned around where you live.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your orthodontic journey"
+  },
+  "faqs": [
+    {
+      "q": "How long does orthodontic treatment usually take?",
+      "a": "Many cases take 12–24 months, but it depends on how complex the bite is, the method (braces or clear aligners) and how consistently the plan is followed. You get an estimate in writing after your examination."
+    },
+    {
+      "q": "Why are retainers important after orthodontic treatment?",
+      "a": "Teeth naturally tend to move back after treatment. Retainers hold the new positions and reduce the risk of relapse, so wearing them as instructed is part of the treatment."
+    },
+    {
+      "q": "Can I have orthodontic treatment if I live abroad?",
+      "a": "Often yes. Clear aligners need fewer in-person visits than braces, and some check-ups can be done remotely with photos. Braces need regular adjustments in the clinic, so we plan the visit schedule with you before you start."
+    },
+    {
+      "q": "How do I know whether I need veneers or crowns?",
+      "a": "Veneers may suit teeth that need a change in shape or colour and still have enough healthy enamel. Crowns are usually considered when a tooth is significantly weakened or heavily restored. The choice is made after an examination."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after your examination, before any treatment starts. Anything that depends on what we find during treatment is explained and quoted as a range up front."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Giang.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Giang's team reviews your case and replies with a suitable treatment direction."
+  },
+  "related": [
+    {
+      "t": "Porcelain veneers"
+    },
+    {
+      "t": "Dental crowns"
+    },
+    {
+      "t": "General dentistry"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "name": "Dra. Tran Thi Giang",
+  "nick": "Dra. Giang",
+  "short": "Dra. Giang",
+  "first": "Giang",
+  "jobTitle": "Dentista — ortodoncia y odontología general",
+  "role": "Ortodoncia y odontología general",
+  "card": "Ortodoncia y odontología general",
+  "eyebrow": "DDS · Ortodoncia y odontología general",
+  "title": "Dra. Tran Thi Giang — Ortodoncia y odontología general | Greenfield Dental",
+  "description": "Dra. Tran Thi Giang, dentista en Greenfield Dental, Hanói: ortodoncia infantil, brackets para adultos y carillas, con un trato tranquilo y delicado para pacientes de todas las edades.",
+  "lead": "La Dra. Tran Thi Giang es una dentista tranquila y delicada para tratamientos de ortodoncia a cualquier edad, con planes adaptados a cada paciente y visitas relajadas para los niños. También realiza odontología general y carillas, con gran atención al detalle.",
+  "chips": [
+    "Ortodoncia infantil",
+    "Brackets para adultos",
+    "Carillas"
+  ],
+  "portraitAlt": "Dra. Tran Thi Giang, dentista en Greenfield Dental",
+  "specialty": [
+    "Ortodoncia",
+    "Odontología general"
+  ],
+  "wa": "Hola, Greenfield Dental. Me gustaría una consulta con la Dra. Giang.",
+  "ogLine": [
+    "Ortodoncia para niños y adultos · Carillas",
+    "Trato tranquilo y delicado a cualquier edad"
+  ],
+  "stats": [
+    {
+      "n": "Todas las edades",
+      "l": "Ortodoncia para niños y adultos"
+    },
+    {
+      "n": "DDS",
+      "l": "Universidad de Medicina de Hanói"
+    }
+  ],
+  "about": {
+    "eyebrow": "Sobre la Dra. Giang",
+    "h2": "Sonrisas de aspecto",
+    "h2em": "natural.",
+    "imgAlt": "La Dra. Giang con una paciente en Greenfield Dental",
+    "p": [
+      "La Dra. Giang ofrece ortodoncia y odontología general, desde la prevención y los empastes hasta los brackets, las carillas y las coronas, adaptados a las necesidades de cada paciente.",
+      "Ayudar a los pacientes a sonreír con más confianza es lo que la llevó a la odontología. Procura que cada visita sea lo más delicada y tranquila posible, sobre todo para los niños."
+    ],
+    "creds": [
+      {
+        "t": "Doctora en Cirugía Dental (DDS)",
+        "s": "Universidad de Medicina de Hanói"
+      },
+      {
+        "t": "Ortodoncia a cualquier edad",
+        "s": "Niños, adolescentes y adultos"
+      },
+      {
+        "t": "Odontología general",
+        "s": "Prevención · Restauración · Atención familiar"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Ortodoncia infantil",
+      "s": "Valoración temprana · Brackets · Visitas tranquilas",
+      "imgAlt": "Alineador transparente en la mano"
+    },
+    {
+      "t": "Brackets y alineadores para adultos",
+      "s": "Metálicos · Cerámicos · Alineadores transparentes"
+    },
+    {
+      "t": "Carillas y coronas cerámicas",
+      "s": "Restauraciones conservadoras y naturales"
+    },
+    {
+      "t": "Odontología general",
+      "s": "Revisiones · Empastes · Limpieza"
+    }
+  ],
+  "quote": {
+    "text": "Una gran sonrisa empieza por sentirse cómodo.",
+    "em": "Mi objetivo es que cada visita sea lo más delicada y tranquila posible.",
+    "by": "Dra. Tran Thi Giang",
+    "role": "Dentista, Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctora en Cirugía Dental (DDS)",
+      "s": "Universidad de Medicina de Hanói"
+    },
+    {
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Curso de formación en ortodoncia con typodont",
+      "s": "JM Ortho, Hanói"
+    },
+    {
+      "t": "Carillas avanzadas y rehabilitación de boca completa",
+      "s": "DMG"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Desgaste dental severo con sensibilidad",
+      "d": "Coronas Ceramill Zolid y carillas E.max Press para recuperar la estructura dental desgastada, la función y el confort.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Varios dientes ausentes con pérdida ósea",
+      "d": "Coronas de zirconio para restaurar dientes comprometidos y mejorar la masticación y la estabilidad.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Diente ausente con caries y desgaste extensos",
+      "d": "Coronas Ceramill Zolid para reconstruir la estructura dental perdida y recuperar el confort y la función.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Dientes ausentes con pérdida ósea y desgaste severo",
+      "d": "Implantes Dentium y coronas de zirconio para reponer los dientes ausentes y restaurar los desgastados.",
+      "m": "3 visitas · Implantes y odontología restauradora"
+    },
+    {
+      "t": "Dientes ausentes y fracturados con caries profundas",
+      "d": "Coronas de zirconio y restauraciones con Biodentine para reconstruir y proteger dientes comprometidos.",
+      "m": "3 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Varios dientes ausentes con desgaste severo",
+      "d": "Implantes Straumann y coronas de zirconio para reponer los dientes ausentes y restablecer la mordida.",
+      "m": "3 visitas · Implantes y odontología restauradora"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Antes de empezar",
+      "d": "Envíe fotos y radiografías, si las tiene, para una primera opinión de la Dra. Giang."
+    },
+    {
+      "t": "Exploración y registros",
+      "d": "Revisión gratuita, radiografías, fotos y escáner 3D."
+    },
+    {
+      "t": "Plan y presupuesto por escrito",
+      "d": "Método, duración estimada y presupuesto por escrito."
+    },
+    {
+      "t": "Colocación de brackets o alineadores",
+      "d": "El tratamiento empieza cuando usted aprueba el plan."
+    },
+    {
+      "t": "Controles periódicos",
+      "d": "Ajustes en la clínica; algunos controles de alineadores, a distancia."
+    },
+    {
+      "t": "Fase final",
+      "d": "Ajuste fino de la mordida antes de retirar los brackets."
+    },
+    {
+      "t": "Retenedores y seguimiento",
+      "d": "Colocación y revisión de retenedores para mantener el resultado."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Antes de empezar",
+      "t1": "Primeras visitas",
+      "t2": "Durante el tratamiento · normalmente 12–24 meses"
+    },
+    "gap": "tratamiento",
+    "gapLong": "Duración del tratamiento · normalmente 12–24 meses",
+    "intro": "La ortodoncia avanza por etapas, con controles planificados según el lugar donde usted vive.",
+    "h2": "Siete pasos,",
+    "h2em": "planificados por escrito",
+    "eyebrow": "Su tratamiento de ortodoncia"
+  },
+  "faqs": [
+    {
+      "q": "¿Cuánto suele durar un tratamiento de ortodoncia?",
+      "a": "Muchos casos duran 12–24 meses, aunque depende de la complejidad de la mordida, del método (brackets o alineadores transparentes) y de la constancia con el plan. Tras la exploración recibe una estimación por escrito."
+    },
+    {
+      "q": "¿Por qué son importantes los retenedores después de la ortodoncia?",
+      "a": "Los dientes tienden a volver a su posición tras el tratamiento. Los retenedores mantienen la nueva posición y reducen el riesgo de recidiva, por eso llevarlos según las indicaciones forma parte del tratamiento."
+    },
+    {
+      "q": "¿Puedo hacerme la ortodoncia si vivo en el extranjero?",
+      "a": "A menudo, sí. Los alineadores transparentes requieren menos visitas presenciales que los brackets, y algunos controles pueden hacerse a distancia con fotos. Los brackets necesitan ajustes periódicos en la clínica, por lo que planificamos con usted el calendario de visitas antes de empezar."
+    },
+    {
+      "q": "¿Cómo sé si necesito carillas o coronas?",
+      "a": "Las carillas pueden convenir a dientes que necesitan un cambio de forma o color y conservan suficiente esmalte sano. Las coronas suelen considerarse cuando el diente está muy debilitado o muy restaurado. La decisión se toma tras una exploración."
+    },
+    {
+      "q": "¿Cómo se determina el coste?",
+      "a": "Recibe un presupuesto por escrito tras la exploración, antes de empezar cualquier tratamiento. Todo lo que dependa de lo que encontremos durante el tratamiento se explica y se presupuesta en un rango desde el principio."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Plan de tratamiento por escrito",
+      "d": "Visitas, plazos y materiales por escrito antes de empezar el tratamiento."
+    },
+    {
+      "t": "Presupuesto por escrito",
+      "d": "Acordado antes del tratamiento. No se añade nada sin su consentimiento."
+    },
+    {
+      "t": "Garantía",
+      "d": "Las condiciones de garantía figuran en su plan de tratamiento."
+    },
+    {
+      "t": "Planificación digital",
+      "d": "Escaneo digital, radiografías y planificación del tratamiento en 3D."
+    },
+    {
+      "t": "Atención al paciente internacional",
+      "d": "Recogida en el aeropuerto, equipo que habla inglés y ayuda para organizar su viaje."
+    },
+    {
+      "t": "Cuidados posteriores y seguimiento a distancia",
+      "d": "Controles y apoyo cuando ya ha vuelto a casa."
+    }
+  ],
+  "cta": {
+    "h2": "Reserve una consulta",
+    "h2em": "con la Dra. Giang.",
+    "p": "Envíe fotos y sus preguntas por WhatsApp. El equipo de de la Dra. Giang revisa su caso y le responde con una orientación de tratamiento adecuada."
+  },
+  "related": [
+    {
+      "t": "Carillas de porcelana"
+    },
+    {
+      "t": "Coronas dentales"
+    },
+    {
+      "t": "Odontología general"
+    }
+  ]
+}

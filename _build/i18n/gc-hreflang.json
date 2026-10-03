@@ -1,0 +1,162 @@
+{
+ "home": {
+  "en": "https://greenfield.clinic/",
+  "es": "https://greenfield.clinic/es/",
+  "ko": "https://greenfield.clinic/ko/",
+  "zh-Hans": "https://greenfield.clinic/zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi",
+  "x-default": "https://www.nhakhoagreenfield.com/vi"
+ },
+ "our-doctors": {
+  "en": "https://greenfield.clinic/our-doctors/",
+  "es": "https://greenfield.clinic/es/nuestros-dentistas/",
+  "ko": "https://greenfield.clinic/ko/doctors/",
+  "zh-Hans": "https://greenfield.clinic/zh/doctors-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/bac-si",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/bac-si"
+ },
+ "dental-implants-vietnam": {
+  "en": "https://greenfield.clinic/dental-implants-vietnam/",
+  "es": "https://greenfield.clinic/es/implantes-dentales/",
+  "ko": "https://greenfield.clinic/ko/dental-implants/",
+  "zh-Hans": "https://greenfield.clinic/zh/dental-implants-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/implant",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/implant"
+ },
+ "all-on-4-dental-implants-vietnam": {
+  "en": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/",
+  "x-default": "https://greenfield.clinic/all-on-4-dental-implants-vietnam/"
+ },
+ "porcelain-veneers": {
+  "en": "https://greenfield.clinic/porcelain-veneers/",
+  "es": "https://greenfield.clinic/es/carillas-de-porcelana/",
+  "ko": "https://greenfield.clinic/ko/veneers/",
+  "zh-Hans": "https://greenfield.clinic/zh/veneers-zh/",
+  "x-default": "https://greenfield.clinic/porcelain-veneers/"
+ },
+ "dental-crowns": {
+  "en": "https://greenfield.clinic/dental-crowns/",
+  "es": "https://greenfield.clinic/es/coronas-dentales/",
+  "ko": "https://greenfield.clinic/ko/crowns/",
+  "zh-Hans": "https://greenfield.clinic/zh/crowns-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/rang-su",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/rang-su"
+ },
+ "invisalign-in-vietnam": {
+  "en": "https://greenfield.clinic/invisalign-in-vietnam/",
+  "es": "https://greenfield.clinic/es/invisalign-vietnam/",
+  "ko": "https://greenfield.clinic/ko/invisalign/",
+  "zh-Hans": "https://greenfield.clinic/zh/invisalign-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/nieng-rang/invisalign",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/nieng-rang/invisalign"
+ },
+ "teeth-braces": {
+  "en": "https://greenfield.clinic/teeth-braces/",
+  "es": "https://greenfield.clinic/es/ortodoncia-brackets/",
+  "ko": "https://greenfield.clinic/ko/braces/",
+  "zh-Hans": "https://greenfield.clinic/zh/braces-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/nieng-rang/mac-cai",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/nieng-rang/mac-cai"
+ },
+ "general-dentistry": {
+  "en": "https://greenfield.clinic/general-dentistry/",
+  "es": "https://greenfield.clinic/es/odontologia-general/",
+  "ko": "https://greenfield.clinic/ko/general-dentistry-ko/",
+  "zh-Hans": "https://greenfield.clinic/zh/general-dentistry-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/tong-quat",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/tong-quat"
+ },
+ "teeth-whitening-2": {
+  "en": "https://greenfield.clinic/teeth-whitening-2/",
+  "es": "https://greenfield.clinic/es/blanqueamiento-dental/",
+  "ko": "https://greenfield.clinic/ko/teeth-whitening/",
+  "zh-Hans": "https://greenfield.clinic/zh/teeth-whitening-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dich-vu/tay-trang",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dich-vu/tay-trang"
+ },
+ "night-guards-mouthguards-retainers-hanoi": {
+  "en": "https://greenfield.clinic/night-guards-mouthguards-retainers-hanoi/",
+  "x-default": "https://greenfield.clinic/night-guards-mouthguards-retainers-hanoi/"
+ },
+ "sleep-dentistry-hanoi": {
+  "en": "https://greenfield.clinic/sleep-dentistry-hanoi/",
+  "x-default": "https://greenfield.clinic/sleep-dentistry-hanoi/"
+ },
+ "smile-gallery": {
+  "en": "https://greenfield.clinic/smile-gallery/",
+  "es": "https://greenfield.clinic/es/galeria-de-sonrisas/",
+  "ko": "https://greenfield.clinic/ko/smile-gallery-ko/",
+  "zh-Hans": "https://greenfield.clinic/zh/smile-gallery-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/ket-qua",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/ket-qua"
+ },
+ "patient-reviews": {
+  "en": "https://greenfield.clinic/patient-reviews/",
+  "es": "https://greenfield.clinic/es/opiniones-de-pacientes/",
+  "ko": "https://greenfield.clinic/ko/reviews/",
+  "zh-Hans": "https://greenfield.clinic/zh/reviews-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/danh-gia",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/danh-gia"
+ },
+ "about-us": {
+  "en": "https://greenfield.clinic/about-us/",
+  "es": "https://greenfield.clinic/es/sobre-nosotros/",
+  "ko": "https://greenfield.clinic/ko/about/",
+  "zh-Hans": "https://greenfield.clinic/zh/about-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/ve-chung-toi",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/ve-chung-toi"
+ },
+ "contact-us": {
+  "en": "https://greenfield.clinic/contact-us/",
+  "es": "https://greenfield.clinic/es/contacto/",
+  "ko": "https://greenfield.clinic/ko/contact/",
+  "zh-Hans": "https://greenfield.clinic/zh/contact-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/lien-he",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/lien-he"
+ },
+ "dental-tourism": {
+  "en": "https://greenfield.clinic/dental-tourism/",
+  "es": "https://greenfield.clinic/es/turismo-dental/",
+  "ko": "https://greenfield.clinic/ko/dental-tourism-ko/",
+  "zh-Hans": "https://greenfield.clinic/zh/dental-tourism-zh/",
+  "x-default": "https://greenfield.clinic/dental-tourism/"
+ },
+ "overseas-vietnamese": {
+  "en": "https://greenfield.clinic/overseas-vietnamese/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/ve-nuoc-lam-rang",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/ve-nuoc-lam-rang"
+ },
+ "expat-dentist-hanoi": {
+  "en": "https://greenfield.clinic/expat-dentist-hanoi/",
+  "x-default": "https://greenfield.clinic/expat-dentist-hanoi/"
+ },
+ "faq": {
+  "en": "https://greenfield.clinic/faq/",
+  "es": "https://greenfield.clinic/es/preguntas-frecuentes/",
+  "ko": "https://greenfield.clinic/ko/questions/",
+  "zh-Hans": "https://greenfield.clinic/zh/faq-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/faq",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/faq"
+ },
+ "blog": {
+  "en": "https://greenfield.clinic/blog/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/tin-tuc",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/tin-tuc"
+ },
+ "privacy-policy": {
+  "en": "https://greenfield.clinic/privacy-policy/",
+  "es": "https://greenfield.clinic/es/politica-de-privacidad/",
+  "ko": "https://greenfield.clinic/ko/privacy/",
+  "zh-Hans": "https://greenfield.clinic/zh/privacy-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/chinh-sach-bao-mat",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/chinh-sach-bao-mat"
+ },
+ "terms-and-conditions": {
+  "en": "https://greenfield.clinic/terms-and-conditions/",
+  "es": "https://greenfield.clinic/es/terminos-y-condiciones/",
+  "ko": "https://greenfield.clinic/ko/terms/",
+  "zh-Hans": "https://greenfield.clinic/zh/terms-zh/",
+  "vi": "https://www.nhakhoagreenfield.com/vi/dieu-khoan",
+  "x-default": "https://www.nhakhoagreenfield.com/vi/dieu-khoan"
+ }
+}

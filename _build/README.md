@@ -84,3 +84,19 @@ Triển khai: thay nội dung repo bằng `dist/` (giữ nguyên URL `/dr-*`). K
 Số liệu chỉ lấy từ thẻ bác sĩ trên greenfield.clinic/our-doctors (03/10). Đánh giá: chỉ điểm Google chung của phòng khám.
 Ca trước/sau ghi "Cases from Greenfield's implant / orthodontic / restorative team".
 Nhớ thêm https://doctors.greenfield.clinic vào WA_ATTR_ORIGINS (Quotation) để mã click WhatsApp được nhận.
+
+## Đa ngôn ngữ (03/10/2026)
+
+EN `/dr-<slug>` · VI/ES/KO/ZH `/<lang>/dr-<slug>` (25 trang). Ảnh dùng chung đường dẫn EN.
+
+```
+i18n/src/<key>.json      nguồn EN cần dịch (node i18n/extract.mjs — chạy lại khi sửa doctors/*.json)
+i18n/tr/<lang>.mjs       bản dịch (khối chung + từng bác sĩ)
+i18n/<lang>/<key>.json   sinh ra: node i18n/make.mjs vi es ko zh (kiểm cấu trúc khớp src)
+i18n/ui/<lang>.json      chuỗi giao diện + menu [nhãn, khoá link]
+i18n/links.mjs           bản đồ link web chính theo ngôn ngữ (gc-hreflang.json + VI nhakhoagreenfield)
+node build-page.mjs [key…] [--lang=vi,es]   → dist/<lang>/<slug>/index.html
+LASTMOD=YYYY-MM-DD node build-dist-extras.mjs   → sitemap 25 URL + hreflang, vercel.json (/vi /es /ko /zh 307)
+node i18n/verify.mjs [--ext]                   → hreflang 2 chiều, link nội bộ, từ cấm, chữ Anh sót KO/ZH
+```
+VI: liên hệ chính Zalo, phụ gọi điện, WhatsApp chỉ là link nhỏ. Sửa nội dung EN → chạy extract → cập nhật tr/<lang>.mjs (make.mjs báo thiếu).

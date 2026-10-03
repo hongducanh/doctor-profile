@@ -1,0 +1,250 @@
+{
+  "name": "BS. Phạm Thị Thu Hiền",
+  "nick": "BS. Hailey",
+  "short": "BS. Hailey",
+  "first": "Hailey",
+  "jobTitle": "Bác sĩ nha khoa tổng quát & phục hình",
+  "role": "Bác sĩ nha khoa tổng quát & phục hình",
+  "card": "Tổng quát & phục hình",
+  "eyebrow": "Bác sĩ RHM · Nha khoa tổng quát & phục hình",
+  "title": "BS. Phạm Thị Thu Hiền (BS. Hailey) — Bác sĩ phục hình | Nha khoa Greenfield",
+  "description": "BS. Phạm Thị Thu Hiền (BS. Hailey), bác sĩ tổng quát và phục hình tại Nha khoa Greenfield, Hà Nội: veneer, mão sứ, inlay/onlay, điều trị tủy dưới kính hiển vi. 6+ năm, 200+ ca.",
+  "lead": "BS. Phạm Thị Thu Hiền (BS. Hailey) là bác sĩ nha khoa tổng quát và phục hình. Bác sĩ tin rằng điều trị tốt nhất không phải lúc nào cũng là can thiệp nhiều nhất: giữ lại càng nhiều mô răng khỏe càng tốt để có phục hình bảo tồn, tự nhiên và bền lâu.",
+  "chips": [
+    "Veneer & mão sứ",
+    "Inlay & onlay",
+    "Điều trị tủy dưới kính hiển vi"
+  ],
+  "portraitAlt": "BS. Phạm Thị Thu Hiền (BS. Hailey), bác sĩ tổng quát và phục hình tại Nha khoa Greenfield",
+  "specialty": [
+    "Phục hình răng",
+    "Nội nha",
+    "Nha khoa tổng quát"
+  ],
+  "wa": "Chào Nha khoa Greenfield, tôi muốn được tư vấn với BS. Hailey.",
+  "ogLine": [
+    "Veneer · Mão sứ · Điều trị tủy dưới kính hiển vi",
+    "6+ năm · 200+ ca veneer & mão sứ"
+  ],
+  "stats": [
+    {
+      "l": "Năm kinh nghiệm lâm sàng"
+    },
+    {
+      "l": "Ca veneer & mão sứ"
+    }
+  ],
+  "badge": {
+    "l": "Năm kinh nghiệm<br>lâm sàng"
+  },
+  "about": {
+    "eyebrow": "Về BS. Hailey",
+    "h2": "Răng khỏe,",
+    "h2em": "nụ cười tự tin.",
+    "imgAlt": "BS. Hailey điều trị cho khách tại Nha khoa Greenfield",
+    "p": [
+      "BS. Hailey điều trị nha khoa tổng quát và phục hình, từ chăm sóc định kỳ đến veneer, mão sứ, inlay và onlay, chú trọng kết quả bảo tồn và bền lâu.",
+      "Bác sĩ chọn nghề nha để giúp mọi người giữ răng thật khỏe mạnh lâu nhất có thể, và lên kế hoạch mỗi phục hình dựa trên phần mô răng còn giữ lại được."
+    ],
+    "creds": [
+      {
+        "t": "Bác sĩ Răng Hàm Mặt",
+        "s": "Trường Đại học Y Hà Nội"
+      },
+      {
+        "t": "Phục hình răng",
+        "s": "Veneer · Mão sứ · Inlay & onlay"
+      },
+      {
+        "t": "Điều trị tủy dưới kính hiển vi",
+        "s": "Giữ lại răng thật"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Veneer",
+      "s": "Mài tối thiểu · Hình dáng và màu răng tự nhiên"
+    },
+    {
+      "t": "Mão sứ, inlay & onlay",
+      "s": "Phục hồi răng đã yếu"
+    },
+    {
+      "t": "Điều trị tủy dưới kính hiển vi",
+      "s": "Điều trị lần đầu · Điều trị lại"
+    },
+    {
+      "t": "Khay trong suốt & mắc cài",
+      "s": "Sắp đều răng trước khi phục hình",
+      "imgAlt": "Khay niềng trong suốt cầm trên tay"
+    },
+    {
+      "t": "Nha khoa tổng quát",
+      "s": "Khám định kỳ · Trám răng · Lấy cao răng"
+    }
+  ],
+  "quote": {
+    "text": "Chiếc răng khỏe nhất luôn là răng thật của bạn.",
+    "em": "Việc của tôi là giúp bạn giữ nó lâu nhất có thể.",
+    "by": "BS. Phạm Thị Thu Hiền — BS. Hailey",
+    "role": "Bác sĩ tổng quát & phục hình, Nha khoa Greenfield"
+  },
+  "certs": [
+    {
+      "t": "Bác sĩ Răng Hàm Mặt",
+      "s": "Trường Đại học Y Hà Nội"
+    },
+    {
+      "t": "Khóa Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Khóa đào tạo chỉnh nha trên mô hình Typodont",
+      "s": "JM Ortho, Hà Nội"
+    },
+    {
+      "t": "Veneer nâng cao & phục hình toàn hàm",
+      "s": "DMG"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Mòn răng nặng kèm ê buốt",
+      "d": "Mão sứ Ceramill Zolid và veneer E.max Press phục hồi mô răng bị mòn, chức năng ăn nhai và sự thoải mái.",
+      "m": "2 buổi hẹn · Phục hình răng"
+    },
+    {
+      "t": "Mất nhiều răng kèm tiêu xương",
+      "d": "Mão sứ zirconia phục hồi các răng tổn thương, cải thiện chức năng ăn nhai và độ ổn định.",
+      "m": "2 buổi hẹn · Phục hình răng"
+    },
+    {
+      "t": "Mất răng kèm sâu răng và mòn răng nhiều",
+      "d": "Mão sứ Ceramill Zolid tái tạo phần mô răng đã mất, giúp ăn nhai thoải mái trở lại.",
+      "m": "2 buổi hẹn · Phục hình răng"
+    },
+    {
+      "t": "Mất răng kèm tiêu xương và mòn răng nặng",
+      "d": "Implant Dentium và mão sứ zirconia thay răng mất và phục hồi các răng bị mòn.",
+      "m": "3 buổi hẹn · Implant & phục hình răng"
+    },
+    {
+      "t": "Mất răng, gãy răng kèm sâu răng lan rộng",
+      "d": "Mão sứ zirconia và phục hồi Biodentine giúp tái tạo và bảo vệ các răng tổn thương.",
+      "m": "3 buổi hẹn · Phục hình răng"
+    },
+    {
+      "t": "Mất nhiều răng kèm mòn răng nặng",
+      "d": "Implant Straumann và mão sứ zirconia thay răng mất và phục hồi khớp cắn.",
+      "m": "3 buổi hẹn · Implant & phục hình răng"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Trước khi đến khám",
+      "d": "Gửi ảnh và phim X-quang để BS. Hailey cho ý kiến ban đầu."
+    },
+    {
+      "t": "Khám & quét dữ liệu",
+      "d": "Khám miễn phí với BS. Hailey, chụp X-quang và quét kỹ thuật số."
+    },
+    {
+      "t": "Kế hoạch & báo giá bằng văn bản",
+      "d": "Số răng, vật liệu, số buổi hẹn và báo giá bằng văn bản."
+    },
+    {
+      "t": "Chuẩn bị răng",
+      "d": "Mài tối thiểu; đeo răng tạm trong lúc labo chế tác."
+    },
+    {
+      "t": "Thử răng",
+      "d": "Kiểm tra hình dáng, màu sắc và khớp cắn trước khi gắn chính thức."
+    },
+    {
+      "t": "Gắn chính thức",
+      "d": "Gắn mão sứ hoặc veneer và kiểm tra khớp cắn."
+    },
+    {
+      "t": "Theo dõi",
+      "d": "Theo dõi từ xa qua ảnh; tái khám theo hẹn của bác sĩ."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Trước khi đến khám",
+      "t1": "Một đợt · thường 5–10 ngày",
+      "t2": "Sau điều trị"
+    },
+    "gap": "về nhà",
+    "gapLong": "Sau khi bạn trở về nhà",
+    "intro": "Phần lớn ca veneer và mão sứ hoàn tất trong một đợt, tùy số răng cần điều trị.",
+    "h2": "Bảy bước,",
+    "h2em": "lên kế hoạch bằng văn bản",
+    "eyebrow": "Hành trình điều trị"
+  },
+  "faqs": [
+    {
+      "q": "Làm sao biết tôi cần veneer hay mão sứ?",
+      "a": "Veneer có thể phù hợp với răng cần thay đổi hình dáng hoặc màu sắc mà vẫn còn đủ men răng khỏe. Mão sứ thường được cân nhắc khi răng đã yếu nhiều hoặc đã trám lớn. Bác sĩ sẽ quyết định sau khi thăm khám."
+    },
+    {
+      "q": "Răng đã điều trị tủy có thể bị nhiễm trùng lại không?",
+      "a": "Có thể. Nhiễm trùng lại có thể do sót ống tủy, rò rỉ, sâu răng mới, nứt răng hoặc phục hình sau cùng chưa kín khít. Làm sạch và trám bít kỹ, lý tưởng là dưới kính hiển vi, cùng một phục hình vừa khít giúp phòng ngừa điều này."
+    },
+    {
+      "q": "Có những lựa chọn nào để thay răng mất?",
+      "a": "Tùy số răng mất và tình trạng răng kế cận, xương hàm, các lựa chọn gồm cấy ghép implant, cầu răng trên implant, cầu răng thông thường hoặc hàm tháo lắp."
+    },
+    {
+      "q": "Niềng răng thường mất bao lâu?",
+      "a": "Nhiều trường hợp mất 12–24 tháng, tùy mức độ phức tạp của khớp cắn, phương pháp (mắc cài hay khay trong suốt) và việc tuân thủ kế hoạch. Bạn nhận thời gian dự kiến bằng văn bản sau buổi khám."
+    },
+    {
+      "q": "Chi phí được xác định thế nào?",
+      "a": "Bạn nhận báo giá bằng văn bản sau buổi khám, trước khi bắt đầu điều trị. Những gì phụ thuộc vào tình trạng thực tế trong quá trình điều trị đều được giải thích và báo theo khoảng ngay từ đầu."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Kế hoạch điều trị bằng văn bản",
+      "d": "Số buổi hẹn, lộ trình và vật liệu được ghi rõ trước khi bắt đầu điều trị."
+    },
+    {
+      "t": "Báo giá bằng văn bản",
+      "d": "Thống nhất trước khi điều trị. Không thêm hạng mục nào khi bạn chưa đồng ý."
+    },
+    {
+      "t": "Bảo hành",
+      "d": "Điều kiện bảo hành được ghi trong kế hoạch điều trị của bạn."
+    },
+    {
+      "t": "Lập kế hoạch kỹ thuật số",
+      "d": "Quét kỹ thuật số, chụp X-quang và lập kế hoạch điều trị 3D."
+    },
+    {
+      "t": "Hỗ trợ khách ở xa",
+      "d": "Đón sân bay, sắp xếp lịch hẹn và lưu trú cho khách ngoại tỉnh, Việt kiều."
+    },
+    {
+      "t": "Chăm sóc sau điều trị & theo dõi từ xa",
+      "d": "Hỏi thăm và hỗ trợ cả sau khi bạn trở về nhà."
+    }
+  ],
+  "cta": {
+    "h2": "Đặt lịch tư vấn",
+    "h2em": "với BS. Hailey.",
+    "p": "Gửi ảnh và câu hỏi qua Zalo. Đội ngũ của BS. Hailey xem trước tình trạng của bạn và phản hồi hướng điều trị phù hợp."
+  },
+  "related": [
+    {
+      "t": "Mão sứ hay veneer?"
+    },
+    {
+      "t": "Răng sứ & Veneer"
+    },
+    {
+      "t": "Nha khoa tổng quát"
+    }
+  ]
+}

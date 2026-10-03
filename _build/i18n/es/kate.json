@@ -1,0 +1,276 @@
+{
+  "name": "Dra. Ta Hong Nhung",
+  "nick": "Dra. Kate",
+  "short": "Dra. Kate",
+  "first": "Kate",
+  "jobTitle": "Ortodoncista · Fundadora y directora clínica",
+  "role": "Fundadora y directora clínica, ortodoncista",
+  "card": "Directora clínica · Ortodoncista",
+  "eyebrow": "DDS · MSc · Fundadora y directora clínica",
+  "title": "Dra. Ta Hong Nhung (Dra. Kate) — Ortodoncista en Hanói | Greenfield Dental",
+  "description": "Dra. Ta Hong Nhung (Dra. Kate), fundadora y directora clínica de Greenfield Dental, Hanói: Invisalign, brackets para adultos y adolescentes, ATM y mordida. Más de 15 años de experiencia.",
+  "lead": "Tras formarse en Europa y Asia, la Dra. Ta Hong Nhung (Dra. Kate), MSc, fundó Greenfield Dental para unir una odontología cuidadosa con una experiencia tranquila y respetuosa para el paciente. Dirige el equipo clínico y el servicio de ortodoncia, desde los alineadores transparentes hasta los casos complejos de mordida y articulación temporomandibular (ATM).",
+  "chips": [
+    "Invisalign y alineadores transparentes",
+    "Brackets para adultos y adolescentes",
+    "ATM y problemas de mordida"
+  ],
+  "portraitAlt": "Dra. Ta Hong Nhung (Dra. Kate), fundadora y directora clínica de Greenfield Dental",
+  "specialty": [
+    "Ortodoncia",
+    "Endodoncia",
+    "Prostodoncia"
+  ],
+  "wa": "Hola, Greenfield Dental. Me gustaría una consulta con la Dra. Kate.",
+  "ogLine": [
+    "Invisalign y alineadores · Brackets · ATM y mordida",
+    "Más de 15 años · Invisalign Platinum Provider"
+  ],
+  "stats": [
+    {
+      "l": "Años de práctica clínica"
+    },
+    {
+      "l": "Invisalign Provider"
+    }
+  ],
+  "badge": {
+    "l": "Años de<br>práctica clínica"
+  },
+  "about": {
+    "eyebrow": "Sobre la Dra. Kate",
+    "h2": "Un solo plan para",
+    "h2em": "toda su sonrisa.",
+    "imgAlt": "La Dra. Kate atendiendo a un paciente en Greenfield Dental",
+    "p": [
+      "La Dra. Kate trabaja en ortodoncia, endodoncia y prostodoncia, y trata cada caso como un plan único en lugar de procedimientos separados, documentado con imágenes antes, durante y después.",
+      "Ver a pacientes enfrentarse a la ansiedad, la incomodidad y una atención impersonal la llevó a crear una clínica distinta, donde cada paciente se siente respetado, cómodo y bien atendido."
+    ],
+    "creds": [
+      {
+        "t": "DDS y Máster en Odontoestomatología",
+        "s": "Universidad de Medicina de Hanói"
+      },
+      {
+        "t": "Diploma en Implantología (DIU)",
+        "s": "Université de Bordeaux, Francia"
+      },
+      {
+        "t": "Invisalign Platinum Provider",
+        "s": "Tratamiento con alineadores transparentes"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Invisalign y alineadores transparentes",
+      "s": "Invisalign · Otros sistemas de alineadores",
+      "imgAlt": "Alineador transparente en la mano"
+    },
+    {
+      "t": "Brackets para adultos y adolescentes",
+      "s": "Brackets metálicos y cerámicos"
+    },
+    {
+      "t": "ATM y problemas de mordida",
+      "s": "Apiñamiento · Sobremordida · Mordida cruzada · Articulación mandibular"
+    },
+    {
+      "t": "Endodoncia con microscopio",
+      "s": "Tratamiento · Retratamiento"
+    },
+    {
+      "t": "Rehabilitación restauradora",
+      "s": "Coronas cerámicas · Incrustaciones inlay y onlay"
+    }
+  ],
+  "quote": {
+    "text": "A los pacientes no basta con tratarlos.",
+    "em": "Deberían sentirse a gusto en cada momento de su atención.",
+    "by": "Dra. Ta Hong Nhung — Dra. Kate",
+    "role": "Fundadora y directora clínica, Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctor en Cirugía Dental (DDS)",
+      "s": "Universidad de Medicina de Hanói"
+    },
+    {
+      "t": "Máster en Odontoestomatología",
+      "s": "Universidad de Medicina de Hanói"
+    },
+    {
+      "t": "Diploma Interuniversitario en Implantología Quirúrgica y Protésica",
+      "s": "Facultad de Odontología, Burdeos, Francia"
+    },
+    {
+      "t": "Programa de formación para ortodoncistas de Vietnam",
+      "s": "3M Excellere Asia Pacific"
+    },
+    {
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Curso de formación en ortodoncia con typodont",
+      "s": "JM Ortho, Hanói"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2019",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2020",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2021",
+      "s": "Invisalign"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Mordida cruzada anterior con mordida borde a borde",
+      "d": "Brackets metálicos para corregir la mordida cruzada anterior, alinear ambas arcadas y mejorar la mordida.",
+      "m": "25 meses · Ortodoncia"
+    },
+    {
+      "t": "Biprotrusión con apiñamiento",
+      "d": "Brackets metálicos para retraer y alinear los dientes anteriores, corregir la mordida y mejorar el equilibrio facial.",
+      "m": "33 meses · Ortodoncia"
+    },
+    {
+      "t": "Resalte severo con sobremordida profunda",
+      "d": "Brackets metálicos para reducir el resalte y la sobremordida, alinear ambas arcadas y lograr una mordida más equilibrada.",
+      "m": "34 meses · Ortodoncia"
+    },
+    {
+      "t": "Arcadas estrechas con sonrisa gingival",
+      "d": "Brackets metálicos con expansión de las arcadas para corregir el apiñamiento y la mordida cruzada.",
+      "m": "21 meses · Ortodoncia"
+    },
+    {
+      "t": "Clase III con mordida cruzada anterior",
+      "d": "Brackets metálicos para corregir la relación de clase III, alinear ambas arcadas y conseguir una mordida estable.",
+      "m": "37 meses · Ortodoncia"
+    },
+    {
+      "t": "Apiñamiento y malposición severos",
+      "d": "Brackets metálicos para corregir un apiñamiento severo, alinear ambas arcadas y mejorar la mordida.",
+      "m": "28 meses · Ortodoncia"
+    },
+    {
+      "t": "Apiñamiento inferior con asimetría mandibular",
+      "d": "Tratamiento con Invisalign para alinear los dientes apiñados y lograr una mordida más equilibrada.",
+      "m": "25 meses · Ortodoncia"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Antes de empezar",
+      "d": "Envíe fotos y radiografías, si las tiene, para una primera opinión de la Dra. Kate."
+    },
+    {
+      "t": "Exploración y registros",
+      "d": "Revisión gratuita, radiografías, fotos y escáner 3D."
+    },
+    {
+      "t": "Plan y presupuesto por escrito",
+      "d": "Método, duración estimada y presupuesto por escrito."
+    },
+    {
+      "t": "Colocación de brackets o alineadores",
+      "d": "El tratamiento empieza cuando usted aprueba el plan."
+    },
+    {
+      "t": "Controles periódicos",
+      "d": "Ajustes en la clínica; algunos controles de alineadores, a distancia."
+    },
+    {
+      "t": "Fase final",
+      "d": "Ajuste fino de la mordida antes de retirar los brackets."
+    },
+    {
+      "t": "Retenedores y seguimiento",
+      "d": "Colocación y revisión de retenedores para mantener el resultado."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Antes de empezar",
+      "t1": "Primeras visitas",
+      "t2": "Durante el tratamiento · normalmente 12–24 meses"
+    },
+    "gap": "tratamiento",
+    "gapLong": "Duración del tratamiento · normalmente 12–24 meses",
+    "intro": "La ortodoncia avanza por etapas, con controles planificados según el lugar donde usted vive.",
+    "h2": "Siete pasos,",
+    "h2em": "planificados por escrito",
+    "eyebrow": "Su tratamiento de ortodoncia"
+  },
+  "faqs": [
+    {
+      "q": "¿Cuánto suele durar un tratamiento de ortodoncia?",
+      "a": "Muchos casos duran 12–24 meses, aunque depende de la complejidad de la mordida, del método (brackets o alineadores transparentes) y de la constancia con el plan. Tras la exploración recibe una estimación por escrito."
+    },
+    {
+      "q": "¿Por qué son importantes los retenedores después de la ortodoncia?",
+      "a": "Los dientes tienden a volver a su posición tras el tratamiento. Los retenedores mantienen la nueva posición y reducen el riesgo de recidiva, por eso llevarlos según las indicaciones forma parte del tratamiento."
+    },
+    {
+      "q": "¿Puedo hacerme la ortodoncia si vivo en el extranjero?",
+      "a": "A menudo, sí. Los alineadores transparentes requieren menos visitas presenciales que los brackets, y algunos controles pueden hacerse a distancia con fotos. Los brackets necesitan ajustes periódicos en la clínica, por lo que planificamos con usted el calendario de visitas antes de empezar."
+    },
+    {
+      "q": "¿Puede volver a infectarse un diente tras una endodoncia?",
+      "a": "Puede ocurrir. La reinfección puede deberse a conductos no tratados, filtraciones, nuevas caries, fisuras o una restauración final deficiente. Una limpieza y un sellado cuidadosos, idealmente con microscopio, y una restauración final bien ajustada ayudan a prevenirla."
+    },
+    {
+      "q": "¿Cómo sé si necesito carillas o coronas?",
+      "a": "Las carillas pueden convenir a dientes que necesitan un cambio de forma o color y conservan suficiente esmalte sano. Las coronas suelen considerarse cuando el diente está muy debilitado o muy restaurado. La decisión se toma tras una exploración."
+    },
+    {
+      "q": "¿Cómo se determina el coste?",
+      "a": "Recibe un presupuesto por escrito tras la exploración, antes de empezar cualquier tratamiento. Todo lo que dependa de lo que encontremos durante el tratamiento se explica y se presupuesta en un rango desde el principio."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Plan de tratamiento por escrito",
+      "d": "Visitas, plazos y materiales por escrito antes de empezar el tratamiento."
+    },
+    {
+      "t": "Presupuesto por escrito",
+      "d": "Acordado antes del tratamiento. No se añade nada sin su consentimiento."
+    },
+    {
+      "t": "Garantía",
+      "d": "Las condiciones de garantía figuran en su plan de tratamiento."
+    },
+    {
+      "t": "Planificación digital",
+      "d": "Escaneo digital, radiografías y planificación del tratamiento en 3D."
+    },
+    {
+      "t": "Atención al paciente internacional",
+      "d": "Recogida en el aeropuerto, equipo que habla inglés y ayuda para organizar su viaje."
+    },
+    {
+      "t": "Cuidados posteriores y seguimiento a distancia",
+      "d": "Controles y apoyo cuando ya ha vuelto a casa."
+    }
+  ],
+  "cta": {
+    "h2": "Reserve una consulta",
+    "h2em": "con la Dra. Kate.",
+    "p": "Envíe fotos y sus preguntas por WhatsApp. El equipo de de la Dra. Kate revisa su caso y le responde con una orientación de tratamiento adecuada."
+  },
+  "related": [
+    {
+      "t": "Invisalign en Vietnam"
+    },
+    {
+      "t": "Brackets de ortodoncia"
+    }
+  ]
+}

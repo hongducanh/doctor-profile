@@ -1,0 +1,250 @@
+{
+  "name": "Dra. Pham Thi Thu Hien",
+  "nick": "Dra. Hailey",
+  "short": "Dra. Hailey",
+  "first": "Hailey",
+  "jobTitle": "Odontóloga general y restauradora",
+  "role": "Odontóloga general y restauradora",
+  "card": "Odontología general y restauradora",
+  "eyebrow": "DDS · Odontología general y restauradora",
+  "title": "Dra. Pham Thi Thu Hien (Dra. Hailey) — Odontología restauradora | Greenfield Dental",
+  "description": "Dra. Pham Thi Thu Hien (Dra. Hailey), odontóloga general y restauradora en Greenfield Dental, Hanói: carillas, coronas cerámicas, inlays y onlays, endodoncia con microscopio. Más de 6 años.",
+  "lead": "La Dra. Pham Thi Thu Hien (Dra. Hailey) es odontóloga general y restauradora. Cree que el mejor tratamiento no siempre es el más grande: conservando la mayor cantidad posible de diente sano, ayuda a sus pacientes a obtener restauraciones conservadoras, naturales y duraderas.",
+  "chips": [
+    "Carillas y coronas cerámicas",
+    "Incrustaciones inlay y onlay",
+    "Endodoncia con microscopio"
+  ],
+  "portraitAlt": "Dra. Pham Thi Thu Hien (Dra. Hailey), odontóloga general y restauradora en Greenfield Dental",
+  "specialty": [
+    "Odontología restauradora",
+    "Endodoncia",
+    "Odontología general"
+  ],
+  "wa": "Hola, Greenfield Dental. Me gustaría una consulta con la Dra. Hailey.",
+  "ogLine": [
+    "Carillas · Coronas cerámicas · Endodoncia con microscopio",
+    "Más de 6 años · Más de 200 casos de carillas y coronas"
+  ],
+  "stats": [
+    {
+      "l": "Años de práctica clínica"
+    },
+    {
+      "l": "Casos de carillas y coronas"
+    }
+  ],
+  "badge": {
+    "l": "Años de<br>práctica clínica"
+  },
+  "about": {
+    "eyebrow": "Sobre la Dra. Hailey",
+    "h2": "Dientes sanos,",
+    "h2em": "sonrisas seguras.",
+    "imgAlt": "La Dra. Hailey atendiendo a un paciente en Greenfield Dental",
+    "p": [
+      "La Dra. Hailey ofrece odontología general y restauradora, desde la atención habitual hasta carillas, coronas cerámicas, inlays y onlays, con un enfoque en resultados conservadores y duraderos.",
+      "Eligió la odontología para ayudar a sus pacientes a conservar sus propios dientes sanos el mayor tiempo posible, y planifica cada restauración en torno a la estructura dental que puede salvarse."
+    ],
+    "creds": [
+      {
+        "t": "Doctora en Cirugía Dental (DDS)",
+        "s": "Universidad de Medicina de Hanói"
+      },
+      {
+        "t": "Odontología restauradora",
+        "s": "Carillas · Coronas cerámicas · Inlays y onlays"
+      },
+      {
+        "t": "Endodoncia asistida por microscopio",
+        "s": "Conservar los dientes naturales"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Carillas",
+      "s": "Preparación mínima · Forma y color naturales"
+    },
+    {
+      "t": "Coronas cerámicas, inlays y onlays",
+      "s": "Reconstrucción de dientes debilitados"
+    },
+    {
+      "t": "Endodoncia con microscopio",
+      "s": "Tratamiento · Retratamiento"
+    },
+    {
+      "t": "Alineadores transparentes y brackets",
+      "s": "Alinear antes de restaurar",
+      "imgAlt": "Alineador transparente en la mano"
+    },
+    {
+      "t": "Odontología general",
+      "s": "Revisiones · Empastes · Limpieza"
+    }
+  ],
+  "quote": {
+    "text": "El diente más sano siempre es el suyo.",
+    "em": "Mi trabajo es ayudarle a conservarlo el mayor tiempo posible.",
+    "by": "Dra. Pham Thi Thu Hien — Dra. Hailey",
+    "role": "Odontóloga general y restauradora, Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctora en Cirugía Dental (DDS)",
+      "s": "Universidad de Medicina de Hanói"
+    },
+    {
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Curso de formación en ortodoncia con typodont",
+      "s": "JM Ortho, Hanói"
+    },
+    {
+      "t": "Carillas avanzadas y rehabilitación de boca completa",
+      "s": "DMG"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Desgaste dental severo con sensibilidad",
+      "d": "Coronas Ceramill Zolid y carillas E.max Press para recuperar la estructura dental desgastada, la función y el confort.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Varios dientes ausentes con pérdida ósea",
+      "d": "Coronas de zirconio para restaurar dientes comprometidos y mejorar la masticación y la estabilidad.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Diente ausente con caries y desgaste extensos",
+      "d": "Coronas Ceramill Zolid para reconstruir la estructura dental perdida y recuperar el confort y la función.",
+      "m": "2 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Dientes ausentes con pérdida ósea y desgaste severo",
+      "d": "Implantes Dentium y coronas de zirconio para reponer los dientes ausentes y restaurar los desgastados.",
+      "m": "3 visitas · Implantes y odontología restauradora"
+    },
+    {
+      "t": "Dientes ausentes y fracturados con caries profundas",
+      "d": "Coronas de zirconio y restauraciones con Biodentine para reconstruir y proteger dientes comprometidos.",
+      "m": "3 visitas · Odontología restauradora"
+    },
+    {
+      "t": "Varios dientes ausentes con desgaste severo",
+      "d": "Implantes Straumann y coronas de zirconio para reponer los dientes ausentes y restablecer la mordida.",
+      "m": "3 visitas · Implantes y odontología restauradora"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Antes de viajar",
+      "d": "Envíe fotos y radiografías para una primera opinión de la Dra. Hailey."
+    },
+    {
+      "t": "Exploración y escáner",
+      "d": "Revisión gratuita con la Dra. Hailey, radiografías y escáner digital."
+    },
+    {
+      "t": "Plan y presupuesto por escrito",
+      "d": "Dientes, materiales, visitas y presupuesto por escrito."
+    },
+    {
+      "t": "Preparación",
+      "d": "Preparación mínima; provisionales mientras trabaja el laboratorio."
+    },
+    {
+      "t": "Prueba",
+      "d": "Comprobación de forma, color y mordida antes de la colocación final."
+    },
+    {
+      "t": "Colocación final",
+      "d": "Cementado de coronas o carillas y control de la mordida."
+    },
+    {
+      "t": "Seguimiento",
+      "d": "Revisión desde casa con fotos; controles según indicación."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Antes de viajar",
+      "t1": "Un viaje · normalmente 5–10 días",
+      "t2": "Después de volver"
+    },
+    "gap": "en casa",
+    "gapLong": "Después de volver a casa",
+    "intro": "La mayoría de los casos de carillas y coronas se completan en un solo viaje, según el número de dientes tratados.",
+    "h2": "Siete pasos,",
+    "h2em": "planificados por escrito",
+    "eyebrow": "Su tratamiento"
+  },
+  "faqs": [
+    {
+      "q": "¿Cómo sé si necesito carillas o coronas?",
+      "a": "Las carillas pueden convenir a dientes que necesitan un cambio de forma o color y conservan suficiente esmalte sano. Las coronas suelen considerarse cuando el diente está muy debilitado o muy restaurado. La decisión se toma tras una exploración."
+    },
+    {
+      "q": "¿Puede volver a infectarse un diente tras una endodoncia?",
+      "a": "Puede ocurrir. La reinfección puede deberse a conductos no tratados, filtraciones, nuevas caries, fisuras o una restauración final deficiente. Una limpieza y un sellado cuidadosos, idealmente con microscopio, y una restauración final bien ajustada ayudan a prevenirla."
+    },
+    {
+      "q": "¿Qué opciones hay para reponer dientes ausentes?",
+      "a": "Según cuántos dientes falten y el estado de los dientes vecinos y del hueso, las opciones incluyen implantes dentales, puentes sobre implantes, puentes convencionales o prótesis removibles."
+    },
+    {
+      "q": "¿Cuánto suele durar un tratamiento de ortodoncia?",
+      "a": "Muchos casos duran 12–24 meses, aunque depende de la complejidad de la mordida, del método (brackets o alineadores transparentes) y de la constancia con el plan. Tras la exploración recibe una estimación por escrito."
+    },
+    {
+      "q": "¿Cómo se determina el coste?",
+      "a": "Recibe un presupuesto por escrito tras la exploración, antes de empezar cualquier tratamiento. Todo lo que dependa de lo que encontremos durante el tratamiento se explica y se presupuesta en un rango desde el principio."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Plan de tratamiento por escrito",
+      "d": "Visitas, plazos y materiales por escrito antes de empezar el tratamiento."
+    },
+    {
+      "t": "Presupuesto por escrito",
+      "d": "Acordado antes del tratamiento. No se añade nada sin su consentimiento."
+    },
+    {
+      "t": "Garantía",
+      "d": "Las condiciones de garantía figuran en su plan de tratamiento."
+    },
+    {
+      "t": "Planificación digital",
+      "d": "Escaneo digital, radiografías y planificación del tratamiento en 3D."
+    },
+    {
+      "t": "Atención al paciente internacional",
+      "d": "Recogida en el aeropuerto, equipo que habla inglés y ayuda para organizar su viaje."
+    },
+    {
+      "t": "Cuidados posteriores y seguimiento a distancia",
+      "d": "Controles y apoyo cuando ya ha vuelto a casa."
+    }
+  ],
+  "cta": {
+    "h2": "Reserve una consulta",
+    "h2em": "con la Dra. Hailey.",
+    "p": "Envíe fotos y sus preguntas por WhatsApp. El equipo de de la Dra. Hailey revisa su caso y le responde con una orientación de tratamiento adecuada."
+  },
+  "related": [
+    {
+      "t": "Carillas de porcelana"
+    },
+    {
+      "t": "Coronas dentales"
+    },
+    {
+      "t": "Odontología general"
+    }
+  ]
+}

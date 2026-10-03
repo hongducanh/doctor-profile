@@ -1,23 +1,58 @@
 // Mẫu chung trang hồ sơ bác sĩ (chạy thật 03/10/2026) — khung giống greenfield.clinic, dữ liệu từ doctors/<key>.json.
-//   node build-page.mjs            → dist/<slug>/index.html cho mọi bác sĩ (chạy build-images.mjs trước)
-//   node build-page.mjs henry      → chỉ một bác sĩ
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
+//   node build-page.mjs                  → mọi bác sĩ × mọi ngôn ngữ (chạy build-images.mjs trước)
+//   node build-page.mjs henry --lang=vi  → chỉ một bác sĩ / một ngôn ngữ
+// Đa ngôn ngữ (03/10/2026): EN ở /dr-<slug>, VI/ES/KO/ZH ở /<lang>/dr-<slug>. Chuỗi giao diện: i18n/ui/<lang>.json;
+// nội dung bác sĩ: i18n/<lang>/<key>.json (cùng cấu trúc i18n/src/<key>.json) ghép đè lên doctors/<key>.json.
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
+import { LINKS, keyOfUrl } from "./i18n/links.mjs";
 
 const P = (rel) => fileURLToPath(new URL(rel, import.meta.url));
 const ALL = Object.fromEntries(readdirSync(P("./doctors/")).filter((f) => f.endsWith(".json")).map((f) => { const d = JSON.parse(readFileSync(P(`./doctors/${f}`), "utf8")); return [d.key, d]; }));
 const ORDER = ["kate", "chris", "henry", "giang", "hailey"];
+export const LANGS = ["en", "vi", "es", "ko", "zh"];
+const HL = { en: "en", vi: "vi", es: "es", ko: "ko", zh: "zh-Hans" };
+const OGL = { en: "en_US", vi: "vi_VN", es: "es_ES", ko: "ko_KR", zh: "zh_CN" };
+const CODE = { en: "EN", vi: "VI", es: "ES", ko: "KO", zh: "中文" };
+const UI = {};
+const ui = (l) => (UI[l] ||= JSON.parse(readFileSync(P(`./i18n/ui/${l}.json`), "utf8")));
 const M = JSON.parse(readFileSync(P("./manifest.json"), "utf8"));
 const FONTS_CSS = readFileSync(P("./shared/fonts.css"), "utf8").replace(/url\(fonts\//g, "url(/shared/fonts/");
-for (const key of (process.argv.slice(2).length ? process.argv.slice(2) : ORDER)) build(ALL[key]);
+/** Ghép bản dịch lên bản EN: object theo khoá, mảng theo vị trí (giữ img/link của EN). */
+const merge = (a, b) => (b === undefined ? a : Array.isArray(a) && Array.isArray(b) ? a.map((x, i) => merge(x, b[i]))
+  : a && b && typeof a === "object" && typeof b === "object" ? Object.fromEntries([...new Set([...Object.keys(a), ...Object.keys(b)])].map((k) => [k, merge(a[k], b[k])])) : b);
+function doc(key, lang) {
+  if (lang === "en") return ALL[key];
+  const f = P(`./i18n/${lang}/${key}.json`);
+  if (!existsSync(f)) throw new Error(`thiếu bản dịch ${lang}/${key}.json`);
+  return merge(ALL[key], JSON.parse(readFileSync(f, "utf8")));
+}
+const pagePath = (lang, slug) => (lang === "en" ? `/${slug}` : `/${lang}/${slug}`);
+const args = process.argv.slice(2);
+const langArg = args.find((a) => a.startsWith("--lang="));
+const keys = args.filter((a) => !a.startsWith("--"));
+for (const lang of langArg ? langArg.slice(7).split(",") : LANGS) for (const key of keys.length ? keys : ORDER) build(doc(key, lang), lang);
 
-function build(D) {
+function build(D, lang) {
+const T = ui(lang);
+const isVI = lang === "vi";
+const L = (k) => LINKS[lang][k];
 const SITE = "https://doctors.greenfield.clinic";
-const URL_ = `${SITE}/${D.slug}`;
+const URL_ = `${SITE}${pagePath(lang, D.slug)}`;
 const WA_NUM = "84906621988";
 const TOKEN = "(via doctors.greenfield.clinic)";
 const waHref = `https://wa.me/${WA_NUM}?text=${encodeURIComponent(`${D.wa} ${TOKEN}`)}`;
+const ZALO = "https://zalo.me/0906621988";
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+/** Chuỗi giao diện có {short}/{name}/{n}: thoát HTML rồi mới thay biến; {n} = số đánh giá Google sống. */
+const V = { short: D.short, name: D.name, nick: D.nick, jobTitle: D.jobTitle };
+const t = (s) => esc(s).replace(/\{(\w+)\}/g, (m, k) => (k === "n" ? "<span data-count>264</span>" : V[k] !== undefined ? esc(V[k]) : m));
+const tp = (s) => s.replace(/\{(\w+)\}/g, (m, k) => (V[k] !== undefined ? V[k] : m)); // bản thô cho thuộc tính meta (esc sau)
+const js = (o) => JSON.stringify(o).replace(/</g, "\\u003c");
+/** Link EN của dữ liệu bác sĩ → link cùng ngôn ngữ; null nếu web chính không có trang đó. */
+const loc = (u) => (lang === "en" ? u : L(keyOfUrl(u)) || null);
+// Liên hệ chính: VI = Zalo (khách trong nước), còn lại WhatsApp.
+const primary = isVI ? ZALO : waHref;
 
 const mk = (name, slug = D.slug) => (M[`${slug}/${name}`] ? `${slug}/${name}` : M[`shared/${name}`] ? `shared/${name}` : null);
 function meta(name, slug) { const k = mk(name, slug); if (!k) throw new Error(`thiếu ảnh ${name} (${slug || D.slug})`); return { k, ...M[k] }; }
@@ -35,13 +70,14 @@ const ICON = {
   star: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9 12 2Z"/></svg>`,
   check: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></svg>`,
   arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>`,
+  zalo: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.5-9 7.9 0 2.4 1.2 4.5 3.1 6l-.7 3.1 3.3-1.6c1 .3 2.1.4 3.3.4 5 0 9-3.5 9-7.9s-4-7.9-9-7.9Z"/><path d="M8.5 9h4.5l-4.5 5h4.5M15.8 9v5"/></svg>`,
 };
+const PI = isVI ? ICON.zalo : ICON.wa; // icon nút liên hệ chính
 
-const SERVICES = [["Dental implants","dental-implants-vietnam"],["All-on-4 / All-on-6","all-on-4-dental-implants-vietnam"],["Dental crowns","dental-crowns"],["Porcelain veneers","porcelain-veneers"],["Invisalign","invisalign-in-vietnam"],["Braces","teeth-braces"],["General dentistry","general-dentistry"],["Teeth whitening","teeth-whitening-2"],["Night guards & retainers","night-guards-mouthguards-retainers-hanoi"],["Sleep dentistry","sleep-dentistry-hanoi"]];
-const RESULTS = [["Smile gallery","smile-gallery"],["Patient reviews","patient-reviews"]];
-const ABOUT = [["Our doctors","our-doctors"],["About Greenfield","about-us"],["Plan your trip","dental-tourism"],["Overseas Vietnamese","overseas-vietnamese"],["Living in Hanoi","expat-dentist-hanoi"],["FAQ","faq"],["Blog","blog"]];
-const GC = (p) => `https://greenfield.clinic/${p}/`;
-const menu = (label, items) => `<details class="dd"><summary>${label}</summary><div class="dd-panel">${items.map(([t, p]) => `<a href="${GC(p)}">${t}</a>`).join("")}</div></details>`;
+const items = (arr) => arr.filter(([, k]) => L(k)).map(([lb, k]) => `<a href="${L(k)}">${esc(lb)}</a>`).join("");
+const menu = (label, arr) => `<details class="dd"><summary>${esc(label)}</summary><div class="dd-panel">${items(arr)}</div></details>`;
+const MN = T.menus;
+const langLinks = (cls) => LANGS.map((l) => `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}${cls ? ` class="${cls}"` : ""}>${CODE[l]}</a>`).join("");
 
 const portraitM = meta(D.portrait);
 const heroPreload = `<link rel="preload" as="image" type="image/avif" imagesrcset="${srcset(D.portrait, "avif")}" imagesizes="(min-width: 1024px) 440px, 200px" fetchpriority="high">`;
@@ -53,44 +89,56 @@ const jsonld = {
       address: { "@type": "PostalAddress", streetAddress: "95 Trung Hoa", addressLocality: "Yen Hoa Ward, Hanoi", addressCountry: "VN" },
       openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "08:00", closes: "18:00" } },
     { "@type": "Physician", "@id": `${URL_}#physician`, name: `${D.name} (${D.nick})`, url: URL_, image: `${SITE}${dirOf(D.portrait)}/${D.portrait}-800.webp`,
-      medicalSpecialty: D.specialty, telephone: "+84906621988", parentOrganization: { "@id": "https://greenfield.clinic/#clinic" },
+      medicalSpecialty: ALL[D.key].specialty, telephone: "+84906621988", parentOrganization: { "@id": "https://greenfield.clinic/#clinic" },
       address: { "@type": "PostalAddress", streetAddress: "95 Trung Hoa", addressLocality: "Yen Hoa Ward, Hanoi", addressCountry: "VN" } },
     { "@type": "Person", "@id": `${URL_}#person`, name: D.name, alternateName: D.nick, jobTitle: D.jobTitle, url: URL_,
       image: `${SITE}${dirOf(D.portrait)}/${D.portrait}-800.webp`,
       alumniOf: D.alumni.map((n) => ({ "@type": "CollegeOrUniversity", name: n })),
       worksFor: { "@id": "https://greenfield.clinic/#clinic" }, knowsAbout: D.specialty,
-      sameAs: ["https://greenfield.clinic/our-doctors/"] },
-    { "@type": "ProfilePage", "@id": `${URL_}#page`, url: URL_, name: D.title, mainEntity: { "@id": `${URL_}#person` }, inLanguage: "en" },
+      sameAs: [L("doctors")] },
+    { "@type": "ProfilePage", "@id": `${URL_}#page`, url: URL_, name: D.title, description: D.description, mainEntity: { "@id": `${URL_}#person` }, inLanguage: HL[lang] },
   ],
 };
 
 const casesData = D.cases.map((c, i) => ({ i, t: c.t, d: c.d, m: c.m,
   b: { a: srcset(`${c.img}-before`, "avif"), w: srcset(`${c.img}-before`, "webp"), s: `${dirOf(`${c.img}-before`)}/${c.img}-before-${Math.max(...meta(`${c.img}-before`).widths)}.webp` },
   f: { a: srcset(`${c.img}-after`, "avif"), w: srcset(`${c.img}-after`, "webp"), s: `${dirOf(`${c.img}-after`)}/${c.img}-after-${Math.max(...meta(`${c.img}-after`).widths)}.webp` } }));
-const TEAM = { implant: "Greenfield's implant team", orthodontic: "Greenfield's orthodontic team", restorative: "Greenfield's restorative team" }[D.casesTeam];
+const TEAM = T.cases.team[D.casesTeam];
 const JM = D.journeyMeta; const G = JM.groups;
 const counts = D.journey.reduce((o, s) => ((o[s.g] = (o[s.g] || 0) + 1), o), {});
 let col = 1; const span = {}; for (const g of ["pre", "t1", "t2"]) { span[g] = `${col}/${col + (counts[g] || 0)}`; col += counts[g] || 0; }
 const qm = meta(D.quote.img); const qWide = qm.ratio < 1.2;
 const qW = qWide ? 420 : 310;
-const others = ORDER.filter((k) => k !== D.key).map((k) => ALL[k]);
+const others = ORDER.filter((k) => k !== D.key).map((k) => doc(k, lang));
 const c0 = D.cases[0];
+const CJK = { ko: "'Pretendard','Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC'" }[lang];
+const CJK_CSS = CJK ? `/* ${lang}: chữ CJK theo font hệ thống, phần Latin vẫn Be Vietnam Pro; tiêu đề KHÔNG dùng Cormorant (sans 600) */
+:root{--sans:'Be Vietnam Pro',${CJK},system-ui,-apple-system,sans-serif;--serif:var(--sans)}
+h1,h2{font-family:var(--sans);font-weight:600;line-height:1.3;letter-spacing:0}
+h1 em,h2 em{font-style:normal;font-weight:600}
+.eyebrow,.ftr .ft-h,.mnav .mh,.steps .tg,.trips span,.ba .tag{letter-spacing:.04em}
+.quote .qt{line-height:1.45;max-width:16em}
+.quote footer i,.steps .heal-cap,.steps li.heal::before{font-style:normal}${lang === "ko" ? "\nbody{word-break:keep-all;overflow-wrap:break-word}" : ""}` : "";
 
 const html = `<!doctype html>
-<html lang="en">
+<html lang="${HL[lang]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(D.title)}</title>
 <meta name="description" content="${esc(D.description)}">
 <link rel="canonical" href="${URL_}">
+${LANGS.map((l) => `<link rel="alternate" hreflang="${HL[l]}" href="${SITE}${pagePath(l, D.slug)}">`).join("\n")}
+<link rel="alternate" hreflang="x-default" href="${SITE}${pagePath("en", D.slug)}">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Greenfield Dental">
-<meta property="og:title" content="${esc(`${D.name} (${D.nick}) — ${D.jobTitle} | Greenfield Dental`)}">
+<meta property="og:locale" content="${OGL[lang]}">
+${LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternate" content="${OGL[l]}">`).join("")}
+<meta property="og:title" content="${esc(tp(T.ogTitle))}">
 <meta property="og:description" content="${esc(D.description)}">
 <meta property="og:url" content="${URL_}">
 <meta property="og:image" content="${SITE}/${D.slug}/img/${D.key}-og-1200x630.jpg">
-<meta name="twitter:title" content="${esc(`${D.name} (${D.nick}) — Greenfield Dental`)}">
+<meta name="twitter:title" content="${esc(tp(T.twTitle))}">
 <meta name="twitter:description" content="${esc(D.description)}">
 <meta name="twitter:image" content="${SITE}/${D.slug}/img/${D.key}-og-1200x630.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
@@ -99,7 +147,7 @@ const html = `<!doctype html>
 <link rel="icon" href="/shared/img/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/shared/img/favicon-192.png">
 <link rel="preload" href="/shared/fonts/BeVietnamPro-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/shared/fonts/CormorantGaramond-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+${lang === "ko" || lang === "zh" ? "" : `<link rel="preload" href="/shared/fonts/CormorantGaramond-600-latin.woff2" as="font" type="font/woff2" crossorigin>`}${isVI ? `\n<link rel="preload" href="/shared/fonts/BeVietnamPro-400-vietnamese.woff2" as="font" type="font/woff2" crossorigin>` : ""}
 ${heroPreload}
 <style>
 ${FONTS_CSS}
@@ -333,6 +381,21 @@ a.card:hover{border-color:var(--gold)}
 
 .wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .wa-float svg{width:30px;height:30px}
+.wa-float.zalo{background:#0068FF}
+.wa-small{font-size:14px;color:var(--on-moss)} .wa-small a{color:var(--on-moss);text-underline-offset:3px}
+
+/* Chọn ngôn ngữ: menu thả (< 1280px), hàng chữ EN · VI · ES · KO · 中文 (≥ 1280px) */
+.lang-dd>summary{padding:0 10px;gap:6px}
+.lang-dd>summary svg{width:18px;height:18px}
+.lang-dd .dd-panel{left:auto;right:0;min-width:120px}
+.lang-dd .dd-panel a[aria-current],.lang-row a[aria-current]{color:var(--gold)}
+.lang-row{display:none;align-items:center}
+.lang-row a{display:flex;align-items:center;min-height:44px;padding:0 6px;font:500 14px/1 var(--sans);color:var(--on-moss);text-decoration:none}
+.lang-row a:hover{color:#fff}
+.lang-row a+a::before{content:"·";margin-right:6px;color:var(--on-moss-line)}
+.mnav .mlang{display:flex;flex-wrap:wrap;gap:4px 16px}
+.mnav .mlang a{border-bottom:0}
+.mnav .mlang a[aria-current]{color:var(--gold)}
 
 @media (min-width:640px){
   .stats .wrap{grid-template-columns:repeat(var(--n,4),1fr)} .stat{border-bottom:0;border-right:1px solid var(--line);padding:24px 20px} .stat:last-child{border-right:0}
@@ -353,7 +416,7 @@ a.card:hover{border-color:var(--gold)}
   section.block{padding-block:88px}
   .cards{grid-template-columns:repeat(3,1fr)} .card{min-height:200px} .card.media{min-height:260px}
   .quote .wrap{grid-template-columns:34% 1fr;align-items:center;gap:56px;min-height:500px;padding-block:40px 0}
-  .quote picture{order:-1;width:var(--qw,310px);justify-self:center}
+  .quote picture{order:-1;width:var(--qw,310px);max-width:100%;justify-self:center}
   .quote .qbox{justify-self:start;padding:56px 24px 96px;max-width:720px}
   .quote .qm{width:96px}
   .quote .qt{max-width:28ch}
@@ -365,6 +428,10 @@ a.card:hover{border-color:var(--gold)}
   .legal{padding-bottom:24px}
   .wa-float{display:none}
 }
+.hdr .btn,.rating small{white-space:nowrap}
+/* 1024–1279px: menu + chọn ngôn ngữ + nút đặt lịch đã kín chỗ → ẩn khối đánh giá Google (vẫn có ở mục Đánh giá) */
+@media (min-width:1024px) and (max-width:1279px){.hdr .rating{display:none}}
+@media (min-width:1280px){.lang-dd{display:none}.lang-row{display:flex}}
 @media (min-width:1200px){
   /* Desktop: một hàng 7 bước, vạch nối liền 01→07, nhóm chuyến ở trên */
   .trips{display:grid;grid-template-columns:repeat(7,1fr);column-gap:20px;margin-bottom:14px;align-items:end}
@@ -381,11 +448,12 @@ a.card:hover{border-color:var(--gold)}
 }
 @media (min-width:1280px){.quote .qt{font-size:40px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+${CJK_CSS}
 </style>
-<script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({page_type:"doctor_profile",doctor:"${D.key}"});</script>
+<script>window.dataLayer=window.dataLayer||[];window.dataLayer.push({page_type:"doctor_profile",doctor:"${D.key}",page_lang:"${lang}"});</script>
 <script>/* Đồng ý cookie — CÙNG luật với greenfield.clinic (gf_consent_v1): EU/UK/CH mặc định từ chối + banner; ngoài EU mặc định cho phép.
    Thêm: lưu cả cookie .greenfield.clinic để web chính / trang bác sĩ đọc chung (web chính hiện chỉ dùng localStorage). */
-(function(){var KEY="gf_consent_v1";
+(function(){var KEY="gf_consent_v1",TX=${js({ ...T.cookie, url: L("privacy") })};
 var EU=["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IE","IT","LV","LT","LU","MT","NL","PL","PT","RO","SK","SI","ES","SE","IS","LI","NO","GB","UK","CH"];
 function isEU(){try{if(/^Europe\\//.test(Intl.DateTimeFormat().resolvedOptions().timeZone||""))return true;}catch(e){}try{var L=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""];for(var i=0;i<L.length;i++){var m=String(L[i]).match(/[-_]([A-Za-z]{2})\\b/);if(m&&EU.indexOf(m[1].toUpperCase())>-1)return true;}}catch(e){}return false;}
 function readCookie(){var m=document.cookie.match(/(?:^|; )gf_consent_v1=([^;]+)/);if(!m)return null;try{var c=JSON.parse(decodeURIComponent(m[1]));return c&&c.v===1?c:null;}catch(e){return null;}}
@@ -398,10 +466,10 @@ function save(a,m){choice={v:1,analytics:!!a,marketing:!!m,ts:Date.now()};try{lo
  try{var d=/greenfield\\.clinic$/.test(location.hostname)?";domain=.greenfield.clinic":"";document.cookie=KEY+"="+encodeURIComponent(JSON.stringify(choice))+";path=/;max-age=31536000;SameSite=Lax"+d+(location.protocol==="https:"?";Secure":"");}catch(e){}
  upd(choice);close();}
 var box;function close(){if(box&&box.parentNode)box.parentNode.removeChild(box);box=null;}
-function open(settings){close();var c=choice||{analytics:false,marketing:false};box=document.createElement("div");box.id="gf-cc";box.setAttribute("role","dialog");box.setAttribute("aria-label","Cookies on greenfield.clinic");
- box.innerHTML="<p><b class='t'>Cookies.</b> We use analytics and ad-measurement cookies only with your permission. <a href='https://greenfield.clinic/privacy-policy/'>Privacy Policy</a></p>"+
- (settings?"<label><input type='checkbox' checked disabled> <span><b>Essential</b> — always on</span></label><label><input type='checkbox' id='gf-cc-an'"+(c.analytics?" checked":"")+"> <span><b>Analytics</b> — understand how the site is used</span></label><label><input type='checkbox' id='gf-cc-mk'"+(c.marketing?" checked":"")+"> <span><b>Marketing</b> — measure which ads help patients find us</span></label><div class='row'><button data-a='save' class='pri'>Save choices</button><button data-a='rej'>Reject non-essential</button></div>"
- :"<div class='row'><button data-a='acc' class='pri'>Accept all</button><button data-a='rej'>Reject</button><button data-a='set' class='lk'>Settings</button></div>");
+function open(settings){close();var c=choice||{analytics:false,marketing:false};box=document.createElement("div");box.id="gf-cc";box.setAttribute("role","dialog");box.setAttribute("aria-label",TX.aria);
+ box.innerHTML="<p><b class='t'>"+TX.title+"</b> "+TX.text+" <a href='"+TX.url+"'>"+TX.privacy+"</a></p>"+
+ (settings?"<label><input type='checkbox' checked disabled> <span><b>"+TX.essential+"</b> — "+TX.essentialD+"</span></label><label><input type='checkbox' id='gf-cc-an'"+(c.analytics?" checked":"")+"> <span><b>"+TX.analytics+"</b> — "+TX.analyticsD+"</span></label><label><input type='checkbox' id='gf-cc-mk'"+(c.marketing?" checked":"")+"> <span><b>"+TX.marketing+"</b> — "+TX.marketingD+"</span></label><div class='row'><button data-a='save' class='pri'>"+TX.save+"</button><button data-a='rej'>"+TX.rejectNE+"</button></div>"
+ :"<div class='row'><button data-a='acc' class='pri'>"+TX.accept+"</button><button data-a='rej'>"+TX.reject+"</button><button data-a='set' class='lk'>"+TX.settings+"</button></div>");
  box.addEventListener("click",function(e){var a=e.target.getAttribute&&e.target.getAttribute("data-a");if(a==="acc")save(1,1);else if(a==="rej")save(0,0);else if(a==="set")open(true);else if(a==="save")save(document.getElementById("gf-cc-an").checked,document.getElementById("gf-cc-mk").checked);});
  document.body.appendChild(box);}
 window.gfCookieSettings=function(){open(true)};
@@ -416,36 +484,39 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 <script>/* GTM tải sau thao tác đầu tiên / 3s sau load — y như greenfield.clinic (gf-gtm-deferred); kèm doctor trong sự kiện click. */
 (function(){var done=false,ev=["keydown","mousedown","mousemove","touchstart","wheel","scroll"];function load(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,load,{passive:true})});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ND5D4BL3');}
 window.gfLoadGTM=load;ev.forEach(function(e){addEventListener(e,load,{passive:true})});
-document.addEventListener("click",function(e){try{var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var u=a.href||"";if(!/wa\\.me|whatsapp\\.com|^tel:|^mailto:/i.test(u))return;
+document.addEventListener("click",function(e){try{var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var u=a.href||"";if(!/wa\\.me|whatsapp\\.com|zalo\\.me|^tel:|^mailto:/i.test(u))return;
  var loc=a.closest(".hdr,.mnav")?"header":a.closest(".ftr")?"footer":a.closest(".wa-float")?"floating":a.closest(".hero")?"hero":a.closest(".cta")?"end_cta":"content";
  var t=String(a.innerText||a.getAttribute("aria-label")||"").replace(/\\s+/g," ").trim().slice(0,100);
- window.dataLayer.push({event:"gf_doctor_contact",doctor:"${D.key}",contact_method:/wa\\.me|whatsapp/i.test(u)?"whatsapp":/^tel:/i.test(u)?"call":"email",cta_location:loc});
+ window.dataLayer.push({event:"gf_doctor_contact",doctor:"${D.key}",contact_method:/wa\\.me|whatsapp/i.test(u)?"whatsapp":/zalo\\.me/i.test(u)?"zalo":/^tel:/i.test(u)?"call":"email",cta_location:loc,page_lang:"${lang}"});
  var gtm=window.google_tag_manager;if(gtm){for(var k in gtm){if(k.indexOf("GTM-")===0)return;}}
- window.dataLayer.push({event:"gf_contact_click_pre",gf_link_url:u,gf_cta_location:loc,gf_cta_text:t||"unknown",doctor:"${D.key}"});load();}catch(x){}},true);
+ window.dataLayer.push({event:"gf_contact_click_pre",gf_link_url:u,gf_cta_location:loc,gf_cta_text:t||"unknown",doctor:"${D.key}",page_lang:"${lang}"});load();}catch(x){}},true);
 if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener("load",function(){setTimeout(load,3000)})}})();</script>
 <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
 </head>
 <body>
 <header class="hdr">
   <div class="wrap">
-    <a class="logo" href="https://greenfield.clinic/" aria-label="Greenfield Dental home"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
-    <nav class="nav" aria-label="Main">
-      ${menu("Services", SERVICES)}${menu("Results", RESULTS)}${menu("About", ABOUT)}<a href="https://greenfield.clinic/contact-us/">Contact</a>
+    <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
+    <nav class="nav" aria-label="${esc(T.navAria)}">
+      ${menu(T.nav.services, MN.services)}${menu(T.nav.results, MN.results)}${menu(T.nav.about, MN.about)}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
     </nav>
     <div class="hdr-right">
-      <a class="rating" href="https://g.co/kgs/FmAkkx3" rel="noopener">${ICON.star}<span><b data-rating>5.0</b><small><span data-count>264</span> Google reviews</small></span></a>
-      <a class="btn btn-gold btn-cta-sm" href="https://greenfield.clinic/contact-us/">Free consultation</a>
-      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span></button>
+      <details class="dd lang-dd"><summary aria-label="${esc(T.langAria)}: ${esc(T.langName)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="dd-panel">${langLinks()}</div></details>
+      <nav class="lang-row" aria-label="${esc(T.langAria)}">${langLinks()}</nav>
+      <a class="rating" href="https://g.co/kgs/FmAkkx3" rel="noopener">${ICON.star}<span><b data-rating>5.0</b><small>${t(T.ratingSmall)}</small></span></a>
+      <a class="btn btn-gold btn-cta-sm" href="${L("contact")}">${esc(T.freeConsult)}</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="${esc(T.openMenu)}"><span></span></button>
     </div>
   </div>
   <div class="mnav" id="mnav">
-    <p class="mh">Services</p>${SERVICES.slice(0, 6).map(([t, p]) => `<a href="${GC(p)}">${t}</a>`).join("")}
-    <p class="mh">Results</p>${RESULTS.map(([t, p]) => `<a href="${GC(p)}">${t}</a>`).join("")}
-    <p class="mh">About</p>${ABOUT.slice(0, 4).map(([t, p]) => `<a href="${GC(p)}">${t}</a>`).join("")}<a href="https://greenfield.clinic/contact-us/">Contact</a>
-    <p style="margin-top:20px"><a class="btn btn-gold" style="border:0;justify-content:center" href="${waHref}">${ICON.wa}Free consultation</a></p>
+    <p class="mh">${esc(T.nav.services)}</p>${items(MN.services.slice(0, MN.mobileServices))}
+    <p class="mh">${esc(T.nav.results)}</p>${items(MN.results)}
+    <p class="mh">${esc(T.nav.about)}</p>${items(MN.about.slice(0, MN.mobileAbout))}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
+    <p class="mh">${esc(T.langAria)}</p><div class="mlang">${langLinks()}</div>
+    <p style="margin-top:20px"><a class="btn btn-gold" style="border:0;justify-content:center" href="${primary}">${PI}${esc(T.freeConsult)}</a></p>
   </div>
 </header>
-<nav class="subnav" aria-label="On this page"><div class="wrap"><a href="#top"><b>${esc(D.short)}</b></a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#cases">Cases</a><a href="#reviews">Reviews</a><a href="#journey">Your trip</a><a href="#faq">FAQs</a></div></nav>
+<nav class="subnav" aria-label="${esc(T.subnavAria)}"><div class="wrap"><a href="#top"><b>${esc(D.short)}</b></a><a href="#about">${esc(T.subnav.about)}</a><a href="#expertise">${esc(T.subnav.expertise)}</a><a href="#cases">${esc(T.subnav.cases)}</a><a href="#reviews">${esc(T.subnav.reviews)}</a><a href="#journey">${esc(T.subnav.journey)}</a><a href="#faq">${esc(T.subnav.faq)}</a></div></nav>
 
 <main id="top">
 <section class="hero">
@@ -456,7 +527,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
       <h1>${esc(D.name)} <em>${esc(D.nick)}</em></h1>
       <p class="lead">${esc(D.lead)}</p>
       <ul class="chips">${D.chips.map((c) => `<li>${ICON.check}${esc(c)}</li>`).join("")}</ul>
-      <div class="ctas"><a class="btn btn-gold" href="${waHref}">${ICON.wa}Free consultation with ${esc(D.short)}</a><a class="btn btn-ghost" href="#cases">View treatment cases</a></div>
+      <div class="ctas"><a class="btn btn-gold" href="${primary}">${PI}${t(isVI ? T.vi.zaloCta : T.heroCta)}</a><a class="btn btn-ghost" href="#cases">${esc(T.viewCases)}</a></div>
     </div>
   </div>
 </section>
@@ -477,19 +548,19 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 
 <section class="block" id="expertise" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Main expertise</p><h2>What ${esc(D.short)} <em>treats</em></h2></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.expertise.eyebrow)}</p><h2>${t(T.expertise.h2)} <em>${t(T.expertise.h2em)}</em></h2></div>
     <div class="cards">
-      ${D.expertise.map((x) => { const inner = `<div><h3>${esc(x.t)}</h3><p style="margin-top:8px">${esc(x.s)}</p></div>${x.link ? `<span class="go">Learn more ${ICON.arrow}</span>` : ""}`;
+      ${D.expertise.map((x) => { const link = x.link && loc(x.link); const inner = `<div><h3>${esc(x.t)}</h3><p style="margin-top:8px">${esc(x.s)}</p></div>${link ? `<span class="go">${esc(T.expertise.learnMore)} ${ICON.arrow}</span>` : ""}`;
         const media = x.img ? pic(x.img, x.imgAlt, "(min-width: 1024px) 380px, 100vw") : "";
-        return x.link ? `<a class="card${x.img ? " media" : ""}" href="${x.link}">${media}${inner}</a>` : `<div class="card">${inner}</div>`; }).join("\n      ")}
-      <div class="card advice"><div><h3>Not sure which treatment you need?</h3><p style="margin-top:8px">Send photos of your teeth and your concerns. ${esc(D.short)} will suggest the most suitable approach.</p></div><a class="btn btn-gold" href="${waHref}">${ICON.wa}Get advice</a></div>
+        return link ? `<a class="card${x.img ? " media" : ""}" href="${link}">${media}${inner}</a>` : `<div class="card${x.img ? " media" : ""}">${media}${inner}</div>`; }).join("\n      ")}
+      <div class="card advice"><div><h3>${t(T.expertise.adviceH)}</h3><p style="margin-top:8px">${t(T.expertise.adviceP)}</p></div><a class="btn btn-gold" href="${primary}">${PI}${esc(T.expertise.adviceBtn)}</a></div>
     </div>
   </div>
 </section>
 
-<section class="quote" aria-label="In ${esc(D.pronounPoss)} words" style="--qw:${qW}px;--qwt:${qWide ? 380 : 300}px;--qwm:${qWide ? 340 : 260}px">
+<section class="quote" aria-label="${t(T.quoteAria)}" style="--qw:${qW}px;--qwt:${qWide ? 380 : 300}px;--qwm:${qWide ? 340 : 260}px">
   <div class="wrap">
-    ${pic(D.quote.img, `${D.name} smiling`, `(min-width: 640px) ${qW}px, ${qWide ? 340 : 260}px`)}
+    ${pic(D.quote.img, tp(T.quoteAlt), `(min-width: 640px) ${qW}px, ${qWide ? 340 : 260}px`)}
     <div class="qbox"><svg class="qm o" viewBox="0 0 64 52" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M4 48V30C4 15 11 6 25 3l2 6c-8 3-12 8-12 15h10v24zM36 48V30c0-15 7-24 21-27l2 6c-8 3-12 8-12 15h10v24z"/></svg>
       <blockquote><p class="qt">${esc(D.quote.text)} ${esc(D.quote.em)}</p><footer><b>${esc(D.quote.by)}</b><i>${esc(D.quote.role)}</i></footer></blockquote><svg class="qm c" viewBox="0 0 64 52" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M60 4v18c0 15-7 24-21 27l-2-6c8-3 12-8 12-15H39V4zM28 4v18c0 15-7 24-21 27l-2-6c8-3 12-8 12-15H7V4z"/></svg>
     </div>
@@ -498,27 +569,27 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 
 <section class="block">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Training</p><h2>${D.certs.length <= 2 ? "Education" : "Certificates <em>&amp; courses</em>"}</h2></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.certs.eyebrow)}</p><h2>${D.certs.length <= 2 ? esc(T.certs.edu) : `${esc(T.certs.h2)} <em>${esc(T.certs.h2em)}</em>`}</h2></div>
     <ul class="certs${D.certs.length <= 2 ? " few" : ""}">${D.certs.map((c) => `<li>${pic(c.img, c.t, "240px")}<div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></div></li>`).join("")}</ul>
   </div>
 </section>
 
 <section class="block" id="cases" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Case studies</p><h2>Cases from <em>${esc(TEAM)}</em></h2><p class="muted">Real clinical photos, published with patient consent. Drag the handle to compare before and after.</p></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.cases.eyebrow)}</p><h2>${esc(T.cases.h2)} <em>${esc(TEAM)}</em></h2><p class="muted">${esc(T.cases.intro)}</p></div>
     <div class="case">
       <div class="ba" id="ba" style="--pos:50%">
-        <picture id="ba-b"><source type="image/avif" srcset="${casesData[0].b.a}" sizes="(min-width: 1024px) 620px, 100vw"><source type="image/webp" srcset="${casesData[0].b.w}" sizes="(min-width: 1024px) 620px, 100vw"><img src="${casesData[0].b.s}" alt="Before treatment: ${esc(c0.t)}" width="${Math.max(...meta(`${c0.img}-before`).widths)}" height="${Math.max(...meta(`${c0.img}-before`).widths)}" loading="lazy" decoding="async"></picture>
-        <picture class="after" id="ba-a"><source type="image/avif" srcset="${casesData[0].f.a}" sizes="(min-width: 1024px) 620px, 100vw"><source type="image/webp" srcset="${casesData[0].f.w}" sizes="(min-width: 1024px) 620px, 100vw"><img src="${casesData[0].f.s}" alt="After treatment: ${esc(c0.t)}" width="${Math.max(...meta(`${c0.img}-before`).widths)}" height="${Math.max(...meta(`${c0.img}-before`).widths)}" loading="lazy" decoding="async"></picture>
-        <span class="tag b">Before</span><span class="tag a">After</span><span class="line"></span><span class="knob" aria-hidden="true">⟷</span>
-        <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
+        <picture id="ba-b"><source type="image/avif" srcset="${casesData[0].b.a}" sizes="(min-width: 1024px) 620px, 100vw"><source type="image/webp" srcset="${casesData[0].b.w}" sizes="(min-width: 1024px) 620px, 100vw"><img src="${casesData[0].b.s}" alt="${esc(T.cases.beforeAlt + c0.t)}" width="${Math.max(...meta(`${c0.img}-before`).widths)}" height="${Math.max(...meta(`${c0.img}-before`).widths)}" loading="lazy" decoding="async"></picture>
+        <picture class="after" id="ba-a"><source type="image/avif" srcset="${casesData[0].f.a}" sizes="(min-width: 1024px) 620px, 100vw"><source type="image/webp" srcset="${casesData[0].f.w}" sizes="(min-width: 1024px) 620px, 100vw"><img src="${casesData[0].f.s}" alt="${esc(T.cases.afterAlt + c0.t)}" width="${Math.max(...meta(`${c0.img}-before`).widths)}" height="${Math.max(...meta(`${c0.img}-before`).widths)}" loading="lazy" decoding="async"></picture>
+        <span class="tag b">${esc(T.cases.before)}</span><span class="tag a">${esc(T.cases.after)}</span><span class="line"></span><span class="knob" aria-hidden="true">⟷</span>
+        <input type="range" min="0" max="100" value="50" aria-label="${esc(T.cases.compare)}">
       </div>
       <div class="case-info" aria-live="polite">
-        <p class="eyebrow" id="case-n">Case 01 / ${String(D.cases.length).padStart(2, "0")}</p>
+        <p class="eyebrow" id="case-n">${esc(T.cases.label)} 01 / ${String(D.cases.length).padStart(2, "0")}</p>
         <h3 id="case-t">${esc(c0.t)}</h3>
         <p id="case-d">${esc(c0.d)}</p>
         <p class="case-meta" id="case-m">${esc(c0.m)}</p>
-        <div class="case-nav"><button class="prev" type="button" aria-label="Previous case">${ICON.arrow}</button><button class="next" type="button" aria-label="Next case">${ICON.arrow}</button></div>
+        <div class="case-nav"><button class="prev" type="button" aria-label="${esc(T.cases.prev)}">${ICON.arrow}</button><button class="next" type="button" aria-label="${esc(T.cases.next)}">${ICON.arrow}</button></div>
       </div>
     </div>
   </div>
@@ -526,11 +597,11 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 
 <section class="block reviews" id="reviews">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Patient reviews</p><h2>What patients say <em>about Greenfield</em></h2></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.reviews.eyebrow)}</p><h2>${esc(T.reviews.h2)} <em>${esc(T.reviews.h2em)}</em></h2></div>
     <div class="rv-box">
-      <div class="rv-score"><b data-rating>5.0</b><div><span class="stars">${ICON.star.repeat(5)}</span><span><span data-count>264</span> Google reviews for Greenfield Dental</span></div></div>
-      <p class="muted">Reviews come from patients of Greenfield Dental as a whole. Read them on Google, or see patient stories on our website.</p>
-      <div class="rv-links"><a class="btn btn-ghost" href="https://g.co/kgs/FmAkkx3" rel="noopener">Read our Google reviews</a><a class="btn btn-ghost" href="https://greenfield.clinic/patient-reviews/">Patient stories</a></div>
+      <div class="rv-score"><b data-rating>5.0</b><div><span class="stars">${ICON.star.repeat(5)}</span><span>${t(T.reviews.count)}</span></div></div>
+      <p class="muted">${esc(T.reviews.p)}</p>
+      <div class="rv-links"><a class="btn btn-ghost" href="https://g.co/kgs/FmAkkx3" rel="noopener">${esc(T.reviews.google)}</a><a class="btn btn-ghost" href="${L("reviews")}">${esc(T.reviews.stories)}</a></div>
     </div>
   </div>
 </section>
@@ -546,54 +617,54 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 
 <section class="block" id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">FAQs</p><h2>Questions <em>patients ask</em></h2></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.faq.eyebrow)}</p><h2>${esc(T.faq.h2)} <em>${esc(T.faq.h2em)}</em></h2></div>
     <div class="faq">${D.faqs.map((f, i) => `<details${i === 0 ? " open" : ""}><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div>
   </div>
 </section>
 
 <section class="block" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Our commitments</p><h2>What you can <em>expect</em></h2></div>
+    <div class="sec-head"><p class="eyebrow">${esc(T.commit.eyebrow)}</p><h2>${esc(T.commit.h2)} <em>${esc(T.commit.h2em)}</em></h2></div>
     <ul class="commit">${D.commitments.map((c, i) => `<li>${cicon(i)}<div><b>${esc(c.t)}</b><p>${esc(c.d)}</p></div></li>`).join("")}</ul>
   </div>
 </section>
 
 <section class="block others" aria-labelledby="others-h" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Our team</p><h2 id="others-h">Other Greenfield <em>doctors</em></h2></div>
-    <ul class="odocs">${others.map((o) => `<li><a href="/${o.slug}">${pic(o.portrait, o.portraitAlt, "(min-width: 1024px) 280px, 50vw", { slug: o.slug })}<span><b>${esc(o.name)}</b><small>${esc(o.nick)} · ${esc(o.card)}</small><i class="go">View profile ${ICON.arrow}</i></span></a></li>`).join("")}</ul>
+    <div class="sec-head"><p class="eyebrow">${esc(T.others.eyebrow)}</p><h2 id="others-h">${esc(T.others.h2)} <em>${esc(T.others.h2em)}</em></h2></div>
+    <ul class="odocs">${others.map((o) => `<li><a href="${pagePath(lang, o.slug)}">${pic(o.portrait, o.portraitAlt, "(min-width: 1024px) 280px, 50vw", { slug: o.slug })}<span><b>${esc(o.name)}</b><small>${esc(o.nick)} · ${esc(o.card)}</small><i class="go">${esc(T.others.view)} ${ICON.arrow}</i></span></a></li>`).join("")}</ul>
   </div>
 </section>
 
 <section class="cta on-moss" id="book">
-  ${pic("greenfield-clinic-lounge", "Patient lounge at Greenfield Dental, Hanoi", "100vw")}
+  ${pic("greenfield-clinic-lounge", T.cta.loungeAlt, "100vw")}
   <div class="wrap">
-    <p class="eyebrow">Your next step</p>
+    <p class="eyebrow">${esc(T.cta.eyebrow)}</p>
     <h2>${esc(D.cta.h2)} <em>${esc(D.cta.h2em)}</em></h2>
     <p class="lead">${esc(D.cta.p)}</p>
-    <div class="ctas"><a class="btn btn-gold" href="${waHref}">${ICON.wa}WhatsApp +84 906 621 988</a><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://greenfield.clinic/contact-us/">Send a message</a></div>
-    <p class="hours">Open daily 8:00 – 18:00 (last appointment 17:30) · Free examination and consultation</p>
-    <div class="related">${D.related.map((r) => `<a href="${r.u}">${esc(r.t)}</a>`).join("")}<a href="https://greenfield.clinic/our-doctors/">All Greenfield doctors</a></div>
+    <div class="ctas"><a class="btn btn-gold" href="${primary}">${PI}${esc(T.cta.wa)}</a><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="${isVI ? "tel:+84906621988" : L("contact")}">${esc(T.cta.send)}</a></div>
+    ${isVI ? `<p class="wa-small"><a href="${waHref}">${esc(T.vi.waLink)}</a></p>\n    ` : ""}<p class="hours">${esc(T.cta.hours)}</p>
+    <div class="related">${D.related.filter((r) => loc(r.u)).map((r) => `<a href="${loc(r.u)}">${esc(r.t)}</a>`).join("")}<a href="${L("doctors")}">${esc(T.cta.allDoctors)}</a></div>
   </div>
 </section>
 </main>
 
 <footer class="ftr">
   <div class="wrap cols">
-    <div class="brand"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118" loading="lazy"><p>Premium dental care in the heart of Hanoi, for local and international patients.</p>
+    <div class="brand"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118" loading="lazy"><p>${esc(T.footer.blurb)}</p>
       <div class="social"><a href="https://www.facebook.com/nhakhoagreenfield" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.2H8v3h2.5V21z"/></svg></a><a href="https://www.instagram.com/greenfield_dental/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a><a href="https://www.youtube.com/@nhakhoagreenfield" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3z"/></svg></a><a href="https://www.linkedin.com/company/greenfielddental/" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.9 8.6H3.8V20h3.1zM5.3 3.5a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM20.2 13.4c0-3-1.6-4.9-4.1-4.9a3.6 3.6 0 0 0-3.2 1.7V8.6H9.9V20h3.1v-6.2c0-1.6.8-2.6 2.1-2.6 1.3 0 1.9.9 1.9 2.6V20h3.2z"/></svg></a></div></div>
-    <div><h2 class="ft-h">Treatments</h2><ul>${[["Dental Implants","dental-implants-vietnam"],["Porcelain Veneers","porcelain-veneers"],["Invisalign","invisalign-in-vietnam"],["Orthodontic Braces","teeth-braces"],["Dental Crowns","dental-crowns"],["Teeth Whitening","teeth-whitening-2"],["General Dentistry","general-dentistry"],["All-on-4 / All-on-6","all-on-4-dental-implants-vietnam"],["Night guards & retainers","night-guards-mouthguards-retainers-hanoi"]].map(([t, p]) => `<li><a href="${GC(p)}">${t}</a></li>`).join("")}</ul></div>
-    <div><h2 class="ft-h">Clinic</h2><ul>${[["Our Doctors","our-doctors"],["Smile Gallery","smile-gallery"],["Plan your trip","dental-tourism"],["Overseas Vietnamese","overseas-vietnamese"],["Living in Hanoi","expat-dentist-hanoi"],["Blog","blog"],["Contact Us","contact-us"]].map(([t, p]) => `<li><a href="${GC(p)}">${t}</a></li>`).join("")}</ul></div>
-    <div><h2 class="ft-h">Visit us</h2><ul class="visit">
-      <li><a href="https://maps.google.com/?q=Greenfield+Dental+95+Trung+Hoa+Hanoi" rel="noopener">95 Trung Hoa, Yen Hoa Ward, Hanoi, Vietnam</a></li>
-      <li>Mon – Sun, 8:00 – 18:00 (last appointment 17:30)</li>
-      <li><a href="tel:+84906621988">+84 906 621 988</a></li>
+    <div><h2 class="ft-h">${esc(T.footer.treatments)}</h2><ul>${T.footer.treatmentLinks.filter(([, k]) => L(k)).map(([lb, k]) => `<li><a href="${L(k)}">${esc(lb)}</a></li>`).join("")}</ul></div>
+    <div><h2 class="ft-h">${esc(T.footer.clinic)}</h2><ul>${T.footer.clinicLinks.filter(([, k]) => L(k)).map(([lb, k]) => `<li><a href="${L(k)}">${esc(lb)}</a></li>`).join("")}</ul></div>
+    <div><h2 class="ft-h">${esc(T.footer.visit)}</h2><ul class="visit">
+      <li><a href="https://maps.google.com/?q=Greenfield+Dental+95+Trung+Hoa+Hanoi" rel="noopener">${esc(T.footer.address)}</a></li>
+      <li>${esc(T.footer.hours)}</li>
+      <li><a href="tel:+84906621988">${esc(T.footer.phone)}</a></li>
       <li><a href="mailto:hello@nhakhoagreenfield.com">hello@nhakhoagreenfield.com</a></li></ul>
-      <a class="btn btn-gold" href="${waHref}">${ICON.wa}Chat on WhatsApp</a></div>
+      <a class="btn btn-gold" href="${primary}">${PI}${esc(T.footer.chat)}</a></div>
   </div>
-  <div class="wrap legal"><span>© 2026 Greenfield Dental Company Limited · Tax code 0110015087</span><span class="sp"></span><a href="https://greenfield.clinic/privacy-policy/">Privacy Policy</a><a href="#cookie-settings" data-gf-cookie-settings>Cookie settings</a><a href="https://greenfield.clinic/terms-and-conditions/">Terms</a></div>
+  <div class="wrap legal"><span>${esc(T.footer.legal)}</span><span class="sp"></span><a href="${L("privacy")}">${esc(T.footer.privacy)}</a><a href="#cookie-settings" data-gf-cookie-settings>${esc(T.footer.cookies)}</a><a href="${L("terms")}">${esc(T.footer.terms)}</a></div>
 </footer>
-<a class="wa-float" href="${waHref}" aria-label="Chat with ${esc(D.short)} on WhatsApp">${ICON.wa}</a>
+<a class="wa-float${isVI ? " zalo" : ""}" href="${primary}" aria-label="${t(T.floatAria)}">${PI}</a>
 
 <script>/* Mã click WhatsApp — CÙNG cơ chế greenfield.clinic (gf_attr_v1 + mã 6 ký tự + sendBeacon wa-attr). Token: (via doctors.greenfield.clinic #MÃ).
    ⚠ Cần thêm https://doctors.greenfield.clinic vào WA_ATTR_ORIGINS (Quotation) trước khi đăng. */
@@ -615,16 +686,19 @@ document.addEventListener("click",onWa,true);document.addEventListener("auxclick
 document.querySelectorAll(".dd").forEach(function(d){d.addEventListener("toggle",function(){if(d.open)document.querySelectorAll(".dd").forEach(function(o){if(o!==d)o.open=false;});});});
 document.addEventListener("click",function(e){if(!e.target.closest(".dd"))document.querySelectorAll(".dd[open]").forEach(function(d){d.open=false;});});
 try{fetch("https://lead.greenfield.clinic/api/public/google-rating").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.count)return;document.querySelectorAll("[data-count]").forEach(function(e){e.textContent=j.count});document.querySelectorAll("[data-rating]").forEach(function(e){e.textContent=j.ratingText||"5.0"});}).catch(function(){});}catch(e){}
-var C=${JSON.stringify(casesData)},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
+var C=${js(casesData)},TL=${js({ b: T.cases.beforeAlt, a: T.cases.afterAlt, n: T.cases.label })},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});
 function setPic(p,d,alt){var s=p.querySelectorAll("source");s[0].srcset=d.a;s[1].srcset=d.w;var im=p.querySelector("img");im.src=d.s;im.alt=alt;}
-function show(n){i=(n+C.length)%C.length;var c=C[i];setPic(document.getElementById("ba-b"),c.b,"Before treatment: "+c.t);setPic(document.getElementById("ba-a"),c.f,"After treatment: "+c.t);
- document.getElementById("case-n").textContent="Case "+String(i+1).padStart(2,"0")+" / "+String(C.length).padStart(2,"0");document.getElementById("case-t").textContent=c.t;document.getElementById("case-d").textContent=c.d;document.getElementById("case-m").textContent=c.m;rng.value=50;ba.style.setProperty("--pos","50%");}
+function show(n){i=(n+C.length)%C.length;var c=C[i];setPic(document.getElementById("ba-b"),c.b,TL.b+c.t);setPic(document.getElementById("ba-a"),c.f,TL.a+c.t);
+ document.getElementById("case-n").textContent=TL.n+" "+String(i+1).padStart(2,"0")+" / "+String(C.length).padStart(2,"0");document.getElementById("case-t").textContent=c.t;document.getElementById("case-d").textContent=c.d;document.getElementById("case-m").textContent=c.m;rng.value=50;ba.style.setProperty("--pos","50%");}
 document.querySelector(".case-nav .prev").addEventListener("click",function(){show(i-1)});document.querySelector(".case-nav .next").addEventListener("click",function(){show(i+1)});})();</script>
 </body>
 </html>
 `;
-mkdirSync(P(`./dist/${D.slug}/`), { recursive: true });
-writeFileSync(P(`./dist/${D.slug}/index.html`), html);
-console.log(D.slug, (html.length / 1024).toFixed(1) + " KB");
+const out = lang === "en" ? `./dist/${D.slug}/` : `./dist/${lang}/${D.slug}/`;
+mkdirSync(P(out), { recursive: true });
+// Tiếng Trung không có khoảng trắng giữa các vế: bỏ dấu cách giữa chữ Hán/dấu câu toàn khổ và phần nhấn mạnh.
+const page = lang === "zh" ? html.replace(/([\u3000-\u9fff\uff00-\uffef]) (<em>|[\u3000-\u9fff])/g, "$1$2") : html;
+writeFileSync(P(`${out}index.html`), page);
+console.log(lang, D.slug, (page.length / 1024).toFixed(1) + " KB");
 }

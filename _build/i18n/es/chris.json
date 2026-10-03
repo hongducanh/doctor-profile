@@ -1,0 +1,245 @@
+{
+  "name": "Dr. Do Nhu Chuyen",
+  "nick": "Dr. Chris",
+  "short": "Dr. Chris",
+  "first": "Chris",
+  "jobTitle": "Implantólogo",
+  "role": "Implantólogo",
+  "card": "Implantólogo",
+  "eyebrow": "DDS · Implantólogo · Greenfield Dental",
+  "title": "Dr. Do Nhu Chuyen (Dr. Chris) — Implantólogo en Hanói | Greenfield Dental",
+  "description": "Dr. Do Nhu Chuyen (Dr. Chris), cirujano implantólogo en Greenfield Dental, Hanói: All-on-4 / All-on-6, implantes unitarios y múltiples, cirugía con sedación. Más de 12 años y 10.000 implantes.",
+  "lead": "El Dr. Do Nhu Chuyen (Dr. Chris) es cirujano implantólogo con más de 12 años de experiencia clínica y más de 10.000 implantes colocados. Licenciado por la Universidad de Medicina de Hanói, se centra en el tratamiento de arcada completa y en casos complejos, incluida la cirugía de implantes con sedación.",
+  "chips": [
+    "All-on-4 y All-on-6",
+    "Implantes unitarios y múltiples",
+    "Cirugía de implantes con sedación"
+  ],
+  "portraitAlt": "Dr. Do Nhu Chuyen (Dr. Chris), implantólogo en Greenfield Dental",
+  "specialty": [
+    "Implantología",
+    "Cirugía oral"
+  ],
+  "wa": "Hola, Greenfield Dental. Me gustaría una consulta con el Dr. Chris.",
+  "ogLine": [
+    "All-on-4 / All-on-6 · Cirugía de implantes con sedación",
+    "Más de 12 años · Más de 10.000 implantes"
+  ],
+  "stats": [
+    {
+      "l": "Años de práctica clínica"
+    },
+    {
+      "n": "10.000+",
+      "l": "Implantes colocados"
+    }
+  ],
+  "badge": {
+    "l": "Años de<br>práctica clínica"
+  },
+  "about": {
+    "eyebrow": "Sobre el Dr. Chris",
+    "h2": "Precisión para",
+    "h2em": "cada sonrisa.",
+    "imgAlt": "El Dr. Chris realizando una cirugía de implantes en Greenfield Dental",
+    "p": [
+      "El Dr. Chris se dedica a la implantología, All-on-4 y All-on-6, y a la cirugía oral menor. Combina la planificación digital con una técnica quirúrgica cuidadosa para recuperar la función, la estabilidad y un resultado de aspecto natural.",
+      "Para el Dr. Chris, la odontología consiste en marcar una diferencia real: devolver al paciente su comodidad y su confianza es lo que sigue motivando su trabajo cada día."
+    ],
+    "creds": [
+      {
+        "t": "Doctor en Cirugía Dental (DDS)",
+        "s": "Universidad de Medicina de Hanói"
+      },
+      {
+        "t": "All-on-4 y All-on-6",
+        "s": "Rehabilitación de arcada completa sobre implantes"
+      },
+      {
+        "t": "Cirugía de implantes con sedación",
+        "s": "Para casos complejos y de arcada completa"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "All-on-4 y All-on-6",
+      "s": "Rehabilitación de arcada completa · Dientes fijos",
+      "imgAlt": "Puente fijo de arcada completa sobre implantes"
+    },
+    {
+      "t": "Implantes unitarios y múltiples",
+      "s": "Colocación de implantes · Coronas y puentes sobre implantes"
+    },
+    {
+      "t": "Cirugía de implantes con sedación",
+      "s": "Casos complejos y de arcada completa"
+    },
+    {
+      "t": "Injerto óseo y elevación de seno",
+      "s": "Aumento óseo antes de los implantes"
+    },
+    {
+      "t": "Muelas del juicio y cirugía oral",
+      "s": "Extracción quirúrgica · Cirugía oral menor"
+    }
+  ],
+  "quote": {
+    "text": "El mejor tratamiento empieza por escuchar.",
+    "em": "Solo entendiendo lo que necesita cada paciente podemos recomendar la solución adecuada.",
+    "by": "Dr. Do Nhu Chuyen — Dr. Chris",
+    "role": "Implantólogo de Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctor en Cirugía Dental (DDS)",
+      "s": "Universidad de Medicina de Hanói"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Implantes Dentium con coronas de zirconio",
+      "d": "Coronas de zirconio sobre implantes para reponer seis dientes ausentes, recuperar la función y ayudar a conservar el hueso maxilar.",
+      "m": "Implantología"
+    },
+    {
+      "t": "Rehabilitación con implantes All-on-6",
+      "d": "Restauración completa All-on-6 ante una pérdida dental extensa, pérdida ósea y enfermedad periodontal, para recuperar una función estable.",
+      "m": "Implantes de arcada completa"
+    },
+    {
+      "t": "Restauración de arcada completa All-on-4",
+      "d": "Implantes All-on-4 para una dentición muy deteriorada, con varios dientes ausentes y fracturados y pérdida ósea.",
+      "m": "Implantes de arcada completa"
+    },
+    {
+      "t": "Rehabilitación con implantes All-on-6",
+      "d": "Implantes All-on-6 para recuperar la función tras una periodontitis avanzada, pérdida ósea de grado 3 y seis dientes ausentes.",
+      "m": "Implantes de arcada completa"
+    },
+    {
+      "t": "Implantes Dentium con coronas Ceramill",
+      "d": "Coronas Ceramill sobre implantes para once dientes ausentes, desgaste importante, fracturas y sensibilidad.",
+      "m": "Implantología"
+    },
+    {
+      "t": "Restauración de arcada completa All-on-4",
+      "d": "Implantes All-on-4 para reponer quince dientes ausentes en un caso con periodontitis, movilidad dental y pérdida ósea.",
+      "m": "Implantes de arcada completa"
+    },
+    {
+      "t": "Restauración de arcada completa All-on-4",
+      "d": "Una solución All-on-4 estable tras una pérdida dental extensa, periodontitis, movilidad dental y pérdida ósea.",
+      "m": "Implantes de arcada completa"
+    },
+    {
+      "t": "Implantes Neodent con restauraciones Ceramill Zolid",
+      "d": "Implantes y restauraciones cerámicas para reponer cuatro dientes ausentes y tratar quistes dentales y desgaste cervical.",
+      "m": "Implantología"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Antes de viajar",
+      "d": "Envíe fotos y radiografías para una primera opinión del Dr. Chris."
+    },
+    {
+      "t": "Llegada a Hanói",
+      "d": "Recogida en el aeropuerto y ayuda con su estancia."
+    },
+    {
+      "t": "Exploración y escáner 3D",
+      "d": "Revisión gratuita con el Dr. Chris y tomografía CBCT."
+    },
+    {
+      "t": "Plan y presupuesto por escrito",
+      "d": "Calendario y presupuesto por escrito; los injertos, en un rango."
+    },
+    {
+      "t": "Cirugía de implantes",
+      "d": "Colocación de implantes; dientes provisionales si el hueso lo permite."
+    },
+    {
+      "t": "Controles durante su estancia",
+      "d": "Revisión de la cicatrización antes de volver a casa."
+    },
+    {
+      "t": "Dientes definitivos y seguimiento",
+      "d": "Colocación de las coronas o el puente definitivos y controles a distancia."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Antes de viajar",
+      "t1": "Viaje 1 · unos 5–7 días",
+      "t2": "Viaje 2 · tras 3–6 meses"
+    },
+    "gap": "cicatrización",
+    "gapLong": "Cicatrización · 3–6 meses",
+    "intro": "La mayoría de los casos de implantes requieren dos viajes: primero la cirugía y, tras la cicatrización, los dientes definitivos.",
+    "h2": "Siete pasos,",
+    "h2em": "planificados por escrito",
+    "eyebrow": "Su tratamiento con implantes"
+  },
+  "faqs": [
+    {
+      "q": "¿Puedo completar el tratamiento con implantes en un solo viaje?",
+      "a": "Normalmente se necesitan dos viajes. En el primero (unos 5–7 días), el Dr. Chris coloca los implantes y, en casos All-on-4 o All-on-6 si el hueso lo permite, un puente provisional fijo. Cuando los implantes han cicatrizado, normalmente en 3–6 meses, un segundo viaje de pocos días sirve para colocar el puente o las coronas definitivos. Los casos que requieren injerto óseo pueden tardar más; el Dr. Chris confirma el plan tras el escáner."
+    },
+    {
+      "q": "¿Cuánto duran los implantes dentales?",
+      "a": "Los implantes están pensados como una solución a largo plazo. Con una buena higiene en casa y revisiones periódicas, muchos duran 15–20 años o más. Las coronas o el puente pueden necesitar mantenimiento o sustitución con el tiempo."
+    },
+    {
+      "q": "¿Podré comer con normalidad tras los implantes de boca completa?",
+      "a": "Sí, una vez completada la cicatrización y colocada la restauración definitiva. Justo después de la cirugía le damos una breve guía de dieta blanda para proteger los tejidos en cicatrización."
+    },
+    {
+      "q": "¿Qué diferencia hay entre All-on-4 y All-on-6?",
+      "a": "Ambos sustituyen una arcada completa por un puente fijo. All-on-6 utiliza seis implantes en lugar de cuatro, lo que aporta más soporte y puede convenir a pacientes con menor densidad ósea o una mordida más fuerte."
+    },
+    {
+      "q": "¿Cómo se determina el coste?",
+      "a": "Recibe un presupuesto por escrito tras la exploración y el escáner, antes de empezar cualquier tratamiento. Los conceptos que dependen del escáner, como el injerto óseo, la elevación de seno o la sedación intravenosa, se presupuestan en un rango para evitar sorpresas."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Plan de tratamiento por escrito",
+      "d": "Visitas, plazos y materiales por escrito antes de empezar el tratamiento."
+    },
+    {
+      "t": "Presupuesto por escrito",
+      "d": "Acordado antes del tratamiento. No se añade nada sin su consentimiento."
+    },
+    {
+      "t": "Garantía",
+      "d": "Las condiciones de garantía figuran en su plan de tratamiento."
+    },
+    {
+      "t": "Planificación digital",
+      "d": "Escaneo digital, radiografías y planificación del tratamiento en 3D."
+    },
+    {
+      "t": "Atención al paciente internacional",
+      "d": "Recogida en el aeropuerto, equipo que habla inglés y ayuda para organizar su viaje."
+    },
+    {
+      "t": "Cuidados posteriores y seguimiento a distancia",
+      "d": "Controles y apoyo cuando ya ha vuelto a casa."
+    }
+  ],
+  "cta": {
+    "h2": "Reserve una consulta",
+    "h2em": "con el Dr. Chris.",
+    "p": "Envíe fotos y sus preguntas por WhatsApp. El Dr. Chris revisa su caso antes de que viaje y le responde con una orientación de tratamiento adecuada."
+  },
+  "related": [
+    {
+      "t": "All-on-4 / All-on-6"
+    },
+    {
+      "t": "Implantes dentales en Vietnam"
+    }
+  ]
+}

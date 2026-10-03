@@ -1,0 +1,276 @@
+{
+  "name": "Dr. Ta Hong Nhung",
+  "nick": "Dr. Kate",
+  "short": "Dr. Kate",
+  "first": "Kate",
+  "jobTitle": "Orthodontist · Founder & Clinical Director",
+  "role": "Founder & Clinical Director, orthodontist",
+  "card": "Clinical Director · Orthodontist",
+  "eyebrow": "DDS · MSc · Founder & Clinical Director",
+  "title": "Dr. Ta Hong Nhung (Dr. Kate) — Orthodontist & Clinical Director | Greenfield Dental",
+  "description": "Dr. Ta Hong Nhung (Dr. Kate), founder and clinical director of Greenfield Dental, Hanoi: Invisalign and clear aligners, braces for adults and teens, TMJ and bite problems. 15+ years, Platinum Invisalign Provider.",
+  "lead": "After training across Europe and Asia, Dr. Ta Hong Nhung (Dr. Kate), MSc, founded Greenfield Dental to pair careful dentistry with a calm, respectful patient experience. She leads the clinical team and the orthodontic service, from clear aligners to complex bite and jaw-joint (TMJ) cases.",
+  "chips": [
+    "Invisalign & clear aligners",
+    "Braces for adults & teens",
+    "TMJ & bite problems"
+  ],
+  "portraitAlt": "Dr. Ta Hong Nhung (Dr. Kate), founder and clinical director of Greenfield Dental",
+  "specialty": [
+    "Orthodontics",
+    "Endodontics",
+    "Prosthodontics"
+  ],
+  "wa": "Hi Greenfield Dental, I'd like a consultation with Dr. Kate.",
+  "ogLine": [
+    "Invisalign & clear aligners · Braces · TMJ & bite",
+    "15+ years · Platinum Invisalign Provider"
+  ],
+  "stats": [
+    {
+      "l": "Years in clinical practice"
+    },
+    {
+      "l": "Invisalign Provider"
+    }
+  ],
+  "badge": {
+    "l": "Years in<br>clinical practice"
+  },
+  "about": {
+    "eyebrow": "About Dr. Kate",
+    "h2": "One plan for",
+    "h2em": "your whole smile.",
+    "imgAlt": "Dr. Kate treating a patient at Greenfield Dental",
+    "p": [
+      "Dr. Kate works across orthodontics, endodontics and prosthodontics, and treats each case as one plan rather than separate procedures, documented with before, during and after imaging.",
+      "Seeing patients face anxiety, discomfort and impersonal care led her to build a different kind of practice, where every patient feels respected, comfortable and properly looked after."
+    ],
+    "creds": [
+      {
+        "t": "DDS and Master in Odonto-Stomatology",
+        "s": "Hanoi Medical University"
+      },
+      {
+        "t": "Implantology diploma (DIU)",
+        "s": "Université de Bordeaux, France"
+      },
+      {
+        "t": "Platinum Invisalign Provider",
+        "s": "Clear aligner treatment"
+      }
+    ]
+  },
+  "expertise": [
+    {
+      "t": "Invisalign & clear aligners",
+      "s": "Invisalign · Other clear aligner systems",
+      "imgAlt": "Clear aligner held in hand"
+    },
+    {
+      "t": "Braces for adults & teens",
+      "s": "Metal and ceramic braces"
+    },
+    {
+      "t": "TMJ & bite problems",
+      "s": "Crowding · Deep bite · Crossbite · Jaw-joint"
+    },
+    {
+      "t": "Root canal treatment under the microscope",
+      "s": "Treatment · Retreatment"
+    },
+    {
+      "t": "Restorative rehabilitation",
+      "s": "Ceramic crowns · Inlays & onlays"
+    }
+  ],
+  "quote": {
+    "text": "Patients shouldn't just be treated.",
+    "em": "They should enjoy every moment of their care.",
+    "by": "Dr. Ta Hong Nhung — Dr. Kate",
+    "role": "Founder & Clinical Director, Greenfield Dental"
+  },
+  "certs": [
+    {
+      "t": "Doctor of Dental Surgery",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "t": "Master in Odonto-Stomatology",
+      "s": "Hanoi Medical University"
+    },
+    {
+      "t": "Inter-University Diploma in Surgical and Prosthetic Implantology",
+      "s": "Faculty of Odontology, Bordeaux, France"
+    },
+    {
+      "t": "Vietnam Orthodontist's Educational Program",
+      "s": "3M Excellere Asia Pacific"
+    },
+    {
+      "t": "Invisalign HAO Master Class",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Typodont Orthodontic Training Course",
+      "s": "JM Ortho, Hanoi"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2019",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2020",
+      "s": "Invisalign"
+    },
+    {
+      "t": "Invisalign Platinum Provider 2021",
+      "s": "Invisalign"
+    }
+  ],
+  "cases": [
+    {
+      "t": "Anterior crossbite with edge-to-edge bite",
+      "d": "Metal braces to correct the anterior crossbite, align both arches and improve the bite.",
+      "m": "25 months · Orthodontics"
+    },
+    {
+      "t": "Bimaxillary protrusion with crowding",
+      "d": "Metal braces to retract and align the front teeth, correct the bite and improve facial balance.",
+      "m": "33 months · Orthodontics"
+    },
+    {
+      "t": "Severe overjet with deep bite",
+      "d": "Metal braces to reduce overjet and overbite, align both arches and establish a more balanced bite.",
+      "m": "34 months · Orthodontics"
+    },
+    {
+      "t": "Narrow arches with gummy smile",
+      "d": "Metal braces with arch expansion to correct crowding and crossbite.",
+      "m": "21 months · Orthodontics"
+    },
+    {
+      "t": "Class III bite with anterior crossbite",
+      "d": "Metal braces to correct the Class III relationship, align both arches and achieve a stable bite.",
+      "m": "37 months · Orthodontics"
+    },
+    {
+      "t": "Severe crowding and misalignment",
+      "d": "Metal braces to correct severe crowding, align both arches and improve the bite.",
+      "m": "28 months · Orthodontics"
+    },
+    {
+      "t": "Lower crowding with mandibular asymmetry",
+      "d": "Invisalign treatment to align crowded teeth and achieve a more balanced bite.",
+      "m": "25 months · Orthodontics"
+    }
+  ],
+  "journey": [
+    {
+      "t": "Before you start",
+      "d": "Send photos and any X-rays for Dr. Kate's first opinion."
+    },
+    {
+      "t": "Examination & records",
+      "d": "Free exam, X-rays, photos and a 3D scan."
+    },
+    {
+      "t": "Written plan & quote",
+      "d": "Method, estimated time and a written quote."
+    },
+    {
+      "t": "Braces or aligners fitted",
+      "d": "Treatment starts once you agree the plan."
+    },
+    {
+      "t": "Regular check-ups",
+      "d": "Adjustments in clinic; some aligner checks remotely."
+    },
+    {
+      "t": "Finishing",
+      "d": "Fine-tuning the bite before braces come off."
+    },
+    {
+      "t": "Retainers & follow-up",
+      "d": "Retainers fitted and reviewed to keep the result."
+    }
+  ],
+  "journeyMeta": {
+    "groups": {
+      "pre": "Before you start",
+      "t1": "First visits",
+      "t2": "During treatment · usually 12–24 months"
+    },
+    "gap": "treatment",
+    "gapLong": "Treatment time · usually 12–24 months",
+    "intro": "Orthodontic treatment runs in stages, with check-ups planned around where you live.",
+    "h2": "Seven steps,",
+    "h2em": "planned in writing",
+    "eyebrow": "Your orthodontic journey"
+  },
+  "faqs": [
+    {
+      "q": "How long does orthodontic treatment usually take?",
+      "a": "Many cases take 12–24 months, but it depends on how complex the bite is, the method (braces or clear aligners) and how consistently the plan is followed. You get an estimate in writing after your examination."
+    },
+    {
+      "q": "Why are retainers important after orthodontic treatment?",
+      "a": "Teeth naturally tend to move back after treatment. Retainers hold the new positions and reduce the risk of relapse, so wearing them as instructed is part of the treatment."
+    },
+    {
+      "q": "Can I have orthodontic treatment if I live abroad?",
+      "a": "Often yes. Clear aligners need fewer in-person visits than braces, and some check-ups can be done remotely with photos. Braces need regular adjustments in the clinic, so we plan the visit schedule with you before you start."
+    },
+    {
+      "q": "Can a tooth become infected again after root canal treatment?",
+      "a": "It can. Reinfection may come from missed canals, leakage, new decay, cracks or a poor final restoration. Careful cleaning and sealing, ideally under a microscope, and a well-fitting final restoration help prevent it."
+    },
+    {
+      "q": "How do I know whether I need veneers or crowns?",
+      "a": "Veneers may suit teeth that need a change in shape or colour and still have enough healthy enamel. Crowns are usually considered when a tooth is significantly weakened or heavily restored. The choice is made after an examination."
+    },
+    {
+      "q": "How is the cost decided?",
+      "a": "You receive a written quote after your examination, before any treatment starts. Anything that depends on what we find during treatment is explained and quoted as a range up front."
+    }
+  ],
+  "commitments": [
+    {
+      "t": "Written treatment plan",
+      "d": "Visits, timeline and materials written down before treatment starts."
+    },
+    {
+      "t": "Written quote",
+      "d": "Agreed before treatment. Nothing is added without your consent."
+    },
+    {
+      "t": "Warranty",
+      "d": "Warranty terms are written into your treatment plan."
+    },
+    {
+      "t": "Digital planning",
+      "d": "Digital scanning, X-rays and 3D treatment planning."
+    },
+    {
+      "t": "International patient support",
+      "d": "Airport pickup, English-speaking team and help planning your trip."
+    },
+    {
+      "t": "Aftercare & remote follow-up",
+      "d": "Check-ins and support after you return home."
+    }
+  ],
+  "cta": {
+    "h2": "Book a consultation",
+    "h2em": "with Dr. Kate.",
+    "p": "Send photos and your questions on WhatsApp. Dr. Kate's team reviews your case and replies with a suitable treatment direction."
+  },
+  "related": [
+    {
+      "t": "Invisalign in Vietnam"
+    },
+    {
+      "t": "Orthodontic braces"
+    }
+  ]
+}
