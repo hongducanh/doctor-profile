@@ -304,12 +304,12 @@ main{position:relative;z-index:1;padding-top:20px}
 .cnav span{font-size:14px;color:var(--mut);margin-left:8px}
 
 /* đánh giá */
-.fw{position:relative;min-height:660px;display:flex;align-items:center;justify-content:center}
+.fw{position:relative;min-height:840px;display:flex;align-items:center;justify-content:center}
 .fw h2{text-align:center;font-size:56px;line-height:1.1;color:var(--deep);position:relative;z-index:1;max-width:620px}
-.fc{position:absolute;z-index:2;width:clamp(238px,22vw,300px);background:#fff;border-radius:16px;padding:18px 18px 16px;box-shadow:0 22px 50px -34px rgba(51,59,59,.55);animation:floaty var(--d,8s) ease-in-out infinite var(--o,0s)}
+.fc{position:absolute;z-index:2;width:300px;background:#fff;border-radius:16px;padding:18px 18px 16px;box-shadow:0 22px 50px -34px rgba(51,59,59,.55);animation:floaty var(--d,8s) ease-in-out infinite var(--o,0s)}
 .fci{transition:opacity .5s ease}
 .fc.fade .fci{opacity:0}
-.fc blockquote{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;margin:0 0 14px;font-size:14px;line-height:1.62;color:#4A5453;text-wrap:pretty}
+.fc blockquote{margin:0 0 14px;font-size:14px;line-height:1.62;color:#4A5453;text-wrap:pretty}
 .fc figcaption{display:flex;align-items:center;gap:10px}
 .fc img{width:30px;height:30px;border-radius:50%;object-fit:cover;background:var(--bg);flex:none}
 .fc b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
@@ -365,10 +365,10 @@ main{position:relative;z-index:1;padding-top:20px}
 /* footer */
 .ftr{position:relative;z-index:1;overflow:hidden;background:var(--deep);color:#fff}
 .ftr .pad{padding-top:clamp(48px,6vw,84px)}
-.ftop{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);align-items:center}
+.ftop{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
 .ftop h2{font-size:40px;line-height:1.15;color:#fff;text-wrap:pretty}
-.fform{display:flex;align-items:center;gap:8px;background:rgba(11,31,21,.45);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 7px 7px 24px;justify-self:end;width:100%;max-width:440px}
-.fform>span{flex:1;font-size:14px;line-height:1.4;color:rgba(255,255,255,.6)}
+.fform{display:flex;align-items:center;gap:8px;background:rgba(11,31,21,.45);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 7px 7px 24px;justify-self:end}
+.fform>span{flex:1;font-size:14px;line-height:1.4;color:rgba(255,255,255,.6);white-space:nowrap}
 .fform a{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 6px 0 20px;border-radius:999px;background:#fff;color:#0B1F15;font-size:16px;font-weight:600;flex:none;transition:transform .25s}
 .fform a:hover{transform:translateY(-1px)}
 .fform .ar{width:32px;height:32px;background:var(--mint);color:var(--g2);font-size:14px}
@@ -392,6 +392,7 @@ main{position:relative;z-index:1;padding-top:20px}
 .js [data-reveal]{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
 .js [data-reveal].on{opacity:1;transform:none}
 
+@media (min-width:1024px) and (max-width:1279px){.fw{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;min-height:0;align-items:start}.fw h2{grid-column:1/-1;justify-self:center;margin-bottom:24px}.fc{position:static;width:auto;animation:none}}
 @media (max-width:1080px) and (min-width:761px){.steps{grid-template-columns:repeat(4,1fr);row-gap:34px}.steps li::before{display:none}}
 @media (max-width:1023px){
   .h2,.about h2,.guar h2,.ftop h2,.qt{font-size:30px} .endcta h2,.fw h2,.badge b{font-size:40px} .stat b{font-size:40px}
