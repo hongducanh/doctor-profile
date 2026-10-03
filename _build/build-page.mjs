@@ -61,7 +61,8 @@ function view(D, lang) {
     advice: en ? E.advice : { h: U.advH, p: sub(T.expertise.adviceP).replace(/\{short\}/g, D.short), btn: T.expertise.adviceBtn },
     quote: { ...(en ? E.quote : { text: D.quote.text, em: D.quote.em, by: D.quote.by, role: D.quote.role }), img: D.quote.img },
     certsH2: U.certsH2,
-    certs: (en ? E.certs : D.certs).map((c) => ({ img: c.img, t: c.t, s: c.s, contain: en ? !!c.contain : contain(c.img) })),
+    certs: (en ? E.certs : [...D.certs, ...E.certs.slice(D.certs.length).map((c, i) => { const x = ((E.certsI18n || {})[lang] || [])[i]; return x ? { ...c, t: x[0], s: x[1] } : c; })])
+      .map((c) => ({ img: c.img, t: c.t, s: c.s, contain: en ? !!c.contain : contain(c.img) })),
     casesH2: U.casesH2, casesIntro: U.casesIntro,
     cases: en ? E.cases : D.cases,
     reviewsH2: U.reviewsH2, reviews: E.reviews || [],
@@ -139,6 +140,8 @@ const revCard = (r, i) => `<figure class="fc" style="${SLOTS[i]}"><div class="fc
 const certLi = (c, hide) => `<li class="cert"${hide ? ` aria-hidden="true"` : ""}><div class="ph${c.contain ? " c" : ""}">${pic(c.img, hide ? "" : c.t, "250px")}</div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></li>`;
 const marquee = V.certs.length >= 4;
 const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC'" }[lang];
+const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
+const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
 const nav = [["about", 0], ["expertise", 1], ["journey", 2], ["cases", 3], ["reviews", 4], ["faq", 5]];
 const arrow = `<span class="ar" aria-hidden="true">→</span>`, dbl = `<span class="ar" aria-hidden="true">»</span>`;
 
@@ -209,6 +212,17 @@ h1 em,h2 em{font-style:normal;color:var(--g)}
 .lang-p a small,.mlang a small{font-weight:400;color:var(--mut)}
 .lang-p a:hover{background:var(--mint)}
 .lang-p a[aria-current],.mlang a[aria-current]{color:var(--g2);background:var(--mint)}
+.docs{position:relative}
+.docs summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:13.5px;color:#5A6462;font-weight:500;min-height:44px}
+.docs summary::-webkit-details-marker{display:none}
+.docs summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.docs summary:hover,.docs[open] summary{color:var(--g2)}
+.docs-p{left:50%;right:auto;transform:translateX(-50%);min-width:230px}
+.docs-p a{font-weight:500;white-space:nowrap}
+.mh{margin:14px 6px 2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.mdocs{display:grid}
+.mdocs a{padding:12px 6px;font-size:15px;color:var(--ink);border-bottom:1px solid rgba(51,59,59,.06)}
+.mdocs a[aria-current]{color:var(--g2);font-weight:600}
 .btn-book{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--g);color:var(--g2);font-size:13.5px;font-weight:600;background:transparent;transition:background .25s,color .25s;flex:none;white-space:nowrap}
 .btn-book::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g);transition:background .25s}
 .btn-book:hover{background:var(--g);color:#fff}
@@ -467,9 +481,9 @@ main{position:relative;z-index:1;padding-top:20px}
   .fform a{justify-content:center}
   .fcols{grid-template-columns:1fr 1fr}
 }
+@media (max-width:1180px){.nav,.hdr .btn-book,.hdr .lang{display:none}.burger{display:flex}}
+@media (min-width:1181px) and (max-width:1320px){.nav{gap:18px}.hdr .pad{gap:16px}}
 @media (max-width:980px){
-  .nav,.hdr .btn-book,.hdr .lang{display:none}
-  .burger{display:flex}
   .hero{grid-template-columns:1fr}
   .hero-bg .fade{width:100%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.97) 45%,rgba(255,255,255,.6) 58%,rgba(255,255,255,0) 72%)}
   .hero-bg .blob{top:10%}
@@ -547,13 +561,14 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 <header class="hdr">
   <div class="pad">
     <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-green-60.webp" alt="Greenfield Dental" width="252" height="60"></a>
-    <nav class="nav" aria-label="${esc(T.subnavAria)}">${nav.map(([id, i]) => `<a href="#${id}">${esc(U.nav[i])}</a>`).join("")}</nav>
+    <nav class="nav" aria-label="${esc(T.subnavAria)}">${nav.map(([id, i]) => `<a href="#${id}">${esc(U.nav[i])}</a>`).join("")}<details class="docs"><summary>${esc(U.doctors)}</summary><div class="lang-p docs-p">${docLinks()}</div></details></nav>
     <details class="lang"><summary aria-label="${esc(U.lang)}: ${esc(LNAME[lang])}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="lang-p">${langLinks()}</div></details>
     <a class="btn-book" href="#book">${esc(U.book)}</a>
     <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="${esc(U.menu)}"><span></span><span></span><span></span></button>
   </div>
   <div class="mnav" id="mnav">
     ${nav.map(([id, i]) => `<a href="#${id}">${esc(U.navM[i])}</a>`).join("")}
+    <p class="mh">${esc(U.doctors)}</p><div class="mdocs">${docLinks()}</div>
     <div class="mlang" aria-label="${esc(U.lang)}">${langLinks()}</div>
     <a class="mbook" href="#book">${esc(U.book)}</a>
   </div>
@@ -714,7 +729,7 @@ document.addEventListener("click",onWa,true);document.addEventListener("auxclick
 (function(){var b=document.querySelector(".burger"),m=document.getElementById("mnav");
 b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o);});
 m.addEventListener("click",function(e){if(e.target.closest("a[href^='#']")){m.classList.remove("open");b.setAttribute("aria-expanded",false);}});
-var lg=document.querySelector(".lang");document.addEventListener("click",function(e){if(lg&&lg.open&&!e.target.closest(".lang"))lg.open=false;});
+var dds=[].slice.call(document.querySelectorAll(".hdr details"));dds.forEach(function(d){d.addEventListener("toggle",function(){if(d.open)dds.forEach(function(o){if(o!==d)o.open=false})})});document.addEventListener("click",function(e){dds.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false})});
 var C=${js(casesData)},TL=${js({ b: T.cases.beforeAlt, a: T.cases.afterAlt, n: U.caseLabel })},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});
 function setPic(p,d,alt){var s=p.querySelectorAll("source");s[0].srcset=d.a;s[1].srcset=d.w;var im=p.querySelector("img");im.src=d.s;im.alt=alt;}
