@@ -107,7 +107,7 @@ const jsonld = {
   "@graph": [
     { "@type": "Dentist", "@id": "https://greenfield.clinic/#clinic", name: "Greenfield Dental", telephone: "+84906621988", email: "hello@nhakhoagreenfield.com",
       address: { "@type": "PostalAddress", streetAddress: "95 Trung Hoa", addressLocality: "Cau Giay, Hanoi", addressCountry: "VN" },
-      openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "08:30", closes: "18:00" } },
+      openingHoursSpecification: { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], opens: "08:00", closes: "18:00" } },
     { "@type": "Physician", "@id": `${URL_}#physician`, name: `${D.name} (${D.nick})`, url: URL_, image: `${SITE}${dirOf(D.portrait)}/${D.portrait}-${Math.max(...portraitM.widths)}.webp`,
       medicalSpecialty: ALL[D.key].specialty, telephone: "+84906621988", parentOrganization: { "@id": "https://greenfield.clinic/#clinic" } },
     { "@type": "Person", "@id": `${URL_}#person`, name: D.name, alternateName: D.nick, jobTitle: D.jobTitle, url: URL_,
@@ -124,7 +124,7 @@ const casesData = V.cases.map((c) => ({ t: c.t, d: c.d, m: c.m, b: caseImg(c, "b
 const c0 = V.cases[0], cd0 = casesData[0];
 const CC = { "United Kingdom": "gb", England: "gb", Australia: "au", Canada: "ca", Singapore: "sg", Japan: "jp", "South Korea": "kr", Vietnam: "vn", Spain: "es", "New Zealand": "nz", Germany: "de" };
 const REV = V.reviews.map((r) => { const tx = String(r.text).replace(/[“”]/g, ""); return { n: r.name, c: r.country, f: CC[r.flagC || r.country] || "vn", s: "“" + (tx.length > 168 ? tx.slice(0, tx.lastIndexOf(" ", 168)) + "…" : tx) + "”" }; });
-const SLOTS = ["left:0;top:18%;--d:7.5s;--o:0s", "left:-6%;top:60%;--d:9s;--o:.6s", "left:76%;top:2%;--d:8.2s;--o:.3s", "left:80.7%;top:36%;--d:7s;--o:1.1s", "left:34%;top:67%;--d:9.6s;--o:.9s", "right:2%;top:73%;--d:8s;--o:1.6s"];
+const SLOTS = ["left:0;top:18%;--d:7.5s;--o:0s", "left:max(-6%,calc((100% - 100vw)/2 + 16px));top:60%;--d:9s;--o:.6s", "right:max(-19px,calc((100% - 100vw)/2 + 16px));top:2%;--d:8.2s;--o:.3s", "right:max(-74px,calc((100% - 100vw)/2 + 16px));top:36%;--d:7s;--o:1.1s", "left:34%;top:67%;--d:9.6s;--o:.9s", "right:2%;top:73%;--d:8s;--o:1.6s"];
 const revCard = (r, i) => `<figure class="fc" style="${SLOTS[i]}"><div class="fci"><blockquote>${esc(r.s)}</blockquote><figcaption><img src="https://flagcdn.com/w80/${r.f}.png" alt="${esc(r.c)}" width="30" height="30" loading="lazy"><span><b>${esc(r.n)}</b><small>${esc(r.c)}</small></span></figcaption></div></figure>`;
 const certLi = (c, hide) => `<li class="cert"${hide ? ` aria-hidden="true"` : ""}><div class="ph${c.contain ? " c" : ""}">${pic(c.img, hide ? "" : c.t, "250px")}</div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></li>`;
 const marquee = V.certs.length >= 4;
@@ -369,6 +369,10 @@ main{position:relative;z-index:1;padding-top:20px}
 /* đánh giá */
 .fw{position:relative;min-height:660px;display:flex;align-items:center;justify-content:center}
 .fw h2{text-align:center;font-family:'Anton',Impact,var(--sans);font-weight:400;font-size:clamp(46px,10.6vw,146px);line-height:.9;letter-spacing:-.01em;color:var(--deep);text-transform:uppercase;position:relative;z-index:1}
+/* Tiếng Việt: dấu chồng (Ệ, Ề, Ố…) cần khoảng dòng — .9 làm dấu dòng dưới đè lên dòng trên. */
+:lang(vi) .fw h2{line-height:1.12;padding-top:.08em}
+/* Hàn/Trung: Anton không có chữ CJK → dùng font hệ thống bản đậm, không viết hoa, dòng thoáng hơn. */
+:lang(ko) .fw h2,:lang(zh) .fw h2{font-family:var(--sans);font-weight:800;font-size:clamp(40px,8vw,112px);line-height:1.18;letter-spacing:-.02em;text-transform:none}
 .fc{position:absolute;z-index:2;width:clamp(238px,22vw,300px);background:#fff;border-radius:16px;padding:18px 18px 16px;box-shadow:0 22px 50px -34px rgba(51,59,59,.55);animation:floaty var(--d,8s) ease-in-out infinite var(--o,0s)}
 .fci{transition:opacity .5s ease}
 .fc.fade .fci{opacity:0}
@@ -484,6 +488,7 @@ main{position:relative;z-index:1;padding-top:20px}
   .wa-float{display:flex}
 }
 @media (max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+@media (max-width:420px){.stats{gap:10px}.stat{min-width:0;padding:18px 16px;min-height:150px}.stat b{font-size:30px}} /* 320–360px: số lớn không tràn ngang */
 @media (max-width:760px){
   .steps{grid-template-columns:1fr;row-gap:0}
   .steps li{display:grid;grid-template-columns:38px 1fr;column-gap:16px;row-gap:6px;padding-bottom:28px}
