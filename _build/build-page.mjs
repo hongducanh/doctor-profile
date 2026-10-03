@@ -41,38 +41,24 @@ const langArg = args.find((a) => a.startsWith("--lang="));
 const keys = args.filter((a) => !a.startsWith("--"));
 for (const lang of langArg ? langArg.slice(7).split(",") : LANGS) for (const key of keys.length ? keys : ORDER) build(doc(key, lang), lang);
 
-/** Dữ liệu hiển thị cho giao diện mới: EN = chữ thiết kế; ngôn ngữ khác = nội dung đã dịch xếp vào đúng các khối của thiết kế. */
+/** Dữ liệu hiển thị: mọi ngôn ngữ dùng đúng nội dung + bố cục bản EN (design/<key>.json);
+ *  VI/ES/KO/ZH = bản dịch trung thành design/i18n/<lang>/<key>.json ghép đè (giữ ảnh, icon, cờ quốc gia của bản EN) — owner 03/10/2026. */
 function view(D, lang) {
-  const T = ui(lang), U = T.v2, E = DES[D.key], en = lang === "en";
-  const sub = (s) => String(s).replace(/\{short\}/g, D.short).replace(/\{pron\}/g, D.pronounPoss || "her");
-  const contain = (img) => !!(E.certs.find((c) => c.img === img) || {}).contain;
-  const nm = String(D.name).split(" ");
+  const T = ui(lang), U = T.v2, E0 = DES[D.key], en = lang === "en";
+  const E = en ? E0 : merge(E0, JSON.parse(readFileSync(P(`./design/i18n/${lang}/${D.key}.json`), "utf8")));
   return {
-    eyebrow: en ? E.eyebrow : D.eyebrow,
-    h1: en ? E.h1 : [nm[0], nm.slice(1).join(" ")],
-    checks: en ? E.checks : D.chips,
-    lead: en ? E.lead : D.lead,
-    badge: en ? E.badge : D.badge ? { n: D.badge.n, l: String(D.badge.l).replace(/<br>/g, " ") } : { n: D.stats[0].n, l: D.stats[0].l },
-    trust: en ? E.trust : { h2: U.trust.map(sub), p: D.about.p[1] || "", stats: D.stats.map((s) => ({ k: "", n: s.n, l: s.l })) },
-    about: en ? { ...E.about, img: D.about.img, pos: E.aboutPos }
-      : { eyebrow: D.about.eyebrow, h2: `${D.about.h2}<br>${D.about.h2em}`, p: D.about.p[0], explore: sub(U.explore), chips: D.about.creds, img: D.about.img, pos: E.aboutPos },
-    expH2: en ? E.expertiseH2 : U.expH2,
-    exp: (en ? E.expertise : D.expertise).map((x) => ({ t: x.t, s: x.s, img: x.img })),
-    advice: en ? E.advice : { h: U.advH, p: sub(T.expertise.adviceP).replace(/\{short\}/g, D.short), btn: T.expertise.adviceBtn },
-    quote: { ...(en ? E.quote : { text: D.quote.text, em: D.quote.em, by: D.quote.by, role: D.quote.role }), img: D.quote.img },
-    certsH2: U.certsH2,
-    certs: (en ? E.certs : [...D.certs, ...E.certs.slice(D.certs.length).map((c, i) => { const x = ((E.certsI18n || {})[lang] || [])[i]; return x ? { ...c, t: x[0], s: x[1] } : c; })])
-      .map((c) => ({ img: c.img, t: c.t, s: c.s, contain: en ? !!c.contain : contain(c.img) })),
-    casesH2: U.casesH2, casesIntro: U.casesIntro,
-    cases: en ? E.cases : D.cases,
-    reviewsH2: U.reviewsH2, reviews: E.reviews || [],
-    journeyH2: en ? E.journeyH2 : [D.journeyMeta.h2, D.journeyMeta.h2em], journeyIntro: en ? E.journeyIntro : D.journeyMeta.intro,
-    steps: en ? E.steps : D.journey,
-    faqH2: U.faqH2, faqs: en ? E.faqs : D.faqs,
-    guarH2: U.guarH2, guarIntro: en ? E.guaranteeIntro : "",
-    guar: en ? E.guarantees : D.commitments.map((c, i) => ({ t: c.t, d: c.d, icon: E.guarantees[i % E.guarantees.length].icon })),
-    cta: en ? E.cta : { eyebrow: U.ctaEyebrow, h2: U.ctaH2, p: D.cta.p, btn: T.cta.wa },
-    foot: en ? E.foot : { h2: `${D.cta.h2}<br>${D.cta.h2em}`, hours: U.hours, btn: U.bookS },
+    eyebrow: E.eyebrow, h1: E.h1, checks: E.checks, lead: E.lead, badge: E.badge, trust: E.trust,
+    about: { ...E.about, img: D.about.img, pos: E0.aboutPos },
+    expH2: E.expertiseH2, exp: E.expertise.map((x) => ({ t: x.t, s: x.s, img: x.img })), advice: E.advice,
+    quote: { ...E.quote, img: D.quote.img },
+    certsH2: E.certsH2, certs: E.certs.map((c) => ({ img: c.img, t: c.t, s: c.s, contain: !!c.contain })),
+    casesH2: E.casesH2, casesIntro: E.casesIntro, cases: E.cases,
+    reviewsH2: E.reviewsH2, reviews: (E.reviews || []).map((r, i) => ({ ...r, flagC: E0.reviews[i].country })),
+    journeyH2: E.journeyH2, journeyIntro: E.journeyIntro, steps: E.steps,
+    faqH2: E.faqH2, faqs: E.faqs,
+    guarH2: E.guaranteeH2, guarIntro: E.guaranteeIntro, guar: E.guarantees,
+    cta: lang === "vi" ? { ...E.cta, btn: T.cta.wa } : E.cta,   // VI: liên hệ chính Zalo
+    foot: E.foot,
   };
 }
 
@@ -134,7 +120,7 @@ const caseImg = (c, side) => { const n = `${c.img}-${side}`; return { a: srcset(
 const casesData = V.cases.map((c) => ({ t: c.t, d: c.d, m: c.m, b: caseImg(c, "before"), f: caseImg(c, "after") }));
 const c0 = V.cases[0], cd0 = casesData[0];
 const CC = { "United Kingdom": "gb", England: "gb", Australia: "au", Canada: "ca", Singapore: "sg", Japan: "jp", "South Korea": "kr", Vietnam: "vn", Spain: "es", "New Zealand": "nz", Germany: "de" };
-const REV = V.reviews.map((r) => { const tx = String(r.text).replace(/[“”]/g, ""); return { n: r.name, c: r.country, f: CC[r.country] || "vn", s: "“" + (tx.length > 168 ? tx.slice(0, tx.lastIndexOf(" ", 168)) + "…" : tx) + "”" }; });
+const REV = V.reviews.map((r) => { const tx = String(r.text).replace(/[“”]/g, ""); return { n: r.name, c: r.country, f: CC[r.flagC || r.country] || "vn", s: "“" + (tx.length > 168 ? tx.slice(0, tx.lastIndexOf(" ", 168)) + "…" : tx) + "”" }; });
 const SLOTS = ["left:0;top:18%;--d:7.5s;--o:0s", "left:-6%;top:60%;--d:9s;--o:.6s", "left:76%;top:2%;--d:8.2s;--o:.3s", "left:80.7%;top:36%;--d:7s;--o:1.1s", "left:34%;top:67%;--d:9.6s;--o:.9s", "right:2%;top:73%;--d:8s;--o:1.6s"];
 const revCard = (r, i) => `<figure class="fc" style="${SLOTS[i]}"><div class="fci"><blockquote>${esc(r.s)}</blockquote><figcaption><img src="https://flagcdn.com/w80/${r.f}.png" alt="${esc(r.c)}" width="30" height="30" loading="lazy"><span><b>${esc(r.n)}</b><small>${esc(r.c)}</small></span></figcaption></div></figure>`;
 const certLi = (c, hide) => `<li class="cert"${hide ? ` aria-hidden="true"` : ""}><div class="ph${c.contain ? " c" : ""}">${pic(c.img, hide ? "" : c.t, "250px")}</div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></li>`;
@@ -702,7 +688,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <div class="fcols">
       <div><h2 class="fh">${esc(U.quick)}</h2>${["about", "expertise", "cases", "reviews", "faq"].map((id, i) => `<a href="#${id}">${esc(U.quickL[i])}</a>`).join("")}</div>
       <div><h2 class="fh">${esc(U.touch)}</h2><a href="mailto:hello@nhakhoagreenfield.com">hello@nhakhoagreenfield.com</a><a href="https://maps.google.com/?q=95+Trung+Hoa+Cau+Giay+Hanoi" target="_blank" rel="noopener">${esc(U.address)}</a><a href="tel:+84906621988">+84 906 621 988</a>${isVI ? `<a href="${ZALO}" target="_blank" rel="noopener">Zalo 0906 621 988</a>` : ""}</div>
-      <div><h2 class="fh">${esc(U.social)}</h2><a href="https://www.youtube.com/@nhakhoagreenfield" target="_blank" rel="noopener">Youtube</a><a href="https://www.facebook.com/nhakhoagreenfield" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/greenfielddental/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/greenfield_dental/" target="_blank" rel="noopener">Instagram</a><a href="${L("home")}">Website</a></div>
+      <div><h2 class="fh">${esc(U.social)}</h2><a href="https://www.youtube.com/@nhakhoagreenfield" target="_blank" rel="noopener">Youtube</a><a href="https://www.facebook.com/nhakhoagreenfield" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/greenfielddental/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/greenfield_dental/" target="_blank" rel="noopener">Instagram</a><a href="${L("home")}">${esc(U.website)}</a></div>
     </div>
     <div class="flegal"><p>${esc(U.copy)}</p>${L("privacy") ? `<a href="${L("privacy")}">${esc(T.footer.privacy)}</a>` : ""}<a href="#cookie-settings" data-gf-cookie-settings>${esc(U.cookies)}</a></div>
   </div>
