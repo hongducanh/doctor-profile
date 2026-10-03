@@ -433,6 +433,34 @@
         480,
         800
       ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cert-n2.webp",
+      "name": "cert-n2",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cert-n3.webp",
+      "name": "cert-n3",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cert-n4.webp",
+      "name": "cert-n4",
+      "widths": [
+        480
+      ]
+    },
+    {
+      "src": "originals/dr-do-nhu-chuyen/cert-n5.webp",
+      "name": "cert-n5",
+      "widths": [
+        480
+      ]
     }
   ],
   "ogPortrait": "originals/dr-do-nhu-chuyen/dr-chuy-n-munkdq66-2r0p.webp",
