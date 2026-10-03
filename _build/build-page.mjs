@@ -21,6 +21,8 @@ const UI = {};
 const ui = (l) => (UI[l] ||= JSON.parse(readFileSync(P(`./i18n/ui/${l}.json`), "utf8")));
 const M = JSON.parse(readFileSync(P("./manifest.json"), "utf8"));
 const HDR = Object.fromEntries(["en", "es", "ko", "zh", "vi"].map((l) => [l, readFileSync(P(`./header/${l}.html`), "utf8").trim()]));
+const FTR = Object.fromEntries(["en", "es", "ko", "zh", "vi"].map((l) => [l, readFileSync(P(`./header/footer-${l}.html`), "utf8").trim()]));
+const FOOT_CSS = readFileSync(P("./header/footer.css"), "utf8").trim();
 const HDR_CSS = readFileSync(P("./header/gfh.css"), "utf8").trim(), HDR_JS = readFileSync(P("./header/gfh.js"), "utf8").trim();
 const FF = (fam, file, w, range) => `@font-face{font-family:'${fam}';font-style:normal;font-weight:${w};font-display:swap;src:url(/shared/fonts/${file}) format('woff2');unicode-range:${range}}`;
 const FFi = (fam, file, w, range) => FF(fam, file, w, range).replace("font-style:normal", "font-style:italic");
@@ -139,6 +141,9 @@ const ICON = { arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="n
 const LORD = isVI ? ["vi", "en", "es", "ko", "zh"] : ["en", "es", "ko", "zh", "vi"];
 const LN = { en: "English", es: "Español", ko: "한국어", zh: "简体中文", vi: "Tiếng Việt" };
 const la = (l, cur) => `<a href="${pagePath(l, D.slug)}" lang="${HL[l]}" hreflang="${HL[l]}"${cur ? ` aria-current="true"` : ""}>${LN[l]}</a>`;
+// Footer web chính: hàng ngôn ngữ như web chính (web VI: "Tiếng Việt" không phải link), trỏ sang trang bác sĩ cùng ngôn ngữ.
+const LNF = { ...LN, zh: "中文" };
+const FOOTER = FTR[lang].replace("{{WA}}", esc(waHref)).replace("{{LANG_FOOT}}", LORD.map((l) => l === lang && isVI ? `<span lang="vi" aria-current="true">${LNF[l]}</span>` : `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${LNF[l]}</a>`).join("\n"));
 const HEADER = HDR[lang].replace("{{LANG_PANEL}}", LORD.filter((l) => l !== lang).map((l) => la(l)).join(""))
   .replace("{{LANG_MOB}}", LORD.map((l) => la(l, l === lang)).join("")).replace("{{WA}}", esc(waHref));
 const others = ORDER.filter((k) => k !== D.key).map((k) => doc(k, lang));
@@ -436,28 +441,14 @@ main{position:relative;z-index:1;padding-top:20px}
 .endcta .alt{font-size:14px}
 .endcta .alt a{color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:3px}
 
-/* footer */
-.ftr{position:relative;z-index:1;overflow:hidden;background:var(--deep);color:#fff}
-.ftr .pad{padding-top:clamp(48px,6vw,84px)}
-.ftop{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
-.ftop h2{font-size:40px;line-height:1.15;color:#fff;text-wrap:pretty}
-.fform{display:flex;align-items:center;gap:8px;background:rgba(11,31,21,.45);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:7px 7px 7px 24px;justify-self:end}
-.fform>span{flex:1;font-size:14px;line-height:1.4;color:rgba(255,255,255,.6);white-space:nowrap}
-.fform a{display:inline-flex;align-items:center;gap:10px;height:46px;padding:0 6px 0 20px;border-radius:999px;background:#fff;color:#0B1F15;font-size:16px;font-weight:600;flex:none;transition:transform .25s}
-.fform a:hover{transform:translateY(-1px)}
-.fform .ar{width:32px;height:32px;background:var(--mint);color:var(--g2);font-size:14px}
-.fsep{display:flex;align-items:center;gap:18px;margin:clamp(34px,4vw,56px) 0}
-.fsep span{flex:1;height:1px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.34) 0 6px,transparent 6px 12px)}
-.fsep i{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.4);flex:none}
-.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,4vw,48px)}
-.fcols>div{display:grid;gap:10px;align-content:start}
-.fh{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62);margin:0 0 4px;font-weight:400}
-.fcols a{font-size:14px;color:rgba(255,255,255,.78);padding:4px 0 4px 14px;border-left:1px solid rgba(255,255,255,.22);transition:color .25s}
-.fcols a:hover{color:#fff}
-.flegal{display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;padding:61px 0 34px;font-size:14px;color:rgba(255,255,255,.6)}
-.flegal p{flex:1 1 360px}
-.flegal a{color:rgba(255,255,255,.6)}
-.flegal a:hover{color:#fff}
+/* footer = footer 2 web chính (#gf-footer, đồng bộ bằng sync-header.mjs — owner 03/10/2026) */
+${FOOT_CSS}
+#gf-footer .gf-msg{display:flex;gap:4px;margin:8px 0 0 -12px}
+#gf-footer .gf-msg a{width:44px;height:44px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7)}
+#gf-footer .gf-msg a:hover{background:rgba(255,255,255,.1);color:#fff} #gf-footer .gf-msg svg{width:20px;height:20px}
+#gf-footer .gf-bottom nav span[aria-current]{color:#fff}
+@media (min-width:1024px){:lang(vi) #gf-footer .gf-bottom{flex-wrap:nowrap} :lang(vi) #gf-footer .gf-bottom>span{flex:none}} /* VI: một hàng như nhakhoagreenfield.com (lg:flex-row) */
+#gf-footer .gf-wa+.gf-wa{margin-left:8px}
 .wa-float{display:none;position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:59;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .wa-float svg{width:30px;height:30px}
 .wa-float.zalo{background:#0068FF}
@@ -469,7 +460,7 @@ main{position:relative;z-index:1;padding-top:20px}
 @media (min-width:1024px) and (max-width:1279px){.fw{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;min-height:0;align-items:start}.fw h2{grid-column:1/-1;justify-self:center;margin-bottom:24px}.fc{position:static;width:auto;animation:none}}
 @media (max-width:1080px) and (min-width:761px){.steps{grid-template-columns:repeat(4,1fr);row-gap:34px}.steps li::before{display:none}}
 @media (max-width:1023px){
-  .h2,.about h2,.guar h2,.ftop h2,.qt{font-size:30px} .endcta h2,.fw h2,.badge b{font-size:40px} .stat b{font-size:40px}
+  .h2,.about h2,.guar h2,.qt{font-size:30px} .endcta h2,.fw h2,.badge b{font-size:40px} .stat b{font-size:40px}
   .lead,.trust>p,.about .in>p:not(.pill),.endcta .in>p:not(.pill){font-size:16px} .faq .q{font-size:16px}
   .quote .grid{grid-template-columns:1fr;text-align:center}
   .quote .grid>picture{order:2}
@@ -483,17 +474,13 @@ main{position:relative;z-index:1;padding-top:20px}
   .about>picture img{object-position:right 30% top}
   .chips{position:static;margin-top:26px}
   .chips li{flex:1 1 100%}
-  .fform{justify-self:stretch;flex-direction:column;align-items:stretch;border-radius:22px;padding:18px;gap:14px}
-  .fform>span{text-align:center;white-space:normal}
-  .fform a{justify-content:center}
-  .fcols{grid-template-columns:1fr 1fr}
 }
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .hero-bg .fade{width:100%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.97) 45%,rgba(255,255,255,.6) 58%,rgba(255,255,255,0) 72%)}
   .hero-bg .blob{top:10%}
   .hero-photo{min-height:400px}
-  .case,.ftop{grid-template-columns:1fr}
+  .case{grid-template-columns:1fr}
   .hero .ctas a,.about .ctas a,.endcta .btn-w{width:100%;justify-content:center}
   .wa-float{display:flex}
 }
@@ -513,7 +500,6 @@ main{position:relative;z-index:1;padding-top:20px}
   .pad,.quote .grid{padding-inline:18px}
   .marq{margin-inline:-18px;padding-inline:18px}
   .hero-txt,.guar{padding:24px}
-  .fcols{grid-template-columns:1fr}
   .hero-photo{min-height:360px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.marq.run{overflow-x:auto}.js [data-reveal]{opacity:1;transform:none}}
@@ -553,7 +539,7 @@ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",
 (function(){var done=false,ev=["keydown","mousedown","mousemove","touchstart","wheel","scroll"];function load(){if(done)return;done=true;ev.forEach(function(e){removeEventListener(e,load,{passive:true})});(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ND5D4BL3');}
 window.gfLoadGTM=load;ev.forEach(function(e){addEventListener(e,load,{passive:true})});
 document.addEventListener("click",function(e){try{var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var u=a.href||"";if(!/wa\\.me|whatsapp\\.com|zalo\\.me|^tel:|^mailto:/i.test(u))return;
- var loc=a.closest("#gfh")?"header":a.closest(".ftr")?"footer":a.closest(".wa-float")?"floating":a.closest(".hero")?"hero":a.closest(".endcta")?"end_cta":a.closest(".ftr .fform")?"footer":"content";
+ var loc=a.closest("#gfh")?"header":a.closest("#gf-footer")?"footer":a.closest(".wa-float")?"floating":a.closest(".hero")?"hero":a.closest(".endcta")?"end_cta":"content";
  var t=String(a.innerText||a.getAttribute("aria-label")||"").replace(/\\s+/g," ").trim().slice(0,100);
  window.dataLayer.push({event:"gf_doctor_contact",doctor:"${D.key}",contact_method:/wa\\.me|whatsapp/i.test(u)?"whatsapp":/zalo\\.me/i.test(u)?"zalo":/^tel:/i.test(u)?"call":"email",cta_location:loc,page_lang:"${lang}"});
  var gtm=window.google_tag_manager;if(gtm){for(var k in gtm){if(k.indexOf("GTM-")===0)return;}}
@@ -692,21 +678,7 @@ ${HEADER}
   </div>
 </section>
 
-<footer class="ftr">
-  <div class="pad">
-    <div class="ftop">
-      <h2>${h(V.foot.h2)}</h2>
-      <div class="fform"><span>${esc(V.foot.hours)}</span><a href="${primary}" target="_blank" rel="noopener">${esc(V.foot.btn)}${dbl}</a></div>
-    </div>
-    <div class="fsep" aria-hidden="true"><span></span><i></i><span></span></div>
-    <div class="fcols">
-      <div><h2 class="fh">${esc(U.quick)}</h2>${["about", "expertise", "cases", "reviews", "faq"].map((id, i) => `<a href="#${id}">${esc(U.quickL[i])}</a>`).join("")}</div>
-      <div><h2 class="fh">${esc(U.touch)}</h2><a href="mailto:hello@nhakhoagreenfield.com">hello@nhakhoagreenfield.com</a><a href="https://maps.google.com/?q=95+Trung+Hoa+Cau+Giay+Hanoi" target="_blank" rel="noopener">${esc(U.address)}</a><a href="tel:+84906621988">+84 906 621 988</a>${isVI ? `<a href="${ZALO}" target="_blank" rel="noopener">Zalo 0906 621 988</a>` : ""}</div>
-      <div><h2 class="fh">${esc(U.social)}</h2><a href="https://www.youtube.com/@nhakhoagreenfield" target="_blank" rel="noopener">Youtube</a><a href="https://www.facebook.com/nhakhoagreenfield" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/greenfielddental/posts/?feedView=all" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/greenfield_dental/" target="_blank" rel="noopener">Instagram</a><a href="${L("home")}">${esc(U.website)}</a></div>
-    </div>
-    <div class="flegal"><p>${esc(U.copy)}</p>${L("privacy") ? `<a href="${L("privacy")}">${esc(T.footer.privacy)}</a>` : ""}<a href="#cookie-settings" data-gf-cookie-settings>${esc(U.cookies)}</a></div>
-  </div>
-</footer>
+${FOOTER}
 <a class="wa-float${isVI ? " zalo" : ""}" href="${primary}" target="_blank" rel="noopener" aria-label="${t(T.floatAria)}">${isVI ? ZALO_ICON : WA_ICON}</a>
 
 <script>/* Mã click WhatsApp — CÙNG cơ chế greenfield.clinic (gf_attr_v1 + mã 6 ký tự + sendBeacon wa-attr). Token: (via doctors.greenfield.clinic #MÃ).

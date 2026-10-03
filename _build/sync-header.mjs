@@ -90,3 +90,63 @@ const vi = `<div id="gfh"><div class="gfh-in"><a class="gfh-logo" href="${NK}/vi
   + `<div class="gfh-mob-langs" aria-label="Ngôn ngữ">{{LANG_MOB}}</div></div></div></div>`;
 writeFileSync(new URL("vi.html", OUT), vi + "\n");
 console.log("vi", vi.length, "ký tự ·", menu.map((m) => `${m.t} (${m.groups.reduce((n, g) => n + g.links.length, 0) + m.links.length})`).join(", "));
+
+// ================= FOOTER (owner 03/10/2026: "làm lại footer, đồng bộ với tất cả các web chính") =================
+// EN/ES/KO/ZH: nguyên <footer id="gf-footer"> của greenfield.clinic; VI: cùng khung, nội dung footer nhakhoagreenfield.com.
+// Ô chèn: {{WA}} (nút WhatsApp có mã click), {{LANG_FOOT}} (link ngôn ngữ → trang bác sĩ cùng ngôn ngữ).
+const LOGO_F = '<img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="87" height="64" loading="lazy">';
+function cutFooter(h) {
+  const a = h.indexOf('<footer id="gf-footer"'); if (a < 0) throw new Error("không thấy #gf-footer");
+  return h.slice(a, h.indexOf("</footer>", a) + 9);
+}
+function footHoles(x, lang) {
+  const out = x
+    .replace(/(<a class="gf-logo"[^>]*>)<img[^>]*>/, `$1${LOGO_F}`)
+    .replace(/(<a class="gf-wa" href=")[^"]*/, "$1{{WA}}")
+    .replace(/(<nav aria-label="[^"]*">[\s\S]*?)(<a href="[^"]*" hreflang="en"[\s\S]*?)(<\/nav>)/, "$1{{LANG_FOOT}}$3");
+  for (const k of ["{{WA}}", "{{LANG_FOOT}}"]) if (!out.includes(k)) throw new Error(`footer ${lang}: thiếu ${k}`);
+  return out;
+}
+let fcss = "";
+for (const [lang, u] of Object.entries(home)) {
+  const h = await get(u);
+  writeFileSync(new URL(`footer-${lang}.html`, OUT), footHoles(cutFooter(h), lang) + "\n");
+  if (lang === "en") fcss = [...h.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]).find((c) => c.trimStart().startsWith("#gf-footer"));
+}
+if (!fcss) throw new Error("không thấy CSS #gf-footer");
+writeFileSync(new URL("footer.css", OUT), fcss.trim() + "\n");
+
+// VI: đọc footer nhakhoagreenfield.com (h3 = cột, a = link), dựng trong khung #gf-footer (logo, mạng xã hội, icon lấy từ bản EN).
+const enF = (await import("node:fs")).readFileSync(new URL("footer-en.html", OUT), "utf8");
+const F = nk.slice(nk.indexOf("<footer"), nk.indexOf("</footer>"));
+const txt = (s) => dec(s.replace(/<!-- -->/g, "").replace(/<[^>]+>/g, ""));
+const cols = []; let col = null;
+for (const m of F.matchAll(/<(h3|a|span)\b([^>]*)>([\s\S]*?)<\/\1>/g)) {
+  const t = txt(m[3]); const href = (m[2].match(/href="([^"]*)"/) || [])[1];
+  if (m[1] === "h3") { col = { t, links: [] }; cols.push(col); continue; }
+  if (col && t && (href || m[1] === "span")) col.links.push({ t, href: href && (href.startsWith("/") ? NK + href : href.replace(/&amp;/g, "&")) });
+  if (col && href && /\/dat-lich$/.test(href)) col = null; // nút đặt lịch = mục cuối của cột "Ghé thăm"
+}
+const [svc, clinic, visit] = cols;
+if (!svc || !clinic || !visit) throw new Error("VI footer: đọc cột lỗi");
+const about = txt((F.match(/<p[^>]*>([^<]{20,200})<\/p>/) || [, ""])[1]);
+const legal = txt((F.match(/<p[^>]*>(©[\s\S]*?)<\/p>/) || [, ""])[1]);
+const visitItems = visit.links.filter((l) => !/dat-lich|zalo\.me|wa\.me|m\.me/.test(l.href || ""));
+// Hàng biểu tượng nhắn tin (WhatsApp · Zalo · Messenger) như footer VI; WhatsApp dùng link có mã click.
+const vseg = F.slice(F.indexOf("mailto:"), F.indexOf("/vi/dat-lich"));
+const msg = [...vseg.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].filter((m) => /wa\.me|zalo\.me|m\.me/.test(m[1])).map((m) => {
+  const href = m[1].match(/href="([^"]*)"/)[1], aria = (m[1].match(/aria-label="([^"]*)"/) || [, ""])[1], svg = (m[2].match(/<svg[\s\S]*<\/svg>/) || [""])[0];
+  return `<a href="${/wa\.me/.test(href) ? "{{WA}}" : href}" target="_blank" rel="noopener" aria-label="${aria}">${svg}</a>`; });
+if (msg.length !== 3) throw new Error(`VI footer: hàng nhắn tin có ${msg.length} mục`);
+const fcta = visit.links.find((l) => /dat-lich/.test(l.href || ""));
+const icons = [...enF.matchAll(/<li>(<svg[\s\S]*?<\/svg>)/g)].map((m) => m[1]); // bản đồ, giờ, điện thoại, email
+const social = enF.match(/<div class="gf-social">[\s\S]*?<\/div>/)[0];
+const legalNav = [...F.matchAll(/<a[^>]*href="(\/vi\/(?:chinh-sach-bao-mat|dieu-khoan))"[^>]*>([^<]+)<\/a>/g)].map((m) => `<a href="${NK}${m[1]}">${esc(dec(m[2]))}</a>`);
+const viF = `<footer id="gf-footer" aria-label="Chân trang"><div class="gf-wrap"><div class="gf-grid"><div><a class="gf-logo" href="${NK}/vi" aria-label="Nha khoa Greenfield — trang chủ">${LOGO_F}</a><p class="gf-about">${esc(about)}</p>${social}</div>`
+  + [svc, clinic].map((c) => `<div><h4>${esc(c.t)}</h4><ul>${c.links.map((l) => `<li><a href="${l.href}">${esc(l.t)}</a></li>`).join("")}</ul></div>`).join("")
+  + `<div><h4>${esc(visit.t)}</h4><ul class="gf-contact">${visitItems.map((l, i) => `<li>${icons[i] || ""}${l.href ? `<a href="${l.href}"${/^https?:/.test(l.href) ? ' target="_blank" rel="noopener"' : ""}>${esc(l.t)}</a>` : `<span>${esc(l.t)}</span>`}</li>`).join("")}</ul>`
+  + `<div class="gf-msg">${msg.join("")}</div><a class="gf-wa" href="${fcta ? fcta.href : NK + "/vi/dat-lich"}">${esc(fcta ? fcta.t : "Đặt lịch tư vấn miễn phí")}</a></div></div>`
+  + `<div class="gf-bottom"><span>${esc(legal)}</span><nav aria-label="Pháp lý và ngôn ngữ">${legalNav.join(" ")} <a href="#cookie-settings" data-gf-cookie-settings>Cài đặt cookie</a> {{LANG_FOOT}}</nav></div></div></footer>`;
+if (visitItems.length !== 4 || !legal) throw new Error(`VI footer: thiếu dữ liệu (${visitItems.length} mục liên hệ, legal "${legal}")`);
+writeFileSync(new URL("footer-vi.html", OUT), viF + "\n");
+console.log("footer: en/es/ko/zh từ greenfield.clinic · vi:", svc.links.length, "dịch vụ,", clinic.links.length, "phòng khám ·", legal);
