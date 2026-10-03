@@ -38,7 +38,7 @@
 @font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url(/shared/fonts/anton-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{--bg:#EFF1F2;--ink:#333B3B;--g:#3F8F68;--g2:#2F7253;--mut:#5F6968;--mut2:#6E7877;--mint:#EAF4EE;--deep:#344A3C;--night:#0F2A1D;--sans:'Plus Jakarta Sans','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',system-ui,-apple-system,'Segoe UI',sans-serif;--sec:clamp(56px,8vw,110px);--cp:clamp(26px,3.4vw,52px)}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{scroll-padding-top:132px;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:var(--g2);text-decoration:none}
@@ -56,46 +56,63 @@ h1 em,h2 em{font-style:normal;color:var(--g)}
 .tick{width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--g);display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:60;background:rgba(239,241,242,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(51,59,59,.06)}
-.hdr .pad{padding-block:14px;display:flex;align-items:center;gap:24px}
-.logo{display:flex;align-items:center;flex:none}
-.logo img{height:30px;width:auto}
-.nav{display:flex;gap:26px;margin-left:auto;align-items:center}
-.nav a{font-size:13.5px;color:#5A6462;font-weight:500;transition:color .2s}
-.nav a:hover{color:var(--g2)}
-.lang{position:relative;flex:none}
-.lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;height:44px;padding:0 10px;border-radius:999px;font-size:13px;font-weight:600;color:#5A6462}
-.lang summary::-webkit-details-marker{display:none}
-.lang summary svg{width:17px;height:17px}
-.lang summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.lang-p{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border-radius:16px;padding:6px;box-shadow:0 22px 50px -24px rgba(51,59,59,.45);display:grid;min-width:170px}
-.lang-p a,.mlang a{display:flex;align-items:center;gap:10px;min-height:42px;padding:0 12px;border-radius:10px;color:var(--ink);font-size:13.5px;font-weight:600}
-.lang-p a small,.mlang a small{font-weight:400;color:var(--mut)}
-.lang-p a:hover{background:var(--mint)}
-.lang-p a[aria-current],.mlang a[aria-current]{color:var(--g2);background:var(--mint)}
-.docs{position:relative}
-.docs summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:13.5px;color:#5A6462;font-weight:500;min-height:44px}
-.docs summary::-webkit-details-marker{display:none}
-.docs summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.docs summary:hover,.docs[open] summary{color:var(--g2)}
-.docs-p{left:50%;right:auto;transform:translateX(-50%);min-width:230px}
-.docs-p a{font-weight:500;white-space:nowrap}
-.mh{margin:14px 6px 2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
-.mdocs{display:grid}
-.mdocs a{padding:12px 6px;font-size:15px;color:var(--ink);border-bottom:1px solid rgba(51,59,59,.06)}
-.mdocs a[aria-current]{color:var(--g2);font-weight:600}
-.btn-book{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--g);color:var(--g2);font-size:13.5px;font-weight:600;background:transparent;transition:background .25s,color .25s;flex:none;white-space:nowrap}
-.btn-book::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g);transition:background .25s}
-.btn-book:hover{background:var(--g);color:#fff}
-.btn-book:hover::before{background:#fff}
-.burger{display:none;width:44px;height:44px;border-radius:14px;border:1px solid rgba(51,59,59,.12);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;flex:none;margin-left:auto}
-.burger span{width:16px;height:1.6px;background:var(--ink);display:block}
-.mnav{display:none;padding:8px 18px 22px;gap:2px;background:var(--bg);border-top:1px solid rgba(51,59,59,.06);max-height:calc(100dvh - 73px);overflow:auto}
-.mnav.open{display:grid}
-.mnav>a{padding:14px 6px;font-size:16px;color:var(--ink);font-weight:500;border-bottom:1px solid rgba(51,59,59,.06)}
-.mlang{display:flex;flex-wrap:wrap;gap:6px;padding:14px 0 4px}
-.mlang a{min-height:40px;border:1px solid rgba(51,59,59,.1);border-radius:999px}
-.mbook{margin-top:14px;display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;background:var(--g);color:#fff!important;font-weight:600;font-size:15px}
+/* header — khung giống greenfield.clinic (khôi phục 03/10/2026) */
+.hdr{--moss:#16261E;--moss-2:#1F3329;--gold:#C9974A;--gold-h:#D8A85C;--on-moss:rgba(255,255,255,.86);--on-moss-line:rgba(255,255,255,.12);position:sticky;top:0;z-index:60;background:var(--moss);color:var(--on-moss);border-bottom:1px solid var(--on-moss-line)}
+.hdr .pad{display:flex;align-items:center;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;min-height:48px;flex:none} .logo img{width:66px;height:auto}
+.nav{display:none;align-items:center;gap:4px;margin-left:12px}
+.nav>a,.dd>summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:500 14px/1 var(--sans);color:#fff;text-decoration:none;cursor:pointer;list-style:none;border-radius:8px}
+.dd>summary::-webkit-details-marker{display:none}
+.dd>summary::after{content:"";width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.nav>a:hover,.dd>summary:hover{color:var(--gold)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:100%;left:0;min-width:240px;background:var(--moss);border:1px solid var(--on-moss-line);border-radius:12px;padding:8px;display:grid;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.dd-panel a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:8px;color:var(--on-moss);text-decoration:none;font-size:14px}
+.dd-panel a small,.mlang a small{font-size:12px;opacity:.7}
+.dd-panel a:hover{background:var(--moss-2);color:#fff}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.rating{display:none;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:14px;line-height:1.2;min-height:44px}
+.rating svg{width:16px;height:16px;color:var(--gold)} .rating b{font-weight:600} .rating small{display:block;font-size:14px;color:var(--on-moss);white-space:nowrap}
+.hbtn{display:none;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 18px;border-radius:999px;font:600 14px/1.2 var(--sans);background:var(--gold);color:var(--moss);white-space:nowrap}
+.hbtn:hover{background:var(--gold-h)} .hbtn svg{width:20px;height:20px;flex:none}
+.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--on-moss-line);border-radius:10px;background:transparent;color:#fff;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:1.5px;background:currentColor;position:relative;content:""}
+.burger span::before{position:absolute;top:-6px} .burger span::after{position:absolute;top:6px}
+.mnav{display:none;background:var(--moss);border-top:1px solid var(--on-moss-line);padding:8px 20px 20px;max-height:calc(100dvh - 72px);overflow:auto}
+.mnav.open{display:block}
+.mnav .mh{font:600 12px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:18px 0 6px}
+.mnav a{display:flex;align-items:center;gap:8px;min-height:44px;color:var(--on-moss);text-decoration:none;font-size:16px;border-bottom:1px solid var(--on-moss-line)}
+.mnav .mlang{display:flex;flex-wrap:wrap;gap:4px 16px} .mnav .mlang a{border-bottom:0} .mnav .mlang a[aria-current]{color:var(--gold)}
+.mnav .hbtn{display:flex;margin-top:20px;font-size:16px;min-height:48px;border-bottom:0;color:var(--moss)}
+.lang-dd>summary{padding:0 10px;gap:6px} .lang-dd>summary svg{width:18px;height:18px}
+.lang-dd .dd-panel{left:auto;right:0;min-width:150px}
+.lang-dd .dd-panel a[aria-current],.lang-row a[aria-current]{color:var(--gold)}
+.lang-row{display:none;align-items:center}
+.lang-row a{display:flex;align-items:center;min-height:44px;padding:0 6px;font:500 14px/1 var(--sans);color:var(--on-moss);text-decoration:none}
+.lang-row a:hover{color:#fff} .lang-row a+a::before{content:"·";margin-right:6px;color:var(--on-moss-line)}
+/* thanh mục trong trang */
+.subnav{position:sticky;top:72px;z-index:50;background:rgba(239,241,242,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(51,59,59,.08)}
+.subnav .pad{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.subnav .pad::-webkit-scrollbar{display:none}
+.subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
+.subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+@media (min-width:1024px){.nav,.rating,.hbtn{display:flex}.hdr-right>.hbtn{display:inline-flex}.burger{display:none}}
+@media (min-width:1024px) and (max-width:1279px){.hdr .rating{display:none}}
+@media (min-width:1280px){.lang-dd{display:none}.lang-row{display:flex}}
+/* các bác sĩ khác (khôi phục 03/10/2026) */
+.odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
+.odocs li{display:flex}
+.odocs a{flex:1;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(51,59,59,.08);border-radius:20px;overflow:hidden;color:inherit;transition:border-color .2s,transform .2s}
+.odocs a:hover,.odocs a:focus-visible{border-color:var(--g);transform:translateY(-2px)}
+.odocs picture{display:block;height:240px;background:linear-gradient(180deg,#EEF1EF 0%,#E2E7E4 100%);overflow:hidden}
+.odocs img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;padding-top:16px}
+.odocs .ob{flex:1;display:flex;flex-direction:column;gap:4px;padding:16px 18px 18px}
+.odocs b{font-size:18px;font-weight:600;line-height:1.3} .odocs small{font-size:14px;line-height:1.45;color:var(--mut)}
+.odocs .go{margin-top:auto;padding-top:12px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;font-style:normal;color:var(--g2)}
+.odocs .go svg{width:16px;height:16px}
+@media (prefers-reduced-motion:reduce){.odocs a{transition:none}.odocs a:hover{transform:none}}
+@media (max-width:639px){.odocs{gap:12px}.odocs picture{height:170px}.odocs .ob{padding:12px 12px 14px}.odocs b{font-size:16px}}
+@media (min-width:1024px){.odocs{grid-template-columns:repeat(4,1fr)}}
 
 /* màn đầu */
 main{position:relative;z-index:1;padding-top:20px}
@@ -345,8 +362,6 @@ main{position:relative;z-index:1;padding-top:20px}
   .fform a{justify-content:center}
   .fcols{grid-template-columns:1fr 1fr}
 }
-@media (max-width:1180px){.nav,.hdr .btn-book,.hdr .lang{display:none}.burger{display:flex}}
-@media (min-width:1181px) and (max-width:1320px){.nav{gap:18px}.hdr .pad{gap:16px}}
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .hero-bg .fade{width:100%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.97) 45%,rgba(255,255,255,.6) 58%,rgba(255,255,255,0) 72%)}
@@ -424,19 +439,28 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 <script>document.documentElement.classList.add("js")</script>
 <header class="hdr">
   <div class="pad">
-    <a class="logo" href="https://greenfield.clinic/zh/" aria-label="Greenfield Dental 首页"><img src="/shared/img/greenfield-logo-green-60.webp" alt="Greenfield Dental" width="252" height="60"></a>
-    <nav class="nav" aria-label="本页内容"><a href="#about">简介</a><a href="#expertise">专长</a><a href="#journey">治疗流程</a><a href="#cases">病例</a><a href="#reviews">评价</a><a href="#faq">常见问题</a><details class="docs"><summary>医生团队</summary><div class="lang-p docs-p"><a href="/zh/dr-ta-hong-nhung">Dr. Ta Hong Nhung</a><a href="/zh/dr-do-nhu-chuyen">Dr. Do Nhu Chuyen</a><a href="/zh/dr-tran-thi-giang" aria-current="page">Dr. Tran Thi Giang</a><a href="/zh/dr-nguyen-duc-hieu">Dr. Nguyen Duc Hieu</a><a href="/zh/dr-pham-thi-thu-hien">Dr. Pham Thi Thu Hien</a></div></details></nav>
-    <details class="lang"><summary aria-label="语言: 简体中文"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>中文</summary><div class="lang-p"><a href="/dr-tran-thi-giang" hreflang="en" lang="en">EN<small>English</small></a><a href="/vi/dr-tran-thi-giang" hreflang="vi" lang="vi">VI<small>Tiếng Việt</small></a><a href="/es/dr-tran-thi-giang" hreflang="es" lang="es">ES<small>Español</small></a><a href="/ko/dr-tran-thi-giang" hreflang="ko" lang="ko">KO<small>한국어</small></a><a href="/zh/dr-tran-thi-giang" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文<small>简体中文</small></a></div></details>
-    <a class="btn-book" href="#book">预约咨询</a>
-    <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="菜单"><span></span><span></span><span></span></button>
+    <a class="logo" href="https://greenfield.clinic/zh/" aria-label="Greenfield Dental 首页"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
+    <nav class="nav" aria-label="主菜单">
+      <details class="dd"><summary>诊疗项目</summary><div class="dd-panel"><a href="https://greenfield.clinic/zh/dental-implants-zh/">种植牙</a><a href="https://greenfield.clinic/zh/crowns-zh/">牙冠</a><a href="https://greenfield.clinic/zh/veneers-zh/">瓷贴面</a><a href="https://greenfield.clinic/zh/invisalign-zh/">隐适美</a><a href="https://greenfield.clinic/zh/braces-zh/">牙齿矫正</a><a href="https://greenfield.clinic/zh/general-dentistry-zh/">一般牙科</a><a href="https://greenfield.clinic/zh/teeth-whitening-zh/">牙齿美白</a></div></details><details class="dd"><summary>治疗效果</summary><div class="dd-panel"><a href="https://greenfield.clinic/zh/smile-gallery-zh/">治疗前后对比</a><a href="https://greenfield.clinic/zh/reviews-zh/">患者评价</a></div></details><details class="dd"><summary>关于我们</summary><div class="dd-panel"><a href="https://greenfield.clinic/zh/doctors-zh/">医生团队</a><a href="https://greenfield.clinic/zh/about-zh/">诊所介绍</a><a href="https://greenfield.clinic/zh/dental-tourism-zh/">牙科医疗旅游</a><a href="https://greenfield.clinic/zh/faq-zh/">常见问题</a></div></details><details class="dd"><summary>医生团队</summary><div class="dd-panel"><a href="/zh/dr-ta-hong-nhung">Dr. Ta Hong Nhung</a><a href="/zh/dr-do-nhu-chuyen">Dr. Do Nhu Chuyen</a><a href="/zh/dr-tran-thi-giang" aria-current="page">Dr. Tran Thi Giang</a><a href="/zh/dr-nguyen-duc-hieu">Dr. Nguyen Duc Hieu</a><a href="/zh/dr-pham-thi-thu-hien">Dr. Pham Thi Thu Hien</a></div></details><a href="https://greenfield.clinic/zh/contact-zh/">联系我们</a>
+    </nav>
+    <div class="hdr-right">
+      <details class="dd lang-dd"><summary aria-label="语言: 中文"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>中文</summary><div class="dd-panel"><a href="/dr-tran-thi-giang" hreflang="en" lang="en">EN<small>English</small></a><a href="/vi/dr-tran-thi-giang" hreflang="vi" lang="vi">VI<small>Tiếng Việt</small></a><a href="/es/dr-tran-thi-giang" hreflang="es" lang="es">ES<small>Español</small></a><a href="/ko/dr-tran-thi-giang" hreflang="ko" lang="ko">KO<small>한국어</small></a><a href="/zh/dr-tran-thi-giang" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文<small>简体中文</small></a></div></details>
+      <nav class="lang-row" aria-label="语言"><a href="/dr-tran-thi-giang" hreflang="en" lang="en">EN</a><a href="/vi/dr-tran-thi-giang" hreflang="vi" lang="vi">VI</a><a href="/es/dr-tran-thi-giang" hreflang="es" lang="es">ES</a><a href="/ko/dr-tran-thi-giang" hreflang="ko" lang="ko">KO</a><a href="/zh/dr-tran-thi-giang" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文</a></nav>
+      <a class="rating" href="https://g.co/kgs/FmAkkx3" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9 12 2Z"/></svg><span><b data-rating>5.0</b><small><span data-count>264</span> 条 Google 评价</small></span></a>
+      <a class="hbtn" href="https://greenfield.clinic/zh/contact-zh/">免费咨询</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="打开菜单"><span></span></button>
+    </div>
   </div>
   <div class="mnav" id="mnav">
-    <a href="#about">简介</a><a href="#expertise">专长</a><a href="#journey">治疗流程</a><a href="#cases">病例</a><a href="#reviews">评价</a><a href="#faq">常见问题</a>
-    <p class="mh">医生团队</p><div class="mdocs"><a href="/zh/dr-ta-hong-nhung">Dr. Ta Hong Nhung</a><a href="/zh/dr-do-nhu-chuyen">Dr. Do Nhu Chuyen</a><a href="/zh/dr-tran-thi-giang" aria-current="page">Dr. Tran Thi Giang</a><a href="/zh/dr-nguyen-duc-hieu">Dr. Nguyen Duc Hieu</a><a href="/zh/dr-pham-thi-thu-hien">Dr. Pham Thi Thu Hien</a></div>
-    <div class="mlang" aria-label="语言"><a href="/dr-tran-thi-giang" hreflang="en" lang="en">EN<small>English</small></a><a href="/vi/dr-tran-thi-giang" hreflang="vi" lang="vi">VI<small>Tiếng Việt</small></a><a href="/es/dr-tran-thi-giang" hreflang="es" lang="es">ES<small>Español</small></a><a href="/ko/dr-tran-thi-giang" hreflang="ko" lang="ko">KO<small>한국어</small></a><a href="/zh/dr-tran-thi-giang" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文<small>简体中文</small></a></div>
-    <a class="mbook" href="#book">预约咨询</a>
+    <p class="mh">诊疗项目</p><a href="https://greenfield.clinic/zh/dental-implants-zh/">种植牙</a><a href="https://greenfield.clinic/zh/crowns-zh/">牙冠</a><a href="https://greenfield.clinic/zh/veneers-zh/">瓷贴面</a><a href="https://greenfield.clinic/zh/invisalign-zh/">隐适美</a><a href="https://greenfield.clinic/zh/braces-zh/">牙齿矫正</a><a href="https://greenfield.clinic/zh/general-dentistry-zh/">一般牙科</a><a href="https://greenfield.clinic/zh/teeth-whitening-zh/">牙齿美白</a>
+    <p class="mh">治疗效果</p><a href="https://greenfield.clinic/zh/smile-gallery-zh/">治疗前后对比</a><a href="https://greenfield.clinic/zh/reviews-zh/">患者评价</a>
+    <p class="mh">关于我们</p><a href="https://greenfield.clinic/zh/doctors-zh/">医生团队</a><a href="https://greenfield.clinic/zh/about-zh/">诊所介绍</a><a href="https://greenfield.clinic/zh/dental-tourism-zh/">牙科医疗旅游</a><a href="https://greenfield.clinic/zh/faq-zh/">常见问题</a><a href="https://greenfield.clinic/zh/contact-zh/">联系我们</a>
+    <p class="mh">医生团队</p><a href="/zh/dr-ta-hong-nhung">Dr. Ta Hong Nhung</a><a href="/zh/dr-do-nhu-chuyen">Dr. Do Nhu Chuyen</a><a href="/zh/dr-tran-thi-giang" aria-current="page">Dr. Tran Thi Giang</a><a href="/zh/dr-nguyen-duc-hieu">Dr. Nguyen Duc Hieu</a><a href="/zh/dr-pham-thi-thu-hien">Dr. Pham Thi Thu Hien</a>
+    <p class="mh">语言</p><div class="mlang"><a href="/dr-tran-thi-giang" hreflang="en" lang="en">EN<small>English</small></a><a href="/vi/dr-tran-thi-giang" hreflang="vi" lang="vi">VI<small>Tiếng Việt</small></a><a href="/es/dr-tran-thi-giang" hreflang="es" lang="es">ES<small>Español</small></a><a href="/ko/dr-tran-thi-giang" hreflang="ko" lang="ko">KO<small>한국어</small></a><a href="/zh/dr-tran-thi-giang" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">中文<small>简体中文</small></a></div>
+    <a class="hbtn" href="https://wa.me/84906621988?text=%E6%82%A8%E5%A5%BD%EF%BC%8CGreenfield%20Dental%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20Dr.%20Giang%20%E7%9A%84%E5%92%A8%E8%AF%A2%E3%80%82%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">免费咨询</a>
   </div>
 </header>
+<nav class="subnav" aria-label="本页内容"><div class="pad"><a href="#top"><b>Dr. Giang</b></a><a href="#about">简介</a><a href="#expertise">专长</a><a href="#journey">治疗流程</a><a href="#cases">病例</a><a href="#reviews">评价</a><a href="#faq">常见问题</a></div></nav>
 
 <main id="top" class="pad">
 <section class="hero">
@@ -546,6 +570,11 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <div class="cards"><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12.5l2 2 4-4M5 7l7-3 7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V7z"/></svg><b>治疗保修</b><span>为正畸矫治器和大型修复治疗提供书面保修。</span></div><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.2 3.5H20v8.8l-8.4 8.4a1.4 1.4 0 01-2 0l-6.8-6.8a1.4 1.4 0 010-2zM16.3 7.7h.01"/></svg><b>透明的固定价格</b><span>咨询后一次性报价，无任何隐藏附加费用。</span></div><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM3 12h18M12 2.5c2.4 2.5 3.8 5.9 3.8 9.5S14.4 19 12 21.5c-2.4-2.5-3.8-5.9-3.8-9.5S9.6 5 12 2.5z"/></svg><b>国际患者支持</b><span>为您安排机场接机、翻译和行程规划。</span></div><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 5.5h17v10h-17zM3.5 10.5h17M9 19h6M12 15.5V19"/></svg><b>现代技术与材料</b><span>数字化扫描、3D 治疗规划及高端隐形矫治系统。</span></div><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1114.6 5.9M20.5 12a8.5 8.5 0 01-14.6 5.9M12 8v4l2.6 1.6"/></svg><b>术后护理与远程随访</b><span>回国后仍长期提供复诊跟进与支持。</span></div><div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9-5.3-2.9-5.3 2.9 1.1-5.9L3.5 9.2l5.9-.8L12 3z"/></svg><b>值得信赖的品质</b><span>以数千例已完成病例铸就的可靠记录。</span></div></div>
   </div>
 </section>
+<section class="sec others" aria-labelledby="others-h" data-reveal>
+  <p class="eyebrow">医生团队</p>
+  <h2 class="h2" id="others-h">Greenfield <em>其他医生</em></h2>
+  <ul class="odocs"><li><a href="/zh/dr-ta-hong-nhung"><picture><source type="image/avif" srcset="/dr-ta-hong-nhung/img/kate-portrait-480.avif 480w, /dr-ta-hong-nhung/img/kate-portrait-752.avif 752w" sizes="(min-width: 1024px) 280px, 50vw"><source type="image/webp" srcset="/dr-ta-hong-nhung/img/kate-portrait-480.webp 480w, /dr-ta-hong-nhung/img/kate-portrait-752.webp 752w" sizes="(min-width: 1024px) 280px, 50vw"><img src="/dr-ta-hong-nhung/img/kate-portrait-752.webp" alt="Greenfield Dental 创始人兼临床总监 Dr. Ta Hong Nhung (Dr. Kate)" width="752" height="1248" loading="lazy" decoding="async"></picture><span class="ob"><b>Dr. Ta Hong Nhung</b><small>Dr. Kate · 临床总监 · 正畸</small><i class="go">查看简介 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg></i></span></a></li><li><a href="/zh/dr-do-nhu-chuyen"><picture><source type="image/avif" srcset="/dr-do-nhu-chuyen/img/chris-portrait-480.avif 480w, /dr-do-nhu-chuyen/img/chris-portrait-800.avif 800w" sizes="(min-width: 1024px) 280px, 50vw"><source type="image/webp" srcset="/dr-do-nhu-chuyen/img/chris-portrait-480.webp 480w, /dr-do-nhu-chuyen/img/chris-portrait-800.webp 800w" sizes="(min-width: 1024px) 280px, 50vw"><img src="/dr-do-nhu-chuyen/img/chris-portrait-800.webp" alt="Greenfield Dental 种植牙医生 Dr. Do Nhu Chuyen (Dr. Chris)" width="800" height="1194" loading="lazy" decoding="async"></picture><span class="ob"><b>Dr. Do Nhu Chuyen</b><small>Dr. Chris · 种植牙医生</small><i class="go">查看简介 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg></i></span></a></li><li><a href="/zh/dr-nguyen-duc-hieu"><picture><source type="image/avif" srcset="/dr-nguyen-duc-hieu/img/henry-portrait-480.avif 480w, /dr-nguyen-duc-hieu/img/henry-portrait-800.avif 800w" sizes="(min-width: 1024px) 280px, 50vw"><source type="image/webp" srcset="/dr-nguyen-duc-hieu/img/henry-portrait-480.webp 480w, /dr-nguyen-duc-hieu/img/henry-portrait-800.webp 800w" sizes="(min-width: 1024px) 280px, 50vw"><img src="/dr-nguyen-duc-hieu/img/henry-portrait-800.webp" alt="Greenfield Dental 种植牙医生 Dr. Nguyen Duc Hieu (Dr. Henry)" width="800" height="1247" loading="lazy" decoding="async"></picture><span class="ob"><b>Dr. Nguyen Duc Hieu</b><small>Dr. Henry · 种植牙医生</small><i class="go">查看简介 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg></i></span></a></li><li><a href="/zh/dr-pham-thi-thu-hien"><picture><source type="image/avif" srcset="/dr-pham-thi-thu-hien/img/hailey-portrait-480.avif 480w, /dr-pham-thi-thu-hien/img/hailey-portrait-800.avif 800w" sizes="(min-width: 1024px) 280px, 50vw"><source type="image/webp" srcset="/dr-pham-thi-thu-hien/img/hailey-portrait-480.webp 480w, /dr-pham-thi-thu-hien/img/hailey-portrait-800.webp 800w" sizes="(min-width: 1024px) 280px, 50vw"><img src="/dr-pham-thi-thu-hien/img/hailey-portrait-800.webp" alt="Greenfield Dental 综合与修复牙医 Dr. Pham Thi Thu Hien (Dr. Hailey)" width="800" height="949" loading="lazy" decoding="async"></picture><span class="ob"><b>Dr. Pham Thi Thu Hien</b><small>Dr. Hailey · 综合与修复牙科</small><i class="go">查看简介 <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg></i></span></a></li></ul>
+</section>
 </main>
 
 <section class="endcta" id="book" data-reveal>
@@ -596,6 +625,7 @@ document.addEventListener("click",onWa,true);document.addEventListener("auxclick
 (function(){var b=document.querySelector(".burger"),m=document.getElementById("mnav");
 b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o);});
 m.addEventListener("click",function(e){if(e.target.closest("a[href^='#']")){m.classList.remove("open");b.setAttribute("aria-expanded",false);}});
+try{fetch("https://lead.greenfield.clinic/api/public/google-rating").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.count)return;document.querySelectorAll("[data-count]").forEach(function(e){e.textContent=j.count});document.querySelectorAll("[data-rating]").forEach(function(e){e.textContent=j.ratingText||"5.0"});}).catch(function(){});}catch(e){}
 var dds=[].slice.call(document.querySelectorAll(".hdr details"));dds.forEach(function(d){d.addEventListener("toggle",function(){if(d.open)dds.forEach(function(o){if(o!==d)o.open=false})})});document.addEventListener("click",function(e){dds.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false})});
 var C=[{"t":"重度牙齿磨耗伴敏感","d":"采用 Ceramill Zolid 牙冠和 E.max Press 贴面修复磨耗的牙体结构，改善功能、舒适度及整体笑容美观。","m":"2 次就诊 · 修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-01-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-01-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-01-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-01-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-01-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-01-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-01-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-01-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-01-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-01-after-800.webp"}},{"t":"多颗缺失牙伴骨量流失","d":"采用氧化锆牙冠修复受损牙齿，改善咀嚼功能与稳定性，提升整体笑容外观。","m":"2 次就诊 · 修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-02-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-02-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-02-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-02-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-02-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-02-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-02-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-02-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-02-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-02-after-800.webp"}},{"t":"缺失牙伴大面积龋坏与牙齿磨耗","d":"采用 Ceramill Zolid 牙冠重建缺损的牙体结构，修复受损牙齿，改善舒适度、功能与笑容协调性。","m":"2 次就诊 · 修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-03-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-03-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-03-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-03-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-03-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-03-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-03-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-03-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-03-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-03-after-800.webp"}},{"t":"缺失牙伴骨量流失与重度牙齿磨耗","d":"采用 Dentium 种植体和氧化锆牙冠修复缺失牙及磨耗牙，改善咀嚼功能、稳定性与笑容美观。","m":"3 次就诊 · 种植与修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-04-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-04-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-04-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-04-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-04-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-04-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-04-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-04-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-04-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-04-after-800.webp"}},{"t":"多颗缺失牙与折裂牙伴深龋","d":"采用氧化锆牙冠和 Biodentine 修复重建并保护受损牙齿，恢复咀嚼功能、舒适度与口腔稳定性。","m":"3 次就诊 · 修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-05-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-05-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-05-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-05-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-05-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-05-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-05-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-05-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-05-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-05-after-800.webp"}},{"t":"多颗缺失牙伴重度牙齿磨耗","d":"采用 Straumann 种植体和氧化锆牙冠修复缺失牙及磨耗牙，改善咬合稳定性、咀嚼功能与笑容美观。","m":"3 次就诊 · 种植与修复牙科","b":{"a":"/dr-tran-thi-giang/img/restorative-case-06-before-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-06-before-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-06-before-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-06-before-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-06-before-800.webp"},"f":{"a":"/dr-tran-thi-giang/img/restorative-case-06-after-480.avif 480w, /dr-tran-thi-giang/img/restorative-case-06-after-800.avif 800w","w":"/dr-tran-thi-giang/img/restorative-case-06-after-480.webp 480w, /dr-tran-thi-giang/img/restorative-case-06-after-800.webp 800w","s":"/dr-tran-thi-giang/img/restorative-case-06-after-800.webp"}}],TL={"b":"治疗前：","a":"治疗后：","n":"病例"},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});

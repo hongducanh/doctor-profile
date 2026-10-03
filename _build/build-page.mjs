@@ -129,6 +129,15 @@ const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'
 const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
 const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
 const nav = [["about", 0], ["expertise", 1], ["journey", 2], ["cases", 3], ["reviews", 4], ["faq", 5]];
+const ICON = {
+  star: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m12 2 3 6.9 7.5.6-5.7 4.9 1.8 7.3L12 17.8 5.4 21.7l1.8-7.3L1.5 9.5 9 8.9 12 2Z"/></svg>`,
+  arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>`,
+};
+const items = (arr) => arr.filter(([, k]) => L(k)).map(([lb, k]) => `<a href="${L(k)}">${esc(lb)}</a>`).join("");
+const menu = (label, arr) => `<details class="dd"><summary>${esc(label)}</summary><div class="dd-panel">${items(arr)}</div></details>`;
+const MN = T.menus;
+const langCodes = () => LANGS.map((l) => `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${CODE[l]}</a>`).join("");
+const others = ORDER.filter((k) => k !== D.key).map((k) => doc(k, lang));
 const arrow = `<span class="ar" aria-hidden="true">→</span>`, dbl = `<span class="ar" aria-hidden="true">»</span>`;
 
 const html = `<!doctype html>
@@ -163,7 +172,7 @@ ${heroPreload}
 ${FONTS_CSS}
 :root{--bg:#EFF1F2;--ink:#333B3B;--g:#3F8F68;--g2:#2F7253;--mut:#5F6968;--mut2:#6E7877;--mint:#EAF4EE;--deep:#344A3C;--night:#0F2A1D;--sans:'Plus Jakarta Sans',${CJK ? CJK + "," : ""}system-ui,-apple-system,'Segoe UI',sans-serif;--sec:clamp(56px,8vw,110px);--cp:clamp(26px,3.4vw,52px)}
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+html{scroll-padding-top:132px;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}${lang === "ko" ? "\nbody{word-break:keep-all;overflow-wrap:break-word}" : ""}
 a{color:var(--g2);text-decoration:none}
@@ -181,46 +190,63 @@ h1 em,h2 em{font-style:normal;color:var(--g)}
 .tick{width:22px;height:22px;border-radius:50%;background:var(--mint);color:var(--g);display:flex;align-items:center;justify-content:center;font-size:11px;flex:none}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:60;background:rgba(239,241,242,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(51,59,59,.06)}
-.hdr .pad{padding-block:14px;display:flex;align-items:center;gap:24px}
-.logo{display:flex;align-items:center;flex:none}
-.logo img{height:30px;width:auto}
-.nav{display:flex;gap:26px;margin-left:auto;align-items:center}
-.nav a{font-size:13.5px;color:#5A6462;font-weight:500;transition:color .2s}
-.nav a:hover{color:var(--g2)}
-.lang{position:relative;flex:none}
-.lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;height:44px;padding:0 10px;border-radius:999px;font-size:13px;font-weight:600;color:#5A6462}
-.lang summary::-webkit-details-marker{display:none}
-.lang summary svg{width:17px;height:17px}
-.lang summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.lang-p{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border-radius:16px;padding:6px;box-shadow:0 22px 50px -24px rgba(51,59,59,.45);display:grid;min-width:170px}
-.lang-p a,.mlang a{display:flex;align-items:center;gap:10px;min-height:42px;padding:0 12px;border-radius:10px;color:var(--ink);font-size:13.5px;font-weight:600}
-.lang-p a small,.mlang a small{font-weight:400;color:var(--mut)}
-.lang-p a:hover{background:var(--mint)}
-.lang-p a[aria-current],.mlang a[aria-current]{color:var(--g2);background:var(--mint)}
-.docs{position:relative}
-.docs summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:13.5px;color:#5A6462;font-weight:500;min-height:44px}
-.docs summary::-webkit-details-marker{display:none}
-.docs summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
-.docs summary:hover,.docs[open] summary{color:var(--g2)}
-.docs-p{left:50%;right:auto;transform:translateX(-50%);min-width:230px}
-.docs-p a{font-weight:500;white-space:nowrap}
-.mh{margin:14px 6px 2px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
-.mdocs{display:grid}
-.mdocs a{padding:12px 6px;font-size:15px;color:var(--ink);border-bottom:1px solid rgba(51,59,59,.06)}
-.mdocs a[aria-current]{color:var(--g2);font-weight:600}
-.btn-book{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--g);color:var(--g2);font-size:13.5px;font-weight:600;background:transparent;transition:background .25s,color .25s;flex:none;white-space:nowrap}
-.btn-book::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--g);transition:background .25s}
-.btn-book:hover{background:var(--g);color:#fff}
-.btn-book:hover::before{background:#fff}
-.burger{display:none;width:44px;height:44px;border-radius:14px;border:1px solid rgba(51,59,59,.12);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;flex:none;margin-left:auto}
-.burger span{width:16px;height:1.6px;background:var(--ink);display:block}
-.mnav{display:none;padding:8px 18px 22px;gap:2px;background:var(--bg);border-top:1px solid rgba(51,59,59,.06);max-height:calc(100dvh - 73px);overflow:auto}
-.mnav.open{display:grid}
-.mnav>a{padding:14px 6px;font-size:16px;color:var(--ink);font-weight:500;border-bottom:1px solid rgba(51,59,59,.06)}
-.mlang{display:flex;flex-wrap:wrap;gap:6px;padding:14px 0 4px}
-.mlang a{min-height:40px;border:1px solid rgba(51,59,59,.1);border-radius:999px}
-.mbook{margin-top:14px;display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;background:var(--g);color:#fff!important;font-weight:600;font-size:15px}
+/* header — khung giống greenfield.clinic (khôi phục 03/10/2026) */
+.hdr{--moss:#16261E;--moss-2:#1F3329;--gold:#C9974A;--gold-h:#D8A85C;--on-moss:rgba(255,255,255,.86);--on-moss-line:rgba(255,255,255,.12);position:sticky;top:0;z-index:60;background:var(--moss);color:var(--on-moss);border-bottom:1px solid var(--on-moss-line)}
+.hdr .pad{display:flex;align-items:center;gap:20px;min-height:72px}
+.logo{display:flex;align-items:center;min-height:48px;flex:none} .logo img{width:66px;height:auto}
+.nav{display:none;align-items:center;gap:4px;margin-left:12px}
+.nav>a,.dd>summary{display:flex;align-items:center;min-height:44px;padding:0 12px;font:500 14px/1 var(--sans);color:#fff;text-decoration:none;cursor:pointer;list-style:none;border-radius:8px}
+.dd>summary::-webkit-details-marker{display:none}
+.dd>summary::after{content:"";width:6px;height:6px;margin-left:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.nav>a:hover,.dd>summary:hover{color:var(--gold)}
+.dd{position:relative}
+.dd-panel{position:absolute;top:100%;left:0;min-width:240px;background:var(--moss);border:1px solid var(--on-moss-line);border-radius:12px;padding:8px;display:grid;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.dd-panel a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;border-radius:8px;color:var(--on-moss);text-decoration:none;font-size:14px}
+.dd-panel a small,.mlang a small{font-size:12px;opacity:.7}
+.dd-panel a:hover{background:var(--moss-2);color:#fff}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:16px}
+.rating{display:none;align-items:center;gap:8px;color:#fff;text-decoration:none;font-size:14px;line-height:1.2;min-height:44px}
+.rating svg{width:16px;height:16px;color:var(--gold)} .rating b{font-weight:600} .rating small{display:block;font-size:14px;color:var(--on-moss);white-space:nowrap}
+.hbtn{display:none;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 18px;border-radius:999px;font:600 14px/1.2 var(--sans);background:var(--gold);color:var(--moss);white-space:nowrap}
+.hbtn:hover{background:var(--gold-h)} .hbtn svg{width:20px;height:20px;flex:none}
+.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--on-moss-line);border-radius:10px;background:transparent;color:#fff;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:18px;height:1.5px;background:currentColor;position:relative;content:""}
+.burger span::before{position:absolute;top:-6px} .burger span::after{position:absolute;top:6px}
+.mnav{display:none;background:var(--moss);border-top:1px solid var(--on-moss-line);padding:8px 20px 20px;max-height:calc(100dvh - 72px);overflow:auto}
+.mnav.open{display:block}
+.mnav .mh{font:600 12px/1 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin:18px 0 6px}
+.mnav a{display:flex;align-items:center;gap:8px;min-height:44px;color:var(--on-moss);text-decoration:none;font-size:16px;border-bottom:1px solid var(--on-moss-line)}
+.mnav .mlang{display:flex;flex-wrap:wrap;gap:4px 16px} .mnav .mlang a{border-bottom:0} .mnav .mlang a[aria-current]{color:var(--gold)}
+.mnav .hbtn{display:flex;margin-top:20px;font-size:16px;min-height:48px;border-bottom:0;color:var(--moss)}
+.lang-dd>summary{padding:0 10px;gap:6px} .lang-dd>summary svg{width:18px;height:18px}
+.lang-dd .dd-panel{left:auto;right:0;min-width:150px}
+.lang-dd .dd-panel a[aria-current],.lang-row a[aria-current]{color:var(--gold)}
+.lang-row{display:none;align-items:center}
+.lang-row a{display:flex;align-items:center;min-height:44px;padding:0 6px;font:500 14px/1 var(--sans);color:var(--on-moss);text-decoration:none}
+.lang-row a:hover{color:#fff} .lang-row a+a::before{content:"·";margin-right:6px;color:var(--on-moss-line)}
+/* thanh mục trong trang */
+.subnav{position:sticky;top:72px;z-index:50;background:rgba(239,241,242,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid rgba(51,59,59,.08)}
+.subnav .pad{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.subnav .pad::-webkit-scrollbar{display:none}
+.subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
+.subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+@media (min-width:1024px){.nav,.rating,.hbtn{display:flex}.hdr-right>.hbtn{display:inline-flex}.burger{display:none}}
+@media (min-width:1024px) and (max-width:1279px){.hdr .rating{display:none}}
+@media (min-width:1280px){.lang-dd{display:none}.lang-row{display:flex}}
+/* các bác sĩ khác (khôi phục 03/10/2026) */
+.odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
+.odocs li{display:flex}
+.odocs a{flex:1;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(51,59,59,.08);border-radius:20px;overflow:hidden;color:inherit;transition:border-color .2s,transform .2s}
+.odocs a:hover,.odocs a:focus-visible{border-color:var(--g);transform:translateY(-2px)}
+.odocs picture{display:block;height:240px;background:linear-gradient(180deg,#EEF1EF 0%,#E2E7E4 100%);overflow:hidden}
+.odocs img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;padding-top:16px}
+.odocs .ob{flex:1;display:flex;flex-direction:column;gap:4px;padding:16px 18px 18px}
+.odocs b{font-size:18px;font-weight:600;line-height:1.3} .odocs small{font-size:14px;line-height:1.45;color:var(--mut)}
+.odocs .go{margin-top:auto;padding-top:12px;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;font-style:normal;color:var(--g2)}
+.odocs .go svg{width:16px;height:16px}
+@media (prefers-reduced-motion:reduce){.odocs a{transition:none}.odocs a:hover{transform:none}}
+@media (max-width:639px){.odocs{gap:12px}.odocs picture{height:170px}.odocs .ob{padding:12px 12px 14px}.odocs b{font-size:16px}}
+@media (min-width:1024px){.odocs{grid-template-columns:repeat(4,1fr)}}
 
 /* màn đầu */
 main{position:relative;z-index:1;padding-top:20px}
@@ -470,8 +496,6 @@ main{position:relative;z-index:1;padding-top:20px}
   .fform a{justify-content:center}
   .fcols{grid-template-columns:1fr 1fr}
 }
-@media (max-width:1180px){.nav,.hdr .btn-book,.hdr .lang{display:none}.burger{display:flex}}
-@media (min-width:1181px) and (max-width:1320px){.nav{gap:18px}.hdr .pad{gap:16px}}
 @media (max-width:980px){
   .hero{grid-template-columns:1fr}
   .hero-bg .fade{width:100%;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.97) 45%,rgba(255,255,255,.6) 58%,rgba(255,255,255,0) 72%)}
@@ -549,19 +573,28 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 <script>document.documentElement.classList.add("js")</script>
 <header class="hdr">
   <div class="pad">
-    <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-green-60.webp" alt="Greenfield Dental" width="252" height="60"></a>
-    <nav class="nav" aria-label="${esc(T.subnavAria)}">${nav.map(([id, i]) => `<a href="#${id}">${esc(U.nav[i])}</a>`).join("")}<details class="docs"><summary>${esc(U.doctors)}</summary><div class="lang-p docs-p">${docLinks()}</div></details></nav>
-    <details class="lang"><summary aria-label="${esc(U.lang)}: ${esc(LNAME[lang])}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="lang-p">${langLinks()}</div></details>
-    <a class="btn-book" href="#book">${esc(U.book)}</a>
-    <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="${esc(U.menu)}"><span></span><span></span><span></span></button>
+    <a class="logo" href="${L("home")}" aria-label="${esc(T.logoAria)}"><img src="/shared/img/greenfield-logo-white-160.webp" alt="Greenfield Dental" width="160" height="118"></a>
+    <nav class="nav" aria-label="${esc(T.navAria)}">
+      ${menu(T.nav.services, MN.services)}${menu(T.nav.results, MN.results)}${menu(T.nav.about, MN.about)}<details class="dd"><summary>${esc(U.doctors)}</summary><div class="dd-panel">${docLinks()}</div></details><a href="${L("contact")}">${esc(T.nav.contact)}</a>
+    </nav>
+    <div class="hdr-right">
+      <details class="dd lang-dd"><summary aria-label="${esc(T.langAria)}: ${esc(T.langName)}"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>${CODE[lang]}</summary><div class="dd-panel">${langLinks()}</div></details>
+      <nav class="lang-row" aria-label="${esc(T.langAria)}">${langCodes()}</nav>
+      <a class="rating" href="https://g.co/kgs/FmAkkx3" rel="noopener">${ICON.star}<span><b data-rating>5.0</b><small>${t(T.ratingSmall)}</small></span></a>
+      <a class="hbtn" href="${L("contact")}">${esc(T.freeConsult)}</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="${esc(T.openMenu)}"><span></span></button>
+    </div>
   </div>
   <div class="mnav" id="mnav">
-    ${nav.map(([id, i]) => `<a href="#${id}">${esc(U.navM[i])}</a>`).join("")}
-    <p class="mh">${esc(U.doctors)}</p><div class="mdocs">${docLinks()}</div>
-    <div class="mlang" aria-label="${esc(U.lang)}">${langLinks()}</div>
-    <a class="mbook" href="#book">${esc(U.book)}</a>
+    <p class="mh">${esc(T.nav.services)}</p>${items(MN.services.slice(0, MN.mobileServices))}
+    <p class="mh">${esc(T.nav.results)}</p>${items(MN.results)}
+    <p class="mh">${esc(T.nav.about)}</p>${items(MN.about.slice(0, MN.mobileAbout))}<a href="${L("contact")}">${esc(T.nav.contact)}</a>
+    <p class="mh">${esc(U.doctors)}</p>${docLinks()}
+    <p class="mh">${esc(T.langAria)}</p><div class="mlang">${langLinks()}</div>
+    <a class="hbtn" href="${primary}" target="_blank" rel="noopener">${esc(T.freeConsult)}</a>
   </div>
 </header>
+<nav class="subnav" aria-label="${esc(T.subnavAria)}"><div class="pad"><a href="#top"><b>${esc(D.short)}</b></a>${nav.map(([id, i]) => `<a href="#${id}">${esc(U.nav[i])}</a>`).join("")}</div></nav>
 
 <main id="top" class="pad">
 <section class="hero">
@@ -668,6 +701,11 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <div class="cards">${V.guar.map((g) => `<div class="gcard"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${esc(g.icon)}"/></svg><b>${esc(g.t)}</b><span>${esc(g.d)}</span></div>`).join("")}</div>
   </div>
 </section>
+<section class="sec others" aria-labelledby="others-h" data-reveal>
+  <p class="eyebrow">${esc(T.others.eyebrow)}</p>
+  <h2 class="h2" id="others-h">${esc(T.others.h2)} <em>${esc(T.others.h2em)}</em></h2>
+  <ul class="odocs">${others.map((o) => `<li><a href="${pagePath(lang, o.slug)}">${pic(o.portrait, o.portraitAlt, "(min-width: 1024px) 280px, 50vw", { slug: o.slug })}<span class="ob"><b>${esc(o.name)}</b><small>${esc(o.nick)} · ${esc(o.card)}</small><i class="go">${esc(T.others.view)} ${ICON.arrow}</i></span></a></li>`).join("")}</ul>
+</section>
 </main>
 
 <section class="endcta" id="book" data-reveal>
@@ -718,6 +756,7 @@ document.addEventListener("click",onWa,true);document.addEventListener("auxclick
 (function(){var b=document.querySelector(".burger"),m=document.getElementById("mnav");
 b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o);});
 m.addEventListener("click",function(e){if(e.target.closest("a[href^='#']")){m.classList.remove("open");b.setAttribute("aria-expanded",false);}});
+try{fetch("https://lead.greenfield.clinic/api/public/google-rating").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.count)return;document.querySelectorAll("[data-count]").forEach(function(e){e.textContent=j.count});document.querySelectorAll("[data-rating]").forEach(function(e){e.textContent=j.ratingText||"5.0"});}).catch(function(){});}catch(e){}
 var dds=[].slice.call(document.querySelectorAll(".hdr details"));dds.forEach(function(d){d.addEventListener("toggle",function(){if(d.open)dds.forEach(function(o){if(o!==d)o.open=false})})});document.addEventListener("click",function(e){dds.forEach(function(d){if(d.open&&!d.contains(e.target))d.open=false})});
 var C=${js(casesData)},TL=${js({ b: T.cases.beforeAlt, a: T.cases.afterAlt, n: U.caseLabel })},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});
