@@ -1,0 +1,313 @@
+{
+ "eyebrow": "Bác sĩ RHM | Nha khoa tổng quát & thẩm mỹ",
+ "h1": [
+  "BS.",
+  "Trần Thị Giang"
+ ],
+ "checks": [
+  "Chỉnh nha",
+  "Nha khoa tổng quát",
+  "Nha khoa phục hồi & thẩm mỹ"
+ ],
+ "lead": "BS. Trần Thị Giang là bác sĩ nha khoa tổng quát và thẩm mỹ với niềm đam mê kiến tạo những nụ cười khỏe mạnh, tự nhiên. Bác sĩ được biết đến với phong cách nhẹ nhàng, sự tỉ mỉ đến từng chi tiết và khả năng giúp bệnh nhân luôn thư thái trong suốt quá trình điều trị.",
+ "badge": {
+  "l": "Năm kinh nghiệm"
+ },
+ "trust": {
+  "h2": [
+   "Vì sao bệnh nhân",
+   "tin tưởng bác sĩ"
+  ],
+  "p": "Một nụ cười đẹp có sức mạnh thay đổi cách mỗi người cảm nhận về bản thân. Giúp bệnh nhân cười tự tin hơn chính là điều đã truyền cảm hứng để BS. Giang theo đuổi nghề nha khoa.",
+  "stats": [
+   {
+    "k": "Kinh nghiệm",
+    "l": "Năm kinh nghiệm"
+   },
+   {
+    "k": "Bệnh nhân",
+    "l": "Bệnh nhân đã điều trị"
+   },
+   {
+    "k": "Thẩm mỹ",
+    "l": "Ca mặt dán sứ/mão sứ đã hoàn thành"
+   },
+   {
+    "k": "Phục hình",
+    "l": "Ca phục hình"
+   }
+  ]
+ },
+ "about": {
+  "eyebrow": "Về BS. Trần Thị Giang",
+  "h2": "Nụ cười tự nhiên.",
+  "p": "Cung cấp dịch vụ nha khoa tổng quát và thẩm mỹ, từ chăm sóc dự phòng và điều trị phục hồi đến mặt dán sứ veneer, mão sứ và thiết kế lại toàn bộ nụ cười — được cá nhân hóa theo nhu cầu của từng bệnh nhân.",
+  "explore": "Khám phá chuyên môn của bác sĩ",
+  "chips": [
+   {
+    "t": "Trường Đại học Y Hà Nội",
+    "s": "Bác sĩ Răng Hàm Mặt"
+   },
+   {
+    "t": "Nha khoa tổng quát",
+    "s": "Dự phòng · Phục hồi · Chăm sóc gia đình"
+   },
+   {
+    "t": "Nha khoa thẩm mỹ",
+    "s": "Mặt dán sứ veneer · Thiết kế nụ cười · Tẩy trắng răng"
+   }
+  ]
+ },
+ "expertiseH2": [
+  "Chuyên môn",
+  "chính"
+ ],
+ "advice": {
+  "h": "Chưa rõ mình cần<br>phương án điều trị nào?",
+  "p": "Hãy gửi cho chúng tôi ảnh chụp răng và chia sẻ những băn khoăn của bạn. BS. Giang sẽ tư vấn phương án điều trị phù hợp nhất.",
+  "btn": "Nhận tư vấn"
+ },
+ "expertise": [
+  {
+   "t": "Vi phẫu nội nha<br>dưới kính hiển vi",
+   "s": "Điều trị tủy · Điều trị tủy lại · Cắt chóp chân răng"
+  },
+  {
+   "t": "Khay niềng trong suốt<br>và mắc cài hiện đại",
+   "s": "Invisalign · G-FLEX · Mắc cài sứ"
+  },
+  {
+   "t": "Nha khoa phục hồi<br>và tái tạo nụ cười",
+   "s": "Mặt dán sứ veneer · Mão toàn sứ · Inlay & Onlay"
+  },
+  {
+   "t": "Điều chỉnh khớp cắn<br>và các ca chỉnh nha phức tạp",
+   "s": "Răng chen chúc · Cắn sâu · Cắn chéo · Sai khớp cắn"
+  },
+  {
+   "t": "Phục hình chính xác<br>cho nụ cười tự nhiên",
+   "s": "Phục hình sứ · Mão răng · Phục hồi chức năng"
+  }
+ ],
+ "quote": {
+  "text": "Một nụ cười đẹp bắt đầu từ cảm giác thoải mái. Mục tiêu của tôi là giúp mỗi lần thăm khám đều nhẹ nhàng và không căng thẳng nhất có thể.",
+  "em": "",
+  "by": "BS. Trần Thị Giang",
+  "role": "Bác sĩ Răng Hàm Mặt tại Greenfield Dental"
+ },
+ "certsH2": [
+  "Chứng chỉ &",
+  "giải thưởng"
+ ],
+ "casesH2": [
+  "Ca lâm sàng",
+  "tiêu biểu"
+ ],
+ "casesIntro": "Hình ảnh lâm sàng thực tế, được đăng tải với sự đồng ý của bệnh nhân.",
+ "reviewsH2": "Bệnh nhân<br>nói gì về chúng tôi",
+ "journeyH2": [
+  "Hành trình",
+  "Greenfield"
+ ],
+ "journeyIntro": "Bảy bước cố định cho mọi ca điều trị, để bệnh nhân luôn biết mình đang ở giai đoạn nào.",
+ "faqH2": [
+  "Câu hỏi",
+  "thường gặp"
+ ],
+ "guaranteeH2": [
+  "Cam kết",
+  "Greenfield"
+ ],
+ "guaranteeIntro": "Sáu cam kết được ghi rõ trong hồ sơ điều trị của mỗi bệnh nhân.",
+ "cta": {
+  "eyebrow": "Bước tiếp theo của bạn",
+  "h2": "Bước đầu tiên<br>hướng đến nụ cười mới",
+  "p": "Gửi ảnh và những băn khoăn của bạn — BS. Giang trực tiếp xem từng tin nhắn và phản hồi với hướng điều trị phù hợp.",
+  "btn": "Nhắn tin qua WhatsApp +84 906 621 988"
+ },
+ "foot": {
+  "h2": "Đặt lịch tư vấn<br>với BS. Giang ngay hôm nay",
+  "hours": "Mở cửa cả tuần · 08:30 – 18:00",
+  "btn": "Đặt lịch tư vấn"
+ },
+ "faqs": [
+  {
+   "q": "Điều trị chỉnh nha thường kéo dài bao lâu?",
+   "a": "Quá trình điều trị thường kéo dài 12–24 tháng, nhưng thời gian cụ thể phụ thuộc vào mức độ sai khớp cắn, phương pháp điều trị và mức độ tuân thủ hướng dẫn của bệnh nhân."
+  },
+  {
+   "q": "Vì sao hàm duy trì quan trọng sau khi chỉnh nha?",
+   "a": "Răng có thể tự dịch chuyển sau điều trị. Hàm duy trì giúp giữ răng ở vị trí đã được điều chỉnh và giảm nguy cơ tái phát sau chỉnh nha."
+  },
+  {
+   "q": "Răng đã điều trị tủy có thể bị nhiễm trùng lại không?",
+   "a": "Có. Tình trạng tái nhiễm trùng có thể xảy ra do còn ống tủy chưa được điều trị, rò rỉ, sâu răng mới, nứt răng hoặc phục hình chưa đạt yêu cầu. Làm sạch, trám bít kín và phục hình cuối cùng đúng cách là yếu tố then chốt để đạt hiệu quả lâu dài."
+  },
+  {
+   "q": "Làm sao để biết tôi cần mặt dán sứ veneer hay mão sứ?",
+   "a": "Mặt dán sứ veneer có thể phù hợp để cải thiện hình dáng, màu sắc răng và các khuyết điểm thẩm mỹ nhỏ khi răng vẫn còn đủ men khỏe mạnh. Mão sứ thường được cân nhắc khi răng đã suy yếu đáng kể hoặc bị tổn hại về cấu trúc."
+  },
+  {
+   "q": "Có những lựa chọn nào để thay thế răng đã mất?",
+   "a": "Tùy theo số lượng và tình trạng răng mất, các lựa chọn có thể bao gồm cấy ghép Implant, cầu răng trên Implant, cầu răng truyền thống hoặc hàm giả tháo lắp."
+  }
+ ],
+ "steps": [
+  {
+   "t": "Trước khi đến",
+   "d": "Ảnh chụp, phim X-quang và tư vấn trước chuyến đi."
+  },
+  {
+   "t": "Đón tại sân bay",
+   "d": "Đưa đón thoải mái khi bạn đến Việt Nam."
+  },
+  {
+   "t": "Thăm khám & tư vấn",
+   "d": "Khám trực tiếp và quét 3D cùng BS. Giang."
+  },
+  {
+   "t": "Kế hoạch điều trị",
+   "d": "Kế hoạch, lộ trình rõ ràng và chi phí cố định."
+  },
+  {
+   "t": "Điều trị",
+   "d": "Thực hiện các thủ thuật chỉnh nha hoặc phục hình."
+  },
+  {
+   "t": "Chăm sóc trong thời gian lưu trú",
+   "d": "Hỗ trợ hồi phục trong suốt phần còn lại của chuyến đi."
+  },
+  {
+   "t": "Theo dõi sau điều trị",
+   "d": "Kiểm tra từ xa sau khi bạn về nước."
+  }
+ ],
+ "guarantees": [
+  {
+   "t": "Bảo hành điều trị",
+   "d": "Bảo hành bằng văn bản cho khí cụ chỉnh nha và các phục hình lớn."
+  },
+  {
+   "t": "Chi phí minh bạch, cố định",
+   "d": "Một mức giá duy nhất được báo sau buổi tư vấn, không phát sinh chi phí ẩn."
+  },
+  {
+   "t": "Hỗ trợ bệnh nhân quốc tế",
+   "d": "Đón sân bay, phiên dịch và lên kế hoạch chuyến đi đều được chúng tôi lo liệu."
+  },
+  {
+   "t": "Công nghệ & vật liệu hiện đại",
+   "d": "Quét kỹ thuật số, lập kế hoạch điều trị 3D và hệ thống khay niềng cao cấp."
+  },
+  {
+   "t": "Chăm sóc sau điều trị & theo dõi từ xa",
+   "d": "Kiểm tra và hỗ trợ lâu dài, kể cả khi bạn đã về nước."
+  },
+  {
+   "t": "Chất lượng đáng tin cậy",
+   "d": "Uy tín được xây dựng từ hàng nghìn ca điều trị đã hoàn thành."
+  }
+ ],
+ "cases": [
+  {
+   "t": "Mòn răng nặng kèm ê buốt",
+   "d": "Mão sứ Ceramill Zolid và mặt dán sứ E.max Press để phục hồi mô răng bị mòn, cải thiện chức năng, sự thoải mái và thẩm mỹ tổng thể của nụ cười.",
+   "m": "2 lần hẹn · Nha khoa phục hồi"
+  },
+  {
+   "t": "Mất nhiều răng kèm tiêu xương",
+   "d": "Mão sứ zirconia để phục hồi các răng bị tổn hại, cải thiện chức năng ăn nhai và sự ổn định, đồng thời nâng cao vẻ đẹp tổng thể của nụ cười.",
+   "m": "2 lần hẹn · Nha khoa phục hồi"
+  },
+  {
+   "t": "Mất răng kèm sâu răng diện rộng và mòn răng",
+   "d": "Mão sứ Ceramill Zolid để tái tạo mô răng đã mất, phục hồi các răng bị tổn hại và cải thiện sự thoải mái, chức năng cũng như sự hài hòa của nụ cười.",
+   "m": "2 lần hẹn · Nha khoa phục hồi"
+  },
+  {
+   "t": "Mất răng kèm tiêu xương và mòn răng nặng",
+   "d": "Implant Dentium và mão sứ zirconia để thay thế răng mất và phục hồi các răng bị mòn, cải thiện chức năng ăn nhai, sự ổn định và thẩm mỹ nụ cười.",
+   "m": "3 lần hẹn · Implant & Nha khoa phục hồi"
+  },
+  {
+   "t": "Mất và gãy nhiều răng kèm sâu răng lan sâu",
+   "d": "Mão sứ zirconia và phục hồi bằng Biodentine để tái tạo và bảo vệ các răng bị tổn hại, phục hồi chức năng ăn nhai, sự thoải mái và sự ổn định răng miệng.",
+   "m": "3 lần hẹn · Nha khoa phục hồi"
+  },
+  {
+   "t": "Mất nhiều răng kèm mòn răng nặng",
+   "d": "Implant Straumann và mão sứ zirconia để thay thế răng mất và phục hồi các răng bị mòn, cải thiện độ ổn định khớp cắn, chức năng ăn nhai và thẩm mỹ nụ cười.",
+   "m": "3 lần hẹn · Implant & Nha khoa phục hồi"
+  }
+ ],
+ "certs": [
+  {
+   "t": "Bác sĩ Răng Hàm Mặt",
+   "s": "Trường Đại học Y Hà Nội"
+  },
+  {
+   "t": "Invisalign – Lớp chuyên sâu HAO Master Class",
+   "s": "Invisalign"
+  },
+  {
+   "t": "Khóa đào tạo Chỉnh nha trên Typodont tại Hà Nội",
+   "s": "JM Ortho"
+  },
+  {
+   "t": "Mặt dán sứ veneer & Phục hồi toàn hàm nâng cao",
+   "s": "Dental Milestones Guaranteed"
+  }
+ ],
+ "reviews": [
+  {
+   "name": "Emily Helen",
+   "country": "Vương quốc Anh",
+   "text": "“BS. Giang thực sự xuất sắc. Bác sĩ có tay nghề rất giỏi, chuyên nghiệp và chu đáo trong mọi buổi hẹn. Sự tỉ mỉ của bác sĩ giúp tôi hoàn toàn yên tâm về quá trình điều trị, và kết quả còn đẹp hơn cả những gì tôi tưởng tượng.”"
+  },
+  {
+   "name": "Sophie",
+   "country": "Úc",
+   "text": "“Ngay từ buổi tư vấn đầu tiên, BS. Giang đã khiến tôi cảm thấy hoàn toàn thoải mái. Bác sĩ không chỉ tài năng, chuyên nghiệp mà còn vô cùng chu đáo đến từng chi tiết nhỏ. Tôi luôn cảm thấy mình được chăm sóc bởi đôi bàn tay tốt nhất.”"
+  },
+  {
+   "name": "Olivia",
+   "country": "Anh",
+   "text": "“Chọn BS. Giang để chỉnh nha là một trong những quyết định đúng đắn nhất của tôi. Bác sĩ kết hợp chuyên môn vững vàng với cách làm việc cẩn thận và chuyên nghiệp. Mọi bước đều được giải thích rõ ràng, và tôi không thể hài lòng hơn với nụ cười của mình.”"
+  },
+  {
+   "name": "Charlotte",
+   "country": "Canada",
+   "text": "“BS. Giang thật tuyệt vời trong công việc của mình. Bác sĩ xinh đẹp, ấm áp, vô cùng chuyên nghiệp và rõ ràng rất đam mê nghề. Tôi rất ấn tượng với cách bác sĩ lên kế hoạch cẩn thận cho từng giai đoạn điều trị và theo sát tiến triển của tôi.”"
+  },
+  {
+   "name": "Libby C.",
+   "country": "Úc",
+   "text": "“BS. Giang đã biến hành trình chỉnh nha của tôi thành một trải nghiệm thật tích cực. Bác sĩ có kiến thức sâu rộng, chính xác và chu đáo, đồng thời luôn khiến tôi cảm thấy thoải mái. Sự chuyên nghiệp và tỉ mỉ của bác sĩ thực sự nổi bật.”"
+  },
+  {
+   "name": "Anna",
+   "country": "Anh",
+   "text": "“Tôi đã ấn tượng với BS. Giang ngay từ đầu. Bác sĩ rất chuyên nghiệp, nhẹ nhàng và cực kỳ chính xác trong công việc. Mỗi buổi hẹn đều được lên kế hoạch cẩn thận, và bác sĩ luôn dành thời gian để bảo đảm mọi thứ tiến triển hoàn hảo.”"
+  },
+  {
+   "name": "Rachel",
+   "country": "Singapore",
+   "text": "“BS. Giang là một bác sĩ chỉnh nha xuất sắc. Bác sĩ vô cùng chuyên nghiệp và tỉ mỉ, nhưng cũng rất ấm áp và dễ gần. Tôi thực sự trân trọng việc bác sĩ theo dõi sát sao quá trình điều trị và giải thích từng chi tiết trong suốt hành trình.”"
+  },
+  {
+   "name": "Yuki",
+   "country": "Nhật Bản",
+   "text": "“BS. Giang là một bác sĩ thật tuyệt vời. Bác sĩ rất nhẹ nhàng, chuyên nghiệp và vô cùng cẩn thận với từng chi tiết. Tôi luôn cảm thấy được lắng nghe và chăm sóc chu đáo, và được thấy nụ cười của mình đẹp dần lên trong suốt quá trình điều trị thật là điều tuyệt vời.”"
+  },
+  {
+   "name": "Minji",
+   "country": "Hàn Quốc",
+   "text": "“Tôi rất biết ơn vì đã có BS. Giang là bác sĩ chỉnh nha của mình. Bác sĩ tài năng, chuyên nghiệp và vô cùng chu đáo. Cách làm việc cẩn thận và con mắt tinh tế của bác sĩ giúp tôi luôn tự tin trong suốt quá trình điều trị, và tôi thực sự rất yêu thích kết quả.”"
+  },
+  {
+   "name": "Linh",
+   "country": "Việt Nam",
+   "text": "“Bác sĩ Giang rất tận tâm và chuyên nghiệp. Mình đặc biệt ấn tượng với sự chỉn chu và tỉ mỉ của bác sĩ trong từng giai đoạn điều trị. Bác sĩ luôn giải thích rõ ràng, nhẹ nhàng và khiến mình cảm thấy rất yên tâm.”"
+  }
+ ]
+}
