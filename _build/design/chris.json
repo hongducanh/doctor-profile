@@ -1,0 +1,370 @@
+{
+ "eyebrow": "DDS | IMPLANTOLOGIST",
+ "h1": [
+  "Dr.",
+  "Do Nhu Chuyen"
+ ],
+ "checks": [
+  "Dental Implants",
+  "Tooth Extractions & Oral Surgery",
+  "Full-Arch Implant Rehabilitation"
+ ],
+ "lead": "Dr. Chris is an Implant Dentist with over 12 years of clinical experience and more than 9,000 dental implants placed. A graduate of Hanoi Medical University, he focuses on implant surgery, full-arch rehabilitation and minimally invasive techniques, helping patients restore confident smiles with predictable, long-lasting results.",
+ "badge": {
+  "n": "12+",
+  "l": "Years Experience"
+ },
+ "trust": {
+  "h2": [
+   "Why patients",
+   "trust him"
+  ],
+  "p": "For Dr. Chuyen, dentistry is about making a real difference. Restoring a patient’s smile, comfort and confidence is what continues to inspire his work every day.",
+  "stats": [
+   {
+    "k": "Experience",
+    "n": "12+",
+    "l": "Years Experience"
+   },
+   {
+    "k": "Patients",
+    "n": "15,000+",
+    "l": "Patients Treated"
+   },
+   {
+    "k": "Implant",
+    "n": "9,000+",
+    "l": "Implant Cases"
+   },
+   {
+    "k": "Surgical",
+    "n": "10,000+",
+    "l": "Minor Surgical Cases"
+   }
+  ]
+ },
+ "about": {
+  "eyebrow": "About Dr. do nhu chuyen — chris",
+  "h2": "Precision for every smile.",
+  "p": "Specialised in implant dentistry, All-on-4 & All-on-6, and minor oral surgery. Dr. Chris combines digital planning with precise surgical techniques to restore function, stability and a natural-looking smile.",
+  "explore": "Explore his expertise",
+  "chips": [
+   {
+    "t": "Hanoi Medical University",
+    "s": "Doctor of Dental Surgery"
+   },
+   {
+    "t": "All-on-4 & All-on-6",
+    "s": "Full-arch implant rehabilitation"
+   },
+   {
+    "t": "Minor Oral Surgery",
+    "s": "Advanced surgical procedures"
+   }
+  ]
+ },
+ "expertiseH2": [
+  "Main",
+  "expertise"
+ ],
+ "advice": {
+  "h": "Not sure which<br>treatment you need?",
+  "p": "Send us photos of your teeth and share your concerns. Dr. Chris will recommend the most suitable treatment approach.",
+  "btn": "Get advice"
+ },
+ "expertise": [
+  {
+   "t": "Single & Multiple Implants",
+   "s": "Implant placement · Implant restorations"
+  },
+  {
+   "t": "All-on-4 & All-on-6",
+   "s": "Full-arch rehabilitation · Fixed teeth",
+   "img": "all-on-4-fixed-bridge"
+  },
+  {
+   "t": "Full Mouth Restoration",
+   "s": "Implants · Crowns · Bridges"
+  },
+  {
+   "t": "Bone Grafting & Sinus Lift",
+   "s": "Bone augmentation · Sinus elevation",
+   "img": "dental-examination"
+  },
+  {
+   "t": "Wisdom Tooth & Oral Surgery",
+   "s": "Wisdom teeth · Surgical extraction"
+  }
+ ],
+ "quote": {
+  "text": "The best treatment starts with listening. Only by understanding each patient’s needs can we recommend the right solution.",
+  "em": "",
+  "by": "Dr. Do Nhu Chuyen — Dr.Chris",
+  "role": "Implantologist of Greenfield Dental"
+ },
+ "certsH2": [
+  "Certificates &",
+  "awards"
+ ],
+ "casesH2": [
+  "Case",
+  "studies"
+ ],
+ "casesIntro": "Real clinical photos, published with patient consent.",
+ "reviewsH2": "What our<br>patients say",
+ "journeyH2": [
+  "The Greenfield",
+  "journey"
+ ],
+ "journeyIntro": "Seven fixed steps for every case, so patients always know where they are.",
+ "faqH2": [
+  "Frequently asked",
+  "questions"
+ ],
+ "guaranteeH2": [
+  "The Greenfield",
+  "guarantee"
+ ],
+ "guaranteeIntro": "Six commitments written into every patient's treatment record.",
+ "cta": {
+  "eyebrow": "Your next step",
+  "h2": "Take the first step<br>toward your new smile",
+  "p": "Send photos and your concerns — Dr. Chris reviews every message personally and replies with a suitable treatment direction.",
+  "btn": "Message on WhatsApp +84 906 621 988"
+ },
+ "foot": {
+  "h2": "Book a consultation<br>with Dr. Chris today",
+  "hours": "Open all week · 08:30 – 18:00",
+  "btn": "Book a consultation"
+ },
+ "faqs": [
+  {
+   "q": "Can I complete my implant treatment in one trip?",
+   "a": "Many cases, including All-on-4 and All-on-6, can be completed within a single 5-7 day visit. More complex cases involving grafting may need a short second trip for final restorations."
+  },
+  {
+   "q": "How long do dental implants last?",
+   "a": "With proper care and regular check-ups, implants can last 15-20 years or longer. The surrounding restoration may need replacement over time, but the implant itself is designed to be a long-term solution."
+  },
+  {
+   "q": "Can I eat normally after full mouth implant treatment?",
+   "a": "Yes. Once healing is complete and your final restoration is fitted, you can eat a normal diet. We provide a short-term soft food guide immediately after surgery to protect healing tissue."
+  },
+  {
+   "q": "What is the difference between All-on-4 and All-on-6?",
+   "a": "Both replace a full arch of teeth with a fixed bridge. All-on-6 uses six implants instead of four, offering additional support that can suit patients with lower bone density or higher bite force."
+  },
+  {
+   "q": "How much can I save on full-mouth implants in Vietnam?",
+   "a": "International patients typically save 50-70% compared to costs in the US, UK, Australia or New Zealand, without compromising on materials or technique. We provide a fixed quote after your consultation."
+  }
+ ],
+ "steps": [
+  {
+   "t": "Pre-arrival",
+   "d": "Photos, X-rays and consultation before you travel."
+  },
+  {
+   "t": "Airport Pickup",
+   "d": "Comfortable transfer on arrival in Vietnam."
+  },
+  {
+   "t": "Consultation",
+   "d": "In-person exam and 3D scan with Dr. Chris."
+  },
+  {
+   "t": "Treatment Plan",
+   "d": "Clear plan, timeline and fixed pricing."
+  },
+  {
+   "t": "Treatment",
+   "d": "Orthodontic or restorative procedures performed."
+  },
+  {
+   "t": "Care During Stay",
+   "d": "Recovery support for the rest of your trip."
+  },
+  {
+   "t": "Follow-up",
+   "d": "Remote check-ins after you return home."
+  }
+ ],
+ "guarantees": [
+  {
+   "t": "Treatment Warranty",
+   "d": "Written warranty coverage on orthodontic appliances and major restorative work.",
+   "icon": "M9 12.5l2 2 4-4M5 7l7-3 7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V7z"
+  },
+  {
+   "t": "Transparent, Fixed Pricing",
+   "d": "One quoted price after consultation, with no hidden add-ons.",
+   "icon": "M11.2 3.5H20v8.8l-8.4 8.4a1.4 1.4 0 01-2 0l-6.8-6.8a1.4 1.4 0 010-2zM16.3 7.7h.01"
+  },
+  {
+   "t": "International-Patient Support",
+   "d": "Airport pickup, translation and trip planning handled for you.",
+   "icon": "M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM3 12h18M12 2.5c2.4 2.5 3.8 5.9 3.8 9.5S14.4 19 12 21.5c-2.4-2.5-3.8-5.9-3.8-9.5S9.6 5 12 2.5z"
+  },
+  {
+   "t": "Modern Technology & Materials",
+   "d": "Digital scanning, 3D treatment planning and premium aligner systems.",
+   "icon": "M3.5 5.5h17v10h-17zM3.5 10.5h17M9 19h6M12 15.5V19"
+  },
+  {
+   "t": "Aftercare & Remote Follow-up",
+   "d": "Check-ins and support long after you return home.",
+   "icon": "M3.5 12a8.5 8.5 0 1114.6 5.9M20.5 12a8.5 8.5 0 01-14.6 5.9M12 8v4l2.6 1.6"
+  },
+  {
+   "t": "Quality You Can Trust",
+   "d": "A track record built on thousands of completed cases.",
+   "icon": "M12 3l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9-5.3-2.9-5.3 2.9 1.1-5.9L3.5 9.2l5.9-.8L12 3z"
+  }
+ ],
+ "cases": [
+  {
+   "img": "implant-case-01",
+   "t": "Dentium implants with zirconia crowns",
+   "d": "Implant-supported zirconia crowns to replace six missing teeth, restore function and aesthetics, and help preserve the jawbone.",
+   "m": "5 days · Implant Dentistry"
+  },
+  {
+   "img": "implant-case-02",
+   "t": "All-on-6 implant rehabilitation",
+   "d": "A full-arch All-on-6 restoration to address extensive tooth loss, bone loss, and periodontal disease while restoring stable function.",
+   "m": "4 days · Full-arch Implants"
+  },
+  {
+   "img": "implant-case-03",
+   "t": "All-on-4 implant rehabilitation",
+   "d": "All-on-4 implants to restore a severely compromised dentition with multiple missing and fractured teeth and bone loss.",
+   "m": "4 days · Full-arch Implants"
+  },
+  {
+   "img": "implant-case-04",
+   "t": "All-on-6 implant rehabilitation",
+   "d": "All-on-6 implants to restore oral function following advanced periodontitis, gingivitis, Grade 3 bone loss, and six missing teeth.",
+   "m": "4 days · Full-arch Implants"
+  },
+  {
+   "img": "implant-case-05",
+   "t": "Dentium implants with Ceramill crowns",
+   "d": "Implant-supported Ceramill crowns to restore eleven missing teeth, extensive tooth wear, fractures, and sensitivity while supporting bone preservation.",
+   "m": "4 days · Implant Dentistry"
+  },
+  {
+   "img": "implant-case-06",
+   "t": "All-on-4 implant rehabilitation",
+   "d": "All-on-4 implants to replace fifteen missing teeth and restore function and stability in a case involving periodontitis, loose teeth, and bone loss.",
+   "m": "4 days · Full-arch Implants"
+  },
+  {
+   "img": "implant-case-07",
+   "t": "All-on-4 implant rehabilitation",
+   "d": "A stable All-on-4 solution to restore function and support following extensive tooth loss, periodontitis, loose teeth, and bone loss.",
+   "m": "4 days · Full-arch Implants"
+  },
+  {
+   "img": "implant-case-08",
+   "t": "Neodent implants with Ceramill Zolid veneers",
+   "d": "Implant and ceramic restorations to replace four missing teeth, address dental cysts and cervical tooth wear, and restore a natural-looking, comfortable smile.",
+   "m": "5 days · Implant Dentistry"
+  }
+ ],
+ "certs": [
+  {
+   "img": "cert-dds-hmu",
+   "t": "Dental Implant Placement - Institute of Odonto-Stomatology",
+   "s": "Hanoi Medical University"
+  },
+  {
+   "img": "cert-n2",
+   "t": "Advanced Smile Design Certification",
+   "s": "Korean Academy of Aesthetic Dentistry"
+  },
+  {
+   "img": "cert-n3",
+   "t": "Implant Prosthodontics Fellowship",
+   "s": "ITI International Team for Implantology"
+  },
+  {
+   "img": "cert-n4",
+   "t": "TMJ & Occlusion Specialist Certification",
+   "s": "European Board of Orthodontics"
+  },
+  {
+   "img": "cert-n5",
+   "t": "Top Aesthetic Dentist — Asia Pacific",
+   "s": "International Dental Excellence Awards"
+  }
+ ],
+ "aboutPos": "right 40% center",
+ "reviews": [
+  {
+   "n": "01",
+   "name": "Gaynor",
+   "country": "Spain",
+   "text": "Traveling from Spain to Vietnam for All-on-6 treatment was one of the best decisions we've ever made. Dr. Chris welcomed us with warmth, explained every step clearly, and made us feel completely at ease. We returned home not only with beautiful smiles, but with wonderful memories of Vietnam and the Greenfield team."
+  },
+  {
+   "n": "02",
+   "name": "Steven",
+   "country": "Spain",
+   "text": "I'm so grateful to Dr. Chuyên for his professionalism and kindness. Every appointment was well organized, pain-free, and reassuring. Thanks to him, I can travel home smiling with complete confidence after my All-on-6 treatment."
+  },
+  {
+   "n": "03",
+   "name": "Michael",
+   "country": "Australia",
+   "text": "Coming from Australia for dental treatment exceeded every expectation. Dr. Chris understood that I needed more than a great-looking smile—I needed one I could trust every day. His skill, patience, and genuine care made the trip to Vietnam absolutely worthwhile."
+  },
+  {
+   "n": "04",
+   "name": "Stuart",
+   "country": "New Zealand",
+   "text": "Traveling from New Zealand gave me the chance to discover Vietnam while transforming my smile. Dr. Chuyên planned every stage of my treatment with incredible precision and care. The results feel natural, comfortable, and remind me of an unforgettable journey."
+  },
+  {
+   "n": "05",
+   "name": "Geoffrey",
+   "country": "Australia",
+   "text": "Choosing Dr. Chris for my full-mouth restoration was the best decision. His expertise, honesty, and gentle care made a complex treatment feel surprisingly smooth. I finally have the confidence to eat, smile, and enjoy life again."
+  },
+  {
+   "n": "06",
+   "name": "Ryan",
+   "country": "New Zealand",
+   "text": "Flying from New Zealand for treatment was a leap of faith that truly paid off. Dr. Chuyên restored much more than my teeth—he gave me back my confidence. His patience, skill, and genuine care made every mile worth traveling."
+  },
+  {
+   "n": "07",
+   "name": "Julian",
+   "country": "Germany",
+   "text": "What impressed me most about Dr. Chris was how much he respected the small details that made my smile unique. He listened carefully, preserved what mattered to me, and delivered results that feel completely natural."
+  },
+  {
+   "n": "08",
+   "name": "Kelly",
+   "country": "Australia",
+   "text": "Traveling solo from Australia to Vietnam felt intimidating at first, but meeting Dr. Chuyên changed everything. He was honest, reassuring, and incredibly compassionate throughout my treatment. I always felt safe, respected, and certain I had chosen the right place."
+  },
+  {
+   "n": "09",
+   "name": "Richard",
+   "country": "New Zealand",
+   "text": "Dr. Chris didn't just restore my smile—he helped me regain my confidence. His expertise, honesty, and reassuring approach made every stage of my treatment stress-free. I can finally smile, speak, and meet new people without hesitation."
+  },
+  {
+   "n": "10",
+   "name": "Gustavo",
+   "country": "Germany",
+   "text": "After researching clinics across Europe and Asia, my journey from Germany finally led me to Vietnam. Choosing Dr. Chuyên was the best decision I could have made. His clear guidance, outstanding skill, and caring approach gave me a smile that feels strong, natural, and truly my own."
+  },
+  {
+   "n": "11",
+   "name": "Hayley",
+   "country": "Australia",
+   "text": "Dr. Chris made me feel comfortable from the very first consultation. His gentle hands, attention to detail, and genuine compassion turned a treatment I once feared into an experience I'll always remember. I absolutely love my new smile."
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "eyebrow": "DDS | Msc. | Founder & Clinical Director",
+ "h1": [
+  "Dr.",
+  "Ta Hong Nhung"
+ ],
+ "checks": [
+  "Orthodontics",
+  "Endodontics",
+  "Prosthodontics"
+ ],
+ "lead": "After training across Europe and Asia, Dr. Ta Hong Nhung, MSc. founded Greenfield Dental with a simple vision: to create a clinic where exceptional dentistry is matched by an equally exceptional patient experience.",
+ "badge": {
+  "n": "15+",
+  "l": "Years Experience"
+ },
+ "trust": {
+  "h2": [
+   "Why patients",
+   "trust her"
+  ],
+  "p": "Witnessing patients experience anxiety, discomfort and impersonal care inspired Dr. Nhung to create a different kind of dental practice, one where every patient feels respected, comfortable and genuinely cared for.",
+  "stats": [
+   {
+    "k": "Experience",
+    "n": "15+",
+    "l": "Years Experience"
+   },
+   {
+    "k": "Patients",
+    "n": "5,000+",
+    "l": "Patients Treated"
+   },
+   {
+    "k": "Orthodontics",
+    "n": "3,000+",
+    "l": "Orthodontic Cases"
+   },
+   {
+    "k": "Prosthodontics",
+    "n": "2,000+",
+    "l": "Prosthodontic Cases"
+   }
+  ]
+ },
+ "about": {
+  "eyebrow": "About Dr. Ta Hong Nhung — Kate",
+  "h2": "One plan for<br>your whole smile",
+  "p": "Specialised across orthodontics, endodontics and prosthodontics, Dr. Kate treats every case as one plan instead of separate procedures — documented with before, during and after imaging.",
+  "explore": "Explore her expertise",
+  "chips": [
+   {
+    "t": "Hanoi Medical University",
+    "s": "Doctor of Dental Surgery"
+   },
+   {
+    "t": "Invisalign Platinum",
+    "s": "Certified provider"
+   },
+   {
+    "t": "Implantology diploma",
+    "s": "Bordeaux, France"
+   }
+  ]
+ },
+ "expertiseH2": [
+  "Main",
+  "expertise"
+ ],
+ "advice": {
+  "h": "Not sure which<br>treatment you need?",
+  "p": "Send us photos of your teeth and share your concerns. Dr. Nhung will recommend the most suitable treatment approach.",
+  "btn": "Get advice"
+ },
+ "expertise": [
+  {
+   "t": "Microsurgical endodontics<br>under the microscope",
+   "s": "Root canal treatment · Retreatment · Apicoectomy"
+  },
+  {
+   "t": "Clear aligners<br>and modern braces",
+   "s": "Invisalign · G-FLEX · Ceramic braces",
+   "img": "clear-aligner-in-hand"
+  },
+  {
+   "t": "Restorative dentistry<br>and smile rehabilitation",
+   "s": "Veneers · All-ceramic crowns · Inlays & Onlays"
+  },
+  {
+   "t": "Bite correction<br>and complex orthodontic cases",
+   "s": "Crowding · Deep bite · Crossbite · Malocclusion",
+   "img": "dental-examination"
+  },
+  {
+   "t": "Precision restorations<br>for natural-looking smiles",
+   "s": "Ceramic restorations · Crowns · Functional rehabilitation"
+  }
+ ],
+ "quote": {
+  "text": "Patients shouldn't just be treated. They should",
+  "em": "enjoy every moment of their care.",
+  "by": "Dr. Ta Hong Nhung — Dr.Kate",
+  "role": "Founder and CEO of Greenfield Dental"
+ },
+ "certsH2": [
+  "Certificates &",
+  "awards"
+ ],
+ "casesH2": [
+  "Case",
+  "studies"
+ ],
+ "casesIntro": "Real clinical photos, published with patient consent.",
+ "reviewsH2": "What our<br>patients say",
+ "journeyH2": [
+  "The Greenfield",
+  "journey"
+ ],
+ "journeyIntro": "Seven fixed steps for every case, so patients always know where they are.",
+ "faqH2": [
+  "Frequently asked",
+  "questions"
+ ],
+ "guaranteeH2": [
+  "The Greenfield",
+  "guarantee"
+ ],
+ "guaranteeIntro": "Six commitments written into every patient's treatment record.",
+ "cta": {
+  "eyebrow": "Your next step",
+  "h2": "Take the first step<br>toward your new smile",
+  "p": "Send photos and your concerns — Dr. Kate reviews every message personally and replies with a suitable treatment direction.",
+  "btn": "Message on WhatsApp +84 906 621 988"
+ },
+ "foot": {
+  "h2": "Book a consultation<br>with Dr. Kate today",
+  "hours": "Open all week · 08:30 – 18:00",
+  "btn": "Book a consultation"
+ },
+ "faqs": [
+  {
+   "q": "How long does orthodontic treatment usually take?",
+   "a": "Treatment typically takes 12–24 months, but the duration depends on the severity of the malocclusion, treatment method, and how consistently the patient follows instructions."
+  },
+  {
+   "q": "Why are retainers important after orthodontic treatment?",
+   "a": "Teeth can naturally shift after treatment. Retainers help maintain the corrected tooth positions and reduce the risk of orthodontic relapse."
+  },
+  {
+   "q": "Can a tooth become infected again after root canal treatment?",
+   "a": "Yes. Reinfection can occur due to untreated canals, leakage, new decay, cracks, or inadequate restoration. Proper cleaning, sealing, and final restoration are essential for long-term success."
+  },
+  {
+   "q": "How do I know whether I need veneers or crowns?",
+   "a": "Veneers may be suitable for improving tooth shape, color, and minor aesthetic imperfections when sufficient healthy enamel remains. Crowns are generally considered when a tooth is significantly weakened or structurally compromised."
+  },
+  {
+   "q": "What are the options for replacing missing teeth?",
+   "a": "Depending on the number and condition of missing teeth, options may include dental implants, implant-supported bridges, conventional bridges, or removable dentures."
+  }
+ ],
+ "steps": [
+  {
+   "t": "Pre-arrival",
+   "d": "Photos, X-rays and consultation before you travel."
+  },
+  {
+   "t": "Airport Pickup",
+   "d": "Comfortable transfer on arrival in Vietnam."
+  },
+  {
+   "t": "Consultation",
+   "d": "In-person exam and 3D scan with Dr. Kate."
+  },
+  {
+   "t": "Treatment Plan",
+   "d": "Clear plan, timeline and fixed pricing."
+  },
+  {
+   "t": "Treatment",
+   "d": "Orthodontic or restorative procedures performed."
+  },
+  {
+   "t": "Care During Stay",
+   "d": "Recovery support for the rest of your trip."
+  },
+  {
+   "t": "Follow-up",
+   "d": "Remote check-ins after you return home."
+  }
+ ],
+ "guarantees": [
+  {
+   "t": "Treatment Warranty",
+   "d": "Written warranty coverage on orthodontic appliances and major restorative work.",
+   "icon": "M9 12.5l2 2 4-4M5 7l7-3 7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V7z"
+  },
+  {
+   "t": "Transparent, Fixed Pricing",
+   "d": "One quoted price after consultation, with no hidden add-ons.",
+   "icon": "M11.2 3.5H20v8.8l-8.4 8.4a1.4 1.4 0 01-2 0l-6.8-6.8a1.4 1.4 0 010-2zM16.3 7.7h.01"
+  },
+  {
+   "t": "International-Patient Support",
+   "d": "Airport pickup, translation and trip planning handled for you.",
+   "icon": "M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM3 12h18M12 2.5c2.4 2.5 3.8 5.9 3.8 9.5S14.4 19 12 21.5c-2.4-2.5-3.8-5.9-3.8-9.5S9.6 5 12 2.5z"
+  },
+  {
+   "t": "Modern Technology & Materials",
+   "d": "Digital scanning, 3D treatment planning and premium aligner systems.",
+   "icon": "M3.5 5.5h17v10h-17zM3.5 10.5h17M9 19h6M12 15.5V19"
+  },
+  {
+   "t": "Aftercare & Remote Follow-up",
+   "d": "Check-ins and support long after you return home.",
+   "icon": "M3.5 12a8.5 8.5 0 1114.6 5.9M20.5 12a8.5 8.5 0 01-14.6 5.9M12 8v4l2.6 1.6"
+  },
+  {
+   "t": "Quality You Can Trust",
+   "d": "A track record built on thousands of completed cases.",
+   "icon": "M12 3l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9-5.3-2.9-5.3 2.9 1.1-5.9L3.5 9.2l5.9-.8L12 3z"
+  }
+ ],
+ "cases": [
+  {
+   "img": "ortho-case-01",
+   "t": "Anterior crossbite with edge-to-edge bite",
+   "d": "Metal braces to correct the anterior crossbite, align both arches, and improve overall occlusion.",
+   "m": "25 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-02",
+   "t": "Bimaxillary protrusion with crowding",
+   "d": "Metal braces to retract and align the anterior teeth, correct the bite, and improve facial and smile harmony.",
+   "m": "33 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-03",
+   "t": "Severe overjet with deep bite",
+   "d": "Metal braces to improve overjet and overbite, align both arches, and establish a more balanced occlusion.",
+   "m": "34 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-04",
+   "t": "Narrow arches with gummy smile",
+   "d": "Metal braces with arch expansion to correct crowding and crossbite while creating a broader, more harmonious smile.",
+   "m": "21 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-05",
+   "t": "Class III bite with anterior crossbite",
+   "d": "Metal braces to correct the Class III relationship, align both arches, and achieve a more stable functional bite.",
+   "m": "37 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-06",
+   "t": "Severe dental crowding and misalignment",
+   "d": "Metal braces to correct severe crowding, align both arches, and improve overall bite and smile harmony.",
+   "m": "28 months · Orthodontics"
+  },
+  {
+   "img": "ortho-case-07",
+   "t": "Lower arch crowding with mandibular asymmetry",
+   "d": "Invisalign treatment to align crowded teeth, improve mandibular symmetry, and achieve a more balanced overall occlusion.",
+   "m": "25 months · Orthodontics"
+  }
+ ],
+ "certs": [
+  {
+   "img": "cert-dds-hmu",
+   "t": "Doctor of Dental Surgery",
+   "s": "Hanoi Medical University"
+  },
+  {
+   "img": "cert-msc-hmu",
+   "t": "Odonto-Stomatology",
+   "s": "Hanoi Medical University"
+  },
+  {
+   "img": "cert-diu-bordeaux",
+   "t": "Inter-University Diploma in Surgical and Prosthetic Implantology",
+   "s": "Faculty of Odontology – Bordeaux – France"
+  },
+  {
+   "img": "cert-3m-excellere",
+   "t": "Vietnam Orthodontist's Educational Program",
+   "s": "3M Excellere Asia Pacific"
+  },
+  {
+   "img": "cert-invisalign-hao",
+   "t": "Invisalign – HAO Master Class",
+   "s": "Invisalign"
+  },
+  {
+   "img": "cert-jm-ortho",
+   "t": "Typodont-Orthodontic Training Course in Hanoi",
+   "s": "JM Ortho"
+  },
+  {
+   "img": "cert-invisalign-platinum-2019",
+   "t": "2019 Invisalign Platinum Provider Certificate",
+   "s": "Invisalign",
+   "contain": true
+  },
+  {
+   "img": "cert-invisalign-platinum-2020",
+   "t": "2020 Invisalign Platinum Provider Certificate",
+   "s": "Invisalign",
+   "contain": true
+  },
+  {
+   "img": "cert-invisalign-platinum-2021",
+   "t": "2021 Invisalign Platinum Provider Certificate",
+   "s": "Invisalign",
+   "contain": true
+  }
+ ],
+ "aboutPos": "center",
+ "reviews": [
+  {
+   "n": "01",
+   "name": "Emily Helen",
+   "country": "United Kingdom",
+   "flag": "🇬🇧",
+   "text": "“Dr. Nhung is truly exceptional. She is incredibly skilled, professional, and thoughtful throughout every appointment. Her attention to detail gave me complete confidence in my treatment, and the results are even better than I imagined.”"
+  },
+  {
+   "n": "02",
+   "name": "Sophie",
+   "country": "Australia",
+   "flag": "🇦🇺",
+   "text": "“From my very first consultation, Dr. Kate made me feel completely at ease. She is not only talented and professional, but also incredibly attentive to every little detail. I always felt I was in the best hands.”"
+  },
+  {
+   "n": "03",
+   "name": "Olivia",
+   "country": "England",
+   "flag": "🇬🇧",
+   "text": "“Choosing Dr. Nhung for my orthodontic treatment was one of the best decisions I made. She combines great expertise with such a careful and professional approach. Every step was explained clearly, and I couldn’t be happier with my smile.”"
+  },
+  {
+   "n": "04",
+   "name": "Charlotte",
+   "country": "Canada",
+   "flag": "🇨🇦",
+   "text": "“Dr. Nhung is amazing at what she does. She is beautiful, warm, incredibly professional, and clearly passionate about her work. I was impressed by how carefully she planned every stage of my treatment and how closely she followed my progress.”"
+  },
+  {
+   "n": "05",
+   "name": "Libby C.",
+   "country": "Australia",
+   "flag": "🇦🇺",
+   "text": "“Dr. Nhung made my orthodontic journey such a positive experience. She is extremely knowledgeable, precise, and attentive, while always making me feel comfortable. Her professionalism and attention to detail truly stand out.”"
+  },
+  {
+   "n": "06",
+   "name": "Anna",
+   "country": "England",
+   "flag": "🇬🇧",
+   "text": "“I was impressed by Dr. Nhung from the very beginning. She is highly professional, gentle, and extremely precise in her work. Every appointment felt carefully planned, and she always took the time to make sure everything was progressing perfectly.”"
+  },
+  {
+   "n": "07",
+   "name": "Rachel",
+   "country": "Singapore",
+   "flag": "🇸🇬",
+   "text": "“Dr. Nhung is an outstanding orthodontist. She is incredibly professional and meticulous, but also warm and approachable. I really appreciated how closely she monitored my treatment and explained every detail along the way.”"
+  },
+  {
+   "n": "08",
+   "name": "Yuki",
+   "country": "Japan",
+   "flag": "🇯🇵",
+   "text": "“Dr. Nhung is such a wonderful doctor. She is very gentle, professional, and incredibly careful with every detail. I always felt listened to and well cared for, and seeing my smile improve throughout the treatment has been amazing.”"
+  },
+  {
+   "n": "09",
+   "name": "Minji",
+   "country": "South Korea",
+   "flag": "🇰🇷",
+   "text": "“I’m so grateful to have had Dr. Nhung as my orthodontist. She is talented, professional, and incredibly attentive. Her careful approach and eye for detail made me feel confident throughout the entire treatment, and I absolutely love the result.”"
+  },
+  {
+   "n": "10",
+   "name": "Linh",
+   "country": "Vietnam",
+   "flag": "🇻🇳",
+   "text": "“Bác sĩ Nhung rất tận tâm và chuyên nghiệp. Mình đặc biệt ấn tượng với sự chỉn chu và tỉ mỉ của bác sĩ trong từng giai đoạn điều trị. Bác sĩ luôn giải thích rõ ràng, nhẹ nhàng và khiến mình cảm thấy rất yên tâm.”"
+  }
+ ]
+}
