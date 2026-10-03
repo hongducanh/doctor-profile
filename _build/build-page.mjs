@@ -217,6 +217,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -733,6 +738,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=${js(REV)},cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});

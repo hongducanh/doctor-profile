@@ -147,6 +147,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -615,7 +620,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="pill">您的下一步</p>
     <h2>迈出第一步<br>拥有焕新笑容</h2>
     <p>发送照片并告诉我们您的顾虑——Dr. Chris 会亲自查看每一条信息，并回复适合您的治疗方向。</p>
-    <a class="btn-w" href="https://wa.me/84906621988?text=%E6%82%A8%E5%A5%BD%EF%BC%8CGreenfield%20Dental%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20Dr.%20Chris%20%E7%9A%84%E5%92%A8%E8%AF%A2%E3%80%82%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">通过 WhatsApp 联系 +84 906 621 988<span class="ar" aria-hidden="true">»</span></a>
+    <a class="btn-w" href="https://wa.me/84906621988?text=%E6%82%A8%E5%A5%BD%EF%BC%8CGreenfield%20Dental%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20Dr.%20Chris%20%E7%9A%84%E5%92%A8%E8%AF%A2%E3%80%82%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">通过 WhatsApp 联系<span class="ar" aria-hidden="true">»</span></a>
     
   </div>
 </section>
@@ -670,6 +675,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=[{"n":"Gaynor","c":"西班牙","f":"es","s":"“从西班牙前往越南接受 All-on-6 治疗，是我们做过的最好的决定之一。Dr. Chris 热情地接待了我们，清楚地解释了每一个步骤，让我们完全放下心来。我们回国时不仅带回了美丽的笑容，还带回了关于越南和 Greenfield 团队的美好回忆。”"},{"n":"Steven","c":"西班牙","f":"es","s":"“非常感谢 Dr. Chuyen 的专业与善意。每次就诊都安排得井井有条、无痛且令人安心。多亏了他，完成 All-on-6 治疗后，我可以满怀自信地笑着回家。”"},{"n":"Michael","c":"澳大利亚","f":"au","s":"“从澳大利亚来这里看牙，结果远超我的所有预期。Dr. Chris 明白我需要的不仅是好看的笑容——更是每天都能信赖的笑容。他的技术、耐心和真诚关怀，让这趟越南之行绝对物有所值。”"},{"n":"Stuart","c":"新西兰","f":"nz","s":"“从新西兰远道而来，让我在改变笑容的同时有机会探索越南。Dr. Chuyen 以极高的精准度和细心规划了我治疗的每个阶段。效果自然、舒适，也让我想起一段难忘的旅程。”"},{"n":"Geoffrey","c":"澳大利亚","f":"au","s":"“选择 Dr. Chris 为我做全口修复是最好的决定。他的专业、诚实和温和的关怀，让一项复杂的治疗出乎意料地顺利。我终于又有信心吃东西、微笑、享受生活了。”"},{"n":"Ryan","c":"新西兰","f":"nz","s":"“从新西兰飞来治疗是一次凭信任迈出的大胆决定，而它确实得到了回报。Dr. Chuyen 修复的远不止我的牙齿——他让我重拾了自信。他的耐心、技术和真诚关怀，让这一路的每一程都值得。”"},{"n":"Julian","c":"德国","f":"de","s":"“Dr. Chris 最让我印象深刻的，是他非常尊重那些让我的笑容独一无二的小细节。他认真倾听，保留了对我重要的部分，最终呈现的效果感觉完全自然。”"},{"n":"Kelly","c":"澳大利亚","f":"au","s":"“独自从澳大利亚前往越南，起初让我有些忐忑，但遇见 Dr. Chuyen 改变了一切。在整个治疗过程中，他诚实、令人安心，而且极富同理心。我始终感到安全、受尊重，并确信自己选对了地方。”"},{"n":"Richard","c":"新西兰","f":"nz","s":"“Dr. Chris 不仅修复了我的笑容——还帮助我重拾了自信。他的专业、诚实和令人安心的方式，让我治疗的每个阶段都毫无压力。我终于可以毫无顾虑地微笑、说话和结识新朋友了。”"},{"n":"Gustavo","c":"德国","f":"de","s":"“在调研了欧洲和亚洲各地的诊所之后，我从德国出发，最终来到了越南。选择 Dr. Chuyen 是我能做出的最好的决定。他清晰的指导、出色的技术和体贴的关怀，给了我一个坚固、自然、真正属于我自己的笑容。”"},{"n":"Hayley","c":"澳大利亚","f":"au","s":"“从第一次咨询开始，Dr. Chris 就让我感到很自在。他轻柔的手法、对细节的关注和真诚的关怀，把一项我曾经害怕的治疗变成了一段我会永远铭记的经历。我太爱我的新笑容了。”"}],cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});

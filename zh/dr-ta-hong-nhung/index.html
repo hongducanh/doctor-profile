@@ -147,6 +147,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -615,7 +620,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="pill">您的下一步</p>
     <h2>迈出第一步<br>拥有焕新笑容</h2>
     <p>发送照片并告诉我们您的顾虑——Dr. Kate 会亲自查看每一条信息，并回复适合您的治疗方向。</p>
-    <a class="btn-w" href="https://wa.me/84906621988?text=%E6%82%A8%E5%A5%BD%EF%BC%8CGreenfield%20Dental%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20Dr.%20Kate%20%E7%9A%84%E5%92%A8%E8%AF%A2%E3%80%82%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">通过 WhatsApp 联系 +84 906 621 988<span class="ar" aria-hidden="true">»</span></a>
+    <a class="btn-w" href="https://wa.me/84906621988?text=%E6%82%A8%E5%A5%BD%EF%BC%8CGreenfield%20Dental%EF%BC%8C%E6%88%91%E6%83%B3%E9%A2%84%E7%BA%A6%20Dr.%20Kate%20%E7%9A%84%E5%92%A8%E8%AF%A2%E3%80%82%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">通过 WhatsApp 联系<span class="ar" aria-hidden="true">»</span></a>
     
   </div>
 </section>
@@ -670,6 +675,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=[{"n":"Emily Helen","c":"英国","f":"gb","s":"“Dr. Nhung 真的非常出色。她技术精湛、专业周到，每一次就诊都细致体贴。她对细节的关注让我对治疗充满信心，最终效果甚至比我想象的还要好。”"},{"n":"Sophie","c":"澳大利亚","f":"au","s":"“从第一次咨询开始，Dr. Kate 就让我完全放下心来。她不仅才华出众、专业可靠，而且对每一个小细节都格外用心。我始终觉得自己得到了最好的照顾。”"},{"n":"Olivia","c":"英格兰","f":"gb","s":"“选择 Dr. Nhung 为我做正畸治疗，是我做过的最好的决定之一。她既有深厚的专业功底，又细心严谨、专业到位。每一步都解释得清清楚楚，我对现在的笑容满意极了。”"},{"n":"Charlotte","c":"加拿大","f":"ca","s":"“Dr. Nhung 在专业上非常了不起。她美丽、热情、极其专业，而且显然热爱自己的工作。她精心规划我治疗的每个阶段，并密切跟进我的进展，这让我印象深刻。”"},{"n":"Libby C.","c":"澳大利亚","f":"au","s":"“Dr. Nhung 让我的正畸历程成为一段非常美好的经历。她学识渊博、精准细致、关怀备至，同时总能让我感到舒适。她的专业精神和对细节的关注确实非常突出。”"},{"n":"Anna","c":"英格兰","f":"gb","s":"“从一开始 Dr. Nhung 就给我留下了深刻印象。她非常专业、温柔，工作极其精准。每次就诊都经过精心安排，她总是花时间确保一切进展得完美无缺。”"},{"n":"Rachel","c":"新加坡","f":"sg","s":"“Dr. Nhung 是一位杰出的正畸医生。她极其专业、一丝不苟，同时又热情亲切、平易近人。我非常感激她密切关注我的治疗，并在整个过程中解释每一个细节。”"},{"n":"Yuki","c":"日本","f":"jp","s":"“Dr. Nhung 是一位非常好的医生。她温柔、专业，对每个细节都格外细心。我始终感到被倾听、被悉心照顾，在治疗过程中看着自己的笑容一点点变好，真是太棒了。”"},{"n":"Minji","c":"韩国","f":"kr","s":"“非常感激由 Dr. Nhung 担任我的正畸医生。她才华出众、专业可靠、无比用心。她严谨的方式和对细节的敏锐让我在整个治疗过程中都充满信心，我非常喜欢最终的效果。”"},{"n":"Linh","c":"越南","f":"vn","s":"“Dr. Nhung 非常尽心尽责、专业。我尤其对医生在每个治疗阶段的周到与细致印象深刻。医生总是解释得清楚明白、温和耐心，让我感到非常安心。”"}],cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});

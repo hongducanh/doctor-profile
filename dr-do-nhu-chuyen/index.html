@@ -147,6 +147,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -615,7 +620,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="pill">Your next step</p>
     <h2>Take the first step<br>toward your new smile</h2>
     <p>Send photos and your concerns — Dr. Chris reviews every message personally and replies with a suitable treatment direction.</p>
-    <a class="btn-w" href="https://wa.me/84906621988?text=Hi%20Greenfield%20Dental%2C%20I'd%20like%20a%20consultation%20with%20Dr.%20Chris.%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">Message on WhatsApp +84 906 621 988<span class="ar" aria-hidden="true">»</span></a>
+    <a class="btn-w" href="https://wa.me/84906621988?text=Hi%20Greenfield%20Dental%2C%20I'd%20like%20a%20consultation%20with%20Dr.%20Chris.%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">Message us on WhatsApp<span class="ar" aria-hidden="true">»</span></a>
     
   </div>
 </section>
@@ -670,6 +675,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=[{"n":"Gaynor","c":"Spain","f":"es","s":"“Traveling from Spain to Vietnam for All-on-6 treatment was one of the best decisions we've ever made. Dr. Chris welcomed us with warmth, explained every step clearly,…”"},{"n":"Steven","c":"Spain","f":"es","s":"“I'm so grateful to Dr. Chuyên for his professionalism and kindness. Every appointment was well organized, pain-free, and reassuring. Thanks to him, I can travel home…”"},{"n":"Michael","c":"Australia","f":"au","s":"“Coming from Australia for dental treatment exceeded every expectation. Dr. Chris understood that I needed more than a great-looking smile—I needed one I could trust…”"},{"n":"Stuart","c":"New Zealand","f":"nz","s":"“Traveling from New Zealand gave me the chance to discover Vietnam while transforming my smile. Dr. Chuyên planned every stage of my treatment with incredible precision…”"},{"n":"Geoffrey","c":"Australia","f":"au","s":"“Choosing Dr. Chris for my full-mouth restoration was the best decision. His expertise, honesty, and gentle care made a complex treatment feel surprisingly smooth. I…”"},{"n":"Ryan","c":"New Zealand","f":"nz","s":"“Flying from New Zealand for treatment was a leap of faith that truly paid off. Dr. Chuyên restored much more than my teeth—he gave me back my confidence. His patience,…”"},{"n":"Julian","c":"Germany","f":"de","s":"“What impressed me most about Dr. Chris was how much he respected the small details that made my smile unique. He listened carefully, preserved what mattered to me, and…”"},{"n":"Kelly","c":"Australia","f":"au","s":"“Traveling solo from Australia to Vietnam felt intimidating at first, but meeting Dr. Chuyên changed everything. He was honest, reassuring, and incredibly compassionate…”"},{"n":"Richard","c":"New Zealand","f":"nz","s":"“Dr. Chris didn't just restore my smile—he helped me regain my confidence. His expertise, honesty, and reassuring approach made every stage of my treatment stress-free.…”"},{"n":"Gustavo","c":"Germany","f":"de","s":"“After researching clinics across Europe and Asia, my journey from Germany finally led me to Vietnam. Choosing Dr. Chuyên was the best decision I could have made. His…”"},{"n":"Hayley","c":"Australia","f":"au","s":"“Dr. Chris made me feel comfortable from the very first consultation. His gentle hands, attention to detail, and genuine compassion turned a treatment I once feared into…”"}],cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});

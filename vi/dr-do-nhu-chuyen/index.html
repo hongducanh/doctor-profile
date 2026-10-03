@@ -148,6 +148,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -616,7 +621,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="pill">Bước tiếp theo của bạn</p>
     <h2>Bước đầu tiên<br>hướng đến nụ cười mới</h2>
     <p>Gửi ảnh và những băn khoăn của bạn — BS. Chris trực tiếp xem từng tin nhắn và phản hồi với hướng điều trị phù hợp.</p>
-    <a class="btn-w" href="https://zalo.me/0906621988" target="_blank" rel="noopener">Nhắn Zalo 0906 621 988<span class="ar" aria-hidden="true">»</span></a>
+    <a class="btn-w" href="https://zalo.me/0906621988" target="_blank" rel="noopener">Nhắn Zalo<span class="ar" aria-hidden="true">»</span></a>
     <p class="alt"><a href="https://wa.me/84906621988?text=Ch%C3%A0o%20Nha%20khoa%20Greenfield%2C%20t%C3%B4i%20mu%E1%BB%91n%20%C4%91%C6%B0%E1%BB%A3c%20t%C6%B0%20v%E1%BA%A5n%20v%E1%BB%9Bi%20BS.%20Chris.%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">Hoặc nhắn WhatsApp</a></p>
   </div>
 </section>
@@ -671,6 +676,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=[{"n":"Gaynor","c":"Tây Ban Nha","f":"es","s":"“Hành trình từ Tây Ban Nha đến Việt Nam để điều trị All-on-6 là một trong những quyết định đúng đắn nhất mà chúng tôi từng đưa ra. BS. Chris đón tiếp chúng tôi thật ấm…”"},{"n":"Steven","c":"Tây Ban Nha","f":"es","s":"“Tôi vô cùng biết ơn BS. Chuyên vì sự chuyên nghiệp và tận tình. Mỗi buổi hẹn đều được sắp xếp chu đáo, không đau và khiến tôi an tâm. Nhờ bác sĩ, tôi có thể trở về nhà…”"},{"n":"Michael","c":"Úc","f":"au","s":"“Từ Úc sang điều trị răng đã vượt xa mọi kỳ vọng của tôi. BS. Chris hiểu rằng tôi cần nhiều hơn một nụ cười đẹp — tôi cần một nụ cười mình có thể tin cậy mỗi ngày. Tay…”"},{"n":"Stuart","c":"New Zealand","f":"nz","s":"“Chuyến đi từ New Zealand cho tôi cơ hội khám phá Việt Nam trong khi thay đổi nụ cười của mình. BS. Chuyên đã lên kế hoạch cho từng giai đoạn điều trị với sự chính xác…”"},{"n":"Geoffrey","c":"Úc","f":"au","s":"“Chọn BS. Chris để phục hồi toàn hàm là quyết định đúng đắn nhất. Chuyên môn, sự trung thực và cách chăm sóc nhẹ nhàng của bác sĩ khiến một ca điều trị phức tạp trở nên…”"},{"n":"Ryan","c":"New Zealand","f":"nz","s":"“Bay từ New Zealand sang điều trị là một quyết định đặt trọn niềm tin, và nó thực sự xứng đáng. BS. Chuyên đã phục hồi cho tôi nhiều hơn cả hàm răng — bác sĩ đã trả lại…”"},{"n":"Julian","c":"Đức","f":"de","s":"“Điều khiến tôi ấn tượng nhất ở BS. Chris là bác sĩ rất tôn trọng những chi tiết nhỏ làm nên nét riêng trong nụ cười của tôi. Bác sĩ lắng nghe cẩn thận, giữ lại những gì…”"},{"n":"Kelly","c":"Úc","f":"au","s":"“Một mình đi từ Úc sang Việt Nam lúc đầu khiến tôi khá e ngại, nhưng gặp BS. Chuyên đã thay đổi tất cả. Bác sĩ trung thực, luôn trấn an và vô cùng tận tâm trong suốt quá…”"},{"n":"Richard","c":"New Zealand","f":"nz","s":"“BS. Chris không chỉ phục hồi nụ cười của tôi — bác sĩ còn giúp tôi lấy lại sự tự tin. Chuyên môn, sự trung thực và cách làm việc đầy trấn an của bác sĩ giúp mọi giai…”"},{"n":"Gustavo","c":"Đức","f":"de","s":"“Sau khi tìm hiểu các phòng khám khắp châu Âu và châu Á, hành trình từ Đức cuối cùng đã đưa tôi đến Việt Nam. Chọn BS. Chuyên là quyết định đúng đắn nhất mà tôi có thể…”"},{"n":"Hayley","c":"Úc","f":"au","s":"“BS. Chris khiến tôi cảm thấy thoải mái ngay từ buổi tư vấn đầu tiên. Đôi tay nhẹ nhàng, sự tỉ mỉ và lòng trắc ẩn chân thành của bác sĩ đã biến một ca điều trị tôi từng…”"}],cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});

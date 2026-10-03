@@ -147,6 +147,11 @@ html.gfh-lock .gfh-wrap{position:fixed;left:0;right:0}
 .subnav .pad::-webkit-scrollbar{display:none}
 .subnav a{flex:none;display:flex;align-items:center;min-height:48px;padding:0 14px;font-size:14px;font-weight:500;color:var(--mut)}
 .subnav a:hover{color:var(--ink)} .subnav b{font-weight:600;color:var(--ink)}
+/* mục đang xem: gạch chân vàng như menu web chính */
+.subnav a{position:relative}
+.subnav a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:2px;background:#C9974A;transform:scaleX(0);transition:transform .2s}
+.subnav a[aria-current="true"]{color:var(--ink);font-weight:600}
+.subnav a[aria-current="true"]::after,.subnav a:hover::after{transform:scaleX(1)}
 /* các bác sĩ khác (khôi phục 03/10/2026) */
 .odocs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:16px;align-items:stretch;grid-template-columns:1fr 1fr}
 .odocs li{display:flex}
@@ -615,7 +620,7 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
     <p class="pill">Su siguiente paso</p>
     <h2>Dé el primer paso<br>hacia su nueva sonrisa</h2>
     <p>Envíe fotos y sus inquietudes: la Dra. Kate revisa personalmente cada mensaje y le responde con una orientación de tratamiento adecuada.</p>
-    <a class="btn-w" href="https://wa.me/84906621988?text=Hola%2C%20Greenfield%20Dental.%20Me%20gustar%C3%ADa%20una%20consulta%20con%20la%20Dra.%20Kate.%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">Escríbanos por WhatsApp +84 906 621 988<span class="ar" aria-hidden="true">»</span></a>
+    <a class="btn-w" href="https://wa.me/84906621988?text=Hola%2C%20Greenfield%20Dental.%20Me%20gustar%C3%ADa%20una%20consulta%20con%20la%20Dra.%20Kate.%20(via%20doctors.greenfield.clinic)" target="_blank" rel="noopener">Escríbanos por WhatsApp<span class="ar" aria-hidden="true">»</span></a>
     
   </div>
 </section>
@@ -670,6 +675,11 @@ document.querySelector(".cnav .prev").addEventListener("click",function(){show(i
 var R=[{"n":"Emily Helen","c":"Reino Unido","f":"gb","s":"“La Dra. Nhung es verdaderamente excepcional. Es increíblemente hábil, profesional y atenta en cada cita. Su atención al detalle me dio plena confianza en mi…”"},{"n":"Sophie","c":"Australia","f":"au","s":"“Desde mi primera consulta, la Dra. Kate me hizo sentir completamente a gusto. No solo es talentosa y profesional, sino también increíblemente atenta a cada pequeño…”"},{"n":"Olivia","c":"Inglaterra","f":"gb","s":"“Elegir a la Dra. Nhung para mi tratamiento de ortodoncia fue una de las mejores decisiones que he tomado. Combina una gran experiencia con un enfoque muy cuidadoso y…”"},{"n":"Charlotte","c":"Canadá","f":"ca","s":"“La Dra. Nhung es extraordinaria en lo que hace. Es guapa, cálida, increíblemente profesional y se nota que le apasiona su trabajo. Me impresionó con cuánto cuidado…”"},{"n":"Libby C.","c":"Australia","f":"au","s":"“La Dra. Nhung hizo de mi proceso de ortodoncia una experiencia muy positiva. Tiene amplísimos conocimientos, es precisa y atenta, y siempre me hizo sentir cómoda. Su…”"},{"n":"Anna","c":"Inglaterra","f":"gb","s":"“La Dra. Nhung me impresionó desde el principio. Es muy profesional, delicada y sumamente precisa en su trabajo. Cada cita parecía cuidadosamente planificada, y siempre…”"},{"n":"Rachel","c":"Singapur","f":"sg","s":"“La Dra. Nhung es una ortodoncista excepcional. Es increíblemente profesional y meticulosa, pero también cálida y cercana. Aprecié mucho lo de cerca que supervisó mi…”"},{"n":"Yuki","c":"Japón","f":"jp","s":"“La Dra. Nhung es una doctora maravillosa. Es muy delicada, profesional e increíblemente cuidadosa con cada detalle. Siempre me sentí escuchada y bien atendida, y ver…”"},{"n":"Minji","c":"Corea del Sur","f":"kr","s":"“Estoy muy agradecida de haber tenido a la Dra. Nhung como ortodoncista. Es talentosa, profesional e increíblemente atenta. Su enfoque cuidadoso y su ojo para el detalle…”"},{"n":"Linh","c":"Vietnam","f":"vn","s":"“La Dra. Nhung es muy dedicada y profesional. Me impresionó especialmente lo esmerada y meticulosa que es en cada etapa del tratamiento. Siempre lo explica todo con…”"}],cards=[].slice.call(document.querySelectorAll(".fc"));
 if(R.length>cards.length&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var turn=0,cur=cards.length;setInterval(function(){var k=turn%cards.length,el=cards[k];turn++;el.classList.add("fade");
  setTimeout(function(){var r=R[cur%R.length];cur++;el.querySelector("blockquote").textContent=r.s;var im=el.querySelector("img");im.src="https://flagcdn.com/w80/"+r.f+".png";im.alt=r.c;el.querySelector("b").textContent=r.n;el.querySelector("small").textContent=r.c;el.classList.remove("fade");},520);},2900);}
+/* thanh mục: đánh dấu mục đang xem, tự cuộn ngang trên điện thoại */
+(function(){var bar=document.querySelector(".subnav .pad");if(!bar)return;var L=[].slice.call(bar.querySelectorAll('a[href^="#"]:not([href="#top"])')),S=L.map(function(a){return document.getElementById(a.getAttribute("href").slice(1))}),cur=null,tk=0;
+function upd(){tk=0;var y=document.querySelector(".gfh-wrap").getBoundingClientRect().bottom+24,act=null;S.forEach(function(s,i){if(!s)return;var r=s.getBoundingClientRect();if(r.top<=y&&r.bottom>y)act=L[i]});
+if(act===cur)return;if(cur)cur.removeAttribute("aria-current");cur=act;if(act){act.setAttribute("aria-current","true");if(bar.scrollWidth>bar.clientWidth)bar.scrollTo({left:act.offsetLeft-16,behavior:"smooth"})}}
+addEventListener("scroll",function(){if(!tk)tk=requestAnimationFrame(upd)},{passive:true});addEventListener("resize",upd);upd();})();
 var N=[].slice.call(document.querySelectorAll("[data-reveal]"));function on(n){n.classList.add("on")}
 if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){on(e.target);io.unobserve(e.target);}})},{rootMargin:"0px 0px -12% 0px",threshold:.05});
  N.forEach(function(n){if(n.getBoundingClientRect().top<=innerHeight*.95)on(n);else io.observe(n);});addEventListener("beforeprint",function(){N.forEach(on)});
