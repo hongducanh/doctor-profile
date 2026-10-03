@@ -1,0 +1,313 @@
+{
+ "eyebrow": "DDS | general & cosmetic dentist",
+ "h1": [
+  "Dr.",
+  "Thu Hien"
+ ],
+ "checks": [
+  "Orthodontics",
+  "General",
+  "Restorative & Cosmetic Dentistry"
+ ],
+ "lead": "Dr. Pham Thi Thu Hien (Dr. Hailey) is a General Dentist with a special interest in restorative and aesthetic dentistry. She believes the best treatment isn’t always the biggest treatment. By preserving as much healthy tooth structure as possible, she helps patients achieve natural-looking results that are designed to last.",
+ "badge": {
+  "l": "Years Experience"
+ },
+ "trust": {
+  "h2": [
+   "Why patients",
+   "trust her"
+  ],
+  "p": "Inspired by the belief that a smile is one of the most defining features of a person, Dr. Hailey chose dentistry to help patients preserve both their oral health and natural beauty.",
+  "stats": [
+   {
+    "k": "Experience",
+    "l": "Years Experience"
+   },
+   {
+    "k": "Patients",
+    "l": "Patients Treated"
+   },
+   {
+    "k": "Cosmetic",
+    "l": "Veneers/Crowns Completed"
+   },
+   {
+    "k": "Prosthodontics",
+    "l": "Prosthodontic Cases"
+   }
+  ]
+ },
+ "about": {
+  "eyebrow": "About Dr. pham thi thu hien",
+  "h2": "Healthy teeth.<br>Confident smiles.",
+  "p": "Providing comprehensive general and cosmetic dentistry, from routine care to veneers, crowns and complete smile makeovers — with a focus on natural-looking, long-lasting results.",
+  "explore": "Explore her expertise",
+  "chips": [
+   {
+    "t": "Hanoi Medical University",
+    "s": "Doctor of Dental Surgery"
+   },
+   {
+    "t": "General Dentistry",
+    "s": "Preventive · Restorative · Family Care"
+   },
+   {
+    "t": "Cosmetic Dentistry",
+    "s": "Veneers · Smile Design · Whitening"
+   }
+  ]
+ },
+ "expertiseH2": [
+  "Main",
+  "expertise"
+ ],
+ "advice": {
+  "h": "Not sure which<br>treatment you need?",
+  "p": "Send us photos of your teeth and share your concerns. Dr. Hailey will recommend the most suitable treatment approach.",
+  "btn": "Get advice"
+ },
+ "expertise": [
+  {
+   "t": "Microsurgical endodontics<br>under the microscope",
+   "s": "Root canal treatment · Retreatment · Apicoectomy"
+  },
+  {
+   "t": "Clear aligners<br>and modern braces",
+   "s": "Invisalign · G-FLEX · Ceramic braces"
+  },
+  {
+   "t": "Restorative dentistry<br>and smile rehabilitation",
+   "s": "Veneers · All-ceramic crowns · Inlays & Onlays"
+  },
+  {
+   "t": "Bite correction<br>and complex orthodontic cases",
+   "s": "Crowding · Deep bite · Crossbite · Malocclusion"
+  },
+  {
+   "t": "Precision restorations<br>for natural-looking smiles",
+   "s": "Ceramic restorations · Crowns · Functional rehabilitation"
+  }
+ ],
+ "quote": {
+  "text": "The healthiest tooth is always your own. My role is to help you keep it for as long as possible.",
+  "em": "",
+  "by": "Dr. Pham Thi Thu Hien - Hailey",
+  "role": "DDS of Greenfield Dental"
+ },
+ "certsH2": [
+  "Certificates &",
+  "awards"
+ ],
+ "casesH2": [
+  "Case",
+  "studies"
+ ],
+ "casesIntro": "Real clinical photos, published with patient consent.",
+ "reviewsH2": "What our<br>patients say",
+ "journeyH2": [
+  "The Greenfield",
+  "journey"
+ ],
+ "journeyIntro": "Seven fixed steps for every case, so patients always know where they are.",
+ "faqH2": [
+  "Frequently asked",
+  "questions"
+ ],
+ "guaranteeH2": [
+  "The Greenfield",
+  "guarantee"
+ ],
+ "guaranteeIntro": "Six commitments written into every patient's treatment record.",
+ "cta": {
+  "eyebrow": "Your next step",
+  "h2": "Take the first step<br>toward your new smile",
+  "p": "Send photos and your concerns — Dr. Hailey reviews every message personally and replies with a suitable treatment direction.",
+  "btn": "Message on WhatsApp +84 906 621 988"
+ },
+ "foot": {
+  "h2": "Book a consultation<br>with Dr. Hailey today",
+  "hours": "Open all week · 08:30 – 18:00",
+  "btn": "Book a consultation"
+ },
+ "faqs": [
+  {
+   "q": "How long does orthodontic treatment usually take?",
+   "a": "Treatment typically takes 12–24 months, but the duration depends on the severity of the malocclusion, treatment method, and how consistently the patient follows instructions."
+  },
+  {
+   "q": "Why are retainers important after orthodontic treatment?",
+   "a": "Teeth can naturally shift after treatment. Retainers help maintain the corrected tooth positions and reduce the risk of orthodontic relapse."
+  },
+  {
+   "q": "Can a tooth become infected again after root canal treatment?",
+   "a": "Yes. Reinfection can occur due to untreated canals, leakage, new decay, cracks, or inadequate restoration. Proper cleaning, sealing, and final restoration are essential for long-term success."
+  },
+  {
+   "q": "How do I know whether I need veneers or crowns?",
+   "a": "Veneers may be suitable for improving tooth shape, color, and minor aesthetic imperfections when sufficient healthy enamel remains. Crowns are generally considered when a tooth is significantly weakened or structurally compromised."
+  },
+  {
+   "q": "What are the options for replacing missing teeth?",
+   "a": "Depending on the number and condition of missing teeth, options may include dental implants, implant-supported bridges, conventional bridges, or removable dentures."
+  }
+ ],
+ "steps": [
+  {
+   "t": "Pre-arrival",
+   "d": "Photos, X-rays and consultation before you travel."
+  },
+  {
+   "t": "Airport Pickup",
+   "d": "Comfortable transfer on arrival in Vietnam."
+  },
+  {
+   "t": "Consultation",
+   "d": "In-person exam and 3D scan with Dr. Hailey."
+  },
+  {
+   "t": "Treatment Plan",
+   "d": "Clear plan, timeline and fixed pricing."
+  },
+  {
+   "t": "Treatment",
+   "d": "Orthodontic or restorative procedures performed."
+  },
+  {
+   "t": "Care During Stay",
+   "d": "Recovery support for the rest of your trip."
+  },
+  {
+   "t": "Follow-up",
+   "d": "Remote check-ins after you return home."
+  }
+ ],
+ "guarantees": [
+  {
+   "t": "Treatment Warranty",
+   "d": "Written warranty coverage on orthodontic appliances and major restorative work."
+  },
+  {
+   "t": "Transparent, Fixed Pricing",
+   "d": "One quoted price after consultation, with no hidden add-ons."
+  },
+  {
+   "t": "International-Patient Support",
+   "d": "Airport pickup, translation and trip planning handled for you."
+  },
+  {
+   "t": "Modern Technology & Materials",
+   "d": "Digital scanning, 3D treatment planning and premium aligner systems."
+  },
+  {
+   "t": "Aftercare & Remote Follow-up",
+   "d": "Check-ins and support long after you return home."
+  },
+  {
+   "t": "Quality You Can Trust",
+   "d": "A track record built on thousands of completed cases."
+  }
+ ],
+ "cases": [
+  {
+   "t": "Severe tooth wear with sensitivity",
+   "d": "Ceramill Zolid crowns and E.max Press veneers to restore worn tooth structure, improve function, comfort, and overall smile aesthetics.",
+   "m": "2 visits · Restorative Dentistry"
+  },
+  {
+   "t": "Multiple missing teeth with bone loss",
+   "d": "Zirconia crowns to restore compromised teeth, improve chewing function and stability, and enhance overall smile appearance.",
+   "m": "2 visits · Restorative Dentistry"
+  },
+  {
+   "t": "Missing tooth with extensive decay and tooth wear",
+   "d": "Ceramill Zolid crowns to rebuild lost tooth structure, restore compromised teeth, and improve comfort, function, and smile harmony.",
+   "m": "2 visits · Restorative Dentistry"
+  },
+  {
+   "t": "Missing teeth with bone loss and severe tooth wear",
+   "d": "Dentium implants and zirconia crowns to replace missing teeth and restore worn teeth, improving chewing function, stability, and smile aesthetics.",
+   "m": "3 visits · Implant & Restorative Dentistry"
+  },
+  {
+   "t": "Multiple missing and fractured teeth with deep caries",
+   "d": "Zirconia crowns and Biodentine restorations to rebuild and protect compromised teeth, restoring chewing function, comfort, and oral stability.",
+   "m": "3 visits · Restorative Dentistry"
+  },
+  {
+   "t": "Multiple missing teeth with severe tooth wear",
+   "d": "Straumann implants and zirconia crowns to replace missing teeth and restore worn teeth, improving bite stability, chewing function, and smile aesthetics.",
+   "m": "3 visits · Implant & Restorative Dentistry"
+  }
+ ],
+ "certs": [
+  {
+   "t": "Doctor of Dental Surgery",
+   "s": "Hanoi Medical University"
+  },
+  {
+   "t": "Invisalign – HAO Master Class",
+   "s": "Invisalign"
+  },
+  {
+   "t": "Typodont-Orthodontic Training Course in Hanoi",
+   "s": "JM Ortho"
+  },
+  {
+   "t": "Advanced Veneer & Full-Mouth Rehabilitation",
+   "s": "Dental Milestones Guaranteed"
+  }
+ ],
+ "reviews": [
+  {
+   "name": "Emily Helen",
+   "country": "United Kingdom",
+   "text": "“Dr. Hailey is truly exceptional. She is incredibly skilled, professional, and thoughtful throughout every appointment. Her attention to detail gave me complete confidence in my treatment, and the results are even better than I imagined.”"
+  },
+  {
+   "name": "Sophie",
+   "country": "Australia",
+   "text": "“From my very first consultation, Dr. Hailey made me feel completely at ease. She is not only talented and professional, but also incredibly attentive to every little detail. I always felt I was in the best hands.”"
+  },
+  {
+   "name": "Olivia",
+   "country": "England",
+   "text": "“Choosing Dr. Hailey for my orthodontic treatment was one of the best decisions I made. She combines great expertise with such a careful and professional approach. Every step was explained clearly, and I couldn’t be happier with my smile.”"
+  },
+  {
+   "name": "Charlotte",
+   "country": "Canada",
+   "text": "“Dr. Hailey is amazing at what she does. She is beautiful, warm, incredibly professional, and clearly passionate about her work. I was impressed by how carefully she planned every stage of my treatment and how closely she followed my progress.”"
+  },
+  {
+   "name": "Libby C.",
+   "country": "Australia",
+   "text": "“Dr. Hailey made my orthodontic journey such a positive experience. She is extremely knowledgeable, precise, and attentive, while always making me feel comfortable. Her professionalism and attention to detail truly stand out.”"
+  },
+  {
+   "name": "Anna",
+   "country": "England",
+   "text": "“I was impressed by Dr. Hailey from the very beginning. She is highly professional, gentle, and extremely precise in her work. Every appointment felt carefully planned, and she always took the time to make sure everything was progressing perfectly.”"
+  },
+  {
+   "name": "Rachel",
+   "country": "Singapore",
+   "text": "“Dr. Hailey is an outstanding orthodontist. She is incredibly professional and meticulous, but also warm and approachable. I really appreciated how closely she monitored my treatment and explained every detail along the way.”"
+  },
+  {
+   "name": "Yuki",
+   "country": "Japan",
+   "text": "“Dr. Hailey is such a wonderful doctor. She is very gentle, professional, and incredibly careful with every detail. I always felt listened to and well cared for, and seeing my smile improve throughout the treatment has been amazing.”"
+  },
+  {
+   "name": "Minji",
+   "country": "South Korea",
+   "text": "“I’m so grateful to have had Dr. Hailey as my orthodontist. She is talented, professional, and incredibly attentive. Her careful approach and eye for detail made me feel confident throughout the entire treatment, and I absolutely love the result.”"
+  },
+  {
+   "name": "Linh",
+   "country": "Vietnam",
+   "text": "“Bác sĩ Hailey rất tận tâm và chuyên nghiệp. Mình đặc biệt ấn tượng với sự chỉn chu và tỉ mỉ của bác sĩ trong từng giai đoạn điều trị. Bác sĩ luôn giải thích rõ ràng, nhẹ nhàng và khiến mình cảm thấy rất yên tâm.”"
+  }
+ ]
+}
