@@ -223,6 +223,12 @@ a.card:hover{border-color:var(--gold)}
 .certs picture{display:block;height:120px;padding:16px;background:#fff;border-bottom:1px solid var(--line);flex:none}
 .certs img{width:100%;height:100%;object-fit:contain}
 .certs div{padding:16px;display:grid;gap:4px;align-content:start} .certs b{display:block;font-size:16px;font-weight:600;line-height:1.35} .certs span{display:block;font-size:14px;color:var(--muted);line-height:1.45}
+/* 1–2 mục: thẻ ngang gọn (ảnh trái, chữ phải), không kéo giãn hết bề ngang (03/10/2026). */
+.certs.few{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:1fr;overflow:visible;padding:0;max-width:560px}
+.certs.few li{flex-direction:row;align-items:center}
+.certs.few picture{width:160px;height:104px;padding:0;border-bottom:0;border-right:1px solid var(--line)}
+.certs.few img{object-fit:cover}
+.certs.few div{padding:16px 20px}
 
 .case{display:grid;gap:24px;align-items:center}
 .ba{position:relative;border-radius:18px;overflow:hidden;background:#ddd;aspect-ratio:1/1;touch-action:pan-y}
@@ -330,7 +336,7 @@ a.card:hover{border-color:var(--gold)}
 
 @media (min-width:640px){
   .stats .wrap{grid-template-columns:repeat(var(--n,4),1fr)} .stat{border-bottom:0;border-right:1px solid var(--line);padding:24px 20px} .stat:last-child{border-right:0}
-  .certs{grid-auto-columns:minmax(220px,34%)}
+  .certs{grid-auto-columns:minmax(220px,34%)} .certs.few{grid-auto-columns:auto}
   .quote picture{width:var(--qwt,300px)}
   .quote .qbox{justify-self:center;width:100%;max-width:600px;padding:48px 12px 8px}
   .quote .qm{width:72px}
@@ -354,7 +360,7 @@ a.card:hover{border-color:var(--gold)}
   .case{grid-template-columns:1.1fr .9fr;gap:56px}
   .rv-box{grid-template-columns:auto 1fr auto;gap:40px}
   .commit{grid-template-columns:repeat(3,1fr)} .odocs{grid-template-columns:repeat(4,1fr)}
-  .certs{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));overflow:visible;padding:0}
+  .certs{grid-auto-flow:row;grid-auto-columns:auto;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));overflow:visible;padding:0} .certs.few{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1120px} .certs.few:has(li:only-child){grid-template-columns:1fr;max-width:560px}
   .ftr .cols{grid-template-columns:1.2fr 1fr 1fr 1.2fr}
   .legal{padding-bottom:24px}
   .wa-float{display:none}
@@ -492,8 +498,8 @@ if(document.readyState==="complete"){setTimeout(load,3000)}else{addEventListener
 
 <section class="block">
   <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Training</p><h2>Certificates <em>&amp; courses</em></h2></div>
-    <ul class="certs">${D.certs.map((c) => `<li>${pic(c.img, c.t, "240px")}<div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></div></li>`).join("")}</ul>
+    <div class="sec-head"><p class="eyebrow">Training</p><h2>${D.certs.length <= 2 ? "Education" : "Certificates <em>&amp; courses</em>"}</h2></div>
+    <ul class="certs${D.certs.length <= 2 ? " few" : ""}">${D.certs.map((c) => `<li>${pic(c.img, c.t, "240px")}<div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></div></li>`).join("")}</ul>
   </div>
 </section>
 
