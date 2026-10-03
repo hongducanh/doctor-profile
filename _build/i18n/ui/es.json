@@ -3,11 +3,71 @@
   "langAria": "Idioma",
   "logoAria": "Inicio de Greenfield Dental",
   "navAria": "Principal",
-  "nav": { "services": "Tratamientos", "results": "Resultados", "about": "Nosotros", "contact": "Contacto" },
+  "nav": {
+    "services": "Tratamientos",
+    "results": "Resultados",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
   "menus": {
-    "services": [["Implantes dentales", "implants"], ["Coronas dentales", "crowns"], ["Carillas de porcelana", "veneers"], ["Invisalign", "invisalign"], ["Brackets", "braces"], ["Odontología general", "general"], ["Blanqueamiento dental", "whitening"]],
-    "results": [["Galería de sonrisas", "gallery"], ["Opiniones de pacientes", "reviews"]],
-    "about": [["Nuestros dentistas", "doctors"], ["Sobre Greenfield", "about"], ["Turismo dental", "tourism"], ["Preguntas frecuentes", "faq"]],
+    "services": [
+      [
+        "Implantes dentales",
+        "implants"
+      ],
+      [
+        "Coronas dentales",
+        "crowns"
+      ],
+      [
+        "Carillas de porcelana",
+        "veneers"
+      ],
+      [
+        "Invisalign",
+        "invisalign"
+      ],
+      [
+        "Brackets",
+        "braces"
+      ],
+      [
+        "Odontología general",
+        "general"
+      ],
+      [
+        "Blanqueamiento dental",
+        "whitening"
+      ]
+    ],
+    "results": [
+      [
+        "Galería de sonrisas",
+        "gallery"
+      ],
+      [
+        "Opiniones de pacientes",
+        "reviews"
+      ]
+    ],
+    "about": [
+      [
+        "Nuestros dentistas",
+        "doctors"
+      ],
+      [
+        "Sobre Greenfield",
+        "about"
+      ],
+      [
+        "Turismo dental",
+        "tourism"
+      ],
+      [
+        "Preguntas frecuentes",
+        "faq"
+      ]
+    ],
     "mobileServices": 7,
     "mobileAbout": 4
   },
@@ -15,25 +75,148 @@
   "freeConsult": "Consulta gratuita",
   "openMenu": "Abrir menú",
   "subnavAria": "En esta página",
-  "subnav": { "about": "Perfil", "expertise": "Especialidad", "cases": "Casos", "reviews": "Opiniones", "journey": "Su viaje", "faq": "Preguntas" },
+  "subnav": {
+    "about": "Perfil",
+    "expertise": "Especialidad",
+    "cases": "Casos",
+    "reviews": "Opiniones",
+    "journey": "Su viaje",
+    "faq": "Preguntas"
+  },
   "heroCta": "Consulta gratuita con {short}",
   "viewCases": "Ver casos de tratamiento",
-  "expertise": { "eyebrow": "Especialidad principal", "h2": "Qué trata", "h2em": "{short}", "learnMore": "Más información", "adviceH": "¿No sabe qué tratamiento necesita?", "adviceP": "Envíe fotos de sus dientes y sus dudas. {short} le sugerirá el enfoque más adecuado.", "adviceBtn": "Pedir orientación" },
+  "expertise": {
+    "eyebrow": "Especialidad principal",
+    "h2": "Qué trata",
+    "h2em": "{short}",
+    "learnMore": "Más información",
+    "adviceH": "¿No sabe qué tratamiento necesita?",
+    "adviceP": "Envíe fotos de sus dientes y sus dudas. {short} le sugerirá el enfoque más adecuado.",
+    "adviceBtn": "Pedir orientación"
+  },
   "quoteAria": "En palabras de {short}",
   "quoteAlt": "{name} sonriendo",
-  "certs": { "eyebrow": "Formación", "edu": "Formación académica", "h2": "Certificados", "h2em": "y cursos" },
-  "cases": { "eyebrow": "Casos clínicos", "h2": "Casos del", "team": { "implant": "equipo de implantes de Greenfield", "orthodontic": "equipo de ortodoncia de Greenfield", "restorative": "equipo de odontología restauradora de Greenfield" }, "intro": "Fotos clínicas reales, publicadas con el consentimiento del paciente. Arrastre el control para comparar el antes y el después.", "before": "Antes", "after": "Después", "beforeAlt": "Antes del tratamiento: ", "afterAlt": "Después del tratamiento: ", "compare": "Comparar antes y después", "label": "Caso", "prev": "Caso anterior", "next": "Caso siguiente" },
-  "reviews": { "eyebrow": "Opiniones de pacientes", "h2": "Lo que dicen los pacientes", "h2em": "de Greenfield", "count": "{n} reseñas de Greenfield Dental en Google", "p": "Las opiniones proceden de pacientes de Greenfield Dental en su conjunto. Léalas en Google o vea historias de pacientes en nuestra web.", "google": "Leer nuestras reseñas en Google", "stories": "Historias de pacientes" },
-  "faq": { "eyebrow": "Preguntas frecuentes", "h2": "Lo que", "h2em": "preguntan los pacientes" },
-  "commit": { "eyebrow": "Nuestros compromisos", "h2": "Lo que puede", "h2em": "esperar" },
-  "others": { "eyebrow": "Nuestro equipo", "h2": "Otros dentistas", "h2em": "de Greenfield", "view": "Ver perfil" },
-  "cta": { "eyebrow": "Su próximo paso", "wa": "WhatsApp +84 906 621 988", "send": "Enviar un mensaje", "hours": "Abierto todos los días de 8:00 a 18:00 (última cita 17:30) · Revisión y consulta gratuitas", "allDoctors": "Todos los dentistas de Greenfield", "loungeAlt": "Sala de espera de Greenfield Dental, Hanói" },
+  "certs": {
+    "eyebrow": "Formación",
+    "edu": "Formación académica",
+    "h2": "Certificados",
+    "h2em": "y cursos"
+  },
+  "cases": {
+    "eyebrow": "Casos clínicos",
+    "h2": "Casos del",
+    "team": {
+      "implant": "equipo de implantes de Greenfield",
+      "orthodontic": "equipo de ortodoncia de Greenfield",
+      "restorative": "equipo de odontología restauradora de Greenfield"
+    },
+    "intro": "Fotos clínicas reales, publicadas con el consentimiento del paciente. Arrastre el control para comparar el antes y el después.",
+    "before": "Antes",
+    "after": "Después",
+    "beforeAlt": "Antes del tratamiento: ",
+    "afterAlt": "Después del tratamiento: ",
+    "compare": "Comparar antes y después",
+    "label": "Caso",
+    "prev": "Caso anterior",
+    "next": "Caso siguiente"
+  },
+  "reviews": {
+    "eyebrow": "Opiniones de pacientes",
+    "h2": "Lo que dicen los pacientes",
+    "h2em": "de Greenfield",
+    "count": "{n} reseñas de Greenfield Dental en Google",
+    "p": "Las opiniones proceden de pacientes de Greenfield Dental en su conjunto. Léalas en Google o vea historias de pacientes en nuestra web.",
+    "google": "Leer nuestras reseñas en Google",
+    "stories": "Historias de pacientes"
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "h2": "Lo que",
+    "h2em": "preguntan los pacientes"
+  },
+  "commit": {
+    "eyebrow": "Nuestros compromisos",
+    "h2": "Lo que puede",
+    "h2em": "esperar"
+  },
+  "others": {
+    "eyebrow": "Nuestro equipo",
+    "h2": "Otros dentistas",
+    "h2em": "de Greenfield",
+    "view": "Ver perfil"
+  },
+  "cta": {
+    "eyebrow": "Su próximo paso",
+    "wa": "WhatsApp +84 906 621 988",
+    "send": "Enviar un mensaje",
+    "hours": "Abierto todos los días de 8:00 a 18:00 (última cita 17:30) · Revisión y consulta gratuitas",
+    "allDoctors": "Todos los dentistas de Greenfield",
+    "loungeAlt": "Sala de espera de Greenfield Dental, Hanói"
+  },
   "footer": {
     "blurb": "Odontología de calidad en el corazón de Hanói, para pacientes locales e internacionales.",
     "treatments": "Tratamientos",
-    "treatmentLinks": [["Implantes dentales", "implants"], ["Carillas de porcelana", "veneers"], ["Invisalign", "invisalign"], ["Brackets", "braces"], ["Coronas dentales", "crowns"], ["Blanqueamiento dental", "whitening"], ["Odontología general", "general"]],
+    "treatmentLinks": [
+      [
+        "Implantes dentales",
+        "implants"
+      ],
+      [
+        "Carillas de porcelana",
+        "veneers"
+      ],
+      [
+        "Invisalign",
+        "invisalign"
+      ],
+      [
+        "Brackets",
+        "braces"
+      ],
+      [
+        "Coronas dentales",
+        "crowns"
+      ],
+      [
+        "Blanqueamiento dental",
+        "whitening"
+      ],
+      [
+        "Odontología general",
+        "general"
+      ]
+    ],
     "clinic": "Clínica",
-    "clinicLinks": [["Nuestros dentistas", "doctors"], ["Galería de sonrisas", "gallery"], ["Opiniones de pacientes", "reviews"], ["Sobre Greenfield", "about"], ["Turismo dental", "tourism"], ["Preguntas frecuentes", "faq"], ["Contacto", "contact"]],
+    "clinicLinks": [
+      [
+        "Nuestros dentistas",
+        "doctors"
+      ],
+      [
+        "Galería de sonrisas",
+        "gallery"
+      ],
+      [
+        "Opiniones de pacientes",
+        "reviews"
+      ],
+      [
+        "Sobre Greenfield",
+        "about"
+      ],
+      [
+        "Turismo dental",
+        "tourism"
+      ],
+      [
+        "Preguntas frecuentes",
+        "faq"
+      ],
+      [
+        "Contacto",
+        "contact"
+      ]
+    ],
     "visit": "Visítenos",
     "address": "95 Trung Hoa, barrio Yen Hoa, Hanói, Vietnam",
     "hours": "Lunes a domingo, 8:00 – 18:00 (última cita 17:30)",
@@ -45,7 +228,98 @@
     "terms": "Términos"
   },
   "floatAria": "Escriba a {short} por WhatsApp",
-  "cookie": { "aria": "Cookies en greenfield.clinic", "title": "Cookies.", "text": "Solo usamos cookies de análisis y de medición publicitaria con su permiso.", "privacy": "Política de privacidad", "essential": "Esenciales", "essentialD": "siempre activas", "analytics": "Análisis", "analyticsD": "entender cómo se usa la web", "marketing": "Marketing", "marketingD": "medir qué anuncios ayudan a los pacientes a encontrarnos", "save": "Guardar selección", "rejectNE": "Rechazar las no esenciales", "accept": "Aceptar todas", "reject": "Rechazar", "settings": "Configurar" },
+  "cookie": {
+    "aria": "Cookies en greenfield.clinic",
+    "title": "Cookies.",
+    "text": "Solo usamos cookies de análisis y de medición publicitaria con su permiso.",
+    "privacy": "Política de privacidad",
+    "essential": "Esenciales",
+    "essentialD": "siempre activas",
+    "analytics": "Análisis",
+    "analyticsD": "entender cómo se usa la web",
+    "marketing": "Marketing",
+    "marketingD": "medir qué anuncios ayudan a los pacientes a encontrarnos",
+    "save": "Guardar selección",
+    "rejectNE": "Rechazar las no esenciales",
+    "accept": "Aceptar todas",
+    "reject": "Rechazar",
+    "settings": "Configurar"
+  },
   "ogTitle": "{name} ({nick}) — {jobTitle} | Greenfield Dental",
-  "twTitle": "{name} ({nick}) — Greenfield Dental"
+  "twTitle": "{name} ({nick}) — Greenfield Dental",
+  "v2": {
+    "nav": [
+      "Perfil",
+      "Especialidad",
+      "Proceso",
+      "Casos",
+      "Opiniones",
+      "Preguntas"
+    ],
+    "navM": [
+      "Perfil",
+      "Especialidad",
+      "Proceso de tratamiento",
+      "Casos",
+      "Opiniones",
+      "Preguntas"
+    ],
+    "book": "Reservar consulta",
+    "bookS": "Reservar consulta",
+    "viewCases": "Ver casos",
+    "trust": [
+      "Por qué confían",
+      "nuestros pacientes"
+    ],
+    "explore": "Ver especialidades",
+    "getAdvice": "Pedir consejo",
+    "casesH2": [
+      "Casos",
+      "clínicos"
+    ],
+    "casesIntro": "Fotos clínicas reales, publicadas con el consentimiento del paciente.",
+    "before": "Antes",
+    "after": "Después",
+    "drag": "Arrastre el control para comparar",
+    "caseLabel": "Caso",
+    "reviewsH2": "Lo que dicen<br>los pacientes",
+    "journeyH2": null,
+    "faqH2": [
+      "Preguntas",
+      "frecuentes"
+    ],
+    "guarH2": [
+      "La garantía",
+      "Greenfield"
+    ],
+    "guarIntro": "",
+    "ctaEyebrow": "Su próximo paso",
+    "ctaH2": "Dé el primer paso<br>hacia su nueva sonrisa",
+    "footH2": null,
+    "hours": "Abierto todos los días · 8:00 – 18:00",
+    "quick": "Enlaces rápidos",
+    "quickL": [
+      "Perfil",
+      "Especialidad",
+      "Casos clínicos",
+      "Opiniones",
+      "Preguntas"
+    ],
+    "touch": "Contacto",
+    "address": "95 Trung Hoa, Cau Giay, Hanói",
+    "social": "Redes sociales",
+    "copy": "© 2026 Greenfield Dental. Información solo de referencia; no sustituye un diagnóstico presencial.",
+    "cookies": "Configuración de cookies",
+    "certsH2": [
+      "Certificados",
+      "y formación"
+    ],
+    "expH2": [
+      "Especialidad",
+      "principal"
+    ],
+    "advH": "¿No sabe qué<br>tratamiento necesita?",
+    "menu": "Menú",
+    "lang": "Idioma"
+  }
 }

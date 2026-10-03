@@ -3,11 +3,87 @@
   "langAria": "Ngôn ngữ",
   "logoAria": "Trang chủ Nha khoa Greenfield",
   "navAria": "Menu chính",
-  "nav": { "services": "Dịch vụ", "results": "Kết quả", "about": "Về chúng tôi", "contact": "Liên hệ" },
+  "nav": {
+    "services": "Dịch vụ",
+    "results": "Kết quả",
+    "about": "Về chúng tôi",
+    "contact": "Liên hệ"
+  },
   "menus": {
-    "services": [["Cấy ghép implant", "implants"], ["Trồng răng toàn hàm", "allon4"], ["Răng sứ & Veneer", "crowns"], ["Niềng răng mắc cài", "braces"], ["Niềng răng Invisalign", "invisalign"], ["Kế hoạch điều trị phối hợp", "combined"], ["Điều trị tủy", "endo"], ["Tẩy trắng răng", "whitening"], ["Nha khoa tổng quát", "general"]],
-    "results": [["Kết quả điều trị", "gallery"], ["Đánh giá của khách hàng", "reviews"]],
-    "about": [["Đội ngũ bác sĩ", "doctors"], ["Về chúng tôi", "about"], ["Cơ sở vật chất", "facility"], ["Về nước làm răng", "overseas"], ["Câu hỏi thường gặp", "faq"], ["Kiến thức nha khoa", "blog"]],
+    "services": [
+      [
+        "Cấy ghép implant",
+        "implants"
+      ],
+      [
+        "Trồng răng toàn hàm",
+        "allon4"
+      ],
+      [
+        "Răng sứ & Veneer",
+        "crowns"
+      ],
+      [
+        "Niềng răng mắc cài",
+        "braces"
+      ],
+      [
+        "Niềng răng Invisalign",
+        "invisalign"
+      ],
+      [
+        "Kế hoạch điều trị phối hợp",
+        "combined"
+      ],
+      [
+        "Điều trị tủy",
+        "endo"
+      ],
+      [
+        "Tẩy trắng răng",
+        "whitening"
+      ],
+      [
+        "Nha khoa tổng quát",
+        "general"
+      ]
+    ],
+    "results": [
+      [
+        "Kết quả điều trị",
+        "gallery"
+      ],
+      [
+        "Đánh giá của khách hàng",
+        "reviews"
+      ]
+    ],
+    "about": [
+      [
+        "Đội ngũ bác sĩ",
+        "doctors"
+      ],
+      [
+        "Về chúng tôi",
+        "about"
+      ],
+      [
+        "Cơ sở vật chất",
+        "facility"
+      ],
+      [
+        "Về nước làm răng",
+        "overseas"
+      ],
+      [
+        "Câu hỏi thường gặp",
+        "faq"
+      ],
+      [
+        "Kiến thức nha khoa",
+        "blog"
+      ]
+    ],
     "mobileServices": 6,
     "mobileAbout": 4
   },
@@ -15,25 +91,160 @@
   "freeConsult": "Đặt lịch tư vấn",
   "openMenu": "Mở menu",
   "subnavAria": "Trong trang này",
-  "subnav": { "about": "Giới thiệu", "expertise": "Chuyên môn", "cases": "Ca điều trị", "reviews": "Đánh giá", "journey": "Quy trình", "faq": "Hỏi đáp" },
+  "subnav": {
+    "about": "Giới thiệu",
+    "expertise": "Chuyên môn",
+    "cases": "Ca điều trị",
+    "reviews": "Đánh giá",
+    "journey": "Quy trình",
+    "faq": "Hỏi đáp"
+  },
   "heroCta": "Tư vấn miễn phí với {short}",
   "viewCases": "Xem ca điều trị",
-  "expertise": { "eyebrow": "Chuyên môn chính", "h2": "{short}", "h2em": "điều trị gì", "learnMore": "Tìm hiểu thêm", "adviceH": "Chưa biết mình cần điều trị gì?", "adviceP": "Gửi ảnh răng và điều bạn đang băn khoăn. {short} sẽ gợi ý hướng điều trị phù hợp nhất.", "adviceBtn": "Nhận tư vấn" },
+  "expertise": {
+    "eyebrow": "Chuyên môn chính",
+    "h2": "{short}",
+    "h2em": "điều trị gì",
+    "learnMore": "Tìm hiểu thêm",
+    "adviceH": "Chưa biết mình cần điều trị gì?",
+    "adviceP": "Gửi ảnh răng và điều bạn đang băn khoăn. {short} sẽ gợi ý hướng điều trị phù hợp nhất.",
+    "adviceBtn": "Nhận tư vấn"
+  },
   "quoteAria": "Lời {short}",
   "quoteAlt": "{name} mỉm cười",
-  "certs": { "eyebrow": "Đào tạo", "edu": "Học vấn", "h2": "Chứng chỉ", "h2em": "& khóa đào tạo" },
-  "cases": { "eyebrow": "Ca điều trị", "h2": "Ca điều trị của", "team": { "implant": "đội ngũ implant Greenfield", "orthodontic": "đội ngũ chỉnh nha Greenfield", "restorative": "đội ngũ phục hình Greenfield" }, "intro": "Ảnh lâm sàng thật, đăng khi đã có sự đồng ý của khách hàng. Kéo thanh trượt để so sánh trước và sau.", "before": "Trước", "after": "Sau", "beforeAlt": "Trước điều trị: ", "afterAlt": "Sau điều trị: ", "compare": "So sánh trước và sau", "label": "Ca", "prev": "Ca trước", "next": "Ca tiếp theo" },
-  "reviews": { "eyebrow": "Đánh giá của khách hàng", "h2": "Khách hàng nói gì", "h2em": "về Greenfield", "count": "{n} đánh giá Google cho Nha khoa Greenfield", "p": "Đánh giá đến từ khách hàng của toàn bộ Nha khoa Greenfield. Đọc trên Google, hoặc xem câu chuyện của khách hàng trên website.", "google": "Đọc đánh giá trên Google", "stories": "Câu chuyện khách hàng" },
-  "faq": { "eyebrow": "Hỏi đáp", "h2": "Câu hỏi", "h2em": "thường gặp" },
-  "commit": { "eyebrow": "Cam kết của chúng tôi", "h2": "Những điều", "h2em": "bạn được đảm bảo" },
-  "others": { "eyebrow": "Đội ngũ", "h2": "Các bác sĩ khác", "h2em": "tại Greenfield", "view": "Xem hồ sơ" },
-  "cta": { "eyebrow": "Bước tiếp theo", "wa": "Nhắn Zalo 0906 621 988", "send": "Gọi 0906 621 988", "hours": "Thứ 2 – Chủ nhật, 8:00 – 18:00 (nhận lịch cuối 17:30) · Khám và tư vấn miễn phí", "allDoctors": "Đội ngũ bác sĩ Greenfield", "loungeAlt": "Phòng chờ của khách tại Nha khoa Greenfield, Hà Nội" },
+  "certs": {
+    "eyebrow": "Đào tạo",
+    "edu": "Học vấn",
+    "h2": "Chứng chỉ",
+    "h2em": "& khóa đào tạo"
+  },
+  "cases": {
+    "eyebrow": "Ca điều trị",
+    "h2": "Ca điều trị của",
+    "team": {
+      "implant": "đội ngũ implant Greenfield",
+      "orthodontic": "đội ngũ chỉnh nha Greenfield",
+      "restorative": "đội ngũ phục hình Greenfield"
+    },
+    "intro": "Ảnh lâm sàng thật, đăng khi đã có sự đồng ý của khách hàng. Kéo thanh trượt để so sánh trước và sau.",
+    "before": "Trước",
+    "after": "Sau",
+    "beforeAlt": "Trước điều trị: ",
+    "afterAlt": "Sau điều trị: ",
+    "compare": "So sánh trước và sau",
+    "label": "Ca",
+    "prev": "Ca trước",
+    "next": "Ca tiếp theo"
+  },
+  "reviews": {
+    "eyebrow": "Đánh giá của khách hàng",
+    "h2": "Khách hàng nói gì",
+    "h2em": "về Greenfield",
+    "count": "{n} đánh giá Google cho Nha khoa Greenfield",
+    "p": "Đánh giá đến từ khách hàng của toàn bộ Nha khoa Greenfield. Đọc trên Google, hoặc xem câu chuyện của khách hàng trên website.",
+    "google": "Đọc đánh giá trên Google",
+    "stories": "Câu chuyện khách hàng"
+  },
+  "faq": {
+    "eyebrow": "Hỏi đáp",
+    "h2": "Câu hỏi",
+    "h2em": "thường gặp"
+  },
+  "commit": {
+    "eyebrow": "Cam kết của chúng tôi",
+    "h2": "Những điều",
+    "h2em": "bạn được đảm bảo"
+  },
+  "others": {
+    "eyebrow": "Đội ngũ",
+    "h2": "Các bác sĩ khác",
+    "h2em": "tại Greenfield",
+    "view": "Xem hồ sơ"
+  },
+  "cta": {
+    "eyebrow": "Bước tiếp theo",
+    "wa": "Nhắn Zalo 0906 621 988",
+    "send": "Gọi 0906 621 988",
+    "hours": "Thứ 2 – Chủ nhật, 8:00 – 18:00 (nhận lịch cuối 17:30) · Khám và tư vấn miễn phí",
+    "allDoctors": "Đội ngũ bác sĩ Greenfield",
+    "loungeAlt": "Phòng chờ của khách tại Nha khoa Greenfield, Hà Nội"
+  },
   "footer": {
     "blurb": "Nha khoa chất lượng cao giữa trung tâm Hà Nội, cho khách trong nước và quốc tế.",
     "treatments": "Dịch vụ",
-    "treatmentLinks": [["Cấy ghép implant", "implants"], ["Trồng răng toàn hàm", "allon4"], ["Răng sứ & Veneer", "crowns"], ["Niềng răng", "ortho"], ["Niềng răng Invisalign", "invisalign"], ["Kế hoạch điều trị phối hợp", "combined"], ["Tẩy trắng răng", "whitening"], ["Nha khoa tổng quát", "general"]],
+    "treatmentLinks": [
+      [
+        "Cấy ghép implant",
+        "implants"
+      ],
+      [
+        "Trồng răng toàn hàm",
+        "allon4"
+      ],
+      [
+        "Răng sứ & Veneer",
+        "crowns"
+      ],
+      [
+        "Niềng răng",
+        "ortho"
+      ],
+      [
+        "Niềng răng Invisalign",
+        "invisalign"
+      ],
+      [
+        "Kế hoạch điều trị phối hợp",
+        "combined"
+      ],
+      [
+        "Tẩy trắng răng",
+        "whitening"
+      ],
+      [
+        "Nha khoa tổng quát",
+        "general"
+      ]
+    ],
     "clinic": "Phòng khám",
-    "clinicLinks": [["Về chúng tôi", "about"], ["Đội ngũ bác sĩ", "doctors"], ["Cơ sở vật chất", "facility"], ["Kết quả điều trị", "gallery"], ["Kiến thức nha khoa", "blog"], ["Về nước làm răng", "overseas"], ["Chính sách bảo hành", "warranty"], ["Câu hỏi thường gặp", "faq"], ["Liên hệ", "contact"]],
+    "clinicLinks": [
+      [
+        "Về chúng tôi",
+        "about"
+      ],
+      [
+        "Đội ngũ bác sĩ",
+        "doctors"
+      ],
+      [
+        "Cơ sở vật chất",
+        "facility"
+      ],
+      [
+        "Kết quả điều trị",
+        "gallery"
+      ],
+      [
+        "Kiến thức nha khoa",
+        "blog"
+      ],
+      [
+        "Về nước làm răng",
+        "overseas"
+      ],
+      [
+        "Chính sách bảo hành",
+        "warranty"
+      ],
+      [
+        "Câu hỏi thường gặp",
+        "faq"
+      ],
+      [
+        "Liên hệ",
+        "contact"
+      ]
+    ],
     "visit": "Ghé thăm",
     "address": "95 Trung Hoà, phường Yên Hoà, Hà Nội",
     "hours": "Thứ 2 – Chủ nhật, 8:00 – 18:00 (nhận lịch cuối 17:30)",
@@ -45,8 +256,102 @@
     "terms": "Điều khoản"
   },
   "floatAria": "Nhắn Zalo với {short}",
-  "vi": { "zaloCta": "Nhắn Zalo với {short}", "waLink": "Hoặc nhắn WhatsApp" },
-  "cookie": { "aria": "Cookie trên greenfield.clinic", "title": "Cookie.", "text": "Chúng tôi chỉ dùng cookie phân tích và đo lường quảng cáo khi bạn cho phép.", "privacy": "Chính sách bảo mật", "essential": "Cần thiết", "essentialD": "luôn bật", "analytics": "Phân tích", "analyticsD": "hiểu cách website được sử dụng", "marketing": "Tiếp thị", "marketingD": "đo lường quảng cáo nào giúp khách tìm đến chúng tôi", "save": "Lưu lựa chọn", "rejectNE": "Từ chối cookie không cần thiết", "accept": "Đồng ý tất cả", "reject": "Từ chối", "settings": "Tùy chỉnh" },
+  "vi": {
+    "zaloCta": "Nhắn Zalo với {short}",
+    "waLink": "Hoặc nhắn WhatsApp"
+  },
+  "cookie": {
+    "aria": "Cookie trên greenfield.clinic",
+    "title": "Cookie.",
+    "text": "Chúng tôi chỉ dùng cookie phân tích và đo lường quảng cáo khi bạn cho phép.",
+    "privacy": "Chính sách bảo mật",
+    "essential": "Cần thiết",
+    "essentialD": "luôn bật",
+    "analytics": "Phân tích",
+    "analyticsD": "hiểu cách website được sử dụng",
+    "marketing": "Tiếp thị",
+    "marketingD": "đo lường quảng cáo nào giúp khách tìm đến chúng tôi",
+    "save": "Lưu lựa chọn",
+    "rejectNE": "Từ chối cookie không cần thiết",
+    "accept": "Đồng ý tất cả",
+    "reject": "Từ chối",
+    "settings": "Tùy chỉnh"
+  },
   "ogTitle": "{name} ({nick}) — {jobTitle} | Nha khoa Greenfield",
-  "twTitle": "{name} ({nick}) — Nha khoa Greenfield"
+  "twTitle": "{name} ({nick}) — Nha khoa Greenfield",
+  "v2": {
+    "nav": [
+      "Giới thiệu",
+      "Chuyên môn",
+      "Quy trình",
+      "Ca điều trị",
+      "Đánh giá",
+      "Hỏi đáp"
+    ],
+    "navM": [
+      "Giới thiệu",
+      "Chuyên môn",
+      "Quy trình điều trị",
+      "Ca điều trị",
+      "Đánh giá",
+      "Hỏi đáp"
+    ],
+    "book": "Đặt lịch tư vấn",
+    "bookS": "Đặt lịch tư vấn",
+    "viewCases": "Xem ca điều trị",
+    "trust": [
+      "Vì sao khách hàng",
+      "tin tưởng {short}"
+    ],
+    "explore": "Khám phá chuyên môn",
+    "getAdvice": "Nhận tư vấn",
+    "casesH2": [
+      "Ca",
+      "điều trị"
+    ],
+    "casesIntro": "Ảnh lâm sàng thật, đăng khi đã có sự đồng ý của khách hàng.",
+    "before": "Trước",
+    "after": "Sau",
+    "drag": "Kéo thanh trượt để so sánh",
+    "caseLabel": "Ca",
+    "reviewsH2": "Khách hàng<br>nói gì",
+    "journeyH2": null,
+    "faqH2": [
+      "Câu hỏi",
+      "thường gặp"
+    ],
+    "guarH2": [
+      "Cam kết",
+      "Greenfield"
+    ],
+    "guarIntro": "",
+    "ctaEyebrow": "Bước tiếp theo",
+    "ctaH2": "Bước đầu tiên<br>cho nụ cười mới",
+    "footH2": null,
+    "hours": "Thứ 2 – Chủ nhật · 8:00 – 18:00",
+    "quick": "Liên kết nhanh",
+    "quickL": [
+      "Giới thiệu",
+      "Chuyên môn",
+      "Ca điều trị",
+      "Đánh giá",
+      "Hỏi đáp"
+    ],
+    "touch": "Liên hệ",
+    "address": "95 Trung Hoà, Cầu Giấy, Hà Nội",
+    "social": "Mạng xã hội",
+    "copy": "© 2026 Nha khoa Greenfield. Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán trực tiếp.",
+    "cookies": "Cài đặt cookie",
+    "certsH2": [
+      "Chứng chỉ",
+      "& đào tạo"
+    ],
+    "expH2": [
+      "Chuyên môn",
+      "chính"
+    ],
+    "advH": "Chưa biết mình cần<br>điều trị gì?",
+    "menu": "Menu",
+    "lang": "Ngôn ngữ"
+  }
 }
