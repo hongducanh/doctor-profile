@@ -1,0 +1,631 @@
+{
+ "v": 1,
+ "generatedFrom": "doctor-profile/_build (build-page.mjs exportData)",
+ "key": "hailey",
+ "slug": "dr-pham-thi-thu-hien",
+ "name": "BS. Phạm Thị Thu Hiền",
+ "nick": "BS. Hailey",
+ "short": "BS. Hailey",
+ "jobTitle": "Bác sĩ nha khoa tổng quát & phục hình",
+ "title": "BS. Phạm Thị Thu Hiền (BS. Hailey) — Bác sĩ phục hình | Nha khoa Greenfield",
+ "description": "BS. Phạm Thị Thu Hiền (BS. Hailey), bác sĩ tổng quát và phục hình tại Nha khoa Greenfield, Hà Nội: veneer, mão sứ, inlay/onlay, điều trị tủy dưới kính hiển vi. 6+ năm, 200+ ca.",
+ "specialty": [
+  "Restorative dentistry",
+  "Endodontics",
+  "General dentistry"
+ ],
+ "alumni": [
+  "Hanoi Medical University"
+ ],
+ "waText": "Chào Nha khoa Greenfield, tôi muốn được tư vấn với BS. Hailey.",
+ "ogImage": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-og-1200x630.jpg",
+ "hreflang": {
+  "en": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien",
+  "vi": "https://www.nhakhoagreenfield.com/vi/bac-si/dr-pham-thi-thu-hien",
+  "es": "https://doctors.greenfield.clinic/es/dr-pham-thi-thu-hien",
+  "ko": "https://doctors.greenfield.clinic/ko/dr-pham-thi-thu-hien",
+  "zh-Hans": "https://doctors.greenfield.clinic/zh/dr-pham-thi-thu-hien"
+ },
+ "hero": {
+  "eyebrow": "Bác sĩ RHM | Nha khoa tổng quát & thẩm mỹ",
+  "h1": [
+   "BS.",
+   "Thu Hiền"
+  ],
+  "checks": [
+   "Chỉnh nha",
+   "Nha khoa tổng quát",
+   "Nha khoa phục hồi & thẩm mỹ"
+  ],
+  "lead": "BS. Phạm Thị Thu Hiền (BS. Hailey) là bác sĩ nha khoa tổng quát, đặc biệt quan tâm đến nha khoa phục hồi và thẩm mỹ. Bác sĩ tin rằng phương án điều trị tốt nhất không phải lúc nào cũng là phương án can thiệp nhiều nhất. Bằng cách bảo tồn tối đa mô răng khỏe mạnh, bác sĩ giúp bệnh nhân đạt được kết quả tự nhiên và được thiết kế để bền lâu.",
+  "badge": {
+   "n": "6+",
+   "l": "Năm kinh nghiệm"
+  },
+  "portrait": {
+   "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-800.avif 800w",
+   "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-800.webp 800w",
+   "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-800.webp",
+   "w": 800,
+   "h": 949,
+   "alt": "BS. Phạm Thị Thu Hiền (BS. Hailey), bác sĩ tổng quát và phục hình tại Nha khoa Greenfield"
+  }
+ },
+ "trust": {
+  "h2": [
+   "Vì sao bệnh nhân",
+   "tin tưởng bác sĩ"
+  ],
+  "p": "Xuất phát từ niềm tin rằng nụ cười là một trong những nét đặc trưng nhất của mỗi người, BS. Hailey đã chọn nghề nha khoa để giúp bệnh nhân gìn giữ cả sức khỏe răng miệng lẫn vẻ đẹp tự nhiên.",
+  "stats": [
+   {
+    "k": "Kinh nghiệm",
+    "n": "6+",
+    "l": "Năm kinh nghiệm"
+   },
+   {
+    "k": "Bệnh nhân",
+    "n": "1.000+",
+    "l": "Bệnh nhân đã điều trị"
+   },
+   {
+    "k": "Thẩm mỹ",
+    "n": "200+",
+    "l": "Ca mặt dán sứ/mão sứ đã hoàn thành"
+   },
+   {
+    "k": "Phục hình",
+    "n": "400+",
+    "l": "Ca phục hình"
+   }
+  ]
+ },
+ "about": {
+  "img": {
+   "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-800.avif 800w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-1200.avif 1200w",
+   "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-800.webp 800w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-1200.webp 1200w",
+   "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-treating-patient-1200.webp",
+   "w": 1200,
+   "h": 917,
+   "alt": "BS. Hailey điều trị cho khách tại Nha khoa Greenfield"
+  },
+  "pos": "center",
+  "eyebrow": "Về BS. Phạm Thị Thu Hiền",
+  "h2": "Răng khỏe mạnh.<br>Nụ cười tự tin.",
+  "p": "Cung cấp dịch vụ nha khoa tổng quát và thẩm mỹ toàn diện, từ chăm sóc định kỳ đến mặt dán sứ veneer, mão sứ và thiết kế lại toàn bộ nụ cười — chú trọng kết quả tự nhiên và bền lâu.",
+  "explore": "Khám phá chuyên môn của bác sĩ",
+  "chips": [
+   {
+    "t": "Trường Đại học Y Hà Nội",
+    "s": "Bác sĩ Răng Hàm Mặt"
+   },
+   {
+    "t": "Nha khoa tổng quát",
+    "s": "Dự phòng · Phục hồi · Chăm sóc gia đình"
+   },
+   {
+    "t": "Nha khoa thẩm mỹ",
+    "s": "Mặt dán sứ veneer · Thiết kế nụ cười · Tẩy trắng răng"
+   }
+  ]
+ },
+ "expertise": {
+  "h2": [
+   "Chuyên môn",
+   "chính"
+  ],
+  "items": [
+   {
+    "t": "Vi phẫu nội nha<br>dưới kính hiển vi",
+    "s": "Điều trị tủy · Điều trị tủy lại · Cắt chóp chân răng",
+    "img": null
+   },
+   {
+    "t": "Khay niềng trong suốt<br>và mắc cài hiện đại",
+    "s": "Invisalign · G-FLEX · Mắc cài sứ",
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/shared/img/clear-aligner-in-hand-480.avif 480w, https://doctors.greenfield.clinic/shared/img/clear-aligner-in-hand-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/shared/img/clear-aligner-in-hand-480.webp 480w, https://doctors.greenfield.clinic/shared/img/clear-aligner-in-hand-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/shared/img/clear-aligner-in-hand-800.webp",
+     "w": 800,
+     "h": 1200,
+     "alt": "Khay niềng trong suốt và mắc cài hiện đại"
+    }
+   },
+   {
+    "t": "Nha khoa phục hồi<br>và tái tạo nụ cười",
+    "s": "Mặt dán sứ veneer · Mão toàn sứ · Inlay & Onlay",
+    "img": null
+   },
+   {
+    "t": "Điều chỉnh khớp cắn<br>và các ca chỉnh nha phức tạp",
+    "s": "Răng chen chúc · Cắn sâu · Cắn chéo · Sai khớp cắn",
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/shared/img/dental-examination-480.avif 480w, https://doctors.greenfield.clinic/shared/img/dental-examination-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/shared/img/dental-examination-480.webp 480w, https://doctors.greenfield.clinic/shared/img/dental-examination-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/shared/img/dental-examination-800.webp",
+     "w": 800,
+     "h": 1040,
+     "alt": "Điều chỉnh khớp cắn và các ca chỉnh nha phức tạp"
+    }
+   },
+   {
+    "t": "Phục hình chính xác<br>cho nụ cười tự nhiên",
+    "s": "Phục hình sứ · Mão răng · Phục hồi chức năng",
+    "img": null
+   }
+  ],
+  "advice": {
+   "h": "Chưa rõ mình cần<br>phương án điều trị nào?",
+   "p": "Hãy gửi cho chúng tôi ảnh chụp răng và chia sẻ những băn khoăn của bạn. BS. Hailey sẽ tư vấn phương án điều trị phù hợp nhất.",
+   "btn": "Nhận tư vấn"
+  }
+ },
+ "quote": {
+  "img": {
+   "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-seated-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-seated-800.avif 800w",
+   "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-seated-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-seated-800.webp 800w",
+   "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-seated-800.webp",
+   "w": 800,
+   "h": 856,
+   "alt": "BS. Phạm Thị Thu Hiền"
+  },
+  "text": "Chiếc răng khỏe mạnh nhất luôn là răng thật của bạn. Vai trò của tôi là giúp bạn giữ gìn nó lâu nhất có thể.",
+  "em": "",
+  "by": "BS. Phạm Thị Thu Hiền - Hailey",
+  "role": "Bác sĩ Răng Hàm Mặt tại Greenfield Dental"
+ },
+ "certs": {
+  "h2": [
+   "Chứng chỉ &",
+   "giải thưởng"
+  ],
+  "items": [
+   {
+    "t": "Bác sĩ Răng Hàm Mặt",
+    "s": "Trường Đại học Y Hà Nội",
+    "contain": false,
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-dds-hmu-480.avif 480w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-dds-hmu-480.webp 480w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-dds-hmu-480.webp",
+     "w": 480,
+     "h": 296,
+     "alt": "Bác sĩ Răng Hàm Mặt"
+    }
+   },
+   {
+    "t": "Invisalign – Lớp chuyên sâu HAO Master Class",
+    "s": "Invisalign",
+    "contain": false,
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-invisalign-hao-447.avif 447w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-invisalign-hao-447.webp 447w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-invisalign-hao-447.webp",
+     "w": 447,
+     "h": 447,
+     "alt": "Invisalign – Lớp chuyên sâu HAO Master Class"
+    }
+   },
+   {
+    "t": "Khóa đào tạo Chỉnh nha trên Typodont tại Hà Nội",
+    "s": "JM Ortho",
+    "contain": false,
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-jm-ortho-480.avif 480w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-jm-ortho-480.webp 480w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-jm-ortho-480.webp",
+     "w": 480,
+     "h": 271,
+     "alt": "Khóa đào tạo Chỉnh nha trên Typodont tại Hà Nội"
+    }
+   },
+   {
+    "t": "Mặt dán sứ veneer & Phục hồi toàn hàm nâng cao",
+    "s": "Dental Milestones Guaranteed",
+    "contain": true,
+    "img": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-advanced-veneers-dmg-447.avif 447w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-advanced-veneers-dmg-447.webp 447w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/cert-advanced-veneers-dmg-447.webp",
+     "w": 447,
+     "h": 447,
+     "alt": "Mặt dán sứ veneer & Phục hồi toàn hàm nâng cao"
+    }
+   }
+  ]
+ },
+ "cases": {
+  "h2": [
+   "Ca lâm sàng",
+   "tiêu biểu"
+  ],
+  "intro": "Hình ảnh lâm sàng thực tế, được đăng tải với sự đồng ý của bệnh nhân.",
+  "label": "Ca",
+  "drag": "Kéo thanh trượt để so sánh",
+  "compare": "So sánh trước và sau",
+  "prev": "Ca trước",
+  "next": "Ca tiếp theo",
+  "before": "Trước",
+  "after": "Sau",
+  "items": [
+   {
+    "t": "Mòn răng nặng kèm ê buốt",
+    "d": "Mão sứ Ceramill Zolid và mặt dán sứ E.max Press để phục hồi mô răng bị mòn, cải thiện chức năng, sự thoải mái và thẩm mỹ tổng thể của nụ cười.",
+    "m": "2 lần hẹn · Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mòn răng nặng kèm ê buốt"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-01-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mòn răng nặng kèm ê buốt"
+    }
+   },
+   {
+    "t": "Mất nhiều răng kèm tiêu xương",
+    "d": "Mão sứ zirconia để phục hồi các răng bị tổn hại, cải thiện chức năng ăn nhai và sự ổn định, đồng thời nâng cao vẻ đẹp tổng thể của nụ cười.",
+    "m": "2 lần hẹn · Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mất nhiều răng kèm tiêu xương"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-02-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mất nhiều răng kèm tiêu xương"
+    }
+   },
+   {
+    "t": "Mất răng kèm sâu răng diện rộng và mòn răng",
+    "d": "Mão sứ Ceramill Zolid để tái tạo mô răng đã mất, phục hồi các răng bị tổn hại và cải thiện sự thoải mái, chức năng cũng như sự hài hòa của nụ cười.",
+    "m": "2 lần hẹn · Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mất răng kèm sâu răng diện rộng và mòn răng"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-03-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mất răng kèm sâu răng diện rộng và mòn răng"
+    }
+   },
+   {
+    "t": "Mất răng kèm tiêu xương và mòn răng nặng",
+    "d": "Implant Dentium và mão sứ zirconia để thay thế răng mất và phục hồi các răng bị mòn, cải thiện chức năng ăn nhai, sự ổn định và thẩm mỹ nụ cười.",
+    "m": "3 lần hẹn · Implant & Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mất răng kèm tiêu xương và mòn răng nặng"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-04-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mất răng kèm tiêu xương và mòn răng nặng"
+    }
+   },
+   {
+    "t": "Mất và gãy nhiều răng kèm sâu răng lan sâu",
+    "d": "Mão sứ zirconia và phục hồi bằng Biodentine để tái tạo và bảo vệ các răng bị tổn hại, phục hồi chức năng ăn nhai, sự thoải mái và sự ổn định răng miệng.",
+    "m": "3 lần hẹn · Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mất và gãy nhiều răng kèm sâu răng lan sâu"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-05-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mất và gãy nhiều răng kèm sâu răng lan sâu"
+    }
+   },
+   {
+    "t": "Mất nhiều răng kèm mòn răng nặng",
+    "d": "Implant Straumann và mão sứ zirconia để thay thế răng mất và phục hồi các răng bị mòn, cải thiện độ ổn định khớp cắn, chức năng ăn nhai và thẩm mỹ nụ cười.",
+    "m": "3 lần hẹn · Implant & Nha khoa phục hồi",
+    "before": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-before-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-before-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-before-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-before-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-before-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Trước điều trị: Mất nhiều răng kèm mòn răng nặng"
+    },
+    "after": {
+     "avif": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-after-480.avif 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-after-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-after-480.webp 480w, https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-after-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/restorative-case-06-after-800.webp",
+     "w": 800,
+     "h": 800,
+     "alt": "Sau điều trị: Mất nhiều răng kèm mòn răng nặng"
+    }
+   }
+  ]
+ },
+ "reviews": {
+  "h2": "Bệnh nhân<br>nói gì về chúng tôi",
+  "items": [
+   {
+    "n": "Emily Helen",
+    "c": "Vương quốc Anh",
+    "f": "gb",
+    "s": "“BS. Hailey thực sự xuất sắc. Bác sĩ có tay nghề rất giỏi, chuyên nghiệp và chu đáo trong mọi buổi hẹn. Sự tỉ mỉ của bác sĩ giúp tôi hoàn toàn yên tâm về quá trình điều…”"
+   },
+   {
+    "n": "Sophie",
+    "c": "Úc",
+    "f": "au",
+    "s": "“Ngay từ buổi tư vấn đầu tiên, BS. Hailey đã khiến tôi cảm thấy hoàn toàn thoải mái. Bác sĩ không chỉ tài năng, chuyên nghiệp mà còn vô cùng chu đáo đến từng chi tiết…”"
+   },
+   {
+    "n": "Olivia",
+    "c": "Anh",
+    "f": "gb",
+    "s": "“Chọn BS. Hailey để chỉnh nha là một trong những quyết định đúng đắn nhất của tôi. Bác sĩ kết hợp chuyên môn vững vàng với cách làm việc cẩn thận và chuyên nghiệp. Mọi…”"
+   },
+   {
+    "n": "Charlotte",
+    "c": "Canada",
+    "f": "ca",
+    "s": "“BS. Hailey thật tuyệt vời trong công việc của mình. Bác sĩ xinh đẹp, ấm áp, vô cùng chuyên nghiệp và rõ ràng rất đam mê nghề. Tôi rất ấn tượng với cách bác sĩ lên kế…”"
+   },
+   {
+    "n": "Libby C.",
+    "c": "Úc",
+    "f": "au",
+    "s": "“BS. Hailey đã biến hành trình chỉnh nha của tôi thành một trải nghiệm thật tích cực. Bác sĩ có kiến thức sâu rộng, chính xác và chu đáo, đồng thời luôn khiến tôi cảm…”"
+   },
+   {
+    "n": "Anna",
+    "c": "Anh",
+    "f": "gb",
+    "s": "“Tôi đã ấn tượng với BS. Hailey ngay từ đầu. Bác sĩ rất chuyên nghiệp, nhẹ nhàng và cực kỳ chính xác trong công việc. Mỗi buổi hẹn đều được lên kế hoạch cẩn thận, và bác…”"
+   },
+   {
+    "n": "Rachel",
+    "c": "Singapore",
+    "f": "sg",
+    "s": "“BS. Hailey là một bác sĩ chỉnh nha xuất sắc. Bác sĩ vô cùng chuyên nghiệp và tỉ mỉ, nhưng cũng rất ấm áp và dễ gần. Tôi thực sự trân trọng việc bác sĩ theo dõi sát sao…”"
+   },
+   {
+    "n": "Yuki",
+    "c": "Nhật Bản",
+    "f": "jp",
+    "s": "“BS. Hailey là một bác sĩ thật tuyệt vời. Bác sĩ rất nhẹ nhàng, chuyên nghiệp và vô cùng cẩn thận với từng chi tiết. Tôi luôn cảm thấy được lắng nghe và chăm sóc chu…”"
+   },
+   {
+    "n": "Minji",
+    "c": "Hàn Quốc",
+    "f": "kr",
+    "s": "“Tôi rất biết ơn vì đã có BS. Hailey là bác sĩ chỉnh nha của mình. Bác sĩ tài năng, chuyên nghiệp và vô cùng chu đáo. Cách làm việc cẩn thận và con mắt tinh tế của bác…”"
+   },
+   {
+    "n": "Linh",
+    "c": "Việt Nam",
+    "f": "vn",
+    "s": "“Bác sĩ Hailey rất tận tâm và chuyên nghiệp. Mình đặc biệt ấn tượng với sự chỉn chu và tỉ mỉ của bác sĩ trong từng giai đoạn điều trị. Bác sĩ luôn giải thích rõ ràng,…”"
+   }
+  ]
+ },
+ "journey": {
+  "h2": [
+   "Hành trình",
+   "Greenfield"
+  ],
+  "intro": "Bảy bước cố định cho mọi ca điều trị, để bệnh nhân luôn biết mình đang ở giai đoạn nào.",
+  "steps": [
+   {
+    "t": "Trước khi đến",
+    "d": "Ảnh chụp, phim X-quang và tư vấn trước chuyến đi."
+   },
+   {
+    "t": "Đón tại sân bay",
+    "d": "Đưa đón thoải mái khi bạn đến Việt Nam."
+   },
+   {
+    "t": "Thăm khám & tư vấn",
+    "d": "Khám trực tiếp và quét 3D cùng BS. Hailey."
+   },
+   {
+    "t": "Kế hoạch điều trị",
+    "d": "Kế hoạch, lộ trình rõ ràng và chi phí cố định."
+   },
+   {
+    "t": "Điều trị",
+    "d": "Thực hiện các thủ thuật chỉnh nha hoặc phục hình."
+   },
+   {
+    "t": "Chăm sóc trong thời gian lưu trú",
+    "d": "Hỗ trợ hồi phục trong suốt phần còn lại của chuyến đi."
+   },
+   {
+    "t": "Theo dõi sau điều trị",
+    "d": "Kiểm tra từ xa sau khi bạn về nước."
+   }
+  ]
+ },
+ "faq": {
+  "h2": [
+   "Câu hỏi",
+   "thường gặp"
+  ],
+  "items": [
+   {
+    "q": "Điều trị chỉnh nha thường kéo dài bao lâu?",
+    "a": "Quá trình điều trị thường kéo dài 12–24 tháng, nhưng thời gian cụ thể phụ thuộc vào mức độ sai khớp cắn, phương pháp điều trị và mức độ tuân thủ hướng dẫn của bệnh nhân."
+   },
+   {
+    "q": "Vì sao hàm duy trì quan trọng sau khi chỉnh nha?",
+    "a": "Răng có thể tự dịch chuyển sau điều trị. Hàm duy trì giúp giữ răng ở vị trí đã được điều chỉnh và giảm nguy cơ tái phát sau chỉnh nha."
+   },
+   {
+    "q": "Răng đã điều trị tủy có thể bị nhiễm trùng lại không?",
+    "a": "Có. Tình trạng tái nhiễm trùng có thể xảy ra do còn ống tủy chưa được điều trị, rò rỉ, sâu răng mới, nứt răng hoặc phục hình chưa đạt yêu cầu. Làm sạch, trám bít kín và phục hình cuối cùng đúng cách là yếu tố then chốt để đạt hiệu quả lâu dài."
+   },
+   {
+    "q": "Làm sao để biết tôi cần mặt dán sứ veneer hay mão sứ?",
+    "a": "Mặt dán sứ veneer có thể phù hợp để cải thiện hình dáng, màu sắc răng và các khuyết điểm thẩm mỹ nhỏ khi răng vẫn còn đủ men khỏe mạnh. Mão sứ thường được cân nhắc khi răng đã suy yếu đáng kể hoặc bị tổn hại về cấu trúc."
+   },
+   {
+    "q": "Có những lựa chọn nào để thay thế răng đã mất?",
+    "a": "Tùy theo số lượng và tình trạng răng mất, các lựa chọn có thể bao gồm cấy ghép Implant, cầu răng trên Implant, cầu răng truyền thống hoặc hàm giả tháo lắp."
+   }
+  ]
+ },
+ "guarantees": {
+  "h2": [
+   "Cam kết",
+   "Greenfield"
+  ],
+  "intro": "Sáu cam kết được ghi rõ trong hồ sơ điều trị của mỗi bệnh nhân.",
+  "items": [
+   {
+    "t": "Bảo hành điều trị",
+    "d": "Bảo hành bằng văn bản cho khí cụ chỉnh nha và các phục hình lớn.",
+    "icon": "M9 12.5l2 2 4-4M5 7l7-3 7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V7z"
+   },
+   {
+    "t": "Chi phí minh bạch, cố định",
+    "d": "Một mức giá duy nhất được báo sau buổi tư vấn, không phát sinh chi phí ẩn.",
+    "icon": "M11.2 3.5H20v8.8l-8.4 8.4a1.4 1.4 0 01-2 0l-6.8-6.8a1.4 1.4 0 010-2zM16.3 7.7h.01"
+   },
+   {
+    "t": "Hỗ trợ bệnh nhân quốc tế",
+    "d": "Đón sân bay, phiên dịch và lên kế hoạch chuyến đi đều được chúng tôi lo liệu.",
+    "icon": "M2.5 12a9.5 9.5 0 1119 0 9.5 9.5 0 01-19 0zM3 12h18M12 2.5c2.4 2.5 3.8 5.9 3.8 9.5S14.4 19 12 21.5c-2.4-2.5-3.8-5.9-3.8-9.5S9.6 5 12 2.5z"
+   },
+   {
+    "t": "Công nghệ & vật liệu hiện đại",
+    "d": "Quét kỹ thuật số, lập kế hoạch điều trị 3D và hệ thống khay niềng cao cấp.",
+    "icon": "M3.5 5.5h17v10h-17zM3.5 10.5h17M9 19h6M12 15.5V19"
+   },
+   {
+    "t": "Chăm sóc sau điều trị & theo dõi từ xa",
+    "d": "Kiểm tra và hỗ trợ lâu dài, kể cả khi bạn đã về nước.",
+    "icon": "M3.5 12a8.5 8.5 0 1114.6 5.9M20.5 12a8.5 8.5 0 01-14.6 5.9M12 8v4l2.6 1.6"
+   },
+   {
+    "t": "Chất lượng đáng tin cậy",
+    "d": "Uy tín được xây dựng từ hàng nghìn ca điều trị đã hoàn thành.",
+    "icon": "M12 3l2.6 5.4 5.9.8-4.3 4.1 1.1 5.9-5.3-2.9-5.3 2.9 1.1-5.9L3.5 9.2l5.9-.8L12 3z"
+   }
+  ]
+ },
+ "others": {
+  "eyebrow": "Đội ngũ",
+  "h2": "Các bác sĩ khác",
+  "h2em": "tại Greenfield",
+  "view": "Xem hồ sơ",
+  "items": [
+   {
+    "slug": "dr-ta-hong-nhung",
+    "name": "BS. Tạ Hồng Nhung",
+    "nick": "BS. Kate",
+    "card": "Giám đốc chuyên môn · Chỉnh nha",
+    "portrait": {
+     "avif": "https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-480.avif 480w, https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-480.webp 480w, https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-800.webp",
+     "w": 800,
+     "h": 1293,
+     "alt": "BS. Tạ Hồng Nhung (BS. Kate), nhà sáng lập và giám đốc chuyên môn Nha khoa Greenfield"
+    }
+   },
+   {
+    "slug": "dr-do-nhu-chuyen",
+    "name": "BS. Đỗ Như Chuyên",
+    "nick": "BS. Chris",
+    "card": "Cấy ghép implant",
+    "portrait": {
+     "avif": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-480.avif 480w, https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-480.webp 480w, https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-800.webp",
+     "w": 800,
+     "h": 1213,
+     "alt": "BS. Đỗ Như Chuyên (BS. Chris), bác sĩ cấy ghép implant tại Nha khoa Greenfield"
+    }
+   },
+   {
+    "slug": "dr-nguyen-duc-hieu",
+    "name": "BS. Nguyễn Đức Hiệu",
+    "nick": "BS. Henry",
+    "card": "Cấy ghép implant",
+    "portrait": {
+     "avif": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-480.avif 480w, https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-800.avif 800w",
+     "webp": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-480.webp 480w, https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-800.webp 800w",
+     "src": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-800.webp",
+     "w": 800,
+     "h": 1247,
+     "alt": "BS. Nguyễn Đức Hiệu (BS. Henry), bác sĩ cấy ghép implant tại Nha khoa Greenfield"
+    }
+   },
+   {
+    "slug": "dr-tran-thi-giang",
+    "name": "BS. Trần Thị Giang",
+    "nick": "BS. Giang",
+    "card": "Chỉnh nha & nha khoa tổng quát",
+    "portrait": {
+     "avif": "https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-480.avif 480w, https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-792.avif 792w",
+     "webp": "https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-480.webp 480w, https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-792.webp 792w",
+     "src": "https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-792.webp",
+     "w": 792,
+     "h": 1243,
+     "alt": "BS. Trần Thị Giang, bác sĩ tại Nha khoa Greenfield"
+    }
+   }
+  ]
+ },
+ "cta": {
+  "eyebrow": "Bước tiếp theo của bạn",
+  "h2": "Bước đầu tiên<br>hướng đến nụ cười mới",
+  "p": "Gửi ảnh và những băn khoăn của bạn — BS. Hailey trực tiếp xem từng tin nhắn và phản hồi với hướng điều trị phù hợp.",
+  "btn": "Nhắn Zalo",
+  "waLink": "Hoặc nhắn WhatsApp",
+  "lounge": {
+   "avif": "https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-480.avif 480w, https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-800.avif 800w, https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-1200.avif 1200w",
+   "webp": "https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-480.webp 480w, https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-800.webp 800w, https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-1200.webp 1200w",
+   "src": "https://doctors.greenfield.clinic/shared/img/greenfield-clinic-lounge-1200.webp",
+   "w": 1200,
+   "h": 800,
+   "alt": "Phòng chờ của khách tại Nha khoa Greenfield, Hà Nội"
+  }
+ },
+ "ui": {
+  "book": "Đặt lịch tư vấn"
+ }
+}

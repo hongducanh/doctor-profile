@@ -13,6 +13,11 @@
       "permanent": false
     },
     {
+      "source": "/vi/:slug",
+      "destination": "https://www.nhakhoagreenfield.com/vi/bac-si/:slug",
+      "permanent": true
+    },
+    {
       "source": "/es",
       "destination": "https://greenfield.clinic/es/nuestros-dentistas/",
       "permanent": false
@@ -44,6 +49,19 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
         }
       ]
     }
