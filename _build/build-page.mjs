@@ -42,6 +42,14 @@ function doc(key, lang) {
   return merge(ALL[key], JSON.parse(readFileSync(f, "utf8")));
 }
 const pagePath = (lang, slug) => (lang === "en" ? `/${slug}` : `/${lang}/${slug}`);
+// Bản tiếng Việt chuyển về nhakhoagreenfield.com (owner 28/10/2026: greenfield.clinic + doctors = bản quốc tế,
+// nhakhoagreenfield.com = bản tiếng Việt). doctors.greenfield.clinic/vi/<slug> 301 sang đó; build chỉ xuất dữ liệu
+// dist/data/vi/<slug>.json để trang Next (apps/website /vi/bac-si/[slug]) đọc — nội dung vẫn MỘT nguồn ở repo này.
+const DSITE = "https://doctors.greenfield.clinic";
+const NKG_VI = (slug) => `https://www.nhakhoagreenfield.com/vi/bac-si/${slug}`;
+const pageUrl = (lang, slug) => (lang === "vi" ? NKG_VI(slug) : `${DSITE}${pagePath(lang, slug)}`);
+/** Link trong trang: cùng tên miền thì đường dẫn tương đối, bản VI thì URL nhakhoagreenfield. */
+const linkUrl = (lang, slug) => (lang === "vi" ? NKG_VI(slug) : pagePath(lang, slug));
 const args = process.argv.slice(2);
 const langArg = args.find((a) => a.startsWith("--lang="));
 const keys = args.filter((a) => !a.startsWith("--"));
@@ -101,7 +109,7 @@ function pic(name, alt, sizes, { eager = false, cls = "", slug } = {}) {
 }
 const WA_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>`;
 const ZALO_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c-5 0-9 3.5-9 7.9 0 2.4 1.2 4.5 3.1 6l-.7 3.1 3.3-1.6c1 .3 2.1.4 3.3.4 5 0 9-3.5 9-7.9s-4-7.9-9-7.9Z"/><path d="M8.5 9h4.5l-4.5 5h4.5M15.8 9v5"/></svg>`;
-const langLinks = () => LANGS.map((l) => `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${CODE[l]}<small>${LNAME[l]}</small></a>`).join("");
+const langLinks = () => LANGS.map((l) => `<a href="${linkUrl(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${CODE[l]}<small>${LNAME[l]}</small></a>`).join("");
 const portraitM = meta(D.portrait);
 const heroPreload = `<link rel="preload" as="image" type="image/avif" imagesrcset="${srcset(D.portrait, "avif")}" imagesizes="(min-width: 980px) 420px, 320px" fetchpriority="high">`;
 
@@ -134,16 +142,51 @@ const marquee = V.certs.length >= 4;
 const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC'" }[lang];
 const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
 const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
+/** Ảnh cho trang ngoài (URL tuyệt đối về doctors.greenfield.clinic). */
+function imgData(name, alt, slug) {
+  const m = meta(name, slug), w = Math.max(...m.widths), abs = (x) => x.replace(/(^|, )\//g, `$1${SITE}/`);
+  return { avif: abs(srcset(name, "avif", slug)), webp: abs(srcset(name, "webp", slug)), src: `${SITE}${dirOf(name, slug)}/${name}-${w}.webp`, w, h: Math.round(w * m.ratio), alt: flat(alt || "") };
+}
+/** Bản tiếng Việt: xuất dữ liệu hiển thị đã ghép đủ (chữ + ảnh + số) cho nhakhoagreenfield.com/vi/bac-si/<slug>. */
+function exportData() {
+  const caseD = (c, side) => imgData(`${c.img}-${side}`, `${side === "before" ? T.cases.beforeAlt : T.cases.afterAlt}${c.t}`);
+  const data = {
+    v: 1, generatedFrom: "doctor-profile/_build (build-page.mjs exportData)", key: D.key, slug: D.slug,
+    name: D.name, nick: D.nick, short: D.short, jobTitle: D.jobTitle, title: D.title, description: D.description,
+    specialty: ALL[D.key].specialty, alumni: D.alumni, waText: D.wa,
+    ogImage: existsSync(P(`../${D.slug}/img/${D.key}-og-1200x630.jpg`)) ? `${SITE}/${D.slug}/img/${D.key}-og-1200x630.jpg` : null,
+    hreflang: Object.fromEntries(LANGS.map((l) => [HL[l], pageUrl(l, D.slug)])),
+    hero: { eyebrow: V.eyebrow, h1: V.h1, checks: V.checks, lead: V.lead, badge: V.badge, portrait: imgData(D.portrait, D.portraitAlt) },
+    trust: { h2: V.trust.h2, p: V.trust.p, stats: V.trust.stats.map((s) => ({ k: s.k, n: num(s.n), l: s.l })) },
+    about: { img: imgData(V.about.img, D.about.imgAlt || D.name), pos: V.about.pos, eyebrow: V.about.eyebrow, h2: V.about.h2, p: V.about.p, explore: V.about.explore, chips: V.about.chips },
+    expertise: { h2: V.expH2, items: V.exp.map((x) => ({ t: x.t, s: x.s, img: x.img ? imgData(x.img, flat(x.t)) : null })), advice: V.advice },
+    quote: { img: imgData(V.quote.img, D.name), text: V.quote.text, em: V.quote.em || "", by: V.quote.by, role: V.quote.role },
+    certs: { h2: V.certsH2, items: V.certs.map((c) => ({ t: c.t, s: c.s, contain: c.contain, img: imgData(c.img, c.t) })) },
+    cases: { h2: V.casesH2, intro: V.casesIntro, label: U.caseLabel, drag: U.drag, compare: T.cases.compare, prev: T.cases.prev, next: T.cases.next, before: T.cases.before, after: T.cases.after,
+      items: V.cases.map((c) => ({ t: c.t, d: c.d, m: c.m, before: caseD(c, "before"), after: caseD(c, "after") })) },
+    reviews: { h2: V.reviewsH2, items: REV },
+    journey: { h2: V.journeyH2, intro: V.journeyIntro, steps: V.steps },
+    faq: { h2: V.faqH2, items: V.faqs },
+    guarantees: { h2: V.guarH2, intro: V.guarIntro || "", items: V.guar },
+    others: { eyebrow: T.others.eyebrow, h2: T.others.h2, h2em: T.others.h2em, view: T.others.view,
+      items: others.map((o) => ({ slug: o.slug, name: o.name, nick: o.nick, card: o.card, portrait: imgData(o.portrait, o.portraitAlt, o.slug) })) },
+    cta: { eyebrow: V.cta.eyebrow, h2: V.cta.h2, p: V.cta.p, btn: V.cta.btn, waLink: T.vi.waLink, lounge: imgData("greenfield-clinic-lounge", T.cta.loungeAlt) },
+    ui: { book: U.bookS },
+  };
+  mkdirSync(P("./dist/data/vi/"), { recursive: true });
+  writeFileSync(P(`./dist/data/vi/${D.slug}.json`), JSON.stringify(data, null, 1) + "\n");
+  console.log("vi data", D.slug);
+}
 const num = (n) => (lang === "vi" || lang === "es" ? String(n).replace(/(\d),(?=\d{3}\b)/g, "$1.") : String(n));
 const nav = [["about", 0], ["expertise", 1], ["cases", 3], ["reviews", 4], ["journey", 2], ["faq", 5]]; // đúng thứ tự các phần trên trang
 const ICON = { arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>` };
 // Header web chính: menu ngôn ngữ trỏ sang trang bác sĩ cùng ngôn ngữ (thứ tự + tên như web chính; web VI đưa Tiếng Việt lên đầu).
 const LORD = isVI ? ["vi", "en", "es", "ko", "zh"] : ["en", "es", "ko", "zh", "vi"];
 const LN = { en: "English", es: "Español", ko: "한국어", zh: "简体中文", vi: "Tiếng Việt" };
-const la = (l, cur) => `<a href="${pagePath(l, D.slug)}" lang="${HL[l]}" hreflang="${HL[l]}"${cur ? ` aria-current="true"` : ""}>${LN[l]}</a>`;
+const la = (l, cur) => `<a href="${linkUrl(l, D.slug)}" lang="${HL[l]}" hreflang="${HL[l]}"${cur ? ` aria-current="true"` : ""}>${LN[l]}</a>`;
 // Footer web chính: hàng ngôn ngữ như web chính (web VI: "Tiếng Việt" không phải link), trỏ sang trang bác sĩ cùng ngôn ngữ.
 const LNF = { ...LN, zh: "中文" };
-const FOOTER = FTR[lang].replace("{{WA}}", esc(waHref)).replace("{{LANG_FOOT}}", LORD.map((l) => l === lang && isVI ? `<span lang="vi" aria-current="true">${LNF[l]}</span>` : `<a href="${pagePath(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${LNF[l]}</a>`).join("\n"));
+const FOOTER = FTR[lang].replace("{{WA}}", esc(waHref)).replace("{{LANG_FOOT}}", LORD.map((l) => l === lang && isVI ? `<span lang="vi" aria-current="true">${LNF[l]}</span>` : `<a href="${linkUrl(l, D.slug)}" hreflang="${HL[l]}" lang="${HL[l]}"${l === lang ? ` aria-current="page"` : ""}>${LNF[l]}</a>`).join("\n"));
 const HEADER = HDR[lang].replace("{{LANG_PANEL}}", LORD.filter((l) => l !== lang).map((l) => la(l)).join(""))
   .replace("{{LANG_MOB}}", LORD.map((l) => la(l, l === lang)).join("")).replace("{{WA}}", esc(waHref));
 const others = ORDER.filter((k) => k !== D.key).map((k) => doc(k, lang));
@@ -158,7 +201,7 @@ const html = `<!doctype html>
 <title>${esc(D.title)}</title>
 <meta name="description" content="${esc(D.description)}">
 <link rel="canonical" href="${URL_}">
-${LANGS.map((l) => `<link rel="alternate" hreflang="${HL[l]}" href="${SITE}${pagePath(l, D.slug)}">`).join("\n")}
+${LANGS.map((l) => `<link rel="alternate" hreflang="${HL[l]}" href="${pageUrl(l, D.slug)}">`).join("\n")}
 <link rel="alternate" hreflang="x-default" href="${SITE}${pagePath("en", D.slug)}">
 <meta property="og:type" content="profile">
 <meta property="og:site_name" content="Greenfield Dental">
@@ -723,6 +766,7 @@ if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new Intersect
 </body>
 </html>
 `;
+if (isVI) return exportData();
 const out = lang === "en" ? `./dist/${D.slug}/` : `./dist/${lang}/${D.slug}/`;
 mkdirSync(P(out), { recursive: true });
 const page = lang === "zh" ? html.replace(/([　-鿿＀-￯]) (<em>|[　-鿿])/g, "$1$2") : html;
