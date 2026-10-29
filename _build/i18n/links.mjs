@@ -31,6 +31,7 @@ export const LINKS = {
   es: gcLinks("es"),
   ko: gcLinks("ko"),
   zh: gcLinks("zh-Hans"),
+  ja: gcLinks("ja"),
   vi: {
     home: `${NK}/vi`, doctors: `${NK}/vi/bac-si`, implants: `${NK}/vi/dich-vu/implant`, allon4: `${NK}/vi/dich-vu/implant/toan-ham`,
     crowns: `${NK}/vi/dich-vu/rang-su`, veneers: `${NK}/vi/dich-vu/rang-su/mao-su-hay-veneer`, ortho: `${NK}/vi/dich-vu/nieng-rang`,
@@ -42,8 +43,8 @@ export const LINKS = {
   },
 };
 // Trang không có bản dịch: All-on-4 → trang implant cùng ngôn ngữ.
-for (const l of ["es", "ko", "zh"]) if (!LINKS[l].allon4) LINKS[l].allon4 = LINKS[l].implants;
-for (const l of ["es", "ko", "zh", "vi"]) LINKS[l].book = LINKS[l].book || LINKS[l].contact;
+for (const l of ["es", "ko", "zh", "ja"]) if (!LINKS[l].allon4) LINKS[l].allon4 = LINKS[l].implants;
+for (const l of ["es", "ko", "zh", "ja", "vi"]) LINKS[l].book = LINKS[l].book || LINKS[l].contact;
 LINKS.en.book = LINKS.en.contact;
 
 /** Link EN (greenfield.clinic/<path>/) → khoá trong LINKS. */

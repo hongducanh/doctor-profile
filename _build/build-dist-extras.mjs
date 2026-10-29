@@ -5,7 +5,7 @@ const P = (rel) => fileURLToPath(new URL(rel, import.meta.url));
 const SITE = "https://doctors.greenfield.clinic";
 const SLUGS = ["dr-ta-hong-nhung", "dr-do-nhu-chuyen", "dr-nguyen-duc-hieu", "dr-tran-thi-giang", "dr-pham-thi-thu-hien"];
 // Đa ngôn ngữ: 5 bác sĩ × EN/ES/KO/ZH = 20 URL (VI ở nhakhoagreenfield.com từ 28/10/2026), mỗi URL kèm đủ xhtml:link hreflang (cả vi + x-default = EN).
-const LANGS = [["en", "en"], ["vi", "vi"], ["es", "es"], ["ko", "ko"], ["zh", "zh-Hans"]];
+const LANGS = [["en", "en"], ["vi", "vi"], ["es", "es"], ["ko", "ko"], ["zh", "zh-Hans"], ["ja", "ja"]];
 // Bản tiếng Việt nằm ở nhakhoagreenfield.com/vi/bac-si/<slug> (owner 28/10/2026) — không còn URL /vi/ trên tên miền này.
 const url = (l, s) => (l === "vi" ? `https://www.nhakhoagreenfield.com/vi/bac-si/${s}` : `${SITE}${l === "en" ? "" : `/${l}`}/${s}`);
 const today = process.env.LASTMOD || new Date().toISOString().slice(0, 10);
@@ -31,6 +31,7 @@ writeFileSync(P("./dist/vercel.json"), JSON.stringify({
     { source: "/es", destination: "https://greenfield.clinic/es/nuestros-dentistas/", permanent: false },
     { source: "/ko", destination: "https://greenfield.clinic/ko/doctors/", permanent: false },
     { source: "/zh", destination: "https://greenfield.clinic/zh/doctors-zh/", permanent: false },
+    { source: "/ja", destination: "https://greenfield.clinic/ja/doctors-ja/", permanent: false },
   ],
   headers: [
     { source: "/shared/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
