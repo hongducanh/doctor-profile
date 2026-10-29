@@ -1,0 +1,80 @@
+# BẢN CHÉP từ trungdang712/greenfield-stack .github/workflows/content-check.yml (29/10/2026) — repo này thuộc tài khoản khác nên
+# không gọi được workflow dùng chung (repo riêng tư). Sửa logic ở greenfield-stack rồi chép lại.
+# Kiểm từng trang HTML với Sổ dữ kiện Greenfield OS (POST /api/content-check: R1 dữ kiện lệch Sổ + R2 câu cấm / tên BS đã nghỉ).
+# Secret: GF_CC_CF_ID, GF_CC_CF_SECRET (service token Cloudflare gf-content-check-ci), GF_CC_KEY. Thiếu secret → bỏ qua.
+name: content-check
+on:
+  push: { branches: [main], paths: ["**.html"] }
+  pull_request: { paths: ["**.html"] }
+  workflow_dispatch: {}
+permissions: { contents: read }
+jobs: { check: { uses: trungdang712/greenfield-stack/.github/workflows/content-check.yml@main, with: { domain: allon4vietnam.com }, secrets: inherit } }
+# Secret repo gọi: GF_CC_CF_ID, GF_CC_CF_SECRET (service token Cloudflare gf-content-check-ci), GF_CC_KEY (= CONTENT_CHECK_KEY OS).
+# Thiếu secret → bỏ qua (xanh, có ghi chú). Vercel deploy không chờ CI — đỏ ở đây là tín hiệu sửa, không chặn trang.
+name: content-check
+on:
+  workflow_call:
+    inputs:
+      domain: { type: string, required: true, description: "Domain công khai, vd allon4vietnam.com" }
+      dir: { type: string, default: ".", description: "Thư mục chứa HTML (bỏ qua node_modules, .git, dist trừ khi dir=dist)" }
+      build: { type: string, default: "", description: "Lệnh build trước khi kiểm (vd 'node build.mjs'), trống = không build" }
+      fail-on: { type: string, default: "error", description: "error | never" }
+    secrets:
+      GF_CC_CF_ID: { required: false }
+      GF_CC_CF_SECRET: { required: false }
+      GF_CC_KEY: { required: false }
+permissions: { contents: read }
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24 }
+      - name: Kiểm nội dung với Sổ dữ kiện
+        env:
+          CF_ID: ${{ secrets.GF_CC_CF_ID }}
+          CF_SECRET: ${{ secrets.GF_CC_CF_SECRET }}
+          KEY: ${{ secrets.GF_CC_KEY }}
+          DOMAIN: doctors.greenfield.clinic
+          DIR: "."
+          FAIL_ON: error
+        run: |
+          node --input-type=module <<'EOF'
+          import { readdirSync, readFileSync, statSync, appendFileSync } from "node:fs";
+          import { join, relative } from "node:path";
+          const { CF_ID, CF_SECRET, KEY, DOMAIN, DIR, FAIL_ON } = process.env;
+          const summary = (s) => process.env.GITHUB_STEP_SUMMARY && appendFileSync(process.env.GITHUB_STEP_SUMMARY, s + "\n");
+          if (!CF_ID || !CF_SECRET || !KEY) { console.log("::notice::Chưa đặt secret GF_CC_* — bỏ qua kiểm nội dung."); process.exit(0); }
+          const SKIP = new Set(["node_modules", ".git", ".github", ".vercel", "_build", "_redesign-draft", ...(DIR === "dist" ? [] : ["dist"])]);
+          const files = [];
+          const walk = (d) => { for (const n of readdirSync(d)) { if (SKIP.has(n)) continue; const p = join(d, n); statSync(p).isDirectory() ? walk(p) : n.endsWith(".html") && files.push(p); } };
+          walk(DIR);
+          const urlOf = (f) => { const r = relative(DIR, f).replace(/\\/g, "/"); return `https://${DOMAIN}/${r === "index.html" ? "" : r.replace(/(^|\/)index\.html$/, "$1").replace(/\.html$/, "")}`; };
+          let errors = 0, warns = 0, failed = 0;
+          summary(`### Kiểm nội dung — ${DOMAIN} (${files.length} trang)\n`);
+          for (const f of files.slice(0, 200)) {
+            const html = readFileSync(f, "utf8");
+            if (html.length > 1_900_000) { console.log(`::warning file=${f}::Trang quá lớn, bỏ qua`); continue; }
+            let res;
+            try {
+              res = await fetch("https://os.greenfield.clinic/api/content-check", { method: "POST", signal: AbortSignal.timeout(30_000),
+                headers: { "Content-Type": "application/json", Authorization: `Bearer ${KEY}`, "CF-Access-Client-Id": CF_ID, "CF-Access-Client-Secret": CF_SECRET },
+                body: JSON.stringify({ url: urlOf(f), kind: "page", html }) });
+            } catch (e) { failed++; console.log(`::warning file=${f}::Không gọi được Greenfield OS (${e.name})`); continue; }
+            if (res.status === 429) { await new Promise((r) => setTimeout(r, 15_000)); }
+            if (!res.ok) { failed++; console.log(`::warning file=${f}::Greenfield OS trả HTTP ${res.status}`); continue; }
+            const { findings = [] } = await res.json();
+            for (const x of findings) {
+              const lvl = x.severity === "error" ? "error" : "warning";
+              x.severity === "error" ? errors++ : warns++;
+              const ctx = x.detail?.context ?? x.detail?.snippet ?? "";
+              console.log(`::${lvl} file=${f}::[${x.rule}] ${x.message}${ctx ? ` — …${String(ctx).slice(0, 160)}…` : ""}`);
+              summary(`- ${lvl === "error" ? "❌" : "⚠️"} \`${relative(DIR, f)}\` [${x.rule}] ${x.message}`);
+            }
+          }
+          summary(`\n${errors} lỗi · ${warns} cảnh báo${failed ? ` · ${failed} trang không kiểm được` : ""}. Mục cố ý giữ → quản trị Marketing ghi ngoại lệ ở os.greenfield.clinic/marketing/noi-dung.`);
+          console.log(`${files.length} trang: ${errors} lỗi, ${warns} cảnh báo, ${failed} không kiểm được`);
+          if (FAIL_ON === "error" && errors > 0) process.exit(1);
+          EOF
