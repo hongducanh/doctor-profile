@@ -1,0 +1,330 @@
+{
+ "langName": "日本語",
+ "langAria": "言語",
+ "logoAria": "グリーンフィールド歯科 ホーム",
+ "navAria": "メインメニュー",
+ "nav": {
+  "services": "診療内容",
+  "results": "治療実績",
+  "about": "当院について",
+  "contact": "お問い合わせ"
+ },
+ "menus": {
+  "services": [
+   [
+    "インプラント",
+    "implants"
+   ],
+   [
+    "オールオン4 / オールオン6",
+    "allon4"
+   ],
+   [
+    "クラウン（被せ物）",
+    "crowns"
+   ],
+   [
+    "ポーセレン・ラミネートベニア",
+    "veneers"
+   ],
+   [
+    "インビザライン",
+    "invisalign"
+   ],
+   [
+    "ワイヤー矯正",
+    "braces"
+   ],
+   [
+    "一般歯科",
+    "general"
+   ]
+  ],
+  "results": [
+   [
+    "症例写真",
+    "gallery"
+   ],
+   [
+    "患者様の声",
+    "reviews"
+   ]
+  ],
+  "about": [
+   [
+    "歯科医師紹介",
+    "doctors"
+   ],
+   [
+    "グリーンフィールド歯科について",
+    "about"
+   ],
+   [
+    "ご来院の計画",
+    "tourism"
+   ],
+   [
+    "海外在住のベトナム人の方",
+    "overseas"
+   ]
+  ],
+  "mobileServices": 6,
+  "mobileAbout": 4
+ },
+ "ratingSmall": "Google口コミ{n}件",
+ "freeConsult": "無料相談",
+ "openMenu": "メニューを開く",
+ "subnavAria": "このページの内容",
+ "subnav": {
+  "about": "プロフィール",
+  "expertise": "専門分野",
+  "cases": "症例",
+  "reviews": "患者様の声",
+  "journey": "ご来院の流れ",
+  "faq": "よくあるご質問"
+ },
+ "heroCta": "{short}に無料相談",
+ "viewCases": "治療症例を見る",
+ "expertise": {
+  "eyebrow": "主な専門分野",
+  "h2": "{short}が",
+  "h2em": "担当する治療",
+  "learnMore": "詳しく見る",
+  "adviceH": "どの治療が必要かわからない方へ",
+  "adviceP": "歯の写真とお悩みをお送りください。{short}が最適な方法をご提案します。",
+  "adviceBtn": "相談する"
+ },
+ "quoteAria": "{short}からのメッセージ",
+ "quoteAlt": "笑顔の{name}",
+ "certs": {
+  "eyebrow": "研鑽",
+  "edu": "学歴",
+  "h2": "資格・",
+  "h2em": "研修歴"
+ },
+ "cases": {
+  "eyebrow": "症例紹介",
+  "h2": "症例：",
+  "team": {
+   "implant": "グリーンフィールド歯科のインプラントチーム",
+   "orthodontic": "グリーンフィールド歯科の矯正チーム",
+   "restorative": "グリーンフィールド歯科の補綴・修復チーム"
+  },
+  "intro": "実際の臨床写真を、患者様の同意のもとで掲載しています。ハンドルをドラッグして治療前後を比較できます。",
+  "before": "治療前",
+  "after": "治療後",
+  "beforeAlt": "治療前：",
+  "afterAlt": "治療後：",
+  "compare": "治療前後を比較",
+  "label": "症例",
+  "prev": "前の症例",
+  "next": "次の症例"
+ },
+ "reviews": {
+  "eyebrow": "患者様の声",
+  "h2": "患者様が語る",
+  "h2em": "グリーンフィールド歯科",
+  "count": "グリーンフィールド歯科のGoogle口コミ{n}件",
+  "p": "口コミはグリーンフィールド歯科全体の患者様からいただいたものです。Googleの口コミ、または当院ウェブサイトの患者様の体験談をご覧ください。",
+  "google": "Googleの口コミを読む",
+  "stories": "患者様の体験談"
+ },
+ "faq": {
+  "eyebrow": "よくあるご質問",
+  "h2": "患者様から",
+  "h2em": "よくいただくご質問"
+ },
+ "commit": {
+  "eyebrow": "当院のお約束",
+  "h2": "安心して",
+  "h2em": "ご来院いただくために"
+ },
+ "others": {
+  "eyebrow": "チーム紹介",
+  "h2": "グリーンフィールド歯科の",
+  "h2em": "その他の歯科医師",
+  "view": "プロフィールを見る"
+ },
+ "cta": {
+  "eyebrow": "次のステップ",
+  "wa": "WhatsApp +84 906 621 988",
+  "send": "メッセージを送る",
+  "hours": "毎日 8:00〜18:00 診療（最終受付 17:30）· 診察・相談は無料",
+  "allDoctors": "歯科医師一覧",
+  "loungeAlt": "ハノイ、グリーンフィールド歯科の待合ラウンジ"
+ },
+ "footer": {
+  "blurb": "ハノイ中心部で、現地の方にも海外からの患者様にも上質な歯科医療をご提供します。",
+  "treatments": "診療内容",
+  "treatmentLinks": [
+   [
+    "インプラント",
+    "implants"
+   ],
+   [
+    "ポーセレン・ラミネートベニア",
+    "veneers"
+   ],
+   [
+    "インビザライン",
+    "invisalign"
+   ],
+   [
+    "ワイヤー矯正",
+    "braces"
+   ],
+   [
+    "クラウン（被せ物）",
+    "crowns"
+   ],
+   [
+    "ホワイトニング",
+    "whitening"
+   ],
+   [
+    "一般歯科",
+    "general"
+   ]
+  ],
+  "clinic": "クリニック",
+  "clinicLinks": [
+   [
+    "歯科医師紹介",
+    "doctors"
+   ],
+   [
+    "症例写真",
+    "gallery"
+   ],
+   [
+    "ご来院の計画",
+    "tourism"
+   ],
+   [
+    "海外在住のベトナム人の方",
+    "overseas"
+   ],
+   [
+    "ハノイでの暮らし",
+    "expat"
+   ],
+   [
+    "ブログ",
+    "blog"
+   ],
+   [
+    "お問い合わせ",
+    "contact"
+   ]
+  ],
+  "visit": "アクセス",
+  "address": "95 Trung Hoa, Yen Hoa Ward, Hanoi, Vietnam",
+  "hours": "月曜〜日曜 8:00〜18:00（最終受付 17:30）",
+  "phone": "+84 906 621 988",
+  "chat": "WhatsAppで相談",
+  "legal": "© 2026 Greenfield Dental Company Limited · 税番号 0110015087",
+  "privacy": "プライバシーポリシー",
+  "cookies": "Cookie設定",
+  "terms": "利用規約"
+ },
+ "floatAria": "WhatsAppで{short}に相談",
+ "cookie": {
+  "aria": "greenfield.clinicのCookie",
+  "title": "Cookieについて",
+  "text": "アクセス解析および広告効果測定のCookieは、ご同意いただいた場合にのみ使用します。",
+  "privacy": "プライバシーポリシー",
+  "essential": "必須",
+  "essentialD": "常に有効",
+  "analytics": "アクセス解析",
+  "analyticsD": "サイトの利用状況を把握します",
+  "marketing": "マーケティング",
+  "marketingD": "どの広告が患者様に当院を知っていただくきっかけになったかを測定します",
+  "save": "選択を保存",
+  "rejectNE": "必須以外を拒否",
+  "accept": "すべて許可",
+  "reject": "拒否",
+  "settings": "設定"
+ },
+ "ogTitle": "{name}（{nick}）— {jobTitle} | グリーンフィールド歯科",
+ "twTitle": "{name}（{nick}）— グリーンフィールド歯科",
+ "v2": {
+  "nav": [
+   "プロフィール",
+   "専門分野",
+   "ご来院の流れ",
+   "症例",
+   "患者様の声",
+   "よくあるご質問"
+  ],
+  "navM": [
+   "プロフィール",
+   "専門分野",
+   "治療の流れ",
+   "症例",
+   "患者様の声",
+   "よくあるご質問"
+  ],
+  "book": "無料相談を予約",
+  "bookS": "無料相談を予約",
+  "viewCases": "治療症例を見る",
+  "trust": [
+   "患者様が",
+   "{pron}を信頼する理由"
+  ],
+  "explore": "{pron}の専門分野を見る",
+  "getAdvice": "相談する",
+  "casesH2": [
+   "症例",
+   "紹介"
+  ],
+  "casesIntro": "実際の臨床写真を、患者様の同意のもとで掲載しています。",
+  "before": "治療前",
+  "after": "治療後",
+  "drag": "スライダーをドラッグして比較",
+  "caseLabel": "症例",
+  "reviewsH2": "患者様の<br>声",
+  "journeyH2": [
+   "グリーンフィールド歯科の",
+   "治療の流れ"
+  ],
+  "faqH2": [
+   "よくある",
+   "ご質問"
+  ],
+  "guarH2": [
+   "グリーンフィールド歯科の",
+   "お約束"
+  ],
+  "guarIntro": "すべての患者様の治療記録に明記する6つのお約束です。",
+  "ctaEyebrow": "次のステップ",
+  "ctaH2": "新しい笑顔への<br>第一歩を踏み出しましょう",
+  "footH2": "{short}に<br>今すぐ無料相談",
+  "hours": "年中無休 · 8:00〜18:00",
+  "quick": "クイックリンク",
+  "quickL": [
+   "プロフィール",
+   "主な専門分野",
+   "症例紹介",
+   "患者様の声",
+   "よくあるご質問"
+  ],
+  "touch": "お問い合わせ",
+  "address": "95 Trung Hoa st, Cau Giay, Hanoi",
+  "social": "SNS",
+  "copy": "© 2026 Greenfield Dental. 掲載情報は参考情報であり、対面での診断に代わるものではありません。",
+  "cookies": "Cookie設定",
+  "certsH2": [
+   "資格・",
+   "受賞歴"
+  ],
+  "expH2": [
+   "主な",
+   "専門分野"
+  ],
+  "advH": "どの治療が必要か<br>わからない方へ",
+  "menu": "メニュー",
+  "lang": "言語",
+  "doctors": "歯科医師紹介",
+  "website": "ウェブサイト"
+ }
+}

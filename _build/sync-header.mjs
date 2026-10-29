@@ -26,7 +26,7 @@ function holes(x) {
     .replace(/(<a class="gfh-icon gfh-wa" href=")[^"]*/, "$1{{WA}}");
 }
 
-const home = { en: "https://greenfield.clinic/", es: "https://greenfield.clinic/es/", ko: "https://greenfield.clinic/ko/", zh: "https://greenfield.clinic/zh/" };
+const home = { en: "https://greenfield.clinic/", es: "https://greenfield.clinic/es/", ko: "https://greenfield.clinic/ko/", zh: "https://greenfield.clinic/zh/", ja: "https://greenfield.clinic/ja/" };
 let css = "", js = "";
 for (const [lang, u] of Object.entries(home)) {
   const h = await get(u);

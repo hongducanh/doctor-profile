@@ -12,16 +12,16 @@ const P = (rel) => fileURLToPath(new URL(rel, import.meta.url));
 const ALL = Object.fromEntries(readdirSync(P("./doctors/")).filter((f) => f.endsWith(".json")).map((f) => { const d = JSON.parse(readFileSync(P(`./doctors/${f}`), "utf8")); return [d.key, d]; }));
 const ORDER = ["kate", "chris", "henry", "giang", "hailey"];
 const DES = Object.fromEntries(ORDER.map((k) => [k, JSON.parse(readFileSync(P(`./design/${k}.json`), "utf8"))]));
-export const LANGS = ["en", "vi", "es", "ko", "zh"];
-const HL = { en: "en", vi: "vi", es: "es", ko: "ko", zh: "zh-Hans" };
-const OGL = { en: "en_US", vi: "vi_VN", es: "es_ES", ko: "ko_KR", zh: "zh_CN" };
-const CODE = { en: "EN", vi: "VI", es: "ES", ko: "KO", zh: "中文" };
-const LNAME = { en: "English", vi: "Tiếng Việt", es: "Español", ko: "한국어", zh: "简体中文" };
+export const LANGS = ["en", "vi", "es", "ko", "zh", "ja"]; // ja: owner 29/10/2026
+const HL = { en: "en", vi: "vi", es: "es", ko: "ko", zh: "zh-Hans", ja: "ja" };
+const OGL = { en: "en_US", vi: "vi_VN", es: "es_ES", ko: "ko_KR", zh: "zh_CN", ja: "ja_JP" };
+const CODE = { en: "EN", vi: "VI", es: "ES", ko: "KO", zh: "中文", ja: "日本語" };
+const LNAME = { en: "English", vi: "Tiếng Việt", es: "Español", ko: "한국어", zh: "简体中文", ja: "日本語" };
 const UI = {};
 const ui = (l) => (UI[l] ||= JSON.parse(readFileSync(P(`./i18n/ui/${l}.json`), "utf8")));
 const M = JSON.parse(readFileSync(P("./manifest.json"), "utf8"));
-const HDR = Object.fromEntries(["en", "es", "ko", "zh", "vi"].map((l) => [l, readFileSync(P(`./header/${l}.html`), "utf8").trim()]));
-const FTR = Object.fromEntries(["en", "es", "ko", "zh", "vi"].map((l) => [l, readFileSync(P(`./header/footer-${l}.html`), "utf8").trim()]));
+const HDR = Object.fromEntries(["en", "es", "ko", "zh", "ja", "vi"].map((l) => [l, readFileSync(P(`./header/${l}.html`), "utf8").trim()]));
+const FTR = Object.fromEntries(["en", "es", "ko", "zh", "ja", "vi"].map((l) => [l, readFileSync(P(`./header/footer-${l}.html`), "utf8").trim()]));
 const FOOT_CSS = readFileSync(P("./header/footer.css"), "utf8").trim();
 const HDR_CSS = readFileSync(P("./header/gfh.css"), "utf8").trim(), HDR_JS = readFileSync(P("./header/gfh.js"), "utf8").trim();
 const FF = (fam, file, w, range) => `@font-face{font-family:'${fam}';font-style:normal;font-weight:${w};font-display:swap;src:url(/shared/fonts/${file}) format('woff2');unicode-range:${range}}`;
@@ -139,7 +139,7 @@ const SLOTS = ["left:0;top:18%;--d:7.5s;--o:0s", "left:max(-6%,calc((100% - 100v
 const revCard = (r, i) => `<figure class="fc" style="${SLOTS[i]}"><div class="fci"><blockquote>${esc(r.s)}</blockquote><figcaption><img src="https://flagcdn.com/w80/${r.f}.png" alt="${esc(r.c)}" width="30" height="30" loading="lazy"><span><b>${esc(r.n)}</b><small>${esc(r.c)}</small></span></figcaption></div></figure>`;
 const certLi = (c, hide) => `<li class="cert"${hide ? ` aria-hidden="true"` : ""}><div class="ph${c.contain ? " c" : ""}">${pic(c.img, hide ? "" : c.t, "250px")}</div><b>${esc(c.t)}</b><span>${esc(c.s)}</span></li>`;
 const marquee = V.certs.length >= 4;
-const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC'" }[lang];
+const CJK = { ko: "'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR'", zh: "'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC'", ja: "'Hiragino Kaku Gothic ProN','Hiragino Sans','Yu Gothic','Meiryo','Noto Sans JP'" }[lang];
 const DOCS = ["kate", "chris", "giang", "henry", "hailey"].map((k) => { const o = doc(k, lang); return { k, slug: o.slug, name: o.name }; });
 const docLinks = () => DOCS.map((o) => `<a href="${pagePath(lang, o.slug)}"${o.k === D.key ? ` aria-current="page"` : ""}>${esc(o.name)}</a>`).join("");
 /** Ảnh cho trang ngoài (URL tuyệt đối về doctors.greenfield.clinic). */
@@ -181,8 +181,8 @@ const num = (n) => (lang === "vi" || lang === "es" ? String(n).replace(/(\d),(?=
 const nav = [["about", 0], ["expertise", 1], ["cases", 3], ["reviews", 4], ["journey", 2], ["faq", 5]]; // đúng thứ tự các phần trên trang
 const ICON = { arrow: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></svg>` };
 // Header web chính: menu ngôn ngữ trỏ sang trang bác sĩ cùng ngôn ngữ (thứ tự + tên như web chính; web VI đưa Tiếng Việt lên đầu).
-const LORD = isVI ? ["vi", "en", "es", "ko", "zh"] : ["en", "es", "ko", "zh", "vi"];
-const LN = { en: "English", es: "Español", ko: "한국어", zh: "简体中文", vi: "Tiếng Việt" };
+const LORD = isVI ? ["vi", "en", "es", "ko", "zh", "ja"] : ["en", "es", "ko", "zh", "ja", "vi"];
+const LN = { en: "English", es: "Español", ko: "한국어", zh: "简体中文", ja: "日本語", vi: "Tiếng Việt" };
 const la = (l, cur) => `<a href="${linkUrl(l, D.slug)}" lang="${HL[l]}" hreflang="${HL[l]}"${cur ? ` aria-current="true"` : ""}>${LN[l]}</a>`;
 // Footer web chính: hàng ngôn ngữ như web chính (web VI: "Tiếng Việt" không phải link), trỏ sang trang bác sĩ cùng ngôn ngữ.
 const LNF = { ...LN, zh: "中文" };
@@ -769,7 +769,7 @@ if(!("IntersectionObserver" in window)){N.forEach(on);}else{var io=new Intersect
 if (isVI) return exportData();
 const out = lang === "en" ? `./dist/${D.slug}/` : `./dist/${lang}/${D.slug}/`;
 mkdirSync(P(out), { recursive: true });
-const page = lang === "zh" ? html.replace(/([　-鿿＀-￯]) (<em>|[　-鿿])/g, "$1$2") : html;
+const page = lang === "zh" || lang === "ja" ? html.replace(/([　-鿿＀-￯]) (<em>|[　-鿿])/g, "$1$2") : html;
 writeFileSync(P(`${out}index.html`), page);
 console.log(lang, D.slug, (page.length / 1024).toFixed(1) + " KB");
 }

@@ -31,6 +31,11 @@
       "source": "/zh",
       "destination": "https://greenfield.clinic/zh/doctors-zh/",
       "permanent": false
+    },
+    {
+      "source": "/ja",
+      "destination": "https://greenfield.clinic/ja/doctors-ja/",
+      "permanent": false
     }
   ],
   "headers": [
