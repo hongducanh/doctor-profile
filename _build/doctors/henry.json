@@ -11,7 +11,7 @@
   "jobTitle": "Implant dentist",
   "eyebrow": "DDS · Implant dentist · Greenfield Dental",
   "title": "Dr. Nguyen Duc Hieu (Dr. Henry) — Implant Dentist in Hanoi | Greenfield Dental",
-  "description": "Dr. Nguyen Duc Hieu (Dr. Henry), implant dentist at Greenfield Dental, Hanoi: digital implant planning, All-on-4 / All-on-6, bone grafting and oral surgery. 6+ years, 1,000+ implant cases.",
+  "description": "Dr. Nguyen Duc Hieu (Dr. Henry), implant dentist at Greenfield Dental, Hanoi: digital implant planning, All-on-4 / All-on-6, bone grafting and oral surgery. 6+ years, 5,000+ implant cases.",
   "lead": "Dr. Nguyen Duc Hieu (Dr. Henry) is an implant dentist with a special interest in digital implant planning, periodontics and oral surgery. He plans every stage digitally, starting with healthy bone and gum foundations, so each implant is built for long-term function.",
   "chips": [
     "Dental implants",
@@ -26,7 +26,7 @@
       "l": "Years in clinical practice"
     },
     {
-      "n": "1,000+",
+      "n": "5,000+",
       "l": "Implant cases"
     }
   ],
@@ -506,6 +506,6 @@
   "ogPortrait": "originals/dr-nguyen-duc-hieu/dr-hi-u-munmxak1-5llj.webp",
   "ogLine": [
     "Digital implant planning · Bone grafting · Oral surgery",
-    "6+ years · 1,000+ implant cases"
+    "6+ years · 5,000+ implant cases"
   ]
 }
