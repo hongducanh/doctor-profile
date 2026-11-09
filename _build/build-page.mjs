@@ -11,6 +11,7 @@ import { LINKS } from "./i18n/links.mjs";
 const P = (rel) => fileURLToPath(new URL(rel, import.meta.url));
 const ALL = Object.fromEntries(readdirSync(P("./doctors/")).filter((f) => f.endsWith(".json")).map((f) => { const d = JSON.parse(readFileSync(P(`./doctors/${f}`), "utf8")); return [d.key, d]; }));
 const ORDER = ["kate", "chris", "henry", "giang", "hailey"];
+const PUB = JSON.parse(readFileSync(P("./public-doctors.json"), "utf8")); // factId của Sổ dữ kiện (doctor.<factId>.years|implants)
 const DES = Object.fromEntries(ORDER.map((k) => [k, JSON.parse(readFileSync(P(`./design/${k}.json`), "utf8"))]));
 export const LANGS = ["en", "vi", "es", "ko", "zh", "ja"]; // ja: owner 29/10/2026
 const HL = { en: "en", vi: "vi", es: "es", ko: "ko", zh: "zh-Hans", ja: "ja" };
@@ -93,6 +94,21 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const h = (s) => esc(s).replace(/&lt;br\s*\/?&gt;/gi, "<br>").replace(/\s*<br>\s*/g, "<br>");
 const flat = (s) => String(s).replace(/<br\s*\/?>/gi, " ").replace(/\s+/g, " ").trim();
 const V2 = { short: D.short, name: D.name, nick: D.nick, jobTitle: D.jobTitle };
+/* N-2 (09/11/2026): con số năm / số ca của bác sĩ gắn data-gf-fact="doctor.<factId>.years|implants"; script cuối trang thay số bằng Sổ dữ kiện OS,
+   lỗi / thiếu thì GIỮ số tĩnh. Meta description, JSON-LD và ảnh OG giữ số tĩnh (máy quét báo khi lệch). */
+const FACT = (m) => `doctor.${PUB[D.key].factId}.${m}`;
+const factAttr = (m) => ` data-gf-fact="${FACT(m)}"`;
+const statMetric = (i) => ({ Experience: "years", Implant: "implants" })[DES[D.key].trust.stats[i].k];
+/** Lead: bọc số năm / số implant (nếu có trong câu) bằng <span data-gf-fact>; chỉ lần xuất hiện đầu. */
+const leadHtml = (txt) => {
+  let out = esc(txt);
+  const yrs = String(DES[D.key].badge.n).replace(/\D/g, ""), imp = DES[D.key].trust.stats.find((x) => x.k === "Implant");
+  const impDigits = imp ? String(imp.n).replace(/\D/g, "") : "";
+  const wrap = (re, m) => { out = out.replace(re, (x) => `<span${factAttr(m)}>${x}</span>`); };
+  if (yrs) wrap(new RegExp(`(?<![\\d.,])${yrs}(?![\\d.,]?\\d)`), "years");
+  if (impDigits.length > 3) wrap(new RegExp(`(?<![\\d.,])${impDigits.slice(0, -3)}[.,]?${impDigits.slice(-3)}(?!\\d)`), "implants");
+  return out;
+};
 const t = (s) => esc(s).replace(/\{(\w+)\}/g, (m, k) => (k === "n" ? "<span data-count>264</span>" : V2[k] !== undefined ? esc(V2[k]) : m));
 const tp = (s) => s.replace(/\{(\w+)\}/g, (m, k) => (V2[k] !== undefined ? V2[k] : m));
 const js = (o) => JSON.stringify(o).replace(/</g, "\\u003c");
@@ -605,11 +621,11 @@ ${HEADER}
     <p class="eyebrow">${esc(V.eyebrow)}</p>
     <h1>${esc(V.h1[0])}&nbsp;<em>${esc(V.h1[1])}</em></h1>
     <ul class="checks">${V.checks.map((c) => `<li><span class="tick" aria-hidden="true">${I_CHK}</span>${esc(c)}</li>`).join("")}</ul>
-    <p class="lead">${esc(V.lead)}</p>
+    <p class="lead">${leadHtml(V.lead)}</p>
     <div class="ctas"><a class="btn-p" href="#book">${esc(U.book)}${arrow}</a><a class="btn-o" href="#cases">${esc(U.viewCases)}</a></div>
   </div>
   <div class="hero-photo">
-    <div class="badge"><b>${esc(V.badge.n)}</b><span>${esc(V.badge.l)}</span></div>
+    <div class="badge"><b${factAttr("years")}>${esc(V.badge.n)}</b><span>${esc(V.badge.l)}</span></div>
     ${pic(D.portrait, D.portraitAlt, "(min-width: 980px) 420px, 320px", { eager: true })}
   </div>
 </section>
@@ -617,7 +633,7 @@ ${HEADER}
 <section class="sec trust" id="about" data-reveal>
   ${H2(V.trust.h2)}
   <p>${esc(V.trust.p)}</p>
-  <div class="stats" style="--n:${V.trust.stats.length}">${V.trust.stats.map((s) => `<div class="stat"><span class="k">${esc(s.k)}</span><b>${esc(num(s.n))}</b><span class="l">${esc(s.l)}</span></div>`).join("")}</div>
+  <div class="stats" style="--n:${V.trust.stats.length}">${V.trust.stats.map((s, i) => `<div class="stat"><span class="k">${esc(s.k)}</span><b${statMetric(i) ? factAttr(statMetric(i)) : ""}>${esc(num(s.n))}</b><span class="l">${esc(s.l)}</span></div>`).join("")}</div>
 </section>
 
 <section class="sec" data-reveal>
@@ -744,6 +760,7 @@ document.addEventListener("click",onWa,true);document.addEventListener("auxclick
 <script>/* Menu điện thoại, chọn ngôn ngữ, so sánh trước/sau, lời khen xoay vòng, hiện dần khi cuộn. */
 (function(){
 try{fetch("https://lead.greenfield.clinic/api/public/google-rating").then(function(r){return r.ok?r.json():null}).then(function(j){if(!j||!j.count)return;document.querySelectorAll("[data-count]").forEach(function(e){e.textContent=j.count});document.querySelectorAll("[data-rating]").forEach(function(e){e.textContent=j.ratingText||"5.0"});}).catch(function(){});}catch(e){}
+try{fetch("https://os.greenfield.clinic/api/public/facts").then(function(r){return r.ok?r.json():null}).then(function(j){var f=j&&j.facts;if(!f||typeof f!=="object")return;var dot=/^(vi|es)/.test(document.documentElement.lang);document.querySelectorAll("[data-gf-fact]").forEach(function(e){var x=f[e.getAttribute("data-gf-fact")],n=x&&x.number;if(typeof n!=="number"||n!==Math.floor(n)||n<1||n>1000000)return;var t=e.textContent.replace(/\\d[\\d.,]*/,String(n).replace(/\\B(?=(\\d{3})+(?!\\d))/g,dot?".":","));if(x.plus===false)t=t.replace("+","");e.textContent=t;});}).catch(function(){});}catch(e){}
 var C=${js(casesData)},TL=${js({ b: T.cases.beforeAlt, a: T.cases.afterAlt, n: U.caseLabel })},i=0,ba=document.getElementById("ba"),rng=ba.querySelector("input");
 rng.addEventListener("input",function(){ba.style.setProperty("--pos",rng.value+"%")});
 function setPic(p,d,alt){var s=p.querySelectorAll("source");s[0].srcset=d.a;s[1].srcset=d.w;var im=p.querySelector("img");im.src=d.s;im.alt=alt;}
