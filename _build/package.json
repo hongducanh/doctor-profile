@@ -1,1 +1,1 @@
-{ "name": "doctor-redesign-draft", "private": true, "type": "module", "scripts": { "images": "node build-images.mjs" }, "dependencies": { "sharp": "^0.34.0" } }
+{ "name": "doctor-redesign-draft", "private": true, "type": "module", "scripts": { "images": "node build-images.mjs", "doctors": "node doctors-json.mjs", "check": "node doctors-json.mjs --check", "match-table": "node doctors-match-table.mjs" }, "dependencies": { "sharp": "^0.34.0" } }
