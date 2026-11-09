@@ -1,0 +1,9 @@
+{
+  "_doc": "Thuộc tính công khai của từng bác sĩ cho data/doctors.json (spec greenfield-os/docs/doctor-list-spec.md §3.1). Khoá = key của doctors/<key>.json. services ∈ Line (9 khoá taxonomy OS), focus ∈ Focus (danh sách đóng). order = thứ tự hiển thị chung. aliases.web = khoá ?doctor= cũ trên nhakhoagreenfield.com + doctorKeys cũ trong Quotation (vĩnh viễn, không đổi).",
+  "kate": { "factId": "nhung", "web": ["nhung"], "order": 1, "services": ["orthodontics", "implant", "all_on_x"], "focus": ["tmj", "invisalign", "braces", "full_arch"] },
+  "chris": { "factId": "chuyen", "web": ["chuyen"], "order": 2, "services": ["implant", "all_on_x"], "focus": ["full_arch", "surgery", "sedation"] },
+  "henry": { "factId": "hieu", "web": ["hieu"], "order": 3, "services": ["implant", "all_on_x"], "focus": ["surgery"] },
+  "giang": { "factId": "giang", "web": ["giang"], "order": 4, "services": ["orthodontics", "general", "veneer", "crown", "whitening"], "focus": ["pediatric", "braces", "endo", "perio"] },
+  "hailey": { "factId": "hien", "web": ["hien"], "order": 5, "services": ["general", "veneer", "crown", "whitening"], "focus": ["endo", "perio"] },
+  "retired": []
+}
