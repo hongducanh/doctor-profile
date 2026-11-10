@@ -30,7 +30,7 @@ export const PAGES = [
   ["/dich-vu/nieng-rang/invisalign", { lines: ["orthodontics"] }, ["nhung", "giang"]],
   ["/rang-lech", { lines: ["orthodontics"] }, ["nhung", "giang"]],
   ["/mat-rang", { lines: ["implant"] }, ["chuyen", "nhung"]],
-  ["/dang-dau", { focus: ["endo", "surgery"] }, ["hien", "chuyen"]],
+  ["/dang-dau", { focus: ["endo"] }, ["hien", "chuyen"]],
   ["/rang-o-vang", { lines: ["whitening", "veneer", "crown"] }, ["giang", "hien"]],
   ["/ve-nuoc-lam-rang", { lines: ["implant", "all_on_x"] }, ["chuyen", "nhung"]],
 ];
