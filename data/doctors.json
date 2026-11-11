@@ -1,0 +1,202 @@
+{
+  "v": 1,
+  "generatedAt": "2026-11-09T06:45:01.960Z",
+  "doctors": [
+    {
+      "slug": "dr-ta-hong-nhung",
+      "aliases": {
+        "web": [
+          "nhung"
+        ],
+        "profileKey": "kate",
+        "factId": "nhung"
+      },
+      "order": 1,
+      "name": {
+        "vi": "BS. Tạ Hồng Nhung",
+        "en": "Dr. Ta Hong Nhung"
+      },
+      "nick": "Dr. Kate",
+      "role": {
+        "vi": "Nhà sáng lập & Giám đốc chuyên môn, bác sĩ chỉnh nha",
+        "en": "Founder & Clinical Director, orthodontist",
+        "es": "Fundadora y directora clínica, ortodoncista",
+        "ko": "설립자 겸 진료원장, 교정 전문의",
+        "zh": "创始人兼临床总监，正畸医生",
+        "ja": "創設者兼クリニカルディレクター（矯正歯科医）"
+      },
+      "services": [
+        "orthodontics",
+        "implant",
+        "all_on_x"
+      ],
+      "focus": [
+        "tmj",
+        "invisalign",
+        "braces",
+        "full_arch"
+      ],
+      "photo": {
+        "portrait": "https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-800.webp",
+        "thumb": "https://doctors.greenfield.clinic/dr-ta-hong-nhung/img/kate-portrait-480.webp"
+      },
+      "profileUrl": "https://doctors.greenfield.clinic/dr-ta-hong-nhung"
+    },
+    {
+      "slug": "dr-do-nhu-chuyen",
+      "aliases": {
+        "web": [
+          "chuyen"
+        ],
+        "profileKey": "chris",
+        "factId": "chuyen"
+      },
+      "order": 2,
+      "name": {
+        "vi": "BS. Đỗ Như Chuyên",
+        "en": "Dr. Do Nhu Chuyen"
+      },
+      "nick": "Dr. Chris",
+      "role": {
+        "vi": "Bác sĩ cấy ghép implant",
+        "en": "Implant dentist",
+        "es": "Implantólogo",
+        "ko": "임플란트 전문의",
+        "zh": "种植牙医生",
+        "ja": "インプラント専門医"
+      },
+      "services": [
+        "implant",
+        "all_on_x"
+      ],
+      "focus": [
+        "full_arch",
+        "surgery",
+        "sedation"
+      ],
+      "photo": {
+        "portrait": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-800.webp",
+        "thumb": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen/img/chris-portrait-480.webp"
+      },
+      "profileUrl": "https://doctors.greenfield.clinic/dr-do-nhu-chuyen"
+    },
+    {
+      "slug": "dr-nguyen-duc-hieu",
+      "aliases": {
+        "web": [
+          "hieu"
+        ],
+        "profileKey": "henry",
+        "factId": "hieu"
+      },
+      "order": 3,
+      "name": {
+        "vi": "BS. Nguyễn Đức Hiệu",
+        "en": "Dr. Nguyen Duc Hieu"
+      },
+      "nick": "Dr. Henry",
+      "role": {
+        "vi": "Bác sĩ cấy ghép implant",
+        "en": "Implant dentist",
+        "es": "Implantólogo",
+        "ko": "임플란트 전문의",
+        "zh": "种植牙医生",
+        "ja": "インプラント専門医"
+      },
+      "services": [
+        "implant",
+        "all_on_x"
+      ],
+      "focus": [
+        "surgery"
+      ],
+      "photo": {
+        "portrait": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-800.webp",
+        "thumb": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu/img/henry-portrait-480.webp"
+      },
+      "profileUrl": "https://doctors.greenfield.clinic/dr-nguyen-duc-hieu"
+    },
+    {
+      "slug": "dr-tran-thi-giang",
+      "aliases": {
+        "web": [
+          "giang"
+        ],
+        "profileKey": "giang",
+        "factId": "giang"
+      },
+      "order": 4,
+      "name": {
+        "vi": "BS. Trần Thị Giang",
+        "en": "Dr. Tran Thi Giang"
+      },
+      "nick": "Dr. Giang",
+      "role": {
+        "vi": "Chỉnh nha & nha khoa tổng quát",
+        "en": "Orthodontics & general dentistry",
+        "es": "Ortodoncia y odontología general",
+        "ko": "교정·일반 진료",
+        "zh": "正畸与综合牙科",
+        "ja": "矯正歯科・一般歯科"
+      },
+      "services": [
+        "orthodontics",
+        "general",
+        "veneer",
+        "crown",
+        "whitening"
+      ],
+      "focus": [
+        "pediatric",
+        "braces",
+        "endo",
+        "perio"
+      ],
+      "photo": {
+        "portrait": "https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-792.webp",
+        "thumb": "https://doctors.greenfield.clinic/dr-tran-thi-giang/img/giang-portrait-480.webp"
+      },
+      "profileUrl": "https://doctors.greenfield.clinic/dr-tran-thi-giang"
+    },
+    {
+      "slug": "dr-pham-thi-thu-hien",
+      "aliases": {
+        "web": [
+          "hien"
+        ],
+        "profileKey": "hailey",
+        "factId": "hien"
+      },
+      "order": 5,
+      "name": {
+        "vi": "BS. Phạm Thị Thu Hiền",
+        "en": "Dr. Pham Thi Thu Hien"
+      },
+      "nick": "Dr. Hailey",
+      "role": {
+        "vi": "Bác sĩ nha khoa tổng quát & phục hình",
+        "en": "General & restorative dentist",
+        "es": "Odontóloga general y restauradora",
+        "ko": "일반·보존 보철 치과의사",
+        "zh": "综合与修复牙医",
+        "ja": "一般歯科・修復歯科医"
+      },
+      "services": [
+        "general",
+        "veneer",
+        "crown",
+        "whitening"
+      ],
+      "focus": [
+        "endo",
+        "perio"
+      ],
+      "photo": {
+        "portrait": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-800.webp",
+        "thumb": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien/img/hailey-portrait-480.webp"
+      },
+      "profileUrl": "https://doctors.greenfield.clinic/dr-pham-thi-thu-hien"
+    }
+  ],
+  "retired": []
+}
