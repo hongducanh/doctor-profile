@@ -97,7 +97,8 @@ const V2 = { short: D.short, name: D.name, nick: D.nick, jobTitle: D.jobTitle };
 /* N-2 (09/11/2026): con số năm / số ca của bác sĩ gắn data-gf-fact="doctor.<factId>.years|implants"; script cuối trang thay số bằng Sổ dữ kiện OS,
    lỗi / thiếu thì GIỮ số tĩnh. Meta description, JSON-LD và ảnh OG giữ số tĩnh (máy quét báo khi lệch). */
 const FACT = (m) => `doctor.${PUB[D.key].factId}.${m}`;
-const factAttr = (m) => ` data-gf-fact="${FACT(m)}"`;
+/* pinned (public-doctors.json, 11/11/2026): số ghim tĩnh theo owner → không gắn data-gf-fact, script OS không ghi đè. */
+const factAttr = (m) => ((PUB[D.key].pinned ?? []).includes(m) ? "" : ` data-gf-fact="${FACT(m)}"`);
 const statMetric = (i) => ({ Experience: "years", Implant: "implants" })[DES[D.key].trust.stats[i].k];
 /** Lead: bọc số năm / số implant (nếu có trong câu) bằng <span data-gf-fact>; chỉ lần xuất hiện đầu. */
 const leadHtml = (txt) => {
