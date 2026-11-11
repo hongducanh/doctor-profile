@@ -8,22 +8,6 @@ on:
   pull_request: { paths: ["**.html"] }
   workflow_dispatch: {}
 permissions: { contents: read }
-jobs: { check: { uses: trungdang712/greenfield-stack/.github/workflows/content-check.yml@main, with: { domain: allon4vietnam.com }, secrets: inherit } }
-# Secret repo gọi: GF_CC_CF_ID, GF_CC_CF_SECRET (service token Cloudflare gf-content-check-ci), GF_CC_KEY (= CONTENT_CHECK_KEY OS).
-# Thiếu secret → bỏ qua (xanh, có ghi chú). Vercel deploy không chờ CI — đỏ ở đây là tín hiệu sửa, không chặn trang.
-name: content-check
-on:
-  workflow_call:
-    inputs:
-      domain: { type: string, required: true, description: "Domain công khai, vd allon4vietnam.com" }
-      dir: { type: string, default: ".", description: "Thư mục chứa HTML (bỏ qua node_modules, .git, dist trừ khi dir=dist)" }
-      build: { type: string, default: "", description: "Lệnh build trước khi kiểm (vd 'node build.mjs'), trống = không build" }
-      fail-on: { type: string, default: "error", description: "error | never" }
-    secrets:
-      GF_CC_CF_ID: { required: false }
-      GF_CC_CF_SECRET: { required: false }
-      GF_CC_KEY: { required: false }
-permissions: { contents: read }
 jobs:
   check:
     runs-on: ubuntu-latest
